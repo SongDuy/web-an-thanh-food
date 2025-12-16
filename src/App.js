@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './routes';
 
-import HomePage from './pages/home';
-import NotFoundPage from './pages/notFound';
+// import NotFoundPage from './pages/notFound';
 
 function App() {
   useEffect(() => {
@@ -11,13 +11,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-
-        {/* Xử lý trang lỗi */}
-        <Route path="*" element={<Navigate to="/404" />} />
-        <Route path="/404" element={<NotFoundPage />} />
-      </Routes>
+      <AppRoutes />
     </BrowserRouter>
   );
 }
