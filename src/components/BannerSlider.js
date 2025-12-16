@@ -40,7 +40,7 @@ const BannerSlider = () => {
         {/* Khung hiện thị Banner */}
         <div className="relative w-[1120px] h-[500px] bg-yellow-200 flex items-center justify-center">
 
-          {/* Biểu ngữ cho Banner */}
+          {/*Hiện thị các trích dẫn hay từ sách cho Banner */}
           <div className="text-center">
             <h2 className="text-4xl font-bold mb-2">
               {banner.title}
@@ -59,7 +59,7 @@ const BannerSlider = () => {
               />
             ))}
           </div>
-          
+
         </div>
 
       </div>
