@@ -2,20 +2,51 @@ import { useEffect, useState } from 'react';
 
 const banners = [
   {
-    title: 'Thực phẩm sạch mỗi ngày',
-    subtitle: 'An toàn – Tươi ngon – Nguồn gốc rõ ràng',
-    bg: 'bg-green-200',
+    title: "Bức thư thứ 01",
+    subtitle: `Bắt đầu từ hôm nay, mỗi ngày hãy luôn nở nụ cười trên môi,
+              trên đời này ngoài sinh tử ra thì mọi sự đều là chuyện nhỏ.
+              Cho dù gặp chuyện phiền lòng cũng đừng tự làm khó mình;
+              bất luận hôm nay xảy ra bao nhiêu chuyện đen đủi, đều không nên cảm thấy bi thương.
+              Hôm nay là ngày bạn trẻ nhất trong những ngày tháng sau này,
+              vì còn có ngày mai, hôm nay mãi chỉ là bước khởi đầu của con đường tương lai.`,
+    bg: "bg-green-200",
   },
   {
-    title: 'Rau củ tươi từ nông trại',
-    subtitle: 'Giao hàng nhanh – Giá hợp lý',
+    title: 'Bức thư thứ 02',
+    subtitle: `Ðời người sẽ luôn có sự ấm áp bất ngờ và những hy vọng bất
+              tận. Bất kể con đường phía trước có bao nhiêu khổ ải, chỉ cần
+              phương hướng chính xác thì dù gập ghềnh khúc khuỷu đến mấy,
+              cũng sẽ gần với hạnh phúc hơn là đứng ở vạch xuất phát.`,
     bg: 'bg-yellow-200',
   },
   {
-    title: 'An Thanh Food',
-    subtitle: 'Chăm sóc bữa ăn gia đình Việt',
+    title: 'Bức thư thứ 03',
+    subtitle: `Bạn là một người mạnh mẽ, từng giây từng phút đều yêu cầu
+              bản thân phải đạt được một trăm phần trăm sự kỳ vọng. Nhưng
+              quá khắt khe không phải lúc nào cũng tốt, bạn vốn không phải
+              thiên tài, xin hãy cho phép bản thân được phạm lỗi. Ðừng quá
+              vội vàng, sự cố gắng của bạn, thời gian sẽ giúp bạn thực hiện.`,
     bg: 'bg-blue-200',
   },
+  {
+    title: 'Bức thư thứ 04',
+    subtitle: `Thời gian thay đổi, con người cũng thay đổi. Cuộc đời là một
+              bộ phim tuyệt bản không cách nào phát lại, có những việc cho dù
+              bạn có nỗ lực đến đâu, không thể quay trở lại. Khoảng cách xa
+              nhất trên thế giới này không phải yêu, chẳng phải hận, mà là
+              người thân quen dần dần trở thành xa lạ.`,
+    bg: 'bg-blue-200',
+  },
+  {
+    title: 'Bức thư thứ 05',
+    subtitle: `Rất nhiều lần sau khi bạn đã nỗ lực phấn đấu hết mình nhưng
+              không thể đạt được kết quả như mong muốn, tuyệt đối không
+              phải do bạn không xứng đáng mà là cơ hội vẫn chưa tới. Ðiều
+              bạn cần làm chính là, cắn chặt răng tiếp tục kiên trì nỗ lực, chỉ
+              như vậy mà thôi.`,
+    bg: 'bg-blue-200',
+  },
+
 ];
 
 const BannerSlider = () => {
@@ -24,7 +55,7 @@ const BannerSlider = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % banners.length);
-    }, 5000);
+    }, 30000);
 
     return () => clearInterval(timer);
   }, []);
@@ -41,11 +72,11 @@ const BannerSlider = () => {
         <div className="relative w-[1120px] h-[500px] bg-yellow-200 flex items-center justify-center">
 
           {/*Hiện thị các trích dẫn hay từ sách cho Banner */}
-          <div className="text-center">
+          <div className="text-center w-1/2">
             <h2 className="text-4xl font-bold mb-2">
               {banner.title}
             </h2>
-            <p className="text-lg">
+            <p className="text-lg font-semibold">
               {banner.subtitle}
             </p>
           </div>
