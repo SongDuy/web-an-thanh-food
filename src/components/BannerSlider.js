@@ -36,7 +36,11 @@ const BannerSlider = () => {
       className={`w-full h-[500px] flex items-center justify-center transition-all duration-700 ${banner.bg}`}
     >
       <div className="w-full h-[500px] bg-yellow-100 flex items-center justify-center">
+
+        {/* Khung hiện thị Banner */}
         <div className="relative w-[1120px] h-[500px] bg-yellow-200 flex items-center justify-center">
+
+          {/* Biểu ngữ cho Banner */}
           <div className="text-center">
             <h2 className="text-4xl font-bold mb-2">
               {banner.title}
@@ -45,6 +49,7 @@ const BannerSlider = () => {
               {banner.subtitle}
             </p>
           </div>
+
           {/* Nút chuyển Banner */}
           < div className="absolute bottom-3 left-5 right-0 flex items-center">
             {Array.from({ length: 12 }).map((_, index) => (
@@ -54,6 +59,7 @@ const BannerSlider = () => {
               />
             ))}
           </div>
+          
         </div>
 
       </div>
