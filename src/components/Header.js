@@ -24,14 +24,14 @@ const Header = () => {
             <Link
               to="/"
               className="uppercase text-lg font-bold text-10 hover:text-yellow-500">
-              An Thanh Food
+              An Thanh
             </Link>
           </li>
           <li>
             <Link
               to="/"
               className="uppercase text-lg font-bold text-10 hover:text-yellow-500">
-              An Thanh Food
+              An Thanh
             </Link>
           </li>
         </ul>
