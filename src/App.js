@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+
+import HomePage from './pages/home';
+import NotFoundPage from './pages/notFound';
 
 function App() {
+  useEffect(() => {
+    document.title = 'An Thanh Food';
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+
+        {/* Xử lý trang lỗi */}
+        <Route path="*" element={<Navigate to="/404" />} />
+        <Route path="/404" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
