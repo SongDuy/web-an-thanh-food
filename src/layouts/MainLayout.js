@@ -1,10 +1,13 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import BannerSlider from '../components/BannerSlider';
 
 const MainLayout = ({ children }) => {
     return (
         <>
             <Header />
+
+            <BannerSlider />
 
             <main className="px-10 py-6">
                 {children}
