@@ -59,7 +59,7 @@ const BannerSlider = () => {
           {/*Hiện thị các trích dẫn hay từ sách cho Banner */}
           <div className="w-full h-[500px] relative px-6">
             {/* Title */}
-            <div className="absolute top-[50px] left-0 right-0 text-center">
+            <div className="absolute top-[50px] px-[60px] left-0 right-0 text-center">
               <h2 className="text-4xl font-serifTitle tracking-wide text-black text-shadow-white">
                 {banner.title}
               </h2>
