@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="w-full h-[100px] bg-white text-black flex items-center px-[60px]">
+    <header className="w-full h-[100px] bg-white border-b border-gray-300 text-black flex items-center px-[60px]">
       {/* logo web */}
       <img
         src={``}
