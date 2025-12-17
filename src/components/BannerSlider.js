@@ -67,7 +67,7 @@ const BannerSlider = () => {
 
             {/* Nội dung */}
             <div className="flex h-full items-center justify-center">
-              <p className="max-w-2xl text-lg text-x text-center l font-serifBook leading-loose whitespace-pre-line text-gray-800">
+              <p className="max-w-2xl text-lg text-center font-serifBook leading-loose whitespace-pre-line text-gray-700">
                 {banner.subtitle}
               </p>
             </div>
