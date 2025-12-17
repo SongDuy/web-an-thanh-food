@@ -69,7 +69,8 @@ const BannerSlider = () => {
           {/* VÙNG NỘI DUNG CHÍNH */}
           <div className="absolute h-full left-0 right-0 flex justify-center">
 
-            <div className="w-full h-full overflow-y-scroll overscroll-contain [overflow-anchor:none]
+            <div
+              className="w-full h-full overflow-y-scroll overscroll-contain [overflow-anchor:none]
                 /* Custom Scrollbar */
                 [&::-webkit-scrollbar]:w-2
                 [&::-webkit-scrollbar-track]:bg-transparent
@@ -79,14 +80,14 @@ const BannerSlider = () => {
             >
               {/* Wrapper: flex items-center -> Đã đảm bảo căn giữa theo chiều dọc (trên/dưới) */}
               <div className="min-h-full flex items-center justify-center py-4">
-                
+
                 {/* THAY ĐỔI Ở ĐÂY:
                    1. text-justify: Căn đều 2 bên lề trái phải.
                    2. style={{ textAlignLast: 'center' }}: Dòng cuối cùng căn giữa (đẹp hơn cho quote).
                 */}
-                <p 
+                <p
                   className="max-w-2xl text-lg font-serifBook leading-loose whitespace-pre-line text-white text-shadow-black text-justify"
-                  style={{ textAlignLast: 'center' }} 
+                  style={{ textAlignLast: 'center' }}
                 >
                   {banner.subtitle}
                 </p>
