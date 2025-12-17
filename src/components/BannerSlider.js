@@ -67,7 +67,7 @@ const BannerSlider = () => {
           </div>
 
           {/* VÙNG NỘI DUNG CHÍNH */}
-          <div className="absolute h-full left-0 right-0 flex border justify-center">
+          <div className="absolute h-full left-0 right-0 flex justify-center">
 
             <div className="w-full h-full overflow-y-scroll overscroll-contain [overflow-anchor:none]
                 /* Custom Scrollbar */
