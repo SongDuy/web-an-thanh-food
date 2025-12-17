@@ -9,9 +9,7 @@ const banners = [
   },
   {
     title: 'Bức thư thứ 02',
-    subtitle: `Ðời người sẽ luôn có sự ấm áp bất ngờ và những hy vọng bất
-              tận. Bất kể con đường phía trước có bao nhiêu khổ ải, chỉ cần
-              phương hướng chính xác thì dù gập ghềnh khúc khuỷu đến mấy, cũng sẽ gần với hạnh phúc hơn là đứng ở vạch xuất phát.`,
+    subtitle: `Ðời người sẽ luôn có sự ấm áp bất ngờ và những hy vọng bất tận. Bất kể con đường phía trước có bao nhiêu khổ ải, chỉ cần phương hướng chính xác thì dù gập ghềnh khúc khuỷu đến mấy, cũng sẽ gần với hạnh phúc hơn là đứng ở vạch xuất phát.`,
     author: "Khuyết Danh",
     bg: 'bg-yellow-200',
   },
@@ -59,27 +57,28 @@ const BannerSlider = () => {
         <div className="relative w-[1120px] h-[500px] bg-yellow-200 flex items-center justify-center">
 
           {/*Hiện thị các trích dẫn hay từ sách cho Banner */}
-          <div className="w-full h-[500px] relative">
-            <div className="absolute top-[50px] left-0 right-0 text-center">
-              <h2 className="text-4xl font-bold">
+          <div className="w-full h-[500px] relative px-6">
+            {/* Title */}
+            <div className="absolute top-10 left-0 right-0 text-center">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-wide">
                 {banner.title}
               </h2>
             </div>
 
+            {/* Nội dung */}
             <div className="flex h-full items-center justify-center">
-              <p className="w-1/2 text-center text-xl font-semibold whitespace-pre-line">
+              <p className="max-w-2xl text-lg md:text-x text-center l font-normal leading-loose whitespace-pre-line text-gray-800">
                 {banner.subtitle}
               </p>
             </div>
 
-            <div className="absolute bottom-[50px] right-5 text-right">
-              <h2 className="text-md font-bold">
+            {/* Author */}
+            <div className="absolute bottom-8 right-8 text-right">
+              <p className="text-md italic text-gray-700">
                 Tác giả: "{banner.author}"
-              </h2>
+              </p>
             </div>
           </div>
-
-
 
           {/* Nút chuyển Banner */}
           < div className="absolute bottom-3 left-5 right-0 flex items-center">
