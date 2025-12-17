@@ -70,14 +70,12 @@ const BannerSlider = () => {
           <div className="absolute h-full left-0 right-0 flex border justify-center">
 
             <div className="w-full h-full overflow-y-scroll overscroll-contain [overflow-anchor:none]
-                
                 /* Custom Scrollbar */
                 [&::-webkit-scrollbar]:w-2
                 [&::-webkit-scrollbar-track]:bg-transparent
                 [&::-webkit-scrollbar-thumb]:bg-white/40
                 [&::-webkit-scrollbar-thumb]:rounded-full
-                [&::-webkit-scrollbar-thumb]:hover:bg-white/80
-              "
+                [&::-webkit-scrollbar-thumb]:hover:bg-white/80"
             >
               {/* Wrapper: flex items-center -> Đã đảm bảo căn giữa theo chiều dọc (trên/dưới) */}
               <div className="min-h-full flex items-center justify-center py-4">
