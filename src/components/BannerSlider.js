@@ -54,14 +54,14 @@ const BannerSlider = () => {
       <div className="w-full h-full bg-yellow-100 flex items-center justify-center">
 
         <div
-          className="relative w-[1120px] h-full bg-yellow-200 transition-shadow duration-300 cursor-pointer"
+          className="relative w-[1120px] h-full bg-yellow-200 transition-shadow duration-300"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
 
           {/* Title */}
           <div className="absolute top-[50px] left-0 right-0 flex items-center justify-center z-10">
-            <h2 className="text-4xl font-serifTitle tracking-wide text-black text-shadow-white text-center">
+            <h2 className="text-4xl font-serifTitle tracking-wide text-black text-shadow-white text-center cursor-pointer">
               {banner.title}
             </h2>
           </div>
@@ -86,7 +86,7 @@ const BannerSlider = () => {
                    2. style={{ textAlignLast: 'center' }}: Dòng cuối cùng căn giữa (đẹp hơn cho quote).
                 */}
                 <p
-                  className="max-w-2xl text-lg font-serifBook leading-loose whitespace-pre-line text-white text-shadow-black text-justify"
+                  className="max-w-2xl text-lg font-serifBook leading-loose whitespace-pre-line cursor-pointer text-white text-shadow-black text-justify"
                   style={{ textAlignLast: 'center' }}
                 >
                   {banner.subtitle}
@@ -98,7 +98,7 @@ const BannerSlider = () => {
 
           {/* Author */}
           <div className="absolute bottom-[50px] right-10 flex items-center z-10">
-            <p className="text-md italic font-serifBook text-black text-shadow-white">
+            <p className="text-md italic font-serifBook text-black text-shadow-white cursor-pointer">
               Trích sách - Tác giả: "{banner.author}"
             </p>
           </div>
