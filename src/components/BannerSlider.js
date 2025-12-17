@@ -6,9 +6,8 @@ const banners = [
     subtitle: `Bắt đầu từ hôm nay, mỗi ngày hãy luôn nở nụ cười trên môi,
               trên đời này ngoài sinh tử ra thì mọi sự đều là chuyện nhỏ.
               Cho dù gặp chuyện phiền lòng cũng đừng tự làm khó mình;
-              bất luận hôm nay xảy ra bao nhiêu chuyện đen đủi, đều không nên cảm thấy bi thương.
-              Hôm nay là ngày bạn trẻ nhất trong những ngày tháng sau này,
-              vì còn có ngày mai, hôm nay mãi chỉ là bước khởi đầu của con đường tương lai.`,
+              bất luận hôm nay xảy ra bao nhiêu chuyện đen đủi, đều không nên cảm thấy bi thương. Hôm nay là ngày bạn trẻ nhất trong những ngày tháng sau này, vì còn có ngày mai, hôm nay mãi chỉ là bước khởi đầu của con đường tương lai.`,
+    author: "Khuyết Danh",
     bg: "bg-green-200",
   },
   {
@@ -17,6 +16,7 @@ const banners = [
               tận. Bất kể con đường phía trước có bao nhiêu khổ ải, chỉ cần
               phương hướng chính xác thì dù gập ghềnh khúc khuỷu đến mấy,
               cũng sẽ gần với hạnh phúc hơn là đứng ở vạch xuất phát.`,
+    author: "Khuyết Danh",
     bg: 'bg-yellow-200',
   },
   {
@@ -26,6 +26,7 @@ const banners = [
               quá khắt khe không phải lúc nào cũng tốt, bạn vốn không phải
               thiên tài, xin hãy cho phép bản thân được phạm lỗi. Ðừng quá
               vội vàng, sự cố gắng của bạn, thời gian sẽ giúp bạn thực hiện.`,
+    author: "Khuyết Danh",
     bg: 'bg-blue-200',
   },
   {
@@ -44,6 +45,7 @@ const banners = [
               phải do bạn không xứng đáng mà là cơ hội vẫn chưa tới. Ðiều
               bạn cần làm chính là, cắn chặt răng tiếp tục kiên trì nỗ lực, chỉ
               như vậy mà thôi.`,
+    author: "Khuyết Danh",
     bg: 'bg-blue-200',
   },
 
@@ -72,14 +74,27 @@ const BannerSlider = () => {
         <div className="relative w-[1120px] h-[500px] bg-yellow-200 flex items-center justify-center">
 
           {/*Hiện thị các trích dẫn hay từ sách cho Banner */}
-          <div className="text-center w-1/2">
-            <h2 className="text-4xl font-bold mb-2">
-              {banner.title}
-            </h2>
-            <p className="text-lg font-semibold">
-              {banner.subtitle}
-            </p>
+          <div className="w-full h-[500px] relative">
+            <div className="absolute top-[50px] left-0 right-0 text-center">
+              <h2 className="text-4xl font-bold">
+                {banner.title}
+              </h2>
+            </div>
+
+            <div className="flex h-full items-center justify-center">
+              <p className="w-1/2 text-center text-lg font-semibold whitespace-pre-line">
+                {banner.subtitle}
+              </p>
+            </div>
+
+            <div className="absolute bottom-[50px] right-5 text-right">
+              <h2 className="text-md font-bold">
+                Tác giả: "{banner.author}"
+              </h2>
+            </div>
           </div>
+
+
 
           {/* Nút chuyển Banner */}
           < div className="absolute bottom-3 left-5 right-0 flex items-center">
