@@ -31,69 +31,93 @@ const banners = [
     author: "Miêu Công Tử",
     bg: 'bg-blue-200',
   },
-
 ];
 
 const BannerSlider = () => {
   const [current, setCurrent] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
+    if (isPaused) return;
+
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % banners.length);
-    }, 30000);
+    }, 5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isPaused]);
 
   const banner = banners[current];
 
   return (
-    <section
-      className={`w-full h-[500px] flex items-center justify-center transition-all duration-700 ${banner.bg}`}
-    >
-      <div className="w-full h-[500px] bg-yellow-100 flex items-center justify-center">
+    <section className="w-full h-[500px] overflow-hidden">
+      <div className="w-full h-full bg-yellow-100 flex items-center justify-center">
 
-        {/* Khung hiện thị Banner */}
-        <div className="relative w-[1120px] h-[500px] bg-yellow-200 flex items-center justify-center">
+        <div
+          className="relative w-[1120px] h-full bg-yellow-200 shadow-xl transition-shadow duration-300"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
 
-          {/*Hiện thị các trích dẫn hay từ sách cho Banner */}
-          <div className="w-full h-[500px] relative px-6">
-            {/* Title */}
-            <div className="absolute top-[50px] px-[60px] left-0 right-0 text-center">
-              <h2 className="text-4xl font-serifTitle tracking-wide text-black text-shadow-white">
-                {banner.title}
-              </h2>
-            </div>
+          {/* Title */}
+          <div className="absolute top-[50px] left-0 right-0 flex items-center justify-center z-10">
+            <h2 className="text-4xl font-serifTitle tracking-wide text-black text-shadow-white text-center">
+              {banner.title}
+            </h2>
+          </div>
 
-            {/* Nội dung */}
-            <div className="flex h-full items-center justify-center">
-              <p className="max-w-2xl text-lg text-center font-serifBook leading-loose whitespace-pre-line text-white text-shadow-black">
-                {banner.subtitle}
-              </p>
-            </div>
+          {/* VÙNG NỘI DUNG CHÍNH */}
+          <div className="absolute h-full left-0 right-0 flex border justify-center">
 
-            {/* Author */}
-            <div className="absolute bottom-[50px] right-8 text-right">
-              <p className="text-md italic font-serifBook text-black text-shadow-white">
-                Trích - Tác giả: "{banner.author}"
-              </p>
+            <div className="w-full h-full overflow-y-scroll overscroll-contain [overflow-anchor:none]
+                
+                /* Custom Scrollbar */
+                [&::-webkit-scrollbar]:w-2
+                [&::-webkit-scrollbar-track]:bg-transparent
+                [&::-webkit-scrollbar-thumb]:bg-white/40
+                [&::-webkit-scrollbar-thumb]:rounded-full
+                [&::-webkit-scrollbar-thumb]:hover:bg-white/80
+              "
+            >
+              {/* Wrapper: flex items-center -> Đã đảm bảo căn giữa theo chiều dọc (trên/dưới) */}
+              <div className="min-h-full flex items-center justify-center py-4">
+                
+                {/* THAY ĐỔI Ở ĐÂY:
+                   1. text-justify: Căn đều 2 bên lề trái phải.
+                   2. style={{ textAlignLast: 'center' }}: Dòng cuối cùng căn giữa (đẹp hơn cho quote).
+                */}
+                <p 
+                  className="max-w-2xl text-lg font-serifBook leading-loose whitespace-pre-line text-white text-shadow-black text-justify"
+                  style={{ textAlignLast: 'center' }} 
+                >
+                  {banner.subtitle}
+                </p>
+
+              </div>
             </div>
           </div>
 
+          {/* Author */}
+          <div className="absolute bottom-[50px] right-10 flex items-center z-10">
+            <p className="text-md italic font-serifBook text-black text-shadow-white">
+              Trích - Tác giả: "{banner.author}"
+            </p>
+          </div>
+
           {/* Nút chuyển Banner */}
-          < div className="absolute bottom-3 left-5 right-0 flex items-center">
-            {Array.from({ length: 12 }).map((_, index) => (
+          <div className="absolute bottom-4 left-5 flex justify-center items-center gap-2 z-20">
+            {banners.map((_, index) => (
               <button
                 key={index}
-                className="w-[15px] h-[15px] mx-1 border rounded-full bg-white opacity-60 hover:opacity-100"
+                onClick={() => setCurrent(index)}
+                className={`w-[15px] h-[15px] rounded-full border transition-all duration-300 ${index === current ? "bg-white scale-110 opacity-100" : "bg-white opacity-60 hover:opacity-100"
+                  }`}
               />
             ))}
           </div>
 
         </div>
-
       </div>
-
     </section>
   );
 };
