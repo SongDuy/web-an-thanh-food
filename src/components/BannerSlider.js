@@ -98,7 +98,7 @@ const BannerSlider = () => {
           {/* Author */}
           <div className="absolute bottom-[50px] right-10 flex items-center z-10">
             <p className="text-md italic font-serifBook text-black text-shadow-white">
-              Trích - Tác giả: "{banner.author}"
+              Trích sách - Tác giả: "{banner.author}"
             </p>
           </div>
 
