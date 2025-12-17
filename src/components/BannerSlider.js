@@ -54,7 +54,7 @@ const BannerSlider = () => {
       <div className="w-full h-full bg-yellow-100 flex items-center justify-center">
 
         <div
-          className="relative w-[1120px] h-full bg-yellow-200 shadow-xl transition-shadow duration-300"
+          className="relative w-[1120px] h-full bg-yellow-200 hover:shadow-xl transition-shadow duration-300 cursor-pointer"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
