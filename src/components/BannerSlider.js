@@ -85,7 +85,7 @@ const BannerSlider = () => {
             {Array.from({ length: 12 }).map((_, index) => (
               <button
                 key={index}
-                className="w-[15px] h-[15px] mx-1 rounded-full bg-white opacity-60 hover:opacity-100"
+                className="w-[15px] h-[15px] mx-1 border rounded-full bg-white opacity-60 hover:opacity-100"
               />
             ))}
           </div>
