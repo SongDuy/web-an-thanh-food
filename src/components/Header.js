@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -14,25 +15,37 @@ const Header = () => {
       <nav aria-label="Main navigation">
         <ul className="flex overflow-x-auto gap-5 mx-3 whitespace-nowrap">
           <li>
-            <Link
+            <NavLink
               to="/"
-              className="uppercase text-lg font-bold text-10 hover:text-yellow-500">
+              className={({ isActive }) =>
+                `uppercase text-lg font-bold transition
+                ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`
+              }
+            >
               Trang Chủ
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              to="/"
-              className="uppercase text-lg font-bold text-10 hover:text-yellow-500">
+            <NavLink
+              to="/staples"
+              className={({ isActive }) =>
+                `uppercase text-lg font-bold transition
+                ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`
+              }
+            >
               Lương Thực
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              to="/"
-              className="uppercase text-lg font-bold text-10 hover:text-yellow-500">
+            <NavLink
+              to="/groceries"
+              className={({ isActive }) =>
+                `uppercase text-lg font-bold transition
+                ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`
+              }
+            >
               Thực Phẩm
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
