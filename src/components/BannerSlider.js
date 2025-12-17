@@ -60,21 +60,21 @@ const BannerSlider = () => {
           <div className="w-full h-[500px] relative px-6">
             {/* Title */}
             <div className="absolute top-[50px] left-0 right-0 text-center">
-              <h2 className="text-4xl font-serifTitle tracking-wide">
+              <h2 className="text-4xl font-serifTitle tracking-wide text-black text-shadow-white">
                 {banner.title}
               </h2>
             </div>
 
             {/* Nội dung */}
             <div className="flex h-full items-center justify-center">
-              <p className="max-w-2xl text-lg text-center font-serifBook leading-loose whitespace-pre-line text-gray-700">
+              <p className="max-w-2xl text-lg text-center font-serifBook leading-loose whitespace-pre-line text-black text-shadow-white">
                 {banner.subtitle}
               </p>
             </div>
 
             {/* Author */}
             <div className="absolute bottom-[50px] right-8 text-right">
-              <p className="text-md italic font-serifBook text-gray-700">
+              <p className="text-md italic font-serifBook text-black text-shadow-white">
                 Tác giả: "{banner.author}"
               </p>
             </div>
