@@ -36,6 +36,7 @@ const banners = [
               bạn có nỗ lực đến đâu, không thể quay trở lại. Khoảng cách xa
               nhất trên thế giới này không phải yêu, chẳng phải hận, mà là
               người thân quen dần dần trở thành xa lạ.`,
+    author: "Khuyết Danh",
     bg: 'bg-blue-200',
   },
   {
