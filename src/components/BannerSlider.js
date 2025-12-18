@@ -77,12 +77,19 @@ const banners = [
 ];
 
 const BannerSlider = () => {
-  const [current, setCurrent] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [prevImage, setPrevImage] = useState(banners[0].bgImage);
-  const [prevNextImage, setPrevNextImage] = useState(banners[1].bgImage);
+  // Khởi tạo state từ localStorage (nếu có), nếu không thì mặc định là 0
+  const [current, setCurrent] = useState(() => {
+    const saved = localStorage.getItem('banner-current-index');
+    return saved !== null ? parseInt(saved, 10) : 0;
+  });
 
-  // 1. TỐI ƯU: Tải trước toàn bộ ảnh vào bộ nhớ đệm
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Khởi tạo ảnh cũ dựa trên current đã lấy từ storage
+  const [prevImage, setPrevImage] = useState(banners[current].bgImage);
+  const [prevNextImage, setPrevNextImage] = useState(banners[(current + 1) % banners.length].bgImage);
+
+  // 1. TỐI ƯU: Tải trước toàn bộ ảnh
   useEffect(() => {
     banners.forEach((banner) => {
       const img = new Image();
@@ -90,17 +97,17 @@ const BannerSlider = () => {
     });
   }, []);
 
-  // Tính toán ảnh tiếp theo của slide hiện tại
+  // 2. Lưu index vào localStorage mỗi khi current thay đổi
+  useEffect(() => {
+    localStorage.setItem('banner-current-index', current);
+  }, [current]);
+
   const nextImage = banners[(current + 1) % banners.length].bgImage;
 
-  // 2. TỐI ƯU: Hàm cập nhật slide chính xác kể cả khi click nhảy slide
   const updateSlide = useCallback((newIndex) => {
     if (newIndex === current) return;
-
-    // Ảnh nền ngoài cũ phải là ảnh tiếp theo của slide vừa hiển thị
     setPrevImage(banners[current].bgImage);
     setPrevNextImage(nextImage);
-
     setCurrent(newIndex);
   }, [current, nextImage]);
 
