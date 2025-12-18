@@ -4,6 +4,16 @@
 
 /* Text shadow utilities */
 @layer utilities {
+  /* Animation Fade In */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+
   .text-shadow-white {
     text-shadow:
       0.5px 0.5px 1px white,
