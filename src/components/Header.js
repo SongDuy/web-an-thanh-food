@@ -4,11 +4,17 @@ const Header = () => {
   return (
     <header className="w-full h-[100px] bg-white border-b border-gray-300 text-black flex items-center px-[60px]">
       {/* logo web */}
-      <img
-        src={``}
-        alt="An Thanh Food"
-        className="w-[75px] mr-3 bg-gray-200"
-      />
+      <NavLink
+        to="/">
+        <div className="w-[85px] h-[75px] mr-1">
+          <img
+            src="/logo55.png"
+            alt="An Thanh Food"
+            className="w-full h-full object-cover scale-110"
+          />
+        </div>
+
+      </NavLink>
 
       {/* Danh mục header */}
       <nav aria-label="Main navigation">
