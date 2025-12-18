@@ -5,9 +5,10 @@ const HomePage = () => {
     return (
         <MainLayout>
             <div className="w-full h-full">
-                <h1 className="text-2xl font-bold mb-6">Sản phẩm nổi bật</h1>
+                <h1 className="text-2xl font-bold">Sản phẩm nổi bật </h1>
 
-                <div className="grid grid-cols-4 gap-6">
+                <div className="grid grid-cols-5 gap-2 mt-[35px] ">
+                    <ProductCard />
                     <ProductCard />
                     <ProductCard />
                     <ProductCard />
