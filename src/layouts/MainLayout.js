@@ -9,7 +9,7 @@ const MainLayout = ({ children }) => {
 
             <BannerSlider />
 
-            <main className="px-10 py-6">
+            <main className="px-[160px] py-6">
                 {children}
             </main>
 
