@@ -31,6 +31,49 @@ const banners = [
     author: "Miêu Công Tử",
     bg: 'bg-blue-200',
   },
+  {
+    title: '999 lá thư gửi cho chính mình*',
+    subtitle: "6. Cái gọi là kỳ tích, thực ra là như thế này: Kỳ tích không phải là thứ ông trời ban cho một người vốn chẳng đáng có được nó, mà là sự khen thưởng đang thong dong tìm tới người chăm chỉ, nó chỉ đến muộn một chút thôi chứ tuyệt đối không vắng mặt.",
+    author: "Miêu Công Tử",
+    bg: 'bg-blue-200',
+  },
+  {
+    title: '999 lá thư gửi cho chính mình*',
+    subtitle: `7. Miyaki Hayao từng nói trong phim của mình: "Tôi luôn tin tưởng trên thế giới này nhất định có một cái tôi khác, làm những việc tôi không dám làm, sống cuộc đời mà tôi muốn sống." Thực ra, mỗi người đều có một cái tôi khác, chỉ cần chúng ta bằng lòng, vậy thì sẽ chẳng có việc gì chúng ta không dám làm, và chúng ta sẽ sống cuộc đời mình muốn.`,
+    author: "Miêu Công Tử",
+    bg: 'bg-blue-200',
+  },
+
+  {
+    title: '999 lá thư gửi cho chính mình*',
+    subtitle: "8. Có lẽ bạn cảm thấy mình là kẻ trắng tay, có lẽ bạn vô cùng ngưỡng mộ nhà to, xe đẹp của ông chủ, những đôi khuyên tai cao cấp lấp lánh của các chị em bạn học. Thực ra, bạn không cần ngưỡng mộ những thứ đó, năm tháng nỗ lực phấn đấu sẽ mang tất cả tới cho bạn. Còn những năm tháng tuổi trẻ của bạn, họ không cách nào có lại được.",
+    author: "Miêu Công Tử",
+    bg: 'bg-blue-200',
+  },
+  {
+    title: '999 lá thư gửi cho chính mình*',
+    subtitle: "9. Hiện tại chính là kết quả của mọi hành động trong quá khứ. Nếu bạn ghét bạn hiện tại, bạn nên suy nghĩ lại về chính mình. Vì mỗi thứ bạn không bằng lòng, đều do trước đây bạn chưa từng cố gắng.",
+    author: "Miêu Công Tử",
+    bg: 'bg-blue-200',
+  },
+  {
+    title: '999 lá thư gửi cho chính mình*',
+    subtitle: "10. Tuổi trẻ chính là vào lúc đối mặt khó khăn vất vả, phải nỗ lực phấn đấu. Bạn nhất định phải tin tưởng, đằng sau mọi sự nỗ lực phần thưởng luôn được tăng lên gấp bội. Cuộc sống hôm nay là do sự quyết định của ba năm trước, nhưng nếu hôm nay bạn vẫn sống cuộc sống giống như ba năm trước, vậy thì ba năm sau bạn vẫn sẽ chỉ như vậy mà thôi.",
+    author: "Miêu Công Tử",
+    bg: 'bg-blue-200',
+  },
+  {
+    title: '999 lá thư gửi cho chính mình*',
+    subtitle: "11. Thật ra phấn đấu chính là mỗi ngày đều sống nghiêm túc, mỗi việc dù nhỏ cũng phải làm tốt, không dây dưa lề mề, không oán thán, không đùn đẩy trách nhiệm, không lười biếng trốn tránh. Nỗ lực từng ngày, từng ngày mới có thể hội tụ được tất cả sự dũng cảm giúp bạn kiên trì, dẫn bạn đến nơi mà bạn muốn.",
+    author: "Miêu Công Tử",
+    bg: 'bg-blue-200',
+  },
+  {
+    title: '999 lá thư gửi cho chính mình*',
+    subtitle: "12. Trong những năm tháng cuộc đời, người nào cố gắng nhất định sẽ thoát kén thành bướm. Bạn phải tin rằng, có một ngày bản thân sẽ phá kén thoát ra, trưởng thành hoàn mỹhơn cả sự mong đợi của mọi người, nhưng quá trình này vốn vô cùng gian khổ, vất vả, có lúc sẽ cảm thấy nản lòng chùn bước. Ðối mặt với hiện thực tàn khốc, bạn cảm thấy bản thân vô cùng nhỏ bé, yếu đuối, nhưng đó chính là một phần của cuộc sống. Làm tốt những gì của hiện tại, sau đó tất cả sẽ dần tốt hơn.",
+    author: "Miêu Công Tử",
+    bg: 'bg-blue-200',
+  },
 ];
 
 const BannerSlider = () => {
