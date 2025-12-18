@@ -35,7 +35,7 @@ const banners = [
     title: '999 lá thư gửi cho chính mình**',
     subtitle: "6. Cái gọi là kỳ tích, thực ra là như thế này: Kỳ tích không phải là thứ ông trời ban cho một người vốn chẳng đáng có được nó, mà là sự khen thưởng đang thong dong tìm tới người chăm chỉ, nó chỉ đến muộn một chút thôi chứ tuyệt đối không vắng mặt.",
     author: "Miêu Công Tử",
-    bgImage: 'https://i.pinimg.com/736x/82/bb/bf/82bbbffb0ee24320a2d8c4e7a35e9ea3.jpg',
+    bgImage: 'https://i.imgur.com/Nv5lnNW.jpg',
   },
   {
     title: '999 lá thư gửi cho chính mình**',
