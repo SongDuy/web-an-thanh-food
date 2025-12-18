@@ -97,7 +97,7 @@ const BannerSlider = () => {
       <div className="w-full h-full bg-yellow-100 flex items-center justify-center">
 
         <div
-          className="relative w-[1120px] h-full bg-yellow-200 transition-shadow duration-300"
+          className="relative w-[1120px] h-full bg-green-100 transition-shadow duration-300"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
@@ -152,7 +152,7 @@ const BannerSlider = () => {
               <button
                 key={index}
                 onClick={() => setCurrent(index)}
-                className={`w-[15px] h-[15px] rounded-full border transition-all duration-300 ${index === current ? "bg-white scale-110 opacity-100" : "bg-white opacity-60 hover:opacity-100"
+                className={`w-[15px] h-[15px] rounded-full border transition-all duration-300 ${index === current ? "bg-white scale-110 opacity-100" : "bg-gray-100 opacity-100 hover:opacity-100"
                   }`}
               />
             ))}
