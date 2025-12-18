@@ -1,6 +1,6 @@
 import MainLayout from '../../layouts/MainLayout';
 import ProductCard from '../../components/ProductCard';
-
+import FastfoodIcon from '@mui/icons-material/Fastfood';
 const HomePage = () => {
     return (
         <MainLayout>
