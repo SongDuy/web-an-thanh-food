@@ -26,7 +26,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to="/staples"
+              to="/Lương-Thực"
               className={({ isActive }) =>
                 `uppercase text-lg font-bold transition
                 ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`
@@ -37,7 +37,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to="/groceries"
+              to="/Thực-Phẩm"
               className={({ isActive }) =>
                 `uppercase text-lg font-bold transition
                 ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`

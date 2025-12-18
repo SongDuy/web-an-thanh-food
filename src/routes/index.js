@@ -9,8 +9,8 @@ const AppRoutes = () => {
         <Routes>
             {/* Trang chủ */}
             <Route path="/" element={<HomePage />} />
-            <Route path="/staples" element={<StaplesPage />} />
-            <Route path="/groceries" element={<GroceriesPage />} />
+            <Route path="/Lương-Thực" element={<StaplesPage />} />
+            <Route path="/Thực-Phẩm" element={<GroceriesPage />} />
 
             {/* Trang 404 */}
             <Route path="/404" element={<NotFoundPage />} />
