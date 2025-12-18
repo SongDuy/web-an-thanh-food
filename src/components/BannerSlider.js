@@ -85,7 +85,7 @@ const BannerSlider = () => {
 
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % banners.length);
-    }, 5000);
+    }, 15000);
 
     return () => clearInterval(timer);
   }, [isPaused]);
