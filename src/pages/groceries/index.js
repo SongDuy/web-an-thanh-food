@@ -5,7 +5,7 @@ const GroceriesPage = () => {
     return (
         <>
             <Header />
-            <div>
+            <div className="px-[160px]">
 
             </div>
             <Footer />
