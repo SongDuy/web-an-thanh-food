@@ -19,7 +19,7 @@ const Header = () => {
       {/* Danh mục header */}
       <nav aria-label="Main navigation">
         <ul className="flex overflow-x-auto gap-5 mx-3 whitespace-nowrap">
-          <li>
+          {/* <li>
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -29,7 +29,7 @@ const Header = () => {
             >
               Trang Chủ
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink
               to="/Lương-Thực"
