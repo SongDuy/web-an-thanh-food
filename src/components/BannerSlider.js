@@ -140,7 +140,7 @@ const BannerSlider = () => {
 
         {/* VÙNG CHỨA BANNER CHÍNH */}
         <div
-          className="relative w-[1120px] h-full overflow-hidden z-10 shadow-2xl"
+          className="relative w-[1120px] h-full overflow-hidden z-10 shadow-2xl cursor-pointer"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
