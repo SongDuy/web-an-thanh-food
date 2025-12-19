@@ -6,11 +6,11 @@ const Header = () => {
       {/* logo web */}
       <NavLink
         to="/">
-        <div className="w-[85px] h-[75px] mr-1">
+        <div className="max-w-[85px] max-h-[75px] min-w-[85px] min-h-[75px] mr-1">
           <img
             src="/logo55.png"
             alt="An Thanh Food"
-            className="w-full h-full object-cover scale-110"
+            className="max-w-[85px] max-h-[75px] min-w-full min-h-full object-cover scale-110"
           />
         </div>
 
