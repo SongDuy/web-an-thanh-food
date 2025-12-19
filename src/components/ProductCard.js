@@ -19,14 +19,14 @@ const ProductCard = () => {
 
         {/* Nội dung text: flex-grow giúp vùng này chiếm không gian còn lại */}
         <div className="flex-grow">
-          <h3 className="font-semibold text-gray-800 line-clamp-2">Rau cải xanh</h3>
-          <p className="text-green-600 font-bold mt-1">25.000 ₫</p>
+          <h3 className="font-semibold text-gray-800 line-clamp-2">Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh</h3>
+          <p className="text-sm text-green-600 font-medium">1 gói / 1kg</p>
         </div>
 
         {/* Nút bấm: Sẽ luôn nằm ở đáy nhờ cấu trúc flex-col */}
         <div className="mt-auto grid grid-cols-2 gap-3 w-full">
           <button className=" bg-gray-200 hover:bg-gray-300 border border-gray-300 text-black text-md px-1 py-1 rounded transition-colors font-medium ">
-            <ShoppingCartOutlinedIcon />
+            <ShoppingCartOutlinedIcon /> 
             100000
           </button>
           {/* <button className="bg-green-500 hover:bg-green-600 text-white text-md px-1 py-1 rounded transition-colors font-medium ">
