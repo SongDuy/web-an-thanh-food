@@ -115,7 +115,7 @@ const BannerSlider = () => {
     if (isPaused) return;
     const timer = setInterval(() => {
       updateSlide((current + 1) % banners.length);
-    }, 5000);
+    }, 15000);
     return () => clearInterval(timer);
   }, [isPaused, current, updateSlide]);
 
@@ -164,16 +164,26 @@ const BannerSlider = () => {
           </div>
 
           {/* VÙNG NỘI DUNG CHÍNH */}
-          <div className="absolute h-full left-0 right-0 flex justify-center z-10">
-            <div className="w-full h-full overflow-y-scroll overscroll-contain
-                [&::-webkit-scrollbar]:w-2
-                [&::-webkit-scrollbar-track]:bg-transparent
-                [&::-webkit-scrollbar-thumb]:bg-white/40
-                [&::-webkit-scrollbar-thumb]:rounded-full">
-              <div className="min-h-full flex items-center justify-center py-4 px-10">
+          <div className="absolute inset-0 flex justify-center z-10">
+            <div className="w-full h-full overflow-y-scroll overflow-x-hidden overscroll-contain 
+                  [scrollbar-gutter:stable]
+                  [scrollbar-width:thin] 
+                  [scrollbar-color:rgba(255,255,255,0.4)_transparent]
+                  [&::-webkit-scrollbar]:w-2
+                  [&::-webkit-scrollbar-track]:bg-transparent
+                 [&::-webkit-scrollbar-thumb]:bg-white/40
+                  [&::-webkit-scrollbar-thumb]:rounded-full">
+              {/* Thêm py-10 để đảm bảo khi cuộn lên xuống không bị dính sát mép trên/dưới */}
+              <div className="w-full min-h-full flex items-center justify-center py-10 px-6">
                 <p
-                  className="max-w-2xl text-lg font-serifBook leading-loose whitespace-pre-line cursor-pointer text-white text-shadow-black text-justify transition-opacity duration-1000 select-text"
-                  style={{ textAlignLast: 'center' }}
+                  className="w-full max-w-2xl px-1 text-lg font-serifBook leading-loose whitespace-pre-line cursor-pointer text-white text-shadow-black text-justify break-words transition-opacity duration-1000 select-text"
+                  style={{
+                    display: '-webkit-box',
+                    WebkitLineClamp: 8,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden',
+                    textAlignLast: 'center',
+                  }}
                 >
                   {banner.subtitle}
                 </p>
