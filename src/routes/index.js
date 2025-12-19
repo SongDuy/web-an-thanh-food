@@ -11,7 +11,7 @@ const AppRoutes = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/Lương-Thực" element={<StaplesPage />} />
             <Route path="/Thực-Phẩm" element={<GroceriesPage />} />
-            <Route path="/Chi-Tiet" element={<GroceriesPage />} />
+            <Route path="/Lương-Thực/Chi-Tiết" element={<ProductDetailPage />} />
 
             {/* Trang 404 */}
             <Route path="/404" element={<NotFoundPage />} />
