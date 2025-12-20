@@ -95,7 +95,7 @@ const ProductDetailPage = () => {
                                 <div className="h-full text-md text-black flex items-center">
                                     <LocalShippingOutlinedIcon />
                                     <span className="ml-2">
-                                        Miễn phí vận chuyển
+                                        Miễn phí vận chuyển.
                                     </span>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@ const ProductDetailPage = () => {
                                     Vận chuyển
                                 </span>
                                 <span className="h-full text-md text-black flex items-center">
-                                    Miễn phí vận chuyển
+                                    Miễn phí vận chuyển.
                                 </span>
                             </div>
                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
@@ -112,7 +112,7 @@ const ProductDetailPage = () => {
                                     Vận chuyển
                                 </span>
                                 <span className="h-full text-md text-black flex items-center">
-                                    Miễn phí vận chuyển
+                                    Miễn phí vận chuyển.
                                 </span>
                             </div>
                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
