@@ -106,7 +106,7 @@ const ProductDetailPage = () => {
                         </div>
                         <div className="w-full h-[65px] flex items-center justify-center">
                             <div className="h-[50px] grid grid-cols-2 gap-3">
-                            <button className="w-[200px] h-[50px] bg-gray-100 hover:bg-gray-200 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium ">
+                            <button className="w-[200px] h-[50px] bg-gray-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium ">
                                 <ShoppingCartOutlinedIcon />
                                 100000
                             </button>
