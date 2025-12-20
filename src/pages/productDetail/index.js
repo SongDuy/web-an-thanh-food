@@ -80,7 +80,7 @@ const ProductDetailPage = () => {
                         </div>
                         <div className="w-full h-[65px] bg-gray-100 rounded">
                             <h1 className="w-full h-full flex items-center justify-center text-red-100 text-shadow-black font-bold">
-                                <span className="text-[40px] tracking-tight">0</span>
+                                <span className="text-[28px] tracking-tight">0</span>
                                 <span className="text-[20px] ml-1 underline underline-offset-2 relative -top-[4px]">
                                     đ
                                 </span>
@@ -89,10 +89,10 @@ const ProductDetailPage = () => {
                         </div>
                         <div className="w-full px-5">
                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
-                                <span className="h-full text-md text-gray-500 flex items-center">
+                                <span className="h-full text-md text-gray-600 flex items-center">
                                     Vận chuyển
                                 </span>
-                                <div className="h-full text-md text-black flex items-center">
+                                <div className="h-full text-md text-black text-shadow-yellow flex items-center">
                                     <LocalShippingOutlinedIcon />
                                     <span className="ml-2">
                                         Miễn phí vận chuyển.
@@ -100,7 +100,7 @@ const ProductDetailPage = () => {
                                 </div>
                             </div>
                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
-                                <span className="h-full text-md text-gray-500 flex items-center">
+                                <span className="h-full text-md text-gray-600 flex items-center">
                                     Vận chuyển
                                 </span>
                                 <span className="h-full text-md text-black flex items-center">
@@ -108,7 +108,7 @@ const ProductDetailPage = () => {
                                 </span>
                             </div>
                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
-                                <span className="h-full text-md text-gray-500 flex items-center">
+                                <span className="h-full text-md text-gray-600 flex items-center">
                                     Vận chuyển
                                 </span>
                                 <span className="h-full text-md text-black flex items-center">
@@ -116,10 +116,10 @@ const ProductDetailPage = () => {
                                 </span>
                             </div>
                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
-                                <span className="h-full text-md text-gray-500 flex items-center">
+                                <span className="h-full text-md text-gray-600 flex items-center">
                                     Số lượng
                                 </span>
-                                <span className="h-full flex items-center">
+                                <span className="h-full flex items-center text-gray-500">
                                     <div className="flex border rounded overflow-hidden">
                                         <div className="w-10 h-[28px] flex items-center justify-center border-r">
                                             <RemoveOutlinedIcon/>
