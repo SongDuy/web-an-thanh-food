@@ -34,7 +34,7 @@ const ProductCard = () => {
 
         {/* Nút bấm: Sẽ luôn nằm ở đáy nhờ cấu trúc flex-col */}
         <div className="mt-auto grid grid-cols-2 gap-3 w-full">
-          <button className=" bg-gray-100 hover:bg-gray-200 shadow border-gray-300 text-black text-md px-1 py-1 rounded transition-colors font-medium ">
+          <button className=" bg-gray-100 hover:bg-gray-200 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium ">
             <ShoppingCartOutlinedIcon />
             100000
           </button>
