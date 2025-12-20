@@ -44,16 +44,16 @@ const ProductDetailPage = () => {
                                 <div className="w-full h-[85px] bg-gray-200 rounded-sm">
 
                                 </div>
-                                 <div className="w-full h-[85px] bg-gray-200 rounded-sm">
+                                <div className="w-full h-[85px] bg-gray-200 rounded-sm">
 
                                 </div>
-                                 <div className="w-full h-[85px] bg-gray-200 rounded-sm">
+                                <div className="w-full h-[85px] bg-gray-200 rounded-sm">
 
                                 </div>
-                                 <div className="w-full h-[85px] bg-gray-200 rounded-sm">
+                                <div className="w-full h-[85px] bg-gray-200 rounded-sm">
 
                                 </div>
-                                 <div className="w-full h-[85px] bg-gray-200 rounded-sm">
+                                <div className="w-full h-[85px] bg-gray-200 rounded-sm">
 
                                 </div>
                             </div>
@@ -63,8 +63,8 @@ const ProductDetailPage = () => {
                     </div>
 
                     {/* 2/3 */}
-                    <div className="col-span-3 bg-gray-200">
-                        Nội dung 3/5
+                    <div className="col-span-3 bg-gray-200 text-[22px]">
+                        [SỈ] 10KG Gạo Lứt Huyết Rồng Loại 1- Gạo lức trong thực dưỡng _ Gạo lứt cho người ăn kiêng, tiểu đường, xương khớp
                     </div>
                 </div>
 
