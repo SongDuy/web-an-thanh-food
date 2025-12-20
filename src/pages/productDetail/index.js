@@ -42,7 +42,7 @@ const ProductDetailPage = () => {
                     <div className="col-span-2 bg-white">
                         <div className="w-full h-full grid grid-cols-1 gap-3">
                             <div className="w-full h-[450px] bg-gray-200 rounded">
-                                
+
                             </div>
                             <div className="w-full h-full grid grid-cols-5 gap-3">
                                 <div className="w-full h-[85px] bg-gray-200 rounded">
@@ -63,7 +63,6 @@ const ProductDetailPage = () => {
                             </div>
 
                         </div>
-
                     </div>
 
                     {/* 2/3 */}
@@ -122,13 +121,13 @@ const ProductDetailPage = () => {
                                 <span className="h-full flex items-center text-gray-300">
                                     <div className="flex border rounded overflow-hidden shadow">
                                         <div className="w-10 h-[28px] flex items-center justify-center border-r">
-                                            <RemoveOutlinedIcon/>
+                                            <RemoveOutlinedIcon />
                                         </div>
                                         <div className="w-10 h-[28px] text-lg font-semibold flex items-center justify-center border-l">
                                             1
                                         </div>
                                         <div className="w-10 h-[28px] flex items-center justify-center border-l">
-                                            <AddOutlinedIcon/>
+                                            <AddOutlinedIcon />
                                         </div>
                                     </div>
                                 </span>
