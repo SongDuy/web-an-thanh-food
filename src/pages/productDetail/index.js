@@ -84,41 +84,55 @@ const ProductDetailPage = () => {
                             </h1>
 
                         </div>
-                        <div className="w-full h-[65px]">
-                            <h1 className="w-full h-full text-md flex items-center">
-                               Vận chuyển Miễn phí vận chuyển
-                            </h1>
-                        </div>
-                        <div className="w-full h-[65px]">
-                            <h1 className="w-full h-full text-md flex items-center">
-                                kk
-                            </h1>
-                        </div>
-                        <div className="w-full h-[65px]">
-                            <h1 className="w-full h-full text-md flex items-center">
-                                kk
-                            </h1>
-                        </div>
-                        <div className="w-full h-[65px]">
-                            <h1 className="w-full h-full text-md flex items-center">
-                                Số lượng
-                            </h1>
+                        <div className="w-full px-5">
+                            <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
+                                <span className="h-full text-md flex items-center">
+                                    Vận chuyển
+                                </span>
+                                <span className="h-full text-md flex items-center">
+                                    Miễn phí vận chuyển
+                                </span>
+                            </div>
+                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
+                                <span className="h-full text-md flex items-center">
+                                    Vận chuyển
+                                </span>
+                                <span className="h-full text-md flex items-center">
+                                    Miễn phí vận chuyển
+                                </span>
+                            </div>
+                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
+                                <span className="h-full text-md flex items-center">
+                                    Vận chuyển
+                                </span>
+                                <span className="h-full text-md flex items-center">
+                                    Miễn phí vận chuyển
+                                </span>
+                            </div>
+                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
+                                <span className="h-full text-md flex items-center">
+                                    Số lượng
+                                </span>
+                                <span className="h-full text-md flex items-center">
+                                    Miễn phí vận chuyển
+                                </span>
+                            </div>
                         </div>
                         <div className="w-full h-[65px] flex items-center justify-center">
                             <div className="h-[50px] grid grid-cols-2 gap-3">
-                            <button className="w-[200px] h-[50px] bg-gray-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium ">
-                                <ShoppingCartOutlinedIcon />
-                                100000
-                            </button>
-                            {/* <button className="h-[50px] bg-green-500 hover:bg-green-600 text-shadow-black text-white text-md px-1 py-1 rounded transition-colors font-medium ">
+                                <button className="w-[200px] h-[50px] bg-gray-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium ">
+                                    <ShoppingCartOutlinedIcon />
+                                    100000
+                                </button>
+                                {/* <button className="h-[50px] bg-green-500 hover:bg-green-600 text-shadow-black text-white text-md px-1 py-1 rounded transition-colors font-medium ">
                                 Mua ngay
                             </button> */}
-                            <button className="w-[200px] h-[50px] bg-red-500 hover:bg-red-600 text-shadow-black shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
-                                Hết hàng
-                            </button>
+                                <button className="w-[200px] h-[50px] bg-red-500 hover:bg-red-600 text-shadow-black shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
+                                    Hết hàng
+                                </button>
+                            </div>
                         </div>
-                        </div>
-                        
+
 
                     </div>
                 </div>
