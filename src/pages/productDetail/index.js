@@ -42,7 +42,7 @@ const ProductDetailPage = () => {
                     <div className="col-span-2 bg-white">
                         <div className="w-full h-full grid grid-cols-1 gap-3">
                             <div className="w-full h-[450px] bg-gray-200 rounded">
-                                kk
+                                
                             </div>
                             <div className="w-full h-full grid grid-cols-5 gap-3">
                                 <div className="w-full h-[85px] bg-gray-200 rounded">
@@ -119,8 +119,8 @@ const ProductDetailPage = () => {
                                 <span className="h-full text-md text-gray-500 flex items-center">
                                     Số lượng
                                 </span>
-                                <span className="h-full flex items-center text-gray-500">
-                                    <div className="flex border rounded overflow-hidden">
+                                <span className="h-full flex items-center text-gray-300">
+                                    <div className="flex border rounded overflow-hidden shadow">
                                         <div className="w-10 h-[28px] flex items-center justify-center border-r">
                                             <RemoveOutlinedIcon/>
                                         </div>
