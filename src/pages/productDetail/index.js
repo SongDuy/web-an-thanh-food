@@ -74,25 +74,29 @@ const ProductDetailPage = () => {
                 </div>
 
 
-                {/* Thông tin mô tả của sản phẩm */}
-                <div className=" w-full h-[550px] mt-[15px] px-[25px] py-[25px] border rounded-lg bg-white">
-                    <div className="w-full h-[50px] px-3 bg-red-50 rounded">
-                        <h1 className="w-full h-full flex items-center text-[21px] line-clamp-1">
-                            CHI TIẾT SẢN PHẨM
-                        </h1>
+
+                <div className="w-full h-[1100px] mt-[15px] rounded-lg border bg-white">
+                    {/* Thông tin mô tả của sản phẩm */}
+                    <div className=" w-full h-[550px] px-[25px] py-[25px]">
+                        <div className="w-full h-[50px] px-3 bg-red-50 rounded">
+                            <h1 className="w-full h-full flex items-center text-[21px] line-clamp-1">
+                                CHI TIẾT SẢN PHẨM
+                            </h1>
+                        </div>
+
                     </div>
 
-                </div>
+                    {/* Phần bình luận phản hồi */}
+                    <div className=" w-full h-[550px] px-[25px] py-[25px]">
+                        <div className="w-full h-[50px] px-3 bg-red-50 rounded">
+                            <h1 className="w-full h-full flex items-center text-[21px] line-clamp-1">
+                                MÔ TẢ SẢN PHẨM
+                            </h1>
+                        </div>
 
-                {/* Phần bình luận phản hồi */}
-                <div className=" w-full h-[550px] mt-[15px] px-[25px] py-[25px] border rounded-lg bg-white">
-                    <div className="w-full h-[50px] px-3 bg-red-50 rounded">
-                        <h1 className="w-full h-full flex items-center text-[21px] line-clamp-1">
-                            MÔ TẢ SẢN PHẨM
-                        </h1>
                     </div>
-
                 </div>
+
             </div>
 
             <Footer />
