@@ -28,8 +28,8 @@ const ProductCard = () => {
 
         {/* Nội dung text: flex-grow giúp vùng này chiếm không gian còn lại */}
         <div className="flex-grow">
-          <h3 className="font-semibold text-gray-800 line-clamp-2">Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh</h3>
-          <p className="text-sm text-green-600 font-medium">1 gói / 1kg</p>
+          <h3 className="text-md font-semibold text-gray-800 line-clamp-2">Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh</h3>
+          <p className="text-sm font-semibold text-red-200 text-shadow-black">1 gói / 1kg</p>
         </div>
 
         {/* Nút bấm: Sẽ luôn nằm ở đáy nhờ cấu trúc flex-col */}
@@ -38,10 +38,10 @@ const ProductCard = () => {
             <ShoppingCartOutlinedIcon />
             100000
           </button>
-          {/* <button className="bg-green-500 hover:bg-green-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
+          {/* <button className="bg-green-500 hover:bg-green-600 shadow text-white text-shadow-black text-md px-1 py-1 rounded transition-colors font-medium ">
             Mua ngay
           </button> */}
-          <button className="bg-red-500 hover:bg-red-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
+          <button className="bg-red-500 hover:bg-red-600 shadow text-white text-shadow-black text-md px-1 py-1 rounded transition-colors font-medium ">
             Hết hàng
           </button>
         </div>
