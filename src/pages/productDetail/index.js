@@ -63,8 +63,8 @@ const ProductDetailPage = () => {
                     </div>
 
                     {/* 2/3 */}
-                    <div className="col-span-3 bg-gray-200 text-[22px]">
-                        [SỈ] 10KG Gạo Lứt Huyết Rồng Loại 1- Gạo lức trong thực dưỡng _ Gạo lứt cho người ăn kiêng, tiểu đường, xương khớp
+                    <div className="col-span-3 bg-gray-200 text-[21px]">
+                        [SỈ] 10KG Gạo Lứt Huyết Rồng Loại 1- Gạo lức trong thực dưỡng _ Gạo lứt cho người ăn kiêng, tiểu đường, xương khớp.
                     </div>
                 </div>
 
