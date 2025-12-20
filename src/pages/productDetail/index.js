@@ -77,7 +77,9 @@ const ProductDetailPage = () => {
                         <div className="w-full h-[65px] bg-red-50 shadow-md rounded">
                             <h1 className="w-full h-full flex items-center justify-center text-white text-shadow-black font-bold">
                                 <span className="text-[40px] tracking-tight">0</span>
-                                <span className="text-[20px] align-top ml-1 underline underline-offset-2">đ</span>
+                                <span className="text-[20px] ml-1 underline underline-offset-2 relative -top-[4px]">
+                                    đ
+                                </span>
                             </h1>
 
                         </div>

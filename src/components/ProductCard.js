@@ -15,11 +15,11 @@ const ProductCard = () => {
             alt="Rau cải xanh"
             className="w-full h-full object-cover transition-transform duration-500"
           />
-          <div className="absolute top-0 right-0 bg-yellow-500 text-white font-bold text-shadow-black px-3 py-1 rounded-bl-xl z-10">
-            <span className="text-md">
+          <div className="absolute top-0 right-0 bg-yellow-500 text-white font-bold text-shadow-black px-3 py-0.5 rounded-bl-xl z-10">
+            <span className="text-xl">
               0
             </span>
-            <span className="text-sm">
+            <span className="text-sm align-top ml-0.5 underline underline-offset-2">
               đ
             </span>
 
