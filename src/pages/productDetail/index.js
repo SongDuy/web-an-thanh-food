@@ -143,7 +143,7 @@ const ProductDetailPage = () => {
                                 {/* <button className="h-[50px] bg-green-500 hover:bg-green-600 text-shadow-black text-white text-md px-1 py-1 rounded transition-colors font-medium ">
                                 Mua ngay
                             </button> */}
-                                <button className="w-[200px] h-[50px] bg-red-500 hover:bg-red-600 text-shadow-black shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
+                                <button className="w-[200px] h-[50px] bg-red-500 hover:bg-red-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
                                     Hết hàng
                                 </button>
                             </div>
