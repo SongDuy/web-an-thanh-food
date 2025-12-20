@@ -33,7 +33,7 @@ const ProductDetailPage = () => {
 
                 </div>
 
-                <div className="w-full h-[600px] px-[25px] py-[25px] border rounded-lg bg-white grid grid-cols-5 gap-5">
+                <div className="w-full h-[600px] px-[25px] py-[25px] border rounded bg-white grid grid-cols-5 gap-5">
                     {/* 1/3 */}
                     <div className="col-span-2 bg-white">
                         <div className="w-full h-full grid grid-cols-1 gap-3">
@@ -75,11 +75,11 @@ const ProductDetailPage = () => {
 
 
 
-                <div className="w-full h-[1100px] mt-[15px] rounded-lg border bg-white">
+                <div className="w-full h-full mt-[15px] rounded border bg-white">
                     {/* Thông tin mô tả của sản phẩm */}
-                    <div className=" w-full h-[550px] px-[25px] py-[25px]">
+                    <div className=" w-full h-[310px] px-[25px] py-[25px]">
                         <div className="w-full h-[50px] px-3 bg-red-50 rounded">
-                            <h1 className="w-full h-full flex items-center text-[21px] line-clamp-1">
+                            <h1 className="w-full h-full flex items-center text-[21px] line-clamp-1 uppercase">
                                 CHI TIẾT SẢN PHẨM
                             </h1>
                         </div>
@@ -87,9 +87,9 @@ const ProductDetailPage = () => {
                     </div>
 
                     {/* Phần bình luận phản hồi */}
-                    <div className=" w-full h-[550px] px-[25px] py-[25px]">
+                    <div className=" w-full h-[575px] px-[25px] py-[25px]">
                         <div className="w-full h-[50px] px-3 bg-red-50 rounded">
-                            <h1 className="w-full h-full flex items-center text-[21px] line-clamp-1">
+                            <h1 className="w-full h-full flex items-center text-[21px] line-clamp-1 uppercase">
                                 MÔ TẢ SẢN PHẨM
                             </h1>
                         </div>
@@ -97,6 +97,15 @@ const ProductDetailPage = () => {
                     </div>
                 </div>
 
+                <div className="w-full h-[500px] mt-[15px] rounded border bg-white">
+                    <div className=" w-full h-[310px] px-[25px] py-[25px]">
+                        <div className="w-full h-[50px] px-3 rounded border-b-2">
+                            <h1 className="w-full h-full flex items-center text-[21px] line-clamp-1 uppercase">
+                                ĐÁNH GIÁ SẢN PHẨM
+                            </h1>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <Footer />
