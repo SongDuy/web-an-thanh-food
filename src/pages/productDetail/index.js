@@ -2,6 +2,9 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
+import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
+import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 import { Link } from 'react-router-dom';
 
 const ProductDetailPage = () => {
@@ -89,11 +92,14 @@ const ProductDetailPage = () => {
                                 <span className="h-full text-md flex items-center">
                                     Vận chuyển
                                 </span>
-                                <span className="h-full text-md flex items-center">
-                                    Miễn phí vận chuyển
-                                </span>
+                                <div className="h-full text-md flex items-center">
+                                    <LocalShippingOutlinedIcon />
+                                    <span className="ml-2">
+                                        Miễn phí vận chuyển
+                                    </span>
+                                </div>
                             </div>
-                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
+                            <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
                                 <span className="h-full text-md flex items-center">
                                     Vận chuyển
                                 </span>
@@ -101,7 +107,7 @@ const ProductDetailPage = () => {
                                     Miễn phí vận chuyển
                                 </span>
                             </div>
-                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
+                            <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
                                 <span className="h-full text-md flex items-center">
                                     Vận chuyển
                                 </span>
@@ -109,16 +115,27 @@ const ProductDetailPage = () => {
                                     Miễn phí vận chuyển
                                 </span>
                             </div>
-                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
+                            <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
                                 <span className="h-full text-md flex items-center">
                                     Số lượng
                                 </span>
-                                <span className="h-full text-md flex items-center">
-                                    Miễn phí vận chuyển
+                                <span className="h-full flex items-center">
+                                    <div className="flex border rounded overflow-hidden">
+                                        <div className="w-10 h-[28px] flex items-center justify-center border-r">
+                                            <RemoveOutlinedIcon/>
+                                        </div>
+                                        <div className="w-10 h-[28px] text-lg font-semibold flex items-center justify-center border-l">
+                                            1
+                                        </div>
+                                        <div className="w-10 h-[28px] flex items-center justify-center border-l">
+                                            <AddOutlinedIcon/>
+                                        </div>
+                                    </div>
                                 </span>
                             </div>
+
                         </div>
-                        <div className="w-full h-[65px] flex items-center justify-center">
+                        <div className="w-full h-[65px] mt-5 flex items-center justify-center">
                             <div className="h-[50px] grid grid-cols-2 gap-3">
                                 <button className="w-[200px] h-[50px] bg-gray-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium ">
                                     <ShoppingCartOutlinedIcon />
