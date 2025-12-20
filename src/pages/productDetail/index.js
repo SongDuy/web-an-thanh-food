@@ -76,7 +76,7 @@ const ProductDetailPage = () => {
                             </h1>
                         </div>
                         <div className="w-full h-[65px] bg-gray-100 rounded">
-                            <h1 className="w-full h-full flex items-center justify-center text-white text-shadow-black font-bold">
+                            <h1 className="w-full h-full flex items-center justify-center text-red-500 text-shadow-black font-bold">
                                 <span className="text-[40px] tracking-tight">0</span>
                                 <span className="text-[20px] ml-1 underline underline-offset-2 relative -top-[4px]">
                                     đ
@@ -86,7 +86,7 @@ const ProductDetailPage = () => {
                         </div>
                         <div className="w-full h-[65px]">
                             <h1 className="w-full h-full text-md flex items-center">
-                                Miễn phí vận chuyển
+                               Vận chuyển Miễn phí vận chuyển
                             </h1>
                         </div>
                         <div className="w-full h-[65px]">
