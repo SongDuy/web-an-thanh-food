@@ -98,6 +98,11 @@ const ProductDetailPage = () => {
                                 kk
                             </h1>
                         </div>
+                        <div className="w-full h-[65px]">
+                            <h1 className="w-full h-full text-[21px] flex items-center justify-center">
+                                kk
+                            </h1>
+                        </div>
                          <div className="w-full h-[65px]">
                             <h1 className="w-full h-full text-[21px] flex items-center justify-center">
                                 kk
