@@ -37,7 +37,7 @@ const ProductDetailPage = () => {
                     {/* 1/3 */}
                     <div className="col-span-2 bg-white">
                         <div className="w-full h-full grid grid-cols-1 gap-3">
-                            <div className="w-full h-[450px] bg-black rounded-sm">
+                            <div className="w-full h-[450px] bg-gray-200 rounded-sm">
                                 kk
                             </div>
                             <div className="w-full h-full grid grid-cols-5 gap-3">
