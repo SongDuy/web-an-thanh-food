@@ -1,6 +1,7 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link } from 'react-router-dom';
 
 const ProductDetailPage = () => {
@@ -71,10 +72,10 @@ const ProductDetailPage = () => {
                         </div>
                         <div className="w-full h-[65px]">
                             <h1 className="w-full h-full text-[21px]">
-
+                                Đánh sao
                             </h1>
                         </div>
-                        <div className="w-full h-[65px] bg-red-50 shadow-md rounded">
+                        <div className="w-full h-[65px] bg-gray-100 rounded">
                             <h1 className="w-full h-full flex items-center justify-center text-white text-shadow-black font-bold">
                                 <span className="text-[40px] tracking-tight">0</span>
                                 <span className="text-[20px] ml-1 underline underline-offset-2 relative -top-[4px]">
@@ -84,35 +85,43 @@ const ProductDetailPage = () => {
 
                         </div>
                         <div className="w-full h-[65px]">
-                            <h1 className="w-full h-full text-[21px] flex items-center justify-center">
-                                kk
+                            <h1 className="w-full h-full text-md flex items-center">
+                                Miễn phí vận chuyển
                             </h1>
                         </div>
-                         <div className="w-full h-[65px]">
-                            <h1 className="w-full h-full text-[21px] flex items-center justify-center">
-                                kk
-                            </h1>
-                        </div>
-                         <div className="w-full h-[65px]">
-                            <h1 className="w-full h-full text-[21px] flex items-center justify-center">
+                        <div className="w-full h-[65px]">
+                            <h1 className="w-full h-full text-md flex items-center">
                                 kk
                             </h1>
                         </div>
                         <div className="w-full h-[65px]">
-                            <h1 className="w-full h-full text-[21px] flex items-center justify-center">
+                            <h1 className="w-full h-full text-md flex items-center">
                                 kk
                             </h1>
                         </div>
-                         <div className="w-full h-[65px]">
-                            <h1 className="w-full h-full text-[21px] flex items-center justify-center">
-                                kk
+                        <div className="w-full h-[65px]">
+                            <h1 className="w-full h-full text-md flex items-center">
+                                Số lượng
                             </h1>
                         </div>
+                        <div className="w-full h-[65px] flex items-center justify-center">
+                            <div className="h-[50px] grid grid-cols-2 gap-3">
+                            <button className="w-[200px] h-[50px] bg-gray-100 hover:bg-gray-200 shadow border-gray-300 text-black text-md px-1 py-1 rounded transition-colors font-medium ">
+                                <ShoppingCartOutlinedIcon />
+                                100000
+                            </button>
+                            {/* <button className="h-[50px] bg-green-500 hover:bg-green-600 text-white text-md px-1 py-1 rounded transition-colors font-medium ">
+                                Mua ngay
+                            </button> */}
+                            <button className="w-[200px] h-[50px] bg-red-500 hover:bg-red-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
+                                Hết hàng
+                            </button>
+                        </div>
+                        </div>
+                        
 
                     </div>
                 </div>
-
-
 
                 <div className="w-full h-full mt-[15px] rounded border bg-white">
                     {/* Thông tin mô tả của sản phẩm */}
