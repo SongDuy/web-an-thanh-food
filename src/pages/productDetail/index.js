@@ -99,8 +99,8 @@ const ProductDetailPage = () => {
 
                 <div className="w-full h-[500px] mt-[15px] rounded border bg-white">
                     <div className=" w-full h-[310px] px-[25px] py-[25px]">
-                        <div className="w-full h-[50px] px-3 rounded border-b-2">
-                            <h1 className="w-full h-full flex items-center text-[21px] line-clamp-1 uppercase">
+                        <div className="w-full h-[50px] px-3 bg-white rounded">
+                            <h1 className="w-full h-full flex items-center text-[21px] line-clamp-1 uppercase  border-b-2">
                                 ĐÁNH GIÁ SẢN PHẨM
                             </h1>
                         </div>
