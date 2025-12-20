@@ -35,12 +35,12 @@ const ProductDetailPage = () => {
 
                 <div className="w-full h-[600px] px-[25px] py-[25px] border rounded-lg bg-white grid grid-cols-5 gap-5">
                     {/* 1/3 */}
-                    <div className="col-span-2 bg-gray-100">
+                    <div className="col-span-2 bg-white">
                         <div className="w-full h-full grid grid-cols-1 gap-3">
                             <div className="w-full h-[450px] bg-black">
                                 kk
                             </div>
-                            <div className="w-full h-full grid grid-cols-5 gap-2">
+                            <div className="w-full h-full grid grid-cols-5 gap-3">
                                 <div className="w-full h-[85px] bg-green-200">
 
                                 </div>
