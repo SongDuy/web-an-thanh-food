@@ -120,7 +120,7 @@ const ProductDetailPage = () => {
                                 <span className="h-full text-md text-black flex items-center">
                                     <AccessTimeOutlinedIcon />
                                     <span className="ml-2 font-semibold text-red-500">
-                                        00 ngày 00 giờ 00 giây.
+                                        06 ngày 23 giờ 59 giây.
                                     </span>
                                 </span>
                             </div>
