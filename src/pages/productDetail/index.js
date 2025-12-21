@@ -129,7 +129,7 @@ const ProductDetailPage = () => {
                                     Số lượng
                                 </span>
                                 <span className="h-full flex items-center text-gray-300">
-                                    <div className="flex border rounded overflow-hidden shadow">
+                                    <div className="flex border rounded overflow-hidden">
                                         <div className="w-10 h-[28px] flex items-center justify-center border-r">
                                             <RemoveOutlinedIcon />
                                         </div>
