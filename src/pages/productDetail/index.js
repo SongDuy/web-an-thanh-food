@@ -165,13 +165,57 @@ const ProductDetailPage = () => {
 
                 <div className="w-full h-full mt-[15px] rounded border bg-white">
                     {/* Thông tin mô tả của sản phẩm */}
-                    <div className=" w-full h-[310px] px-[25px] py-[25px]">
-                        <div className="w-full h-[50px] px-3 bg-red-50 rounded">
-                            <h1 className="w-full h-full flex items-center text-[21px] line-clamp-1 uppercase">
-                                CHI TIẾT SẢN PHẨM
+                    <div className="w-full h-[325px] px-[25px] py-[25px]">
+                        {/* Header */}
+                        <div className="w-full h-[50px] px-3 bg-red-50 rounded mb-4">
+                            <h1 className="w-full h-full flex items-center text-[21px] uppercase">
+                                Chi tiết sản phẩm
                             </h1>
                         </div>
 
+                        {/* Bảng chi tiết */}
+                        <div className="w-full rounded text-[15px]">
+                            {/* Danh mục */}
+                            <div className="grid grid-cols-5 px-4 py-4">
+                                <span className="text-gray-500">Danh mục</span>
+
+                                <div className="col-span-4">
+                                    <div className="w-full flex items-center">
+                                        <Link to="/">
+                                            <span className="text-blue-800 text-sm"> Trang chủ </span>
+                                        </Link>
+
+                                        <NavigateNextIcon className="relative top-[2px]" fontSize="small" />
+
+                                        <Link to="/Lương-Thực">
+                                            <span className="text-blue-800 text-sm"> Lương thực </span>
+                                        </Link>
+
+                                        <NavigateNextIcon className="relative top-[2px]" fontSize="small" />
+
+                                        <span className="text-black text-sm"> Chi tiết </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Hạn sử dụng */}
+                            <div className="grid grid-cols-5 px-4 py-4">
+                                <span className="text-gray-500">Hạn sử dụng</span>
+                                <span className="col-span-4">12/2026</span>
+                            </div>
+
+                            {/* Thương hiệu */}
+                            <div className="grid grid-cols-5 px-4 py-4">
+                                <span className="text-gray-500">Thương hiệu</span>
+                                <span className="col-span-4">Nature Made</span>
+                            </div>
+
+                            {/* Xuất xứ */}
+                            <div className="grid grid-cols-5 px-4 py-4">
+                                <span className="text-gray-500">Xuất xứ</span>
+                                <span className="col-span-4">Hoa Kỳ</span>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Phần bình luận phản hồi */}
