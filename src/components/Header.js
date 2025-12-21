@@ -59,7 +59,7 @@ const Header = () => {
 
       {/* Các nút chức năng */}
       <div className="ml-auto">
-        <button className="w-[40px] h-[40px] text-black shadow border rounded-full mr-2">
+        <button className="w-[40px] h-[40px] text-black shadow border rounded-full bg-gray-100 hover:bg-gray-200 mr-2">
           <ShoppingCartOutlinedIcon />
         </button>
 
@@ -67,7 +67,7 @@ const Header = () => {
           Đăng nhập
         </button>
 
-        <button className="w-[40px] h-[40px] rounded-full bg-gray-200 hover:bg-gray-300">
+        <button className="w-[40px] h-[40px] rounded-full border shadow bg-gray-100 hover:bg-gray-200">
           <SearchIcon />
         </button>
       </div>
