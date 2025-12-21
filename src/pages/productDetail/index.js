@@ -176,7 +176,7 @@ const ProductDetailPage = () => {
                         {/* Bảng chi tiết */}
                         <div className="w-full rounded text-[15px]">
                             {/* Danh mục */}
-                            <div className="grid grid-cols-5 px-4 py-3">
+                            <div className="grid grid-cols-5 px-4 pt-3 pb-4">
                                 <span className="text-gray-500">Danh mục</span>
 
                                 <div className="col-span-4">
@@ -224,24 +224,42 @@ const ProductDetailPage = () => {
                         </div>
                     </div>
 
-                    {/* Phần bình luận phản hồi */}
-                    <div className=" w-full h-[575px] px-[25px] py-[25px]">
-                        <div className="w-full h-[50px] px-3 bg-red-50 rounded">
-                            <h1 className="w-full h-full flex items-center text-[21px] line-clamp-1 uppercase">
-                                MÔ TẢ SẢN PHẨM
+                    {/* Phần mô tả */}
+                    <div className="w-full h-[500px] px-[25px] py-[25px]">
+                        {/* Header */}
+                        <div className="w-full h-[50px] px-3 bg-red-50 rounded mb-4">
+                            <h1 className="w-full h-full flex items-center text-[21px] uppercase">
+                                Mô tả sản phẩm
                             </h1>
                         </div>
 
-                        <div>
+                        {/* Content */}
+                        <div className="text-[15px] leading-7 text-gray-700 space-y-4">
                             <p>
-                                Sữa tươi có đường được sản xuất từ nguồn sữa bò tươi nguyên chất, chọn lọc kỹ lưỡng và xử lý theo quy trình hiện đại nhằm giữ trọn hương vị tự nhiên cùng giá trị dinh dưỡng thiết yếu. Với vị ngọt dịu hài hòa, sữa dễ uống, phù hợp với nhiều đối tượng từ trẻ em đến người lớn.
+                                <span className="font-medium">
+                                    Sữa tươi có đường
+                                </span>{" "}
+                                được sản xuất từ nguồn sữa bò tươi nguyên chất, chọn lọc kỹ lưỡng và xử lý theo
+                                quy trình hiện đại nhằm giữ trọn hương vị tự nhiên cùng giá trị dinh dưỡng thiết yếu.
+                                Với vị ngọt dịu hài hòa, sữa dễ uống, phù hợp với nhiều đối tượng từ trẻ em đến người lớn.
+                            </p>
 
-                                Sản phẩm giàu canxi, protein, cùng các vitamin A, D, B2 giúp hỗ trợ phát triển xương và răng, tăng cường thể lực và cung cấp năng lượng cho các hoạt động hằng ngày. Kết cấu sữa mịn, thơm béo tự nhiên, mang lại cảm giác ngon miệng và sảng khoái mỗi khi sử dụng.
+                            <p>
+                                Sản phẩm giàu <span className="font-medium">canxi, protein</span> cùng các vitamin
+                                <span className="font-medium"> A, D, B2</span> giúp hỗ trợ phát triển xương và răng,
+                                tăng cường thể lực và cung cấp năng lượng cho các hoạt động hằng ngày. Kết cấu sữa mịn,
+                                thơm béo tự nhiên, mang lại cảm giác ngon miệng và sảng khoái mỗi khi sử dụng.
+                            </p>
 
-                                Sữa tươi có đường thích hợp dùng trực tiếp, dùng kèm bữa sáng, bữa phụ hoặc làm nguyên liệu cho các món ăn, thức uống như sinh tố, cà phê sữa, bánh ngọt. Sản phẩm được đóng gói tiện lợi, đảm bảo an toàn vệ sinh thực phẩm, dễ bảo quản và sử dụng.
+                            <p>
+                                Sữa tươi có đường thích hợp dùng trực tiếp, dùng kèm bữa sáng, bữa phụ hoặc làm nguyên
+                                liệu cho các món ăn, thức uống như <span className="font-medium">
+                                    sinh tố, cà phê sữa, bánh ngọt</span>. Sản phẩm được đóng gói tiện lợi,
+                                đảm bảo an toàn vệ sinh thực phẩm, dễ bảo quản và sử dụng.
                             </p>
                         </div>
                     </div>
+
                 </div>
 
                 <div className="w-full h-[500px] mt-[15px] rounded border bg-white">
