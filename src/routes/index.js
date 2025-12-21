@@ -3,6 +3,7 @@ import HomePage from '../pages/home';
 import NotFoundPage from '../pages/notFound';
 import StaplesPage from '../pages/staples';
 import GroceriesPage from '../pages/groceries';
+import RankingsPage from '../pages/rankings';
 import ProductDetailPage from '../pages/productDetail';
 const AppRoutes = () => {
     return (
@@ -11,6 +12,7 @@ const AppRoutes = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/Lương-Thực" element={<StaplesPage />} />
             <Route path="/Thực-Phẩm" element={<GroceriesPage />} />
+            <Route path="/Bảng-Xếp-Hạng" element={<RankingsPage />} />
             <Route path="/Lương-Thực/Chi-Tiết" element={<ProductDetailPage />} />
 
             {/* Trang 404 */}
