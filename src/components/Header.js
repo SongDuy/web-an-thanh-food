@@ -59,7 +59,7 @@ const Header = () => {
 
       {/* Các nút chức năng */}
       <div className="ml-auto">
-        <button className="w-[40px] h-[40px] text-white rounded-full bg-red-500 hover:bg-red-600 mr-2">
+        <button className="w-[40px] h-[40px] text-black shadow border rounded-full mr-2">
           <ShoppingCartOutlinedIcon />
         </button>
 
