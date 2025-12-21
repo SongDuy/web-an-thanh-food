@@ -234,7 +234,7 @@ const ProductDetailPage = () => {
                         </div>
 
                         {/* Content */}
-                        <div className="border text-[15px] leading-7 text-gray-700 space-y-4">
+                        <div className="text-[15px] leading-7 text-gray-700 space-y-4 px-4">
                             <p>
                                 <span className="font-medium">
                                     Sữa tươi có đường
