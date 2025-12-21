@@ -95,7 +95,7 @@ const ProductDetailPage = () => {
                                 </span>
                                 <div className="h-full text-md text-black flex items-center">
                                     <LocalShippingOutlinedIcon />
-                                    <span className="ml-2 font-semibold">
+                                    <span className="ml-2 font-semibold text-red-500">
                                         Miễn phí vận chuyển
                                     </span>
                                 </div>
@@ -106,7 +106,7 @@ const ProductDetailPage = () => {
                                 </span>
                                 <span className="h-full text-md text-black flex items-center">
                                     <ShoppingBagOutlinedIcon />
-                                    <span className="ml-2 font-semibold">
+                                    <span className="ml-2 font-semibold text-red-500">
                                         1
                                     </span>
                                 </span>
