@@ -232,6 +232,15 @@ const ProductDetailPage = () => {
                             </h1>
                         </div>
 
+                        <div>
+                            <p>
+                                Sữa tươi có đường được sản xuất từ nguồn sữa bò tươi nguyên chất, chọn lọc kỹ lưỡng và xử lý theo quy trình hiện đại nhằm giữ trọn hương vị tự nhiên cùng giá trị dinh dưỡng thiết yếu. Với vị ngọt dịu hài hòa, sữa dễ uống, phù hợp với nhiều đối tượng từ trẻ em đến người lớn.
+
+                                Sản phẩm giàu canxi, protein, cùng các vitamin A, D, B2 giúp hỗ trợ phát triển xương và răng, tăng cường thể lực và cung cấp năng lượng cho các hoạt động hằng ngày. Kết cấu sữa mịn, thơm béo tự nhiên, mang lại cảm giác ngon miệng và sảng khoái mỗi khi sử dụng.
+
+                                Sữa tươi có đường thích hợp dùng trực tiếp, dùng kèm bữa sáng, bữa phụ hoặc làm nguyên liệu cho các món ăn, thức uống như sinh tố, cà phê sữa, bánh ngọt. Sản phẩm được đóng gói tiện lợi, đảm bảo an toàn vệ sinh thực phẩm, dễ bảo quản và sử dụng.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
