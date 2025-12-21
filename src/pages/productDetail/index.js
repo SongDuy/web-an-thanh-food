@@ -227,14 +227,14 @@ const ProductDetailPage = () => {
                     {/* Phần mô tả */}
                     <div className="w-full h-[500px] px-[25px] py-[25px]">
                         {/* Header */}
-                        <div className="w-full h-[50px] px-3 bg-red-50 rounded mb-4">
+                        <div className="w-full h-[50px] px-3 bg-red-50 rounded mb-[25px]">
                             <h1 className="w-full h-full flex items-center text-[21px] uppercase">
                                 Mô tả sản phẩm
                             </h1>
                         </div>
 
                         {/* Content */}
-                        <div className="text-[15px] leading-7 text-gray-700 space-y-4">
+                        <div className="border text-[15px] leading-7 text-gray-700 space-y-4">
                             <p>
                                 <span className="font-medium">
                                     Sữa tươi có đường
