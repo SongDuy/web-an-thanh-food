@@ -165,7 +165,7 @@ const ProductDetailPage = () => {
 
                 <div className="w-full h-full mt-[15px] rounded border bg-white">
                     {/* Thông tin mô tả của sản phẩm */}
-                    <div className="w-full h-[325px] px-[25px] py-[25px]">
+                    <div className="w-full h-[370px] px-[25px] py-[25px]">
                         {/* Header */}
                         <div className="w-full h-[50px] px-3 bg-red-50 rounded mb-4">
                             <h1 className="w-full h-full flex items-center text-[21px] uppercase">
@@ -176,7 +176,7 @@ const ProductDetailPage = () => {
                         {/* Bảng chi tiết */}
                         <div className="w-full rounded text-[15px]">
                             {/* Danh mục */}
-                            <div className="grid grid-cols-5 px-4 py-4">
+                            <div className="grid grid-cols-5 px-4 py-3">
                                 <span className="text-gray-500">Danh mục</span>
 
                                 <div className="col-span-4">
@@ -196,6 +196,12 @@ const ProductDetailPage = () => {
                                         <span className="text-black text-sm"> Chi tiết </span>
                                     </div>
                                 </div>
+                            </div>
+
+                            {/* Hạn sử dụng */}
+                            <div className="grid grid-cols-5 px-4 py-4">
+                                <span className="text-gray-500">Trọng lượng</span>
+                                <span className="col-span-4">1 túi / 1kg</span>
                             </div>
 
                             {/* Hạn sử dụng */}
