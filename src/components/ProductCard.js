@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const ProductCard = () => {
   const productImg = "https://images.unsplash.com/photo-1518843875459-f738682238a6?q=80&w=2042&auto=format&fit=crop";
@@ -34,14 +33,13 @@ const ProductCard = () => {
 
         {/* Nút bấm: Sẽ luôn nằm ở đáy nhờ cấu trúc flex-col */}
         <div className="mt-auto grid grid-cols-2 gap-3 w-full">
-          <button className=" bg-gray-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium ">
-            <ShoppingCartOutlinedIcon />
-            100000
+          <button className="w-full bg-gray-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium">
+            {Number(10000000).toLocaleString("vi-VN")}
           </button>
           {/* <button className="bg-green-500 hover:bg-green-600 shadow text-white text-shadow-black text-md px-1 py-1 rounded transition-colors font-medium ">
             Mua ngay
           </button> */}
-          <button className="bg-red-500 hover:bg-red-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
+          <button className="w-full bg-red-500 hover:bg-red-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
             Hết hàng
           </button>
         </div>

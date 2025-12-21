@@ -1,3 +1,5 @@
+import SearchIcon from '@mui/icons-material/Search';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
@@ -56,7 +58,19 @@ const Header = () => {
       </nav>
 
       {/* Các nút chức năng */}
+      <div className="ml-auto">
+        <button className="w-[40px] h-[40px] text-black rounded-full bg-gray-200 hover:bg-gray-300 mr-2">
+          <ShoppingCartOutlinedIcon />
+        </button>
 
+        <button className="text-white font-semibold bg-black px-3 py-2 rounded-full mr-2">
+          Đăng nhập
+        </button>
+
+        <button className="w-[40px] h-[40px] rounded-full bg-gray-200 hover:bg-gray-300">
+          <SearchIcon />
+        </button>
+      </div>
     </header>
   );
 };

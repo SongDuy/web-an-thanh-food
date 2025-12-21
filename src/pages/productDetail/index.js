@@ -1,7 +1,6 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
@@ -147,8 +146,7 @@ const ProductDetailPage = () => {
                         <div className="w-full h-[65px] flex items-center justify-center">
                             <div className="h-[50px] grid grid-cols-2 gap-3">
                                 <button className="w-[200px] h-[50px] bg-gray-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium ">
-                                    <ShoppingCartOutlinedIcon />
-                                    100000
+                                    {Number(10).toLocaleString("vi-VN")}
                                 </button>
                                 {/* <button className="h-[50px] bg-green-500 hover:bg-green-600 text-shadow-black text-white text-md px-1 py-1 rounded transition-colors font-medium ">
                                 Mua ngay
