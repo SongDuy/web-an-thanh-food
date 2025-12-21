@@ -5,6 +5,8 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import { Link } from 'react-router-dom';
 
 const ProductDetailPage = () => {
@@ -93,25 +95,33 @@ const ProductDetailPage = () => {
                                 </span>
                                 <div className="h-full text-md text-black flex items-center">
                                     <LocalShippingOutlinedIcon />
-                                    <span className="ml-2">
+                                    <span className="ml-2 font-semibold">
                                         Miễn phí vận chuyển.
                                     </span>
                                 </div>
                             </div>
                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
                                 <span className="h-full text-md text-gray-500 flex items-center">
-                                    Vận chuyển
+                                    Lượt mua
                                 </span>
                                 <span className="h-full text-md text-black flex items-center">
-                                    Miễn phí vận chuyển.
+                                    <ShoppingBagOutlinedIcon />
+                                    <span className="ml-2 font-semibold">
+                                        01.
+                                    </span>
                                 </span>
                             </div>
                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
-                                <span className="h-full text-md text-gray-500 flex items-center">
-                                    Vận chuyển
+                                <span className="h-full text-md text-gray-500 flex flex-col items-start justify-center text-left">
+                                    <span>Thời gian chờ</span>
+                                    <span>mua lại</span>
                                 </span>
+
                                 <span className="h-full text-md text-black flex items-center">
-                                    Miễn phí vận chuyển.
+                                    <AccessTimeOutlinedIcon />
+                                    <span className="ml-2 font-semibold text-red-500">
+                                        00 ngày 00 giờ 00 giây.
+                                    </span>
                                 </span>
                             </div>
                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
