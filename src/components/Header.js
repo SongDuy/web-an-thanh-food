@@ -56,13 +56,13 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to="/Thực-Phẩm"
+              to="/Xếp-Hạng"
               className={({ isActive }) =>
                 `uppercase text-lg font-bold transition
                 ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`
               }
             >
-              Xếp Hạng
+              Trang thiết bị y tế
             </NavLink>
           </li>
         </ul>
