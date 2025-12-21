@@ -62,7 +62,7 @@ const Header = () => {
                 ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`
               }
             >
-              Y Tế
+              Xếp Hạng
             </NavLink>
           </li>
         </ul>
