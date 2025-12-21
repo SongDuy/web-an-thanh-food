@@ -96,7 +96,7 @@ const ProductDetailPage = () => {
                                 <div className="h-full text-md text-black flex items-center">
                                     <LocalShippingOutlinedIcon />
                                     <span className="ml-2 font-semibold text-red-500">
-                                        Miễn phí vận chuyển
+                                        Miễn phí vận chuyển.
                                     </span>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@ const ProductDetailPage = () => {
                                 <span className="h-full text-md text-black flex items-center">
                                     <ShoppingBagOutlinedIcon />
                                     <span className="ml-2 font-semibold text-red-500">
-                                        1
+                                        1 lượt.
                                     </span>
                                 </span>
                             </div>
@@ -120,7 +120,7 @@ const ProductDetailPage = () => {
                                 <span className="h-full text-md text-black flex items-center">
                                     <AccessTimeOutlinedIcon />
                                     <span className="ml-2 font-semibold text-red-500">
-                                        00 ngày 00 giờ 00 giây
+                                        00 ngày 00 giờ 00 giây.
                                     </span>
                                 </span>
                             </div>
