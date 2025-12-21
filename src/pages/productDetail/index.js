@@ -113,8 +113,8 @@ const ProductDetailPage = () => {
                             </div>
                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
                                 <span className="h-full text-md text-gray-500 flex flex-col items-start justify-center text-left">
-                                    <span>Thời gian chờ</span>
-                                    <span>mua lại</span>
+                                    <span>Thời gian</span>
+                                    <span>chờ mua</span>
                                 </span>
 
                                 <span className="h-full text-md text-black flex items-center">
