@@ -54,6 +54,17 @@ const Header = () => {
               Thực Phẩm
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/Thực-Phẩm"
+              className={({ isActive }) =>
+                `uppercase text-lg font-bold transition
+                ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`
+              }
+            >
+              Y Tế
+            </NavLink>
+          </li>
         </ul>
       </nav>
 
