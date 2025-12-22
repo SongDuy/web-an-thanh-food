@@ -37,7 +37,7 @@ const Search = () => {
 
                 {/* Result list */}
                 <div className="flex-1 mt-[25px] overflow-y-auto custom-scrollbar">
-                    <ul className="space-y-1">
+                    <ul className="space-y-2">
 
                         {[1, 2, 3, 4].map((item) => (
                             <li
