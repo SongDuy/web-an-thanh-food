@@ -122,50 +122,51 @@ const BannerSlider = () => {
   const banner = banners[current];
 
   return (
-    <section className="w-full h-[500px] overflow-hidden">
-      <div className="relative w-full h-full flex items-center justify-center bg-black">
+    <div className="pt-[100px]">
+      <section className="w-full h-[500px] overflow-hidden">
+        <div className="relative w-full h-full flex items-center justify-center bg-black">
 
-        {/* LỚP NỀN NGOÀI: Cơ chế 2 lớp để triệt tiêu chớp đen */}
-        {/* Lớp cũ duy trì nền */}
-        <div
-          className="absolute inset-0 bg-cover bg-center filter blur-sm scale-105"
-          style={{ backgroundImage: `url(${prevNextImage})` }}
-        />
-        {/* Lớp mới Fade-in lên trên */}
-        <div
-          key={`outer-${nextImage}`}
-          className="absolute inset-0 bg-cover bg-center animate-fade-in filter blur-sm scale-105"
-          style={{ backgroundImage: `url(${nextImage})` }}
-        />
-
-        {/* VÙNG CHỨA BANNER CHÍNH */}
-        <div
-          className="relative w-[1120px] h-full overflow-hidden z-10 shadow-2xl cursor-pointer"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
-          {/* Lớp ảnh cũ chính */}
+          {/* LỚP NỀN NGOÀI: Cơ chế 2 lớp để triệt tiêu chớp đen */}
+          {/* Lớp cũ duy trì nền */}
           <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${prevImage})` }}
+            className="absolute inset-0 bg-cover bg-center filter blur-sm scale-105"
+            style={{ backgroundImage: `url(${prevNextImage})` }}
           />
-          {/* Lớp ảnh mới chính */}
+          {/* Lớp mới Fade-in lên trên */}
           <div
-            key={`inner-${current}`}
-            className="absolute inset-0 bg-cover bg-center animate-fade-in"
-            style={{ backgroundImage: `url(${banner.bgImage})` }}
+            key={`outer-${nextImage}`}
+            className="absolute inset-0 bg-cover bg-center animate-fade-in filter blur-sm scale-105"
+            style={{ backgroundImage: `url(${nextImage})` }}
           />
 
-          {/* Title - Tăng z-index lên 30 để đảm bảo bao văn bản được */}
-          <div className="absolute top-[50px] left-0 right-0 flex items-center justify-center z-20">
-            <h1 className="text-4xl font-serifTitle tracking-wide text-black text-shadow-white text-center cursor-pointer select-text">
-              {banner.title}
-            </h1>
-          </div>
+          {/* VÙNG CHỨA BANNER CHÍNH */}
+          <div
+            className="relative w-[1120px] h-full overflow-hidden z-10 shadow-2xl cursor-pointer"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            {/* Lớp ảnh cũ chính */}
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${prevImage})` }}
+            />
+            {/* Lớp ảnh mới chính */}
+            <div
+              key={`inner-${current}`}
+              className="absolute inset-0 bg-cover bg-center animate-fade-in"
+              style={{ backgroundImage: `url(${banner.bgImage})` }}
+            />
 
-          {/* VÙNG NỘI DUNG CHÍNH */}
-          <div className="absolute inset-0 flex justify-center z-10">
-            <div className="w-full h-full overflow-y-scroll overflow-x-hidden overscroll-contain 
+            {/* Title - Tăng z-index lên 30 để đảm bảo bao văn bản được */}
+            <div className="absolute top-[50px] left-0 right-0 flex items-center justify-center z-20">
+              <h1 className="text-4xl font-serifTitle tracking-wide text-black text-shadow-white text-center cursor-pointer select-text">
+                {banner.title}
+              </h1>
+            </div>
+
+            {/* VÙNG NỘI DUNG CHÍNH */}
+            <div className="absolute inset-0 flex justify-center z-10">
+              <div className="w-full h-full overflow-y-scroll overflow-x-hidden overscroll-contain 
                   [scrollbar-gutter:stable]
                   [scrollbar-width:thin] 
                   [scrollbar-color:rgba(255,255,255,0.4)_transparent]
@@ -173,45 +174,46 @@ const BannerSlider = () => {
                   [&::-webkit-scrollbar-track]:bg-transparent
                  [&::-webkit-scrollbar-thumb]:bg-white/40
                   [&::-webkit-scrollbar-thumb]:rounded-full">
-              {/* Thêm py-10 để đảm bảo khi cuộn lên xuống không bị dính sát mép trên/dưới */}
-              <div className="w-full min-h-full flex items-center justify-center py-10 px-6">
-                <p
-                  className="w-full max-w-2xl px-1 text-lg font-serifBook leading-loose whitespace-pre-line cursor-pointer text-white text-shadow-black text-justify break-words transition-opacity duration-1000 select-text"
-                  style={{
-                    display: '-webkit-box',
-                    WebkitLineClamp: 8,
-                    WebkitBoxOrient: 'vertical',
-                    overflow: 'hidden',
-                    textAlignLast: 'center',
-                  }}
-                >
-                  {banner.subtitle}
-                </p>
+                {/* Thêm py-10 để đảm bảo khi cuộn lên xuống không bị dính sát mép trên/dưới */}
+                <div className="w-full min-h-full flex items-center justify-center py-10 px-6">
+                  <p
+                    className="w-full max-w-2xl px-1 text-lg font-serifBook leading-loose whitespace-pre-line cursor-pointer text-white text-shadow-black text-justify break-words transition-opacity duration-1000 select-text"
+                    style={{
+                      display: '-webkit-box',
+                      WebkitLineClamp: 8,
+                      WebkitBoxOrient: 'vertical',
+                      overflow: 'hidden',
+                      textAlignLast: 'center',
+                    }}
+                  >
+                    {banner.subtitle}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Author - Tăng z-index lên 30 */}
-          <div className="absolute bottom-[50px] right-10 flex items-center z-20">
-            <p className="text-md italic font-serifBook text-black text-shadow-white cursor-pointer select-text">
-              Trích sách - Tác giả: "{banner.author}"
-            </p>
-          </div>
+            {/* Author - Tăng z-index lên 30 */}
+            <div className="absolute bottom-[50px] right-10 flex items-center z-20">
+              <p className="text-md italic font-serifBook text-black text-shadow-white cursor-pointer select-text">
+                Trích sách - Tác giả: "{banner.author}"
+              </p>
+            </div>
 
-          {/* Nút chuyển Banner */}
-          <div className="absolute bottom-4 left-5 flex justify-center items-center gap-2 z-20">
-            {banners.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => updateSlide(index)}
-                className={`w-[15px] h-[15px] rounded-full transition-all duration-300 ${index === current ? "bg-white" : "bg-black hover:bg-white"
-                  }`}
-              />
-            ))}
+            {/* Nút chuyển Banner */}
+            <div className="absolute bottom-4 left-5 flex justify-center items-center gap-2 z-20">
+              {banners.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => updateSlide(index)}
+                  className={`w-[15px] h-[15px] rounded-full transition-all duration-300 ${index === current ? "bg-white" : "bg-black hover:bg-white"
+                    }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

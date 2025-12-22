@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="w-full h-[100px] bg-white border-b border-gray-300 text-black flex items-center px-[60px]">
+    <header className="fixed top-0 left-0 w-full h-[100px] bg-white border-b border-gray-300 text-black flex items-center px-[60px] z-50">
       {/* logo web */}
       <NavLink
         to="/">

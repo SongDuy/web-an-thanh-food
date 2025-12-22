@@ -13,7 +13,7 @@ const ProductDetailPage = () => {
     return (
         <>
             <Header />
-            <div className="w-full h-full bg-gray-100 px-[160px] border pb-[45px]">
+            <div className="w-full h-full bg-gray-100 px-[160px] border pt-[100px] pb-[45px]">
                 {/* Hình ảnh sản phẩm và đặt hàng */}
                 <div className="w-full h-[35px] flex items-center">
                     <Link to="/">
