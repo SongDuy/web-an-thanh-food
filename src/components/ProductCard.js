@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const ProductCard = () => {
-  const productImg = "https://images.unsplash.com/photo-1518843875459-f738682238a6?q=80&w=2042&auto=format&fit=crop";
+  const productImg = "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png";
 
   return (
     <Link to="/Lương-Thực/Chi-Tiết">
