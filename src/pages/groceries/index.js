@@ -9,7 +9,7 @@ const GroceriesPage = () => {
     return (
         <>
             <Header />
-            <div className="px-[160px] pb-[45px]">
+            <div className="px-[160px] pb-[45px] bg-gray-100">
                 <div className="w-full h-[60px] border-b border-gray-300 flex items-center">
                     <div>
                         <span className="text-black font-bold mr-1">30</span>
