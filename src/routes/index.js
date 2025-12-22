@@ -5,6 +5,7 @@ import StaplesPage from '../pages/staples';
 import GroceriesPage from '../pages/groceries';
 import RankingsPage from '../pages/rankings';
 import ProductDetailPage from '../pages/productDetail';
+import Search from '../components/Search';
 const AppRoutes = () => {
     return (
         <Routes>
@@ -14,6 +15,7 @@ const AppRoutes = () => {
             <Route path="/Thực-Phẩm" element={<GroceriesPage />} />
             <Route path="/Bảng-Xếp-Hạng" element={<RankingsPage />} />
             <Route path="/Lương-Thực/Chi-Tiết" element={<ProductDetailPage />} />
+            <Route path="/Tìm-Kiếm" element={<Search />} />
 
             {/* Trang 404 */}
             <Route path="/404" element={<NotFoundPage />} />
