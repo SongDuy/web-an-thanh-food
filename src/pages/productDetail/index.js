@@ -205,7 +205,7 @@ const ProductDetailPage = () => {
                             {/* Hạn sử dụng */}
                             <div className="grid grid-cols-5 px-4 py-4">
                                 <span className="text-gray-500">Hạn sử dụng</span>
-                                <span className="col-span-4">12/2026</span>
+                                <span className="col-span-4">12 tháng</span>
                             </div>
 
                             {/* Thương hiệu */}
