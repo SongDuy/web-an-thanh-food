@@ -21,17 +21,6 @@ const Header = () => {
       {/* Danh mục header */}
       <nav aria-label="Main navigation">
         <ul className="flex overflow-x-auto gap-5 mx-3 whitespace-nowrap">
-          {/* <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `uppercase text-lg font-bold transition
-                ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`
-              }
-            >
-              Trang Chủ
-            </NavLink>
-          </li> */}
           <li>
             <NavLink
               to="/Lương-Thực"
