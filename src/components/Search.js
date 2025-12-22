@@ -20,7 +20,7 @@ const Search = () => {
                 {/* Search input */}
                 <div className="mt-5">
                     <input
-                        className="w-full h-10 px-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-black"
+                        className="w-full h-10 px-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-black"
                         placeholder="Tìm sản phẩm..."
                     />
 
