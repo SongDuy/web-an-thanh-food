@@ -223,7 +223,7 @@ const ProductDetailPage = () => {
                     </div>
 
                     {/* Phần mô tả */}
-                    <div className="w-full h-[500px] px-[25px] py-[25px]">
+                    <div className="w-full h-[525px] px-[25px] py-[25px]">
                         {/* Header */}
                         <div className="w-full h-[50px] px-3 bg-red-50 rounded mb-[25px]">
                             <h1 className="w-full h-full flex items-center text-[21px] uppercase">
