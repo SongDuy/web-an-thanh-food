@@ -8,7 +8,7 @@ const HomePage = () => {
                 <div className="w-full h-full mt-[35px]">
                     <h1 className="text-2xl font-bold uppercase"> Danh mục lương thực </h1>
 
-                    <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[35px]">
+                    <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[38px]">
                         <ProductCard />
                         <ProductCard />
                         <ProductCard />
@@ -24,7 +24,7 @@ const HomePage = () => {
                 <div className="w-full h-full mt-[35px]">
                     <h1 className="text-2xl font-bold uppercase">Danh mục thực phẩm </h1>
 
-                    <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[35px] ">
+                    <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[38px] ">
                         <ProductCard />
                         <ProductCard />
                         <ProductCard />
