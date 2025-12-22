@@ -28,7 +28,7 @@ const ProductCard = () => {
         {/* Nội dung text: flex-grow giúp vùng này chiếm không gian còn lại */}
         <div className="flex-grow">
           <h3 className="text-md font-semibold text-gray-800 line-clamp-2">Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh</h3>
-          <p className="text-sm font-semibold text-red-200">1 gói / 1kg</p>
+          <p className="text-sm font-semibold text-red-300">1 gói / 1kg</p>
         </div>
 
         {/* Nút bấm: Sẽ luôn nằm ở đáy nhờ cấu trúc flex-col */}
