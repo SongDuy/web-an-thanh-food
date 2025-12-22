@@ -6,7 +6,7 @@ const HomePage = () => {
         <MainLayout>
             <div>
                 <div className="w-full h-full mt-[35px]">
-                    <h1 className="text-2xl font-bold uppercase"> Danh mục lương thực </h1>
+                    <h1 className="text-[23px] font-bold uppercase"> Danh mục lương thực </h1>
 
                     <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[38px]">
                         <ProductCard />
@@ -22,7 +22,23 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div className="w-full h-full mt-[35px]">
-                    <h1 className="text-2xl font-bold uppercase">Danh mục thực phẩm </h1>
+                    <h1 className="text-[23px] font-bold uppercase">Danh mục thực phẩm </h1>
+
+                    <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[38px] ">
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                    </div>
+                </div>
+                <div className="w-full h-full mt-[35px]">
+                    <h1 className="text-[23px] font-bold uppercase">Bảng Xếp Hạng </h1>
 
                     <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[38px] ">
                         <ProductCard />
