@@ -29,7 +29,7 @@ const Search = () => {
                         <button className="flex-1 h-9 text-sm font-medium rounded-lg bg-black text-white transition">
                             Lương Thực
                         </button>
-                        <button className="flex-1 h-9 text-sm font-medium rounded-lg bg-gray-100 shadow border text-gray-700 hover:bg-gray-200 transition">
+                        <button className="flex-1 h-9 text-sm font-medium rounded-lg bg-gray-100 hover:bg-gray-200 shadow border text-gray-700  transition">
                             Thực Phẩm
                         </button>
                     </div>
@@ -42,11 +42,11 @@ const Search = () => {
                         {[1, 2, 3, 4].map((item) => (
                             <li
                                 key={item}
-                                className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 cursor-pointer transition"
+                                className="flex items-center gap-3 p-2 rounded-lg border shadow hover:bg-gray-100 cursor-pointer transition"
                             >
                                 {/* Thumbnail */}
                                 <img
-                                    src="https://via.placeholder.com/80"
+                                    src="https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png"
                                     alt="thumb"
                                     className="w-[70px] h-[70px] rounded-lg object-cover flex-shrink-0"
                                 />
