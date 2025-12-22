@@ -38,6 +38,16 @@ const GroceriesPage = () => {
                     <ProductCard />
                     <ProductCard />
                     <ProductCard />
+                     <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
                 </div>
             </div>
             <Footer />
