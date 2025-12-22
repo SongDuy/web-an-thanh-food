@@ -19,10 +19,10 @@ const GroceriesPage = () => {
                         <button className="pr-3 border-r">
                             <LocalMallOutlinedIcon fontSize="small" /> Phổ Biến
                         </button>
-                        <button className="px-3 border-r">
+                        <button className="px-3 border-r text-gray-500">
                             <StarBorderOutlinedIcon fontSize="small" /> Đánh Giá
                         </button>
-                        <button className="pl-3 border-l">
+                        <button className="pl-3 border-l text-gray-500">
                             <FavoriteBorderOutlinedIcon fontSize="small" /> Yêu Thích
                         </button>
                     </div>
