@@ -1,16 +1,32 @@
+import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import StarIcon from "@mui/icons-material/Star";
 
 const Search = ({ onClose }) => {
+    const [isClosing, setIsClosing] = useState(false);
+
+    const handleClose = () => {
+        setIsClosing(true);
+
+        // Đợi animation chạy xong rồi mới đóng
+        setTimeout(() => {
+            onClose();
+        }, 1000); // = duration trong CSS
+    };
+
     return (
         <div
-            onClick={onClose}   // 👈 click nền mờ sẽ tắt
+            onClick={handleClose}   // 👈 click nền mờ sẽ tắt
             className="fixed inset-0 z-50 flex bg-black/50"
         >
             {/* Sidebar */}
             <div
                 onClick={(e) => e.stopPropagation()} // 👈 chặn click lan
-                className="w-[420px] h-full ml-auto bg-white shadow-xl px-5 py-4 flex flex-col"
+                // className="w-[420px] h-full ml-auto bg-white shadow-xl px-5 py-4 flex flex-col"
+                 className={`
+                    w-[420px] h-full ml-auto bg-white shadow-xl px-5 py-4 flex flex-col
+                    ${isClosing ? "slide-out" : "slide-in"}
+                `}
             >
 
                 {/* Header */}
@@ -19,7 +35,7 @@ const Search = ({ onClose }) => {
                         Tìm kiếm
                     </h2>
                     <button
-                        onClick={onClose}
+                        onClick={handleClose}
                         className="w-9 h-9 flex items-center justify-center rounded-md bg-gray-100 hover:bg-red-500 hover:text-white transition"
                     >
                         <CloseIcon sx={{ fontSize: 22 }} />
