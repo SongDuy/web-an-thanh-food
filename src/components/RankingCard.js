@@ -12,14 +12,16 @@ const RankingCard = () => {
           />
         </div>
 
-        <div className="w-full h-full grid grid-cols-[70%_30%]">
-          <div className="w-full border flex-grow">
+        <div className="w-full h-full grid grid-cols-[75%_25%]">
+          <div className="w-full flex-grow">
             <h3 className="text-md font-semibold text-gray-800 line-clamp-1">Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh</h3>
             <p className="text-sm font-semibold text-red-300">1 gói / 1kg</p>
           </div>
 
-          <div className="w-full border">
-
+          <div className="w-full flex items-center pl-3">
+            <button className="w-full h-[35px] bg-green-500 hover:bg-green-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
+              Mua ngay
+            </button>
           </div>
         </div>
       </div>

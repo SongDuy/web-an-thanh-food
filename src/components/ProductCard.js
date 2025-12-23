@@ -27,7 +27,7 @@ const ProductCard = () => {
 
         {/* Nội dung text: flex-grow giúp vùng này chiếm không gian còn lại */}
         <div className="flex-grow">
-          <h3 className="text-md font-semibold text-gray-800 line-clamp-2">Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh</h3>
+          <h3 className="w-full h-[50px] text-md font-semibold text-gray-800 line-clamp-2">Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh</h3>
           <p className="text-sm font-semibold text-red-300">1 gói / 1kg</p>
         </div>
 
@@ -36,7 +36,7 @@ const ProductCard = () => {
           <button className="w-full bg-gray-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium">
             {Number(100).toLocaleString("vi-VN")}
           </button>
-          {/* <button className="bg-green-500 hover:bg-green-600 shadow text-white text-shadow-black text-md px-1 py-1 rounded transition-colors font-medium ">
+          {/* <button className="w-full bg-green-500 hover:bg-green-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
             Mua ngay
           </button> */}
           <button className="w-full bg-red-500 hover:bg-red-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
