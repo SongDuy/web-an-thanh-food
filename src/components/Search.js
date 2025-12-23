@@ -3,7 +3,7 @@ import StarIcon from "@mui/icons-material/Star";
 
 const Search = ({ onClose }) => {
     return (
-        <div className="fixed inset-0 z-50 flex bg-black/50 backdrop-blur-sm">
+        <div onClick={onClose} className="fixed inset-0 z-50 flex bg-black/50">
             {/* Sidebar */}
             <div className="w-[420px] h-full ml-auto bg-white shadow-xl px-5 py-4 flex flex-col">
 
