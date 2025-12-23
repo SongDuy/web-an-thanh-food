@@ -23,7 +23,7 @@ const RankingCard = () => {
                   className="w-full h-full object-contain rounded transition-transform duration-500"
                 />
 
-                <div className="absolute top-0 right-0 bg-yellow-500 text-red-100 font-bold text-shadow-black px-1.5 rounded-bl-md z-10">
+                <div className="absolute top-0 right-0 bg-yellow-500 text-white font-bold text-shadow-black px-1.5 rounded-bl-md z-10">
                   <span className="text-md">
                     0
                   </span>

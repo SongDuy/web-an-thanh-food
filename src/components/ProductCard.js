@@ -15,7 +15,7 @@ const ProductCard = () => {
               alt="Rau cải xanh"
               className="w-full h-full object-cover transition-transform duration-500"
             />
-            <div className="absolute top-0 right-0 bg-yellow-500 text-red-100 font-bold text-shadow-black px-3 py-0.5 rounded-bl-xl z-10">
+            <div className="absolute top-0 right-0 bg-yellow-500 text-white font-bold text-shadow-black px-3 py-0.5 rounded-bl-xl z-10">
               <span className="text-xl">
                 0
               </span>
