@@ -9,7 +9,7 @@ const RankingCard = () => {
       <div className="w-full h-full flex gap-3">
         <div className="flex items-center justify-center gap-3">
 
-          <div className="min-w-[50px] h-[50px] bg-red-50 shadow text-white text-shadow-black font-serifBook rounded-full text-[35px] leading-none border flex items-center justify-center">
+          <div className="min-w-[50px] h-[50px] bg-red-50 shadow text-white text-shadow-black border border-gray-300 font-serifBook rounded-full text-[35px] leading-none flex items-center justify-center">
             8
           </div>
 
@@ -35,7 +35,7 @@ const RankingCard = () => {
           <div className="w-full flex flex-col gap-1.5">
             <div className="w-full">
               <h3 className="w-full h-[50px] text-md font-semibold text-gray-800 line-clamp-2">
-                Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh
+                Rau cải xà lách Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh
               </h3>
 
               <span className="text-sm font-bold text-red-300">
