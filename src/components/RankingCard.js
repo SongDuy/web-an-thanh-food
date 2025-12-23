@@ -5,11 +5,11 @@ const RankingCard = () => {
   const productImg = "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png";
 
   return (
-    <div className="w-full h-[120px] border rounded shadow hover:bg-red-50 p-4">
+    <div className="w-full h-[145px] border rounded shadow bg-white hover:bg-red-50 p-4">
       <div className="w-full h-full flex gap-3">
         <div className="flex items-center justify-center">
 
-          <div className="w-[50px] h-[50px] bg-red-50 shadow text-white text-shadow-black font-serifBook rounded-full text-[35px] leading-none border flex items-center justify-center">
+          <div className="min-w-[50px] h-[50px] bg-red-50 shadow text-white text-shadow-black font-serifBook rounded-full text-[35px] leading-none border flex items-center justify-center">
             8
           </div>
 
@@ -17,20 +17,24 @@ const RankingCard = () => {
             <img
               src={productImg}
               alt="Rau cải xanh"
-              className="w-full h-full object-cover transition-transform duration-500"
+              className="w-full h-full object-contain transition-transform duration-500"
             />
           </div>
         </div>
 
-        <div className="w-full h-full grid grid-cols-[75%_25%]">
-          <div className="w-full flex flex-col pr-3">
+        <div className="w-full h-full">
+          <div className="w-full flex flex-col gap-2">
             <div className="w-full">
-              <h3 className="w-full text-md font-semibold text-gray-800 line-clamp-1">
+              <h3 className="w-full h-[50px] text-md font-semibold text-gray-800 line-clamp-2">
                 Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh
               </h3>
 
-              <span className="text-sm font-semibold text-red-300">
-                1 gói / 1kg
+              <span className="text-sm font-bold text-red-300">
+                Lương thực:
+
+              </span>
+              <span className="text-sm font-semibold text-red-300 ml-2">
+                1 túi / 1kg
               </span>
             </div>
 
@@ -38,21 +42,21 @@ const RankingCard = () => {
             <div className="w-full mt-auto grid grid-cols-2 gap-3">
               <div className="w-full border shadow rounded text-black flex items-center justify-center gap-1 py-0.5">
                 <StarBorderOutlinedIcon fontSize="small" />
-                Đánh Giá
+                4.5
               </div>
 
               <div className="w-full border shadow rounded text-black flex items-center justify-center gap-1 py-0.5">
                 <FavoriteBorderOutlinedIcon fontSize="small" />
-                Yêu Thích
+                125
               </div>
             </div>
           </div>
 
-          <div className="w-full flex items-center">
+          {/* <div className="w-full flex items-center">
             <button className="w-full h-[35px] bg-green-500 hover:bg-green-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium">
               Mua ngay
             </button>
-          </div>
+          </div> */}
         </div>
 
       </div>

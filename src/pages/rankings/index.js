@@ -2,11 +2,9 @@ import { useState } from "react";
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Search from '../../components/Search';
-import ProductCard from '../../components/ProductCard';
+import RankingCard from '../../components/RankingCard';
 
-import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
-import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
 
 const RankingsPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
@@ -26,38 +24,31 @@ const RankingsPage = () => {
                         <span className="text-gray-500">sản phẩm</span>
                     </div>
                     <div className="ml-auto">
-                        <button className="pr-3 border-r">
-                            <LocalMallOutlinedIcon fontSize="small" /> Phổ Biến
-                        </button>
-                        <button className="px-3 border-r text-gray-500">
-                            <StarBorderOutlinedIcon fontSize="small" /> Đánh Giá
-                        </button>
-                        <button className="pl-3 border-l text-gray-500">
-                            <FavoriteBorderOutlinedIcon fontSize="small" /> Yêu Thích
-                        </button>
+                        <CheckOutlinedIcon fontSize="small" />
+                        <span className="text-black ml-1">Bảng xếp hạng</span>
                     </div>
                 </div>
-                <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[25px]">
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                     <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
+                <div className="w-full min-h-[650px] grid grid-cols-3 gap-3 mt-[25px]">
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
+                    <RankingCard />
                 </div>
             </div>
             <Footer />
