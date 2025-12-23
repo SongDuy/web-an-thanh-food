@@ -17,13 +17,13 @@ const Search = ({ onClose }) => {
     return (
         <div
             onClick={handleClose}   // 👈 click nền mờ sẽ tắt
-            className="fixed inset-0 z-50 flex bg-black/50"
+            className={`fixed inset-0 z-50 flex ${isClosing ? "overlay-out" : "overlay-in"}`}
         >
             {/* Sidebar */}
             <div
                 onClick={(e) => e.stopPropagation()} // 👈 chặn click lan
                 // className="w-[420px] h-full ml-auto bg-white shadow-xl px-5 py-4 flex flex-col"
-                 className={`
+                className={`
                     w-[420px] h-full ml-auto bg-white shadow-xl px-5 py-4 flex flex-col
                     ${isClosing ? "slide-out" : "slide-in"}
                 `}

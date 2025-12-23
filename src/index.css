@@ -39,43 +39,44 @@
   }
 }
 
-@keyframes slideIn {
-  from {
-    transform: translate3d(100%, 0, 0);
-    opacity: 0.6;
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
+/* Overlay */
+@keyframes overlayIn {
+  from { background-color: rgba(0,0,0,0); }
+  to { background-color: rgba(0,0,0,0.5); }
 }
 
+@keyframes overlayOut {
+  from { background-color: rgba(0,0,0,0.5); }
+  to { background-color: rgba(0,0,0,0); }
+}
+
+.overlay-in {
+  animation: overlayIn 1s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+.overlay-out {
+  animation: overlayOut 1s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+/* Sidebar */
 @keyframes slideIn {
-  from {
-    transform: translate3d(100%, 0, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-  }
+  from { transform: translate3d(100%,0,0); }
+  to { transform: translate3d(0,0,0); }
 }
 
 .slide-in {
-  animation: slideIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: slideIn 1s cubic-bezier(0.4,0,0.2,1) forwards;
   will-change: transform;
   backface-visibility: hidden;
 }
 
 @keyframes slideOut {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(100%, 0, 0);
-  }
+  from { transform: translate3d(0,0,0); }
+  to { transform: translate3d(100%,0,0); }
 }
 
 .slide-out {
-  animation: slideOut 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: slideOut 1s cubic-bezier(0.4,0,0.2,1) forwards;
   will-change: transform;
   backface-visibility: hidden;
 }
