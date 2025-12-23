@@ -1,6 +1,5 @@
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import LoginIcon from '@mui/icons-material/Login';
 import { NavLink } from "react-router-dom";
 
 const Header = ({ onOpenSearch }) => {
@@ -59,14 +58,13 @@ const Header = ({ onOpenSearch }) => {
       </nav>
 
       {/* Các nút chức năng */}
-      <div className="ml-auto">
-        <button className="w-[40px] h-[40px] text-black shadow border rounded-full bg-gray-100 hover:bg-gray-200 mr-2">
+      <div className="ml-auto flex items-center gap-2">
+        <button className="w-[40px] h-[40px] text-black shadow border rounded-full bg-gray-100 hover:bg-gray-200">
           <ShoppingCartOutlinedIcon />
         </button>
 
-        <button className="text-black font-semibold px-3 py-2 rounded-full mr-2 border shadow bg-gray-100 hover:bg-gray-200">
-          <LoginIcon />
-          <span className="ml-0.5"> Đăng Nhập</span>
+        <button className="flex items-center gap-2 text-md font-semibold px-4 py-2 rounded-full border shadow bg-gray-100 hover:bg-gray-200 transition">
+          Đăng Nhập
         </button>
 
         <button onClick={onOpenSearch}
