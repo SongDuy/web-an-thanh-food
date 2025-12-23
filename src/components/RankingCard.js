@@ -6,7 +6,7 @@ const RankingCard = () => {
       <div className="w-full h-full flex gap-3">
         <div className="flex items-center justify-center">
 
-          <div className="w-[50px] h-[50px] bg-red-50 border shadow text-white text-shadow-black font-serifBook rounded-full text-[35px] leading-none flex items-center justify-center">
+          <div className="w-[50px] h-[50px] bg-red-50 shadow text-white text-shadow-black font-serifBook rounded-full text-[35px] leading-none border flex items-center justify-center">
             8
           </div>
 
@@ -19,9 +19,9 @@ const RankingCard = () => {
           </div>
         </div>
 
-        <div className="w-full h-full grid grid-cols-[70%_30%]">
-          <div className="w-full flex-grow">
-            <h3 className="text-md font-semibold text-gray-800 line-clamp-1">Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh</h3>
+        <div className="w-full h-full grid grid-cols-[75%_25%]">
+          <div className="w-full flex-grow pr-3">
+            <h3 className="w-full text-md font-semibold text-gray-800 line-clamp-1">Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh</h3>
             <p className="text-sm font-semibold text-red-300">1 gói / 1kg</p>
           </div>
 
