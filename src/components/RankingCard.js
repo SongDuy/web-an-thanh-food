@@ -24,25 +24,27 @@ const RankingCard = () => {
 
         <div className="w-full h-full grid grid-cols-[75%_25%]">
           <div className="w-full flex flex-col pr-3">
-            <h3 className="w-full text-md font-semibold text-gray-800 line-clamp-1">
-              Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh
-            </h3>
+            <div className="w-full">
+              <h3 className="w-full text-md font-semibold text-gray-800 line-clamp-1">
+                Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh
+              </h3>
 
-            <p className="text-sm font-semibold text-red-300">
-              1 gói / 1kg
-            </p>
+              <span className="text-sm font-semibold text-red-300">
+                1 gói / 1kg
+              </span>
+            </div>
 
             {/* Buttons sát đáy */}
-            <div className="w-full mt-auto grid grid-cols-2">
-              <button className="pr-3 border-r text-black flex items-center justify-center gap-1">
+            <div className="w-full mt-auto grid grid-cols-2 gap-3">
+              <div className="w-full border shadow rounded text-black flex items-center justify-center gap-1 py-0.5">
                 <StarBorderOutlinedIcon fontSize="small" />
                 Đánh Giá
-              </button>
+              </div>
 
-              <button className="pl-3 border-l text-black flex items-center justify-center gap-1">
+              <div className="w-full border shadow rounded text-black flex items-center justify-center gap-1 py-0.5">
                 <FavoriteBorderOutlinedIcon fontSize="small" />
                 Yêu Thích
-              </button>
+              </div>
             </div>
           </div>
 
