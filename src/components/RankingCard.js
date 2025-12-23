@@ -8,7 +8,7 @@ const RankingCard = () => {
   return (
     <>
       <Link to="/Lương-Thực/Chi-Tiết">
-        <div className="w-full h-[145px] rounded shadow bg-white hover:bg-red-50 p-4">
+        <div className="w-full h-[145px] rounded shadow bg-white border hover:bg-red-50 p-4">
           <div className="w-full h-full flex gap-3">
             <div className="flex items-center justify-center gap-3">
 
