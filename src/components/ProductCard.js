@@ -5,7 +5,7 @@ const ProductCard = () => {
 
   return (
     <Link to="/Lương-Thực/Chi-Tiết">
-      <div className="border p-4 rounded hover:shadow-md hover:bg-red-50 transition-all duration-300 bg-white max-w-[230px] h-[320px] flex flex-col">
+      <div className="border p-4 rounded shadow hover:shadow-md hover:bg-red-50 transition-all duration-300 bg-white max-w-[230px] h-[320px] flex flex-col">
 
         {/* Khu vực ảnh: Giữ nguyên h-40 (~160px) */}
         <div className=" relative w-full h-[160px] mb-3 overflow-hidden rounded flex-shrink-0">

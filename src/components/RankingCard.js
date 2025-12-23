@@ -1,6 +1,6 @@
 const RankingCard = () => {
   return (
-    <div>
+    <div className="w-full h-[120px] border rounded shadow hover:bg-red-50 p-4">
         kkk
     </div>
   );
