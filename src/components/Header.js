@@ -2,7 +2,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ onOpenSearch }) => {
   return (
     <header className="fixed top-0 left-0 w-full h-[100px] bg-white border-b border-gray-300 text-black flex items-center px-[60px] z-50">
       {/* logo web */}
@@ -67,7 +67,9 @@ const Header = () => {
           Đăng nhập
         </button>
 
-        <button className="w-[40px] h-[40px] rounded-full border shadow bg-gray-100 hover:bg-gray-200">
+        <button onClick={onOpenSearch}
+          className="w-[40px] h-[40px] rounded-full border shadow bg-gray-100 hover:bg-gray-200"
+        >
           <SearchIcon />
         </button>
       </div>

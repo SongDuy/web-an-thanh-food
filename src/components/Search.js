@@ -1,7 +1,7 @@
 import CloseIcon from "@mui/icons-material/Close";
 import StarIcon from "@mui/icons-material/Star";
 
-const Search = () => {
+const Search = ({ onClose }) => {
     return (
         <div className="fixed inset-0 z-50 flex bg-black/50 backdrop-blur-sm">
             {/* Sidebar */}
@@ -12,7 +12,10 @@ const Search = () => {
                     <h2 className="text-lg font-semibold text-gray-800">
                         Tìm kiếm
                     </h2>
-                    <button className="w-9 h-9 flex items-center justify-center rounded-md bg-gray-100 hover:bg-red-500 hover:text-white transition">
+                    <button
+                        onClick={onClose}
+                        className="w-9 h-9 flex items-center justify-center rounded-md bg-gray-100 hover:bg-red-500 hover:text-white transition"
+                    >
                         <CloseIcon sx={{ fontSize: 22 }} />
                     </button>
                 </div>
