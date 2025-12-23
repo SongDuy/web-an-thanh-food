@@ -21,7 +21,6 @@ const ProductCard = () => {
             <span className="text-sm align-top ml-0.5 underline underline-offset-2">
               đ
             </span>
-
           </div>
         </div>
 

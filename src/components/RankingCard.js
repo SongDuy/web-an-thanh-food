@@ -13,12 +13,21 @@ const RankingCard = () => {
             8
           </div>
 
-          <div className="w-[100px] h-[100px]">
+          <div className="relative w-[100px] h-[100px] overflow-hidden rounded flex-shrink-0">
             <img
               src={productImg}
               alt="Rau cải xanh"
               className="w-full h-full object-contain rounded transition-transform duration-500"
             />
+
+            <div className="absolute top-0 right-0 bg-yellow-500 text-red-100 font-bold text-shadow-black px-1.5 rounded-bl-lg z-10">
+              <span className="text-md">
+                0
+              </span>
+              <span className="text-[12px] align-top ml-0.5 underline underline-offset-2">
+                đ
+              </span>
+            </div>
           </div>
         </div>
 
