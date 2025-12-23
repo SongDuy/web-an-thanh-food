@@ -11,6 +11,7 @@ const RankingCard = () => {
 
           </div>
           <div className="w-full border">
+
           </div>
 
 
