@@ -25,7 +25,7 @@ const RankingsPage = () => {
                     </div>
                     <div className="ml-auto">
                         <CheckOutlinedIcon fontSize="small" />
-                        <span className="text-black ml-1">Bảng xếp hạng</span>
+                        <span className="text-black ml-1">Xếp hạng</span>
                     </div>
                 </div>
                 <div className="w-full min-h-[650px] grid grid-cols-3 gap-3 mt-[25px]">
