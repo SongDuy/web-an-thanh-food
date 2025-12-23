@@ -5,25 +5,25 @@ const RankingCard = () => {
   const productImg = "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png";
 
   return (
-    <div className="w-full h-[145px] border rounded shadow bg-white hover:bg-red-50 p-4">
+    <div className="w-full h-[145px] rounded shadow bg-white hover:bg-red-50 p-4">
       <div className="w-full h-full flex gap-3">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center gap-3">
 
           <div className="min-w-[50px] h-[50px] bg-red-50 shadow text-white text-shadow-black font-serifBook rounded-full text-[35px] leading-none border flex items-center justify-center">
             8
           </div>
 
-          <div className="min-w-[90px] h-full ml-3">
+          <div className="w-[100px] h-[100px]">
             <img
               src={productImg}
               alt="Rau cải xanh"
-              className="w-full h-full object-contain transition-transform duration-500"
+              className="w-full h-full object-contain rounded transition-transform duration-500"
             />
           </div>
         </div>
 
         <div className="w-full h-full">
-          <div className="w-full flex flex-col gap-2">
+          <div className="w-full flex flex-col gap-1.5">
             <div className="w-full">
               <h3 className="w-full h-[50px] text-md font-semibold text-gray-800 line-clamp-2">
                 Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh
