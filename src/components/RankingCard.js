@@ -6,7 +6,7 @@ const RankingCard = () => {
 
           <span>kkkk</span>
         </div>
-        <div className="w-full h-full grid grid-cols-[70%_30%] gap-3">
+        <div className="w-full h-full grid grid-cols-[70%_30%]">
           <div className="w-full border">
 
           </div>
