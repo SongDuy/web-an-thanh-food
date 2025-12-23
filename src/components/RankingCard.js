@@ -13,9 +13,11 @@ const RankingCard = () => {
         </div>
 
         <div className="w-full h-full grid grid-cols-[70%_30%]">
-          <div className="w-full border">
-
+          <div className="w-full border flex-grow">
+            <h3 className="text-md font-semibold text-gray-800 line-clamp-1">Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh</h3>
+            <p className="text-sm font-semibold text-red-300">1 gói / 1kg</p>
           </div>
+
           <div className="w-full border">
 
           </div>
