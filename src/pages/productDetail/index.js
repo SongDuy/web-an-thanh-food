@@ -1,5 +1,9 @@
+import { useState } from "react";
+
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import Search from '../../components/Search';
+
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
@@ -9,10 +13,16 @@ import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import { Link } from 'react-router-dom';
 
 const ProductDetailPage = () => {
+    const [openSearch, setOpenSearch] = useState(false);
 
     return (
         <>
-            <Header />
+             <Header onOpenSearch={() => setOpenSearch(true)} />
+
+            {openSearch && (
+                <Search onClose={() => setOpenSearch(false)} />
+            )}
+            
             <div className="w-full h-full bg-gray-100 px-[160px] border pt-[100px] pb-[45px]">
                 {/* Hình ảnh sản phẩm và đặt hàng */}
                 <div className="w-full h-[35px] flex items-center">

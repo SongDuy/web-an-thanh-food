@@ -1,14 +1,24 @@
+import { useState } from "react";
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import Search from '../../components/Search';
 import ProductCard from '../../components/ProductCard';
+
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 
 const RankingsPage = () => {
+    const [openSearch, setOpenSearch] = useState(false);
+
     return (
         <>
-            <Header />
+            <Header onOpenSearch={() => setOpenSearch(true)} />
+
+            {openSearch && (
+                <Search onClose={() => setOpenSearch(false)} />
+            )}
+
             <div className="px-[160px] pt-[100px] pb-[45px] bg-gray-100">
                 <div className="w-full h-[60px] border-b border-gray-300 flex items-center">
                     <div>
