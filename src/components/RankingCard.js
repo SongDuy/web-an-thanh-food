@@ -4,21 +4,28 @@ const RankingCard = () => {
   return (
     <div className="w-full h-[120px] border rounded shadow hover:bg-red-50 p-4">
       <div className="w-full h-full flex gap-3">
-        <div className="min-w-[90px] h-full border">
-          <img
-            src={productImg}
-            alt="Rau cải xanh"
-            className="w-full h-full object-cover transition-transform duration-500"
-          />
+        <div className="flex items-center justify-center">
+
+          <div className="w-[50px] h-[50px] bg-red-50 border shadow text-white text-shadow-black font-serifBook rounded-full text-[35px] leading-none flex items-center justify-center">
+            8
+          </div>
+
+          <div className="min-w-[90px] h-full ml-3">
+            <img
+              src={productImg}
+              alt="Rau cải xanh"
+              className="w-full h-full object-cover transition-transform duration-500"
+            />
+          </div>
         </div>
 
-        <div className="w-full h-full grid grid-cols-[75%_25%]">
+        <div className="w-full h-full grid grid-cols-[70%_30%]">
           <div className="w-full flex-grow">
             <h3 className="text-md font-semibold text-gray-800 line-clamp-1">Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh</h3>
             <p className="text-sm font-semibold text-red-300">1 gói / 1kg</p>
           </div>
 
-          <div className="w-full flex items-center pl-3">
+          <div className="w-full flex items-center">
             <button className="w-full h-[35px] bg-green-500 hover:bg-green-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
               Mua ngay
             </button>
