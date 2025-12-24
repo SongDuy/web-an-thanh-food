@@ -1,5 +1,5 @@
-import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import StarOutlinedIcon from '@mui/icons-material/StarOutlined';
+import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import { Link } from "react-router-dom";
 
 const toSlug = (str) =>
@@ -63,12 +63,12 @@ const RankingCard = ({ product, index }) => {
                 {/* Buttons sát đáy */}
                 <div className="w-full mt-auto grid grid-cols-2 gap-3">
                   <div className="w-full border shadow rounded text-black flex items-center justify-center gap-1 py-0.5">
-                    <StarBorderOutlinedIcon fontSize="small" />
+                    <StarOutlinedIcon fontSize="small" color="warning" />
                     {product.rating}
                   </div>
 
                   <div className="w-full border shadow rounded text-black flex items-center justify-center gap-1 py-0.5">
-                    <FavoriteBorderOutlinedIcon fontSize="small" />
+                    <FavoriteOutlinedIcon fontSize="small" color="error" />
                     {product.likes}
                   </div>
                 </div>
