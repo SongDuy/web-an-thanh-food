@@ -256,7 +256,7 @@ const HomePage = () => {
             <h1 className="text-[22px] font-bold uppercase"> Danh mục lương thực </h1>
             <Link
               to="/luong-thuc"
-              className="ml-auto text-gray-500 flex items-center justify-center"
+              className="ml-auto text-gray-500 hover:text-black flex items-center justify-center"
             >
               View all
               <NavigateNextIcon />
@@ -277,7 +277,7 @@ const HomePage = () => {
             <h1 className="text-[22px] font-bold uppercase">Danh mục thực phẩm </h1>
             <Link
               to="/thuc-pham"
-              className="ml-auto text-gray-500 flex items-center justify-center"
+              className="ml-auto text-gray-500 hover:text-black flex items-center justify-center"
             >
               View all
               <NavigateNextIcon />
@@ -299,7 +299,7 @@ const HomePage = () => {
             <h1 className="text-[22px] font-bold uppercase">Bảng Xếp Hạng </h1>
             <Link
               to="/bang-xep-hang"
-              className="ml-auto text-gray-500 flex items-center justify-center"
+              className="ml-auto text-gray-500 hover:text-black flex items-center justify-center"
             >
               View all
               <NavigateNextIcon />
