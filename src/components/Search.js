@@ -50,18 +50,19 @@ const Search = ({ onClose }) => {
                     />
 
                     {/* Tabs */}
-                    <div className="mt-[25px] flex gap-3">
+                    {/* <div className="mt-[25px] flex gap-3">
                         <button className="flex-1 h-9 text-sm font-medium rounded-lg bg-black text-white transition">
                             Lương Thực
                         </button>
                         <button className="flex-1 h-9 text-sm font-medium rounded-lg bg-gray-100 hover:bg-gray-200 shadow border text-gray-700  transition">
                             Thực Phẩm
                         </button>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Result list */}
                 <div className="w-full grid grid-cols-1 gap-2 mt-[25px]">
+                    <SearchCard />
                     <SearchCard />
                     <SearchCard />
                     <SearchCard />
