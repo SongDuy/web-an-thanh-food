@@ -9,10 +9,10 @@ import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
 const products = [
     {
         id: 1,
-        name: "Rau Cải Xanh",
+        name: "Sữa Tươi Tiệt Trùng - Có Đường",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
-        category: "Lương thực",
+        category: "Thực phẩm",
         unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
@@ -20,10 +20,10 @@ const products = [
     },
     {
         id: 2,
-        name: "Rau Cải Xanh",
+        name: "Sữa Tươi Tiệt Trùng - Ít Đường",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
-        category: "Lương thực",
+        category: "Thực phẩm",
         unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
@@ -31,10 +31,10 @@ const products = [
     },
     {
         id: 3,
-        name: "Rau Cải Xanh",
+        name: "Sữa Tươi Tiệt Trùng - Không Đường",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
-        category: "Lương thực",
+        category: "Thực phẩm",
         unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
@@ -42,10 +42,10 @@ const products = [
     },
     {
         id: 4,
-        name: "Rau Cải Xanh",
+        name: "Sữa Tươi Tiệt Trùng - Vị Dâu",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
-        category: "Lương thực",
+        category: "Thực phẩm",
         unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
@@ -53,7 +53,7 @@ const products = [
     },
     {
         id: 5,
-        name: "Rau Cải Xanh",
+        name: "Sữa Tươi Tiệt Trùng - Vị Socola",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực phẩm",
@@ -64,10 +64,10 @@ const products = [
     },
     {
         id: 6,
-        name: "Rau Cải Xanh",
+        name: "Mì - Tôm Chua Cay",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
-        category: "Lương thực",
+        category: "thực phẩm",
         unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
@@ -75,7 +75,7 @@ const products = [
     },
     {
         id: 7,
-        name: "Rau Cải Xanh",
+        name: "Sữa Đậu Nành - Có Đường",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực phẩm",
@@ -86,10 +86,10 @@ const products = [
     },
     {
         id: 8,
-        name: "Rau Cải Xanh",
+        name: "Sữa Đậu Nành - Ít Đường",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
-        category: "Lương thực",
+        category: "Thực Phẩm",
         unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
@@ -97,7 +97,18 @@ const products = [
     },
     {
         id: 9,
-        name: "Rau Cải Xanh",
+        name: "Sữa Đậu Nành - Không Đường",
+        image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
+        price: 0,
+        category: "Thực Phẩm",
+        unit: "1 túi / 1 kg",
+        rating: 4.5,
+        likes: 125,
+        stock: 32
+    },
+    {
+        id: 10,
+        name: "Gạo Lứt - Huyết Rồng",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
@@ -107,19 +118,8 @@ const products = [
         stock: 32
     },
     {
-        id: 10,
-        name: "Rau Cải Xanh",
-        image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
-        price: 0,
-        category: "Thực phẩm",
-        unit: "1 túi / 1 kg",
-        rating: 4.5,
-        likes: 125,
-        stock: 32
-    },
-    {
         id: 11,
-        name: "Rau Cải Xanh",
+        name: "Gạo Lứt - Tím Than",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
@@ -130,7 +130,7 @@ const products = [
     },
     {
         id: 12,
-        name: "Rau Cải Xanh",
+        name: "Gạo - ST25",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
@@ -141,18 +141,7 @@ const products = [
     },
     {
         id: 13,
-        name: "Rau Cải Xanh",
-        image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
-        price: 0,
-        category: "Thực phẩm",
-        unit: "1 túi / 1 kg",
-        rating: 4.5,
-        likes: 125,
-        stock: 32
-    },
-    {
-        id: 14,
-        name: "Rau Cải Xanh",
+        name: "Gạo -  ST21",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
@@ -162,8 +151,19 @@ const products = [
         stock: 32
     },
     {
+        id: 14,
+        name: "Thịt Hộp - Hàn Quốc",
+        image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
+        price: 0,
+        category: "Thực phẩm",
+        unit: "1 túi / 1 kg",
+        rating: 4.5,
+        likes: 125,
+        stock: 32
+    },
+    {
         id: 15,
-        name: "Rau Cải Xanh",
+        name: "Cá Hộp - Sốt Cà",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực phẩm",
@@ -174,7 +174,7 @@ const products = [
     },
     {
         id: 16,
-        name: "Rau Cải Xanh",
+        name: "Đậu Đen Xanh Lòng",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
