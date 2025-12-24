@@ -62,14 +62,19 @@ const RankingCard = ({ product, index }) => {
 
                 {/* Buttons sát đáy */}
                 <div className="w-full mt-auto grid grid-cols-2 gap-3">
-                  <div className="w-full border shadow rounded text-black flex items-center justify-center gap-0.5 py-0.5">
-                    <StarOutlinedIcon fontSize="small" sx={{ color: "#FFD700" }} />
-                    {product.rating}
+                  <div className="w-full border shadow rounded text-yellow-400 flex items-center justify-center gap-0.5 py-0.5">
+                    <StarOutlinedIcon fontSize="small" />
+                    <span className="text-black">
+                      {product.rating}
+                    </span>
                   </div>
 
-                  <div className="w-full border shadow rounded text-black flex items-center justify-center gap-0.5 py-0.5">
-                    <FavoriteOutlinedIcon fontSize="small" sx={{ color: "#ef4444" }} />
-                    {product.likes}
+                  <div className="w-full border shadow rounded text-red-400 flex items-center justify-center gap-0.5 py-0.5">
+
+                    <FavoriteOutlinedIcon fontSize="small" />
+                    <span className="text-black">
+                      {product.likes}
+                    </span>
                   </div>
                 </div>
               </div>
