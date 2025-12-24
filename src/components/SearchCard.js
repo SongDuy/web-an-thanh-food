@@ -20,10 +20,10 @@ const SearchCard = () => {
 
                 {/* Category - Unit */}
                 <div className="flex text-xs text-gray-500 mt-0.5">
-                    <span className="pr-2 border-r border-gray-300 line-clamp-1">
+                    <span className="pr-2 border-r text-red-300 font-bold line-clamp-1">
                         Thực phẩm
                     </span>
-                    <span className="pl-2 border-l flex items-center gap-1 line-clamp-1">
+                    <span className="pl-2 border-l text-red-300 font-semibold line-clamp-1">
                         1 túi * 1 kg
                     </span>
                 </div>
