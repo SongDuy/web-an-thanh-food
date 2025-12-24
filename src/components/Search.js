@@ -316,7 +316,7 @@ const Search = ({ onClose }) => {
                 </div>
 
                 {/* Result list */}
-                <div className="w-full grid grid-cols-1 gap-2 mt-[25px] pb-2 overflow-y-auto custom-scrollbar">
+                <div className="w-full grid grid-cols-1 gap-2 mt-[25px] pb-2">
 
                     {!hasKeyword && (
                         <p className="text-sm text-gray-400 text-center mt-10">
@@ -335,7 +335,7 @@ const Search = ({ onClose }) => {
                             key={product.id}
                             to={`/${toSlug(product.category)}/${toSlug(product.name)}?id=${product.id}`}
                             onClick={handleClose}
-                            className="block"
+                            //className="block"
                         >
                             <div
                                 className="flex items-center gap-3 p-2 rounded-lg border shadow hover:bg-red-50 cursor-pointer transition"
