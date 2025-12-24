@@ -18,7 +18,7 @@ const products = [
     expiryDate: "2026-06-30",
     rating: 4.5,
     likes: 125,
-    stock: 32
+    stock: 3200
   },
   {
     id: 2,

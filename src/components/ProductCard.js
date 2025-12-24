@@ -48,7 +48,7 @@ const ProductCard = ({ product, index }) => {
           {/* Nút bấm: Sẽ luôn nằm ở đáy nhờ cấu trúc flex-col */}
           <div className="mt-auto grid grid-cols-2 gap-3 w-full">
             <button className="w-full bg-gray-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium">
-              {Number(product.stock).toLocaleString("vi-VN")}
+              {Number(product.stock).toLocaleString("en-US")}
             </button>
             {product.stock > 0 ? (
               <button className="w-full bg-green-500 hover:bg-green-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">

@@ -12,6 +12,23 @@ const toSlug = (str) =>
     .trim()
     .replace(/\s+/g, "-");
 
+function formatLikes(num) {
+  if (num < 1_000) return num.toString();
+
+  if (num < 1_000_000) {
+    const k = Math.floor(num / 100) / 10;
+    return k % 1 === 0 ? `${Math.floor(k)}K` : `${k}K`;
+  }
+
+  if (num < 1_000_000_000) {
+    const m = Math.floor(num / 100_000) / 10;
+    return m % 1 === 0 ? `${Math.floor(m)}M` : `${m}M`;
+  }
+
+  const b = Math.floor(num / 100_000_000) / 10;
+  return b % 1 === 0 ? `${Math.floor(b)}B` : `${b}B`;
+}
+
 const RankingCard = ({ product, index }) => {
   if (!product) return null; // QUAN TRỌNG
 
@@ -62,18 +79,19 @@ const RankingCard = ({ product, index }) => {
 
                 {/* Buttons sát đáy */}
                 <div className="w-full mt-auto grid grid-cols-2 gap-3">
-                  <div className="w-full border shadow rounded text-yellow-400 flex items-center justify-center gap-0.5 py-0.5">
+                  <div className="w-full border shadow rounded text-yellow-400 font-normal flex items-center justify-center gap-0.5 py-0.5">
                     <StarOutlinedIcon fontSize="small" />
                     <span className="text-black">
                       {product.rating}
                     </span>
                   </div>
 
-                  <div className="w-full border shadow rounded text-red-400 flex items-center justify-center gap-0.5 py-0.5">
+                  <div className="w-full border shadow rounded text-red-400  font-normal flex items-center justify-center gap-0.5 py-0.5">
 
                     <FavoriteOutlinedIcon fontSize="small" />
                     <span className="text-black">
-                      {product.likes}
+                      {/* {product.likes} */}
+                      {formatLikes(Number(product.likes))}
                     </span>
                   </div>
                 </div>
