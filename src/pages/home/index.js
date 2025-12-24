@@ -1,6 +1,8 @@
 import MainLayout from '../../layouts/MainLayout';
 import ProductCard from '../../components/ProductCard';
 import RankingCard from '../../components/RankingCard';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import { Link } from 'react-router-dom';
 
 const products = [
   {
@@ -246,52 +248,78 @@ const products = [
 ];
 
 const HomePage = () => {
-    return (
-        <MainLayout>
-            <div>
-                <div className="w-full h-full mt-[35px]">
-                    <h1 className="text-[22px] font-bold uppercase"> Danh mục lương thực </h1>
+  return (
+    <MainLayout>
+      <div>
+        <div className="w-full h-full mt-[35px]">
+          <div className="flex">
+            <h1 className="text-[22px] font-bold uppercase"> Danh mục lương thực </h1>
+            <Link
+              to="/luong-thuc"
+              className="ml-auto text-gray-500"
+            >
+              View all
+              <NavigateNextIcon className="relative bottom-[2px]" />
+            </Link>
+          </div>
+          <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[38px]">
+            {products.slice(0, 10).map((product, index) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="w-full h-full mt-[35px]">
+          <div className="flex">
+            <h1 className="text-[22px] font-bold uppercase">Danh mục thực phẩm </h1>
+            <Link
+              to="/thuc-pham"
+              className="ml-auto text-gray-500"
+            >
+              View all
+              <NavigateNextIcon className="relative bottom-[2px]" />
+            </Link>
+          </div>
 
-                    <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[38px]">
-                        {products.slice(0, 10).map((product, index) => (
-                            <ProductCard
-                                key={product.id}
-                                product={product}
-                                index={index}
-                            />
-                        ))}
-                    </div>
-                </div>
-                <div className="w-full h-full mt-[35px]">
-                    <h1 className="text-[22px] font-bold uppercase">Danh mục thực phẩm </h1>
+          <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[38px] ">
+            {products.slice(0, 10).map((product, index) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="w-full h-full mt-[35px]">
+          <div className="flex">
+            <h1 className="text-[22px] font-bold uppercase">Bảng Xếp Hạng </h1>
+            <Link
+              to="/bang-xep-hang"
+              className="ml-auto text-gray-500"
+            >
+              View all
+              <NavigateNextIcon className="relative bottom-[2px]" />
+            </Link>
+          </div>
 
-                    <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[38px] ">
-                        {products.slice(0, 10).map((product, index) => (
-                            <ProductCard
-                                key={product.id}
-                                product={product}
-                                index={index}
-                            />
-                        ))}
-                    </div>
-                </div>
-                <div className="w-full h-full mt-[35px]">
-                    <h1 className="text-[22px] font-bold uppercase">Bảng Xếp Hạng </h1>
+          <div className="w-full min-h-[650px] grid grid-cols-3 gap-3 mt-[38px] ">
+            {products.slice(0, 15).map((product, index) => (
+              <RankingCard
+                key={product.id}
+                product={product}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
 
-                    <div className="w-full min-h-[650px] grid grid-cols-3 gap-3 mt-[38px] ">
-                        {products.slice(0, 15).map((product, index) => (
-                            <RankingCard
-                                key={product.id}
-                                product={product}
-                                index={index}
-                            />
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-        </MainLayout>
-    );
+    </MainLayout>
+  );
 }
 
 export default HomePage;
