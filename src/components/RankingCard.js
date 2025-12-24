@@ -13,7 +13,7 @@ const RankingCard = () => {
             <div className="flex items-center justify-center gap-3">
 
               <div className="min-w-[50px] h-[50px] bg-red-50 shadow text-white text-shadow-black border border-gray-300 font-serifBook rounded-full text-[35px] leading-none flex items-center justify-center">
-                8
+                1
               </div>
 
               <div className="relative w-[100px] h-[100px] overflow-hidden rounded flex-shrink-0">
