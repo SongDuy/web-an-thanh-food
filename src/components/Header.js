@@ -23,7 +23,7 @@ const Header = ({ onOpenSearch }) => {
         <ul className="flex overflow-x-auto gap-5 mx-3 whitespace-nowrap">
           <li>
             <NavLink
-              to="/Lương-Thực"
+              to="/luong-thuc"
               className={({ isActive }) =>
                 `uppercase text-lg font-bold transition
                 ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`
@@ -34,7 +34,7 @@ const Header = ({ onOpenSearch }) => {
           </li>
           <li>
             <NavLink
-              to="/Thực-Phẩm"
+              to="/thuc-pham"
               className={({ isActive }) =>
                 `uppercase text-lg font-bold transition
                 ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`
@@ -45,7 +45,7 @@ const Header = ({ onOpenSearch }) => {
           </li>
           <li>
             <NavLink
-              to="/Bảng-Xếp-Hạng"
+              to="/bang-xep-hang"
               className={({ isActive }) =>
                 `uppercase text-lg font-bold transition
                 ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`

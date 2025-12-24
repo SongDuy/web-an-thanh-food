@@ -11,10 +11,10 @@ const AppRoutes = () => {
         <Routes>
             {/* Trang chủ */}
             <Route path="/" element={<HomePage />} />
-            <Route path="/Lương-Thực" element={<StaplesPage />} />
-            <Route path="/Thực-Phẩm" element={<GroceriesPage />} />
-            <Route path="/Bảng-Xếp-Hạng" element={<RankingsPage />} />
-            <Route path="/Lương-Thực/Chi-Tiết" element={<ProductDetailPage />} />
+            <Route path="/luong-thuc" element={<StaplesPage />} />
+            <Route path="/thuc-pham" element={<GroceriesPage />} />
+            <Route path="/bang-xep-hang" element={<RankingsPage />} />
+            <Route path="/:category/:id" element={<ProductDetailPage />} />
 
             {/* Trang 404 */}
             <Route path="/404" element={<NotFoundPage />} />

@@ -1,23 +1,33 @@
 import { Link } from "react-router-dom";
 
-const ProductCard = () => {
-  const productImg = "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png";
+const toSlug = (str) =>
+  str
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d")
+    .replace(/[^a-z0-9 ]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+
+const ProductCard = ({ product, index }) => {
+  if (!product) return null; // QUAN TRỌNG
 
   return (
     <>
-      <Link to="/Lương-Thực/Chi-Tiết">
+      <Link to={`/${toSlug(product.category)}/${product.id}-${toSlug(product.name)}`}>
         <div className="border p-4 rounded shadow hover:bg-red-50 transition-all duration-300 bg-white max-w-[230px] h-[320px] flex flex-col">
 
           {/* Khu vực ảnh: Giữ nguyên h-40 (~160px) */}
           <div className=" relative w-full h-[160px] mb-3 overflow-hidden rounded flex-shrink-0">
             <img
-              src={productImg}
-              alt="Rau cải xanh"
+              src={product.image}
+              alt={product.name}
               className="w-full h-full object-cover transition-transform duration-500"
             />
             <div className="absolute top-0 right-0 bg-yellow-500 text-white font-bold text-shadow-black px-3 py-0.5 rounded-bl-xl z-10">
               <span className="text-xl">
-                0
+                {product.price}
               </span>
               <span className="text-sm align-top ml-0.5 underline underline-offset-2">
                 đ
@@ -27,14 +37,18 @@ const ProductCard = () => {
 
           {/* Nội dung text: flex-grow giúp vùng này chiếm không gian còn lại */}
           <div className="flex-grow">
-            <h3 className="w-full h-[50px] text-md font-semibold text-gray-800 line-clamp-2">Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh Rau cải xanh</h3>
-            <p className="text-sm font-semibold text-red-300">1 gói / 1kg</p>
+            <h3 className="w-full h-[50px] text-md font-semibold text-gray-800 line-clamp-2">
+              {product.name}
+            </h3>
+            <p className="text-sm font-semibold text-red-300">
+              {product.unit}
+            </p>
           </div>
 
           {/* Nút bấm: Sẽ luôn nằm ở đáy nhờ cấu trúc flex-col */}
           <div className="mt-auto grid grid-cols-2 gap-3 w-full">
             <button className="w-full bg-gray-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium">
-              {Number(100).toLocaleString("vi-VN")}
+              {Number(product.stock).toLocaleString("vi-VN")}
             </button>
             {/* <button className="w-full bg-green-500 hover:bg-green-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
             Mua ngay
