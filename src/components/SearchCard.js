@@ -1,38 +1,47 @@
 import StarIcon from "@mui/icons-material/Star";
+import InventoryIcon from "@mui/icons-material/Inventory";
 
 const SearchCard = () => {
     return (
-        <>
-            <div className="flex items-center gap-3 p-2 rounded-lg border shadow hover:bg-gray-100 cursor-pointer transition">
-                {/* Thumbnail */}
-                <img
-                    src="https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png"
-                    alt="thumb"
-                    className="w-[70px] h-[70px] rounded-lg object-cover flex-shrink-0"
-                />
+        <div className="flex items-center gap-3 p-2 rounded-lg border shadow hover:bg-gray-100 cursor-pointer transition">
+            {/* Thumbnail */}
+            <img
+                src="https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png"
+                alt="Sữa Tươi Tiệt Trùng - Có Đường"
+                className="w-[70px] h-[70px] rounded-lg object-cover flex-shrink-0"
+            />
 
-                {/* Info */}
-                <div className="flex-1 overflow-hidden">
-                    <p className="text-sm font-semibold text-gray-800 line-clamp-1">
-                        Sample Title Comic
-                    </p>
+            {/* Info */}
+            <div className="flex-1 overflow-hidden">
+                {/* Name */}
+                <p className="text-sm font-semibold text-gray-800 line-clamp-2">
+                    Sữa Tươi Tiệt Trùng - Có Đường
+                </p>
 
-                    <div className="flex text-xs text-gray-500 mt-0.5">
-                        <span className="pr-2 border-r border-gray-300 line-clamp-1">
-                            Author Name
-                        </span>
-                        <span className="pl-2 line-clamp-1">
-                            Action, Fantasy
-                        </span>
+                {/* Category - Unit */}
+                <div className="flex text-xs text-gray-500 mt-0.5">
+                    <span className="pr-2 border-r border-gray-300 line-clamp-1">
+                        Thực phẩm
+                    </span>
+                    <span className="pl-2 flex items-center gap-1 line-clamp-1">
+                        1 túi * 1 kg
+                    </span>
+                </div>
+
+                {/* Rating - Stock */}
+                <div className="flex items-center gap-3 text-xs font-semibold mt-1">
+                    <div className="flex items-center gap-1 text-yellow-500">
+                        <StarIcon fontSize="inherit" />
+                        4.5
                     </div>
 
-                    <div className="flex items-center gap-1 text-yellow-500 text-xs font-semibold mt-1">
-                        <StarIcon fontSize="inherit" />
-                        12,345
+                    <div className="flex items-center gap-1 text-green-600">
+                        <InventoryIcon fontSize="inherit" />
+                        Còn hàng
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

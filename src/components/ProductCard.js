@@ -41,7 +41,7 @@ const ProductCard = ({ product, index }) => {
               {product.name}
             </h3>
             <p className="text-sm font-semibold text-red-300">
-              {product.unit} / {product.weight}
+              {product.unit} * {product.weight}
             </p>
           </div>
 

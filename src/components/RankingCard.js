@@ -1,5 +1,6 @@
 import StarOutlinedIcon from '@mui/icons-material/StarOutlined';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
+
 import { Link } from "react-router-dom";
 
 const toSlug = (str) =>
@@ -69,11 +70,11 @@ const RankingCard = ({ product, index }) => {
                     {product.name}
                   </h3>
 
-                  <span className="text-sm font-bold text-red-300">
-                    {product.category}:
+                  <span className="text-sm font-bold text-red-300 pr-2 border-r ">
+                    {product.category}
                   </span>
-                  <span className="text-sm font-semibold text-red-300 ml-2">
-                    {product.unit} / {product.weight}
+                  <span className="text-sm font-semibold text-red-300  pl-2">
+                    {product.unit} * {product.weight}
                   </span>
                 </div>
 
