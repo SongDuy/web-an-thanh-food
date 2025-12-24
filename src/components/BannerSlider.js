@@ -78,11 +78,12 @@ const banners = [
 
 const BannerSlider = () => {
   // Khởi tạo state từ localStorage (nếu có), nếu không thì mặc định là 0
-  const [current, setCurrent] = useState(() => {
-    const saved = localStorage.getItem('banner-current-index');
-    return saved !== null ? parseInt(saved, 10) : 0;
-  });
+  // const [current, setCurrent] = useState(() => {
+  //   const saved = localStorage.getItem('banner-current-index');
+  //   return saved !== null ? parseInt(saved, 10) : 0;
+  // });
 
+   const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
   // Khởi tạo ảnh cũ dựa trên current đã lấy từ storage
@@ -98,9 +99,9 @@ const BannerSlider = () => {
   }, []);
 
   // 2. Lưu index vào localStorage mỗi khi current thay đổi
-  useEffect(() => {
-    localStorage.setItem('banner-current-index', current);
-  }, [current]);
+  // useEffect(() => {
+  //   localStorage.setItem('banner-current-index', current);
+  // }, [current]);
 
   const nextImage = banners[(current + 1) % banners.length].bgImage;
 
