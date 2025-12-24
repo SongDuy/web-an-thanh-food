@@ -12,7 +12,7 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 const products = [
     {
         id: 1,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
@@ -23,7 +23,7 @@ const products = [
     },
     {
         id: 2,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
@@ -34,7 +34,7 @@ const products = [
     },
     {
         id: 3,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
@@ -45,7 +45,7 @@ const products = [
     },
     {
         id: 4,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
@@ -56,7 +56,7 @@ const products = [
     },
     {
         id: 5,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
@@ -67,7 +67,7 @@ const products = [
     },
     {
         id: 6,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
@@ -78,7 +78,7 @@ const products = [
     },
     {
         id: 7,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
@@ -89,7 +89,7 @@ const products = [
     },
     {
         id: 8,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
@@ -100,7 +100,7 @@ const products = [
     },
     {
         id: 9,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
@@ -111,7 +111,7 @@ const products = [
     },
     {
         id: 10,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
@@ -122,7 +122,7 @@ const products = [
     },
     {
         id: 11,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
@@ -133,7 +133,7 @@ const products = [
     },
     {
         id: 12,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
@@ -144,7 +144,7 @@ const products = [
     },
     {
         id: 13,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
@@ -155,7 +155,7 @@ const products = [
     },
     {
         id: 14,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
@@ -166,7 +166,7 @@ const products = [
     },
     {
         id: 15,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
@@ -177,7 +177,7 @@ const products = [
     },
     {
         id: 16,
-        name: "Rau cải xanh",
+        name: "Rau Cải Xanh",
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Thực Phẩm",
