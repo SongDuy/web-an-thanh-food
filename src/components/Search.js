@@ -61,7 +61,7 @@ const Search = ({ onClose }) => {
                 </div>
 
                 {/* Result list */}
-                <div className="w-full grid grid-cols-1 gap-3 mt-[25px]">
+                <div className="w-full grid grid-cols-1 gap-1.5 mt-[25px]">
                     <SearchCard />
                     <SearchCard />
                     <SearchCard />
