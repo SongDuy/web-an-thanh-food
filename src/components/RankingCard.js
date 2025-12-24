@@ -17,7 +17,8 @@ const RankingCard = ({ product, index }) => {
 
   return (
     <>
-      <Link to={`/${toSlug(product.category)}/${product.id}-${toSlug(product.name)}`}>
+      <Link to={`/${toSlug(product.category)}/${toSlug(product.name)}?id=${product.id}`}>
+
         <div className="w-full h-[145px] rounded shadow bg-white border hover:bg-red-50 p-4">
           <div className="w-full h-full flex gap-3">
             <div className="flex items-center justify-center gap-3">
@@ -82,7 +83,7 @@ const RankingCard = ({ product, index }) => {
 
           </div>
         </div>
-      </Link>
+      </Link >
     </>
   );
 };

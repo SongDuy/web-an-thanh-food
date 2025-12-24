@@ -15,7 +15,7 @@ const ProductCard = ({ product, index }) => {
 
   return (
     <>
-      <Link to={`/${toSlug(product.category)}/${product.id}-${toSlug(product.name)}`}>
+      <Link to={`/${toSlug(product.category)}/${toSlug(product.name)}?id=${product.id}`}>
         <div className="border p-4 rounded shadow hover:bg-red-50 transition-all duration-300 bg-white max-w-[230px] h-[320px] flex flex-col">
 
           {/* Khu vực ảnh: Giữ nguyên h-40 (~160px) */}
