@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import CloseIcon from "@mui/icons-material/Close";
 import StarIcon from "@mui/icons-material/Star";
@@ -247,6 +248,16 @@ const products = [
     }
 ];
 
+const toSlug = (str) =>
+    str
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/đ/g, "d")
+        .replace(/[^a-z0-9 ]/g, "")
+        .trim()
+        .replace(/\s+/g, "-");
+
 const Search = ({ onClose }) => {
     const [isClosing, setIsClosing] = useState(false);
     const [keyword, setKeyword] = useState("");
@@ -261,9 +272,9 @@ const Search = ({ onClose }) => {
         }, 1000); // = duration trong CSS
     };
 
-    const filteredProducts = products.filter((item) =>
-        item.name.toLowerCase().includes(keyword.toLowerCase())
-    );
+    const filteredProducts = products
+        .filter((item) => item.name.toLowerCase().includes(keyword.toLowerCase()))
+        .slice(0, 6); // 👈 Chỉ lấy 6 phần tử đầu tiên
 
     return (
         <div
@@ -296,6 +307,7 @@ const Search = ({ onClose }) => {
                 {/* Search input */}
                 <div className="mt-5">
                     <input
+                        autoFocus
                         value={keyword}
                         onChange={(e) => setKeyword(e.target.value)}
                         className="w-full h-10 px-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-black shadow-sm"
@@ -304,7 +316,7 @@ const Search = ({ onClose }) => {
                 </div>
 
                 {/* Result list */}
-                <div className="w-full grid grid-cols-1 gap-2 mt-[25px] overflow-y-auto custom-scrollbar">
+                <div className="w-full grid grid-cols-1 gap-2 mt-[25px] pb-2 overflow-y-auto custom-scrollbar">
 
                     {!hasKeyword && (
                         <p className="text-sm text-gray-400 text-center mt-10">
@@ -319,51 +331,57 @@ const Search = ({ onClose }) => {
                     )}
 
                     {hasKeyword && filteredProducts.map((product) => (
-                        <div
+                        <Link
                             key={product.id}
-                            className="flex items-center gap-3 p-2 rounded-lg border shadow hover:bg-red-50 cursor-pointer transition"
+                            to={`/${toSlug(product.category)}/${toSlug(product.name)}?id=${product.id}`}
+                            onClick={handleClose}
+                            className="block"
                         >
-                            {/* Thumbnail */}
-                            <img
-                                src={product.image}
-                                alt={product.name}
-                                className="w-[70px] h-[70px] rounded-lg object-cover flex-shrink-0"
-                            />
+                            <div
+                                className="flex items-center gap-3 p-2 rounded-lg border shadow hover:bg-red-50 cursor-pointer transition"
+                            >
+                                {/* Thumbnail */}
+                                <img
+                                    src={product.image}
+                                    alt={product.name}
+                                    className="w-[70px] h-[70px] rounded-lg object-cover flex-shrink-0"
+                                />
 
-                            {/* Info */}
-                            <div className="flex-1 overflow-hidden">
-                                <h3 className="text-sm font-semibold text-gray-800 line-clamp-1">
-                                    {product.name}
-                                </h3>
+                                {/* Info */}
+                                <div className="flex-1 overflow-hidden">
+                                    <h3 className="text-sm font-semibold text-gray-800 line-clamp-1">
+                                        {product.name}
+                                    </h3>
 
-                                <div className="flex text-xs mt-0.5">
-                                    <span className="pr-2 text-red-300 font-bold">
-                                        {product.category}
-                                    </span>
-                                    <span className="mx-2 h-3 w-px bg-gray-300" />
-                                    <span className="text-red-300 font-semibold">
-                                        {product.unit} * {product.weight}
-                                    </span>
-                                </div>
-
-                                <div className="flex items-center gap-3 text-xs font-semibold mt-1">
-                                    <div className="flex items-center gap-1 text-yellow-500">
-                                        <StarIcon fontSize="inherit" />
-                                        {product.rating}
+                                    <div className="flex text-xs mt-0.5">
+                                        <span className="pr-2 text-red-300 font-bold">
+                                            {product.category}
+                                        </span>
+                                        <span className="mx-2 h-3 w-px bg-gray-300" />
+                                        <span className="text-red-300 font-semibold">
+                                            {product.unit} * {product.weight}
+                                        </span>
                                     </div>
 
-                                    <div
-                                        className={`flex items-center gap-1 ${product.stock === 0
-                                                ? "text-gray-400"
+                                    <div className="flex items-center gap-3 text-xs font-semibold mt-1">
+                                        <div className="flex items-center gap-1 text-yellow-500">
+                                            <StarIcon fontSize="inherit" />
+                                            {product.rating}
+                                        </div>
+
+                                        <div
+                                            className={`flex items-center gap-1 ${product.stock === 0
+                                                ? "text-red-600"
                                                 : "text-green-600"
-                                            }`}
-                                    >
-                                        <InventoryIcon fontSize="inherit" />
-                                        {product.stock === 0 ? "Hết hàng" : "Mua ngay"}
+                                                }`}
+                                        >
+                                            <InventoryIcon fontSize="inherit" />
+                                            {product.stock === 0 ? "Hết hàng" : "Mua ngay"}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 

@@ -82,7 +82,7 @@
 }
 
 /* Điều chỉnh thanh cuộn  */
-/* ===== Custom Scrollbar ===== */
+/* ===== Custom Scrollbar (soft & blur) ===== */
 .custom-scrollbar::-webkit-scrollbar {
     width: 6px;
 }
@@ -92,16 +92,18 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #d1d5db; /* gray-300 */
+    background-color: rgba(156, 163, 175, 0.4); /* gray-400, mờ */
     border-radius: 999px;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background-color: #9ca3af; /* gray-400 */
+    background-color: rgba(156, 163, 175, 0.7); /* đậm hơn khi hover */
 }
 
 /* Firefox */
 .custom-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: #d1d5db transparent;
+    scrollbar-color: rgba(156, 163, 175, 0.4) transparent;
 }
+
