@@ -55,7 +55,7 @@ const RankingCard = ({ product, index }) => {
                     {product.category}:
                   </span>
                   <span className="text-sm font-semibold text-red-300 ml-2">
-                    {product.unit}
+                    {product.unit} / {product.weight}
                   </span>
                 </div>
 
