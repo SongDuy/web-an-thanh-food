@@ -46,19 +46,20 @@ const ProductCard = ({ product, index }) => {
           </div>
 
           {/* Nút bấm: Sẽ luôn nằm ở đáy nhờ cấu trúc flex-col */}
+
           <div className="mt-auto grid grid-cols-2 gap-3 w-full">
             <button className="w-full bg-gray-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium">
               {Number(product.stock).toLocaleString("en-US")}
             </button>
-            {product.stock > 0 ? (
-              <button className="w-full bg-green-500 hover:bg-green-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
-                Mua ngay
-              </button>
-            ) : (
-              <button className="w-full bg-red-500 hover:bg-red-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
-                Hết hàng
-              </button>
-            )}
+
+            <button className={`w-full shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ${product.stock === 0
+              ? "bg-red-500 hover:bg-red-600"
+              : "bg-green-500 hover:bg-green-600"
+              }`}
+            >
+              {product.stock === 0 ? "Hết hàng" : "Mua ngay"}
+            </button>
+
           </div>
         </div>
       </Link>
