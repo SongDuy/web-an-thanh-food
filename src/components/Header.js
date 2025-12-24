@@ -68,12 +68,13 @@ const Header = ({ onOpenSearch }) => {
           <ShoppingCartOutlinedIcon />
         </button>
 
-        <button className="flex items-center gap-2 text-md font-semibold px-4 py-2 rounded-full border shadow bg-gray-100 hover:bg-gray-200 transition">
+        <button className="flex items-center justify-center gap-2 text-md font-semibold px-4 py-2 rounded-full border shadow bg-gray-100 hover:bg-gray-200 transition">
           Đăng Nhập
         </button>
 
-        <button onClick={onOpenSearch}
-          className="w-[40px] h-[40px] rounded-full border shadow bg-gray-100 hover:bg-gray-200"
+        <button
+          onClick={onOpenSearch}
+          className="w-[40px] h-[40px] flex items-center justify-center text-black shadow border rounded-full bg-gray-100 hover:bg-gray-200"
         >
           <SearchIcon />
         </button>
