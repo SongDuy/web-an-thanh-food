@@ -63,7 +63,7 @@ const RankingCard = ({ product, index }) => {
                 {/* Buttons sát đáy */}
                 <div className="w-full mt-auto grid grid-cols-2 gap-3">
                   <div className="w-full border shadow rounded text-black flex items-center justify-center gap-1 py-0.5">
-                    <StarOutlinedIcon fontSize="small" color="warning" />
+                    <StarOutlinedIcon fontSize="small" sx={{ color: "#FFD700" }} />
                     {product.rating}
                   </div>
 
