@@ -68,7 +68,7 @@ const RankingCard = ({ product, index }) => {
                   </div>
 
                   <div className="w-full border shadow rounded text-black flex items-center justify-center gap-1 py-0.5">
-                    <FavoriteOutlinedIcon fontSize="small" color="error" />
+                    <FavoriteOutlinedIcon fontSize="small" sx={{ color: "#ef4444" }} />
                     {product.likes}
                   </div>
                 </div>
