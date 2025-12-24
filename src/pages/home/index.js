@@ -251,18 +251,18 @@ const HomePage = () => {
   return (
     <MainLayout>
       <div>
-        <div className="w-full h-full mt-[35px]">
-          <div className="flex">
+        <div className="w-full h-full">
+          <div className="flex my-[35px]">
             <h1 className="text-[22px] font-bold uppercase"> Danh mục lương thực </h1>
             <Link
               to="/luong-thuc"
-              className="ml-auto text-gray-500"
+              className="ml-auto text-gray-500 flex items-center justify-center"
             >
               View all
-              <NavigateNextIcon className="relative bottom-[2px]" />
+              <NavigateNextIcon />
             </Link>
           </div>
-          <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[38px]">
+          <div className="w-full min-h-[650px] grid grid-cols-5 gap-3">
             {products.slice(0, 10).map((product, index) => (
               <ProductCard
                 key={product.id}
@@ -272,19 +272,19 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-        <div className="w-full h-full mt-[35px]">
-          <div className="flex">
+        <div className="w-full h-full">
+          <div className="flex my-[35px]">
             <h1 className="text-[22px] font-bold uppercase">Danh mục thực phẩm </h1>
             <Link
               to="/thuc-pham"
-              className="ml-auto text-gray-500"
+              className="ml-auto text-gray-500 flex items-center justify-center"
             >
               View all
-              <NavigateNextIcon className="relative bottom-[2px]" />
+              <NavigateNextIcon />
             </Link>
           </div>
 
-          <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[38px] ">
+          <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 ">
             {products.slice(0, 10).map((product, index) => (
               <ProductCard
                 key={product.id}
@@ -294,19 +294,19 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-        <div className="w-full h-full mt-[35px]">
-          <div className="flex">
+        <div className="w-full h-full">
+          <div className="flex my-[35px]">
             <h1 className="text-[22px] font-bold uppercase">Bảng Xếp Hạng </h1>
             <Link
               to="/bang-xep-hang"
-              className="ml-auto text-gray-500"
+              className="ml-auto text-gray-500 flex items-center justify-center"
             >
               View all
-              <NavigateNextIcon className="relative bottom-[2px]" />
+              <NavigateNextIcon />
             </Link>
           </div>
 
-          <div className="w-full min-h-[650px] grid grid-cols-3 gap-3 mt-[38px] ">
+          <div className="w-full min-h-[650px] grid grid-cols-3 gap-3">
             {products.slice(0, 15).map((product, index) => (
               <RankingCard
                 key={product.id}
