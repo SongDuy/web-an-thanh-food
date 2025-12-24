@@ -61,10 +61,10 @@ const Header = ({ onOpenSearch }) => {
 
       {/* Các nút chức năng */}
       <div className="ml-auto flex items-center gap-2">
-        <button className="w-[40px] h-[40px] text-black shadow border rounded-full bg-gray-100 hover:bg-gray-200">
+        <button className="w-[40px] h-[40px] flex items-center justify-center text-black shadow border rounded-full bg-gray-100 hover:bg-gray-200">
           <NotificationsNoneOutlinedIcon />
         </button>
-        <button className="w-[40px] h-[40px] text-black shadow border rounded-full bg-gray-100 hover:bg-gray-200">
+        <button className="w-[40px] h-[40px] flex items-center justify-center text-black shadow border rounded-full bg-gray-100 hover:bg-gray-200">
           <ShoppingCartOutlinedIcon />
         </button>
 
