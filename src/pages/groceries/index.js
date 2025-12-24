@@ -19,7 +19,7 @@ const products = [
         unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
-        stock: 32
+        stock: 0
     },
     {
         id: 2,
@@ -52,7 +52,7 @@ const products = [
         unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
-        stock: 32
+        stock: 0
     },
     {
         id: 5,
@@ -107,7 +107,7 @@ const products = [
         unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
-        stock: 32
+        stock: 0
     },
     {
         id: 10,
@@ -151,7 +151,7 @@ const products = [
         unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
-        stock: 32
+        stock: 0
     },
     {
         id: 14,
@@ -173,7 +173,7 @@ const products = [
         unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
-        stock: 32
+        stock: 0
     },
     {
         id: 16,
