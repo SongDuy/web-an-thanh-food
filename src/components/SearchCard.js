@@ -37,7 +37,7 @@ const SearchCard = () => {
 
                     <div className="flex items-center gap-1 text-green-600">
                         <InventoryIcon fontSize="inherit" />
-                        Còn hàng
+                        Mua ngay
                     </div>
                 </div>
             </div>
