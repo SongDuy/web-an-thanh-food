@@ -15,7 +15,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
@@ -26,7 +26,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
@@ -37,7 +37,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
@@ -48,7 +48,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
@@ -59,7 +59,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
@@ -70,7 +70,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
@@ -81,7 +81,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
@@ -92,7 +92,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
@@ -103,7 +103,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
@@ -114,7 +114,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
@@ -125,7 +125,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
@@ -136,7 +136,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
@@ -147,7 +147,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
@@ -158,7 +158,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
@@ -169,7 +169,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
@@ -180,7 +180,7 @@ const products = [
         image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
         price: 0,
         category: "Lương thực",
-        unit: "1 túi / 1kg",
+        unit: "1 túi / 1 kg",
         rating: 4.5,
         likes: 125,
         stock: 32
