@@ -3,7 +3,7 @@ import InventoryIcon from "@mui/icons-material/Inventory";
 
 const SearchCard = () => {
     return (
-        <div className="flex items-center gap-3 p-2 rounded-lg border shadow hover:bg-red-50 cursor-pointer transition">
+        <div className=" flex items-center gap-3 p-2 rounded-lg border shadow hover:bg-red-50 cursor-pointer transition">
             {/* Thumbnail */}
             <img
                 src="https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png"
@@ -14,9 +14,9 @@ const SearchCard = () => {
             {/* Info */}
             <div className="flex-1 overflow-hidden">
                 {/* Name */}
-                <p className="text-sm font-semibold text-gray-800 line-clamp-2">
+                <h3 className="text-sm font-semibold text-gray-800 line-clamp-1">
                     Sữa Tươi Tiệt Trùng - Có Đường
-                </p>
+                </h3>
 
                 {/* Category - Unit */}
                 <div className="flex text-xs text-gray-500 mt-0.5">
