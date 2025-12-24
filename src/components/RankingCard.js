@@ -23,7 +23,7 @@ const RankingCard = ({ product, index }) => {
           <div className="w-full h-full flex gap-3">
             <div className="flex items-center justify-center gap-3">
 
-              <div className="min-w-[50px] h-[50px] bg-red-50 shadow text-black text-shadow-white border border-gray-300 font-serifBook rounded-full text-[35px] leading-none flex items-center justify-center">
+              <div className="min-w-[50px] h-[50px] bg-red-50 shadow text-black text-shadow-white border font-serifBook rounded-full text-[35px] leading-none flex items-center justify-center">
                 {index + 1}
               </div>
 
