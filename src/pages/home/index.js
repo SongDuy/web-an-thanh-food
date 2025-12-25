@@ -18,7 +18,7 @@ const products = [
     expiryDate: "2026-06-30",
     rating: 4.5,
     likes: 125,
-    stock: 3200
+    stock: 3
   },
   {
     id: 2,
@@ -48,7 +48,7 @@ const products = [
     expiryDate: "2026-07-15",
     rating: 4.5,
     likes: 125,
-    stock: 32
+    stock: 2
   },
   {
     id: 4,
@@ -63,7 +63,7 @@ const products = [
     expiryDate: "2026-08-01",
     rating: 4.5,
     likes: 125,
-    stock: 32
+    stock: 8
   },
   {
     id: 5,
@@ -78,7 +78,7 @@ const products = [
     expiryDate: "2026-08-01",
     rating: 4.5,
     likes: 125,
-    stock: 32
+    stock: 23
   },
   {
     id: 6,
@@ -93,7 +93,7 @@ const products = [
     expiryDate: "2025-12-31",
     rating: 4.5,
     likes: 125,
-    stock: 32
+    stock: 31
   },
   {
     id: 7,
@@ -123,7 +123,7 @@ const products = [
     expiryDate: "2026-05-20",
     rating: 4.5,
     likes: 125,
-    stock: 32
+    stock: 5
   },
   {
     id: 9,
@@ -138,7 +138,7 @@ const products = [
     expiryDate: "2026-05-20",
     rating: 4.5,
     likes: 125,
-    stock: 32
+    stock: 9
   },
   {
     id: 10,
@@ -153,7 +153,7 @@ const products = [
     expiryDate: "2027-01-15",
     rating: 4.5,
     likes: 125,
-    stock: 0
+    stock: 16
   },
   {
     id: 11,
@@ -213,7 +213,7 @@ const products = [
     expiryDate: "2026-12-31",
     rating: 4.5,
     likes: 125,
-    stock: 32
+    stock: 0
   },
   {
     id: 15,
@@ -263,7 +263,7 @@ const HomePage = () => {
             </Link>
           </div>
           <div className="w-full min-h-[650px] grid grid-cols-5 gap-3">
-            {products.slice(0, 10).map((product, index) => (
+            {products.sort((a, b) => b.stock - a.stock).slice(0, 10).map((product, index) => (
               <ProductCard
                 key={product.id}
                 product={product}
@@ -285,7 +285,7 @@ const HomePage = () => {
           </div>
 
           <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 ">
-            {products.slice(0, 10).map((product, index) => (
+            {products.sort((a, b) => b.stock - a.stock).slice(0, 10).map((product, index) => (
               <ProductCard
                 key={product.id}
                 product={product}

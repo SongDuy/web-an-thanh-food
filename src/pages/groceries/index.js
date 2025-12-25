@@ -283,7 +283,7 @@ const GroceriesPage = () => {
                     </div>
                 </div>
                 <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[25px]">
-                    {products.map((product, index) => (
+                    {products.sort((a, b) => b.stock - a.stock).map((product, index) => (
                         <ProductCard
                             key={product.id}
                             product={product}
