@@ -48,7 +48,7 @@ const products = [
     brand: "Vinamilk",
     origin: "Việt Nam",
     expiryDate: "2026-07-15",
-    rating: 4.5,
+    rating: 3.9,
     likes: 75,
     stock: 32
   },
@@ -138,7 +138,7 @@ const products = [
     brand: "Fami",
     origin: "Việt Nam",
     expiryDate: "2026-05-20",
-    rating: 4.5,
+    rating: 4.8,
     likes: 125,
     stock: 32
   },
@@ -153,7 +153,7 @@ const products = [
     brand: "ST",
     origin: "Sóc Trăng, Việt Nam",
     expiryDate: "2027-01-15",
-    rating: 4.5,
+    rating: 4.1,
     likes: 125,
     stock: 0
   },
@@ -168,7 +168,7 @@ const products = [
     brand: "ST",
     origin: "Sóc Trăng, Việt Nam",
     expiryDate: "2027-01-15",
-    rating: 4.5,
+    rating: 4.4,
     likes: 125,
     stock: 32
   },
@@ -183,7 +183,7 @@ const products = [
     brand: "ST",
     origin: "Sóc Trăng, Việt Nam",
     expiryDate: "2027-02-01",
-    rating: 4.5,
+    rating: 4.0,
     likes: 125,
     stock: 0
   },
@@ -198,7 +198,7 @@ const products = [
     brand: "ST",
     origin: "Sóc Trăng, Việt Nam",
     expiryDate: "2027-02-01",
-    rating: 4.5,
+    rating: 4.3,
     likes: 125,
     stock: 32
   },
@@ -213,7 +213,7 @@ const products = [
     brand: "CJ",
     origin: "Hàn Quốc",
     expiryDate: "2026-12-31",
-    rating: 4.5,
+    rating: 4.2,
     likes: 125,
     stock: 32
   },
@@ -228,7 +228,7 @@ const products = [
     brand: "Hạ Long",
     origin: "Việt Nam",
     expiryDate: "2026-11-30",
-    rating: 4.5,
+    rating: 4.1,
     likes: 125,
     stock: 0
   },
@@ -243,7 +243,7 @@ const products = [
     brand: "Nông sản Việt",
     origin: "Việt Nam",
     expiryDate: "2027-03-10",
-    rating: 4.5,
+    rating: 4.9,
     likes: 125,
     stock: 32
   },
@@ -258,7 +258,7 @@ const products = [
     brand: "Nông sản Việt",
     origin: "Việt Nam",
     expiryDate: "2027-03-10",
-    rating: 4.5,
+    rating: 4.7,
     likes: 135,
     stock: 32
   },{
@@ -272,7 +272,7 @@ const products = [
     brand: "Nông sản Việt",
     origin: "Việt Nam",
     expiryDate: "2027-03-10",
-    rating: 4.5,
+    rating: 4.6,
     likes: 125,
     stock: 32
   },{
@@ -286,7 +286,7 @@ const products = [
     brand: "Nông sản Việt",
     origin: "Việt Nam",
     expiryDate: "2027-03-10",
-    rating: 4.5,
+    rating: 4.8,
     likes: 125,
     stock: 32
   },{
@@ -300,7 +300,7 @@ const products = [
     brand: "Nông sản Việt",
     origin: "Việt Nam",
     expiryDate: "2027-03-10",
-    rating: 4.5,
+    rating: 4.2,
     likes: 125,
     stock: 32
   },{
