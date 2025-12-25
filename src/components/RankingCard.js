@@ -83,7 +83,7 @@ const RankingCard = ({ product, index }) => {
                   <div className="w-full border shadow rounded text-yellow-400 font-normal flex items-center justify-center gap-0.5 py-0.5">
                     <StarOutlinedIcon fontSize="small" />
                     <span className="text-black">
-                      {product.rating}
+                      {Number(product.rating).toFixed(1)}
                     </span>
                   </div>
 
