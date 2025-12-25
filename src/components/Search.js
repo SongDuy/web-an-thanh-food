@@ -336,7 +336,6 @@ const Search = ({ onClose }) => {
                             key={product.id}
                             to={`/${toSlug(product.category)}/${toSlug(product.name)}?id=${product.id}`}
                             onClick={handleClose}
-                        //className="block"
                         >
                             <div
                                 className="flex items-center gap-3 p-2 rounded-lg border shadow hover:bg-red-50 cursor-pointer transition"
