@@ -10,11 +10,11 @@ const Header = ({ onOpenSearch }) => {
       {/* logo web */}
       <NavLink
         to="/">
-        <div className="max-w-[85px] max-h-[75px] min-w-[85px] min-h-[75px] mr-1">
+        <div className="max-w-[75px] max-h-[75px] min-w-[85px] min-h-[75px] mr-1">
           <img
             src="/logo55.png"
             alt="An Thanh Food"
-            className="max-w-[85px] max-h-[75px] min-w-full min-h-full object-cover scale-110"
+            className="max-w-[75px] max-h-[75px] min-w-full min-h-full object-contain scale-110"
           />
         </div>
 
