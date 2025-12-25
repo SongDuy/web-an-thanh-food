@@ -25,7 +25,7 @@ const ProductCard = ({ product, index }) => {
               alt={product.name}
               className="w-full h-full object-cover transition-transform duration-500"
             />
-            <div className="absolute top-0 right-0 bg-yellow-500 text-white font-bold text-shadow-black px-2 py-0.5 rounded-bl-lg z-10">
+            <div className="absolute top-0 right-0 bg-gradient-to-t from-yellow-300 via-yellow-500 to-yellow-500 text-white font-bold text-shadow-black px-2 py-0.5 rounded-bl-lg z-10">
               <span className="text-xl">
                 {product.price}
               </span>
@@ -48,13 +48,13 @@ const ProductCard = ({ product, index }) => {
           {/* Nút bấm: Sẽ luôn nằm ở đáy nhờ cấu trúc flex-col */}
 
           <div className="mt-auto grid grid-cols-2 gap-3 w-full">
-            <button className="w-full bg-gray-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium">
+            <button className="w-full bg-gradient-to-t from-gray-50 via-gray-100 to-gray-200 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium">
               {Number(product.stock).toLocaleString("en-US")}
             </button>
 
             <button className={`w-full shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ${product.stock === 0
-              ? "bg-red-500 hover:bg-red-600"
-              : "bg-green-500 hover:bg-green-600"
+              ? "bg-gradient-to-t from-red-400 via-red-500 to-red-600 hover:bg-red-700"
+              : "bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:bg-green-700"
               }`}
             >
               {product.stock === 0 ? "Hết hàng" : "Mua ngay"}

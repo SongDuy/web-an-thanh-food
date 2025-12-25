@@ -348,7 +348,7 @@ const Search = ({ onClose }) => {
                                         className="w-full h-full object-cover rounded transition-transform duration-500"
                                     />
 
-                                    <div className="absolute flex items-center top-0 right-0 bg-yellow-500 text-white text-shadow-black font-bold px-1 py-1 rounded-bl-[5px] z-10 leading-none">
+                                    <div className="absolute flex items-center top-0 right-0 bg-gradient-to-t from-yellow-300 via-yellow-500 to-yellow-500 text-white text-shadow-black font-bold px-1 py-1 rounded-bl-[5px] z-10 leading-none">
                                         <span className="text-[9px] leading-none">
                                             {product.price}
                                         </span>
