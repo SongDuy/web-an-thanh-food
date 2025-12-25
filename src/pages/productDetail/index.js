@@ -131,7 +131,7 @@ const ProductDetailPage = () => {
                                 <span>Đã Bán</span>
                                 <span className="text-black">100k</span>
                             </div>
-                            <div className="h-full ml-auto text-md border-r text-gray-500 flex items-center gap-1">
+                            <div className="h-full ml-auto text-md text-gray-500 flex items-center gap-1">
                                 <FavoriteBorderIcon />
                                 <span className="text-black"> Đã thích (41)</span>
                             </div>
