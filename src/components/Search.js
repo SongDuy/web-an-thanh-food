@@ -352,7 +352,7 @@ const Search = ({ onClose }) => {
                                         <span className="text-[9px] leading-none">
                                             {product.price}
                                         </span>
-                                        <span className="text-[6px] ml-0.5 underline underline-offset-1 leading-none relative -top-[1.5px]">
+                                        <span className="text-[7px] ml-0.5 underline underline-offset-1 leading-none relative -top-[1.5px]">
                                             đ
                                         </span>
                                     </div>
