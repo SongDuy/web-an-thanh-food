@@ -246,7 +246,78 @@ const products = [
     rating: 4.5,
     likes: 125,
     stock: 32
-  }
+  },
+  {
+    id: 17,
+    name: "Đậu Đen Xanh Lòng",
+    image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
+    price: 0,
+    category: "Lương thực",
+    unit: "1 túi",
+    weight: "1 kg",
+    brand: "Nông sản Việt",
+    origin: "Việt Nam",
+    expiryDate: "2027-03-10",
+    rating: 4.5,
+    likes: 125,
+    stock: 32
+  },{
+    id: 18,
+    name: "Đậu Đen Xanh Lòng",
+    image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
+    price: 0,
+    category: "Lương thực",
+    unit: "1 túi",
+    weight: "1 kg",
+    brand: "Nông sản Việt",
+    origin: "Việt Nam",
+    expiryDate: "2027-03-10",
+    rating: 4.5,
+    likes: 125,
+    stock: 32
+  },{
+    id: 19,
+    name: "Đậu Đen Xanh Lòng",
+    image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
+    price: 0,
+    category: "Lương thực",
+    unit: "1 túi",
+    weight: "1 kg",
+    brand: "Nông sản Việt",
+    origin: "Việt Nam",
+    expiryDate: "2027-03-10",
+    rating: 4.5,
+    likes: 125,
+    stock: 32
+  },{
+    id: 20,
+    name: "Đậu Đen Xanh Lòng",
+    image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
+    price: 0,
+    category: "Lương thực",
+    unit: "1 túi",
+    weight: "1 kg",
+    brand: "Nông sản Việt",
+    origin: "Việt Nam",
+    expiryDate: "2027-03-10",
+    rating: 4.5,
+    likes: 125,
+    stock: 32
+  },{
+    id: 21,
+    name: "Đậu Đen Xanh Lòng",
+    image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
+    price: 0,
+    category: "Lương thực",
+    unit: "1 túi",
+    weight: "1 kg",
+    brand: "Nông sản Việt",
+    origin: "Việt Nam",
+    expiryDate: "2027-03-10",
+    rating: 4.5,
+    likes: 125,
+    stock: 32
+  },
 ];
 
 
