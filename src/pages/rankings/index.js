@@ -18,8 +18,8 @@ const products = [
     brand: "Vinamilk",
     origin: "Việt Nam",
     expiryDate: "2026-06-30",
-    rating: 4.5,
-    likes: 12,
+    rating: 4.8,
+    likes: 129,
     stock: 32
   },
   {
@@ -33,8 +33,8 @@ const products = [
     brand: "Vinamilk",
     origin: "Việt Nam",
     expiryDate: "2026-06-30",
-    rating: 4.5,
-    likes: 125,
+    rating: 4.1,
+    likes: 12,
     stock: 0
   },
   {
@@ -49,7 +49,7 @@ const products = [
     origin: "Việt Nam",
     expiryDate: "2026-07-15",
     rating: 4.5,
-    likes: 125,
+    likes: 75,
     stock: 32
   },
   {
@@ -63,8 +63,8 @@ const products = [
     brand: "Vinamilk",
     origin: "Việt Nam",
     expiryDate: "2026-08-01",
-    rating: 4.5,
-    likes: 125,
+    rating: 4.7,
+    likes: 15,
     stock: 32
   },
   {
@@ -78,8 +78,8 @@ const products = [
     brand: "Vinamilk",
     origin: "Việt Nam",
     expiryDate: "2026-08-01",
-    rating: 4.5,
-    likes: 125,
+    rating: 4.9,
+    likes: 17,
     stock: 32
   },
   {
@@ -93,8 +93,8 @@ const products = [
     brand: "Hảo Hảo",
     origin: "Việt Nam",
     expiryDate: "2025-12-31",
-    rating: 4.5,
-    likes: 125,
+    rating: 4.6,
+    likes: 35,
     stock: 32
   },
   {
@@ -108,8 +108,8 @@ const products = [
     brand: "Fami",
     origin: "Việt Nam",
     expiryDate: "2026-05-20",
-    rating: 4.5,
-    likes: 125,
+    rating: 4.3,
+    likes: 12,
     stock: 0
   },
   {
@@ -123,8 +123,8 @@ const products = [
     brand: "Fami",
     origin: "Việt Nam",
     expiryDate: "2026-05-20",
-    rating: 4.5,
-    likes: 125,
+    rating: 4.0,
+    likes: 51,
     stock: 32
   },
   {
@@ -259,7 +259,7 @@ const products = [
     origin: "Việt Nam",
     expiryDate: "2027-03-10",
     rating: 4.5,
-    likes: 125,
+    likes: 135,
     stock: 32
   },{
     id: 18,
@@ -320,7 +320,14 @@ const products = [
   },
 ];
 
-
+const sortedProducts = [...products].sort((a, b) => {
+  // So sánh rating trước
+  if (b.rating !== a.rating) {
+    return b.rating - a.rating;
+  }
+  // Nếu rating bằng nhau thì so sánh likes
+  return b.likes - a.likes;
+});
 
 const RankingsPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
@@ -345,7 +352,7 @@ const RankingsPage = () => {
                     </div>
                 </div>
                 <div className="w-full min-h-[650px] grid grid-cols-3 gap-3 mt-[25px]">
-                    {products.map((product, index) => (
+                    {sortedProducts.map((product, index) => (
                         <RankingCard
                             key={product.id}
                             product={product}

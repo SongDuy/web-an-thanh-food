@@ -11,13 +11,13 @@ const products = [
     image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
     price: 0,
     category: "Thực phẩm",
-    unit: "1 túi",
+    unit: "3 túi",
     weight: "1 kg",
     brand: "Vinamilk",
     origin: "Việt Nam",
     expiryDate: "2026-06-30",
-    rating: 4.5,
-    likes: 125,
+    rating: 4.8,
+    likes: 129,
     stock: 3
   },
   {
@@ -31,8 +31,8 @@ const products = [
     brand: "Vinamilk",
     origin: "Việt Nam",
     expiryDate: "2026-06-30",
-    rating: 4.5,
-    likes: 125,
+    rating: 4.1,
+    likes: 12,
     stock: 0
   },
   {
@@ -47,8 +47,8 @@ const products = [
     origin: "Việt Nam",
     expiryDate: "2026-07-15",
     rating: 4.5,
-    likes: 125,
-    stock: 2
+    likes: 75,
+    stock: 10
   },
   {
     id: 4,
@@ -61,9 +61,9 @@ const products = [
     brand: "Vinamilk",
     origin: "Việt Nam",
     expiryDate: "2026-08-01",
-    rating: 4.5,
-    likes: 125,
-    stock: 8
+    rating: 4.7,
+    likes: 15,
+    stock: 7
   },
   {
     id: 5,
@@ -76,9 +76,9 @@ const products = [
     brand: "Vinamilk",
     origin: "Việt Nam",
     expiryDate: "2026-08-01",
-    rating: 4.5,
-    likes: 125,
-    stock: 23
+    rating: 4.9,
+    likes: 17,
+    stock: 26
   },
   {
     id: 6,
@@ -91,9 +91,9 @@ const products = [
     brand: "Hảo Hảo",
     origin: "Việt Nam",
     expiryDate: "2025-12-31",
-    rating: 4.5,
-    likes: 125,
-    stock: 31
+    rating: 4.6,
+    likes: 35,
+    stock: 17
   },
   {
     id: 7,
@@ -106,8 +106,8 @@ const products = [
     brand: "Fami",
     origin: "Việt Nam",
     expiryDate: "2026-05-20",
-    rating: 4.5,
-    likes: 125,
+    rating: 4.3,
+    likes: 12,
     stock: 0
   },
   {
@@ -121,9 +121,9 @@ const products = [
     brand: "Fami",
     origin: "Việt Nam",
     expiryDate: "2026-05-20",
-    rating: 4.5,
-    likes: 125,
-    stock: 5
+    rating: 4.0,
+    likes: 51,
+    stock: 31
   },
   {
     id: 9,
@@ -138,7 +138,7 @@ const products = [
     expiryDate: "2026-05-20",
     rating: 4.5,
     likes: 125,
-    stock: 9
+    stock: 37
   },
   {
     id: 10,
@@ -153,7 +153,7 @@ const products = [
     expiryDate: "2027-01-15",
     rating: 4.5,
     likes: 125,
-    stock: 16
+    stock: 0
   },
   {
     id: 11,
@@ -168,7 +168,7 @@ const products = [
     expiryDate: "2027-01-15",
     rating: 4.5,
     likes: 125,
-    stock: 32
+    stock: 0
   },
   {
     id: 12,
@@ -198,7 +198,7 @@ const products = [
     expiryDate: "2027-02-01",
     rating: 4.5,
     likes: 125,
-    stock: 32
+    stock: 0
   },
   {
     id: 14,
@@ -243,10 +243,89 @@ const products = [
     expiryDate: "2027-03-10",
     rating: 4.5,
     likes: 125,
-    stock: 32
-  }
+    stock: 0
+  },
+  {
+    id: 17,
+    name: "Đậu Đen Xanh Lòng",
+    image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
+    price: 0,
+    category: "Lương thực",
+    unit: "1 túi",
+    weight: "1 kg",
+    brand: "Nông sản Việt",
+    origin: "Việt Nam",
+    expiryDate: "2027-03-10",
+    rating: 4.5,
+    likes: 135,
+    stock: 0
+  },{
+    id: 18,
+    name: "Đậu Đen Xanh Lòng",
+    image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
+    price: 0,
+    category: "Lương thực",
+    unit: "1 túi",
+    weight: "1 kg",
+    brand: "Nông sản Việt",
+    origin: "Việt Nam",
+    expiryDate: "2027-03-10",
+    rating: 4.5,
+    likes: 125,
+    stock: 0
+  },{
+    id: 19,
+    name: "Đậu Đen Xanh Lòng",
+    image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
+    price: 0,
+    category: "Lương thực",
+    unit: "1 túi",
+    weight: "1 kg",
+    brand: "Nông sản Việt",
+    origin: "Việt Nam",
+    expiryDate: "2027-03-10",
+    rating: 4.5,
+    likes: 125,
+    stock: 0
+  },{
+    id: 20,
+    name: "Đậu Đen Xanh Lòng",
+    image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
+    price: 0,
+    category: "Lương thực",
+    unit: "1 túi",
+    weight: "1 kg",
+    brand: "Nông sản Việt",
+    origin: "Việt Nam",
+    expiryDate: "2027-03-10",
+    rating: 4.5,
+    likes: 125,
+    stock: 0
+  },{
+    id: 21,
+    name: "Đậu Đen Xanh Lòng",
+    image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
+    price: 0,
+    category: "Lương thực",
+    unit: "1 túi",
+    weight: "1 kg",
+    brand: "Nông sản Việt",
+    origin: "Việt Nam",
+    expiryDate: "2027-03-10",
+    rating: 4.5,
+    likes: 125,
+    stock: 0
+  },
 ];
 
+const sortedProducts = [...products].sort((a, b) => {
+  // So sánh rating trước
+  if (b.rating !== a.rating) {
+    return b.rating - a.rating;
+  }
+  // Nếu rating bằng nhau thì so sánh likes
+  return b.likes - a.likes;
+});
 const HomePage = () => {
   return (
     <MainLayout>
@@ -307,7 +386,7 @@ const HomePage = () => {
           </div>
 
           <div className="w-full min-h-[650px] grid grid-cols-3 gap-3">
-            {products.slice(0, 15).map((product, index) => (
+            {sortedProducts.slice(0, 15).map((product, index) => (
               <RankingCard
                 key={product.id}
                 product={product}
