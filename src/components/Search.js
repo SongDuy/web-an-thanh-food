@@ -350,10 +350,10 @@ const Search = ({ onClose }) => {
                                     />
 
                                     <div className="absolute flex items-center top-0 right-0 bg-yellow-500 text-white text-shadow-black font-bold px-1 py-1 rounded-bl-[5px] z-10 leading-none">
-                                        <span className="text-[8px] leading-none">
+                                        <span className="text-[9px] leading-none">
                                             {product.price}
                                         </span>
-                                        <span className="text-[6px] ml-0.5 underline underline-offset-1 leading-none relative -top-[2px]">
+                                        <span className="text-[6px] ml-0.5 underline underline-offset-1 leading-none relative -top-[1.5px]">
                                             đ
                                         </span>
                                     </div>
