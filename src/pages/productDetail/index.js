@@ -155,13 +155,13 @@ const ProductDetailPage = () => {
                         </div>
                         <div className="w-full h-[65px] flex items-center justify-center">
                             <div className="h-[50px] grid grid-cols-2 gap-3">
-                                <button className="w-[200px] h-[50px] bg-gray-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium ">
+                                <button className="w-[200px] h-[50px] bg-gradient-to-t from-gray-50 via-gray-100 to-gray-200 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium ">
                                     {Number(10).toLocaleString("vi-VN")}
                                 </button>
                                 {/* <button className="h-[50px] bg-green-500 hover:bg-green-600 text-shadow-black text-white text-md px-1 py-1 rounded transition-colors font-medium ">
                                 Mua ngay
                             </button> */}
-                                <button className="w-[200px] h-[50px] bg-red-500 hover:bg-red-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
+                                <button className="w-[200px] h-[50px] bg-gradient-to-t from-red-400 via-red-500 to-red-600 hover:bg-red-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
                                     Hết hàng
                                 </button>
                             </div>
