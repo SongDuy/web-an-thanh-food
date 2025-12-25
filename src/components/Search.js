@@ -310,7 +310,8 @@ const Search = ({ onClose }) => {
                         autoFocus
                         value={keyword}
                         onChange={(e) => setKeyword(e.target.value)}
-                        className="w-full h-10 px-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-black shadow-sm"
+                        spellCheck={false}
+                        className="w-full h-10 px-3 border-2 border-gray-300 rounded-lg shadow-md text-sm transition-all duration-200 focus:outline-none focus:ring-0"
                         placeholder="Tìm sản phẩm..."
                     />
                 </div>
@@ -335,7 +336,7 @@ const Search = ({ onClose }) => {
                             key={product.id}
                             to={`/${toSlug(product.category)}/${toSlug(product.name)}?id=${product.id}`}
                             onClick={handleClose}
-                            //className="block"
+                        //className="block"
                         >
                             <div
                                 className="flex items-center gap-3 p-2 rounded-lg border shadow hover:bg-red-50 cursor-pointer transition"
@@ -357,7 +358,7 @@ const Search = ({ onClose }) => {
                                         <span className="pr-2 border-r text-red-300  font-bold">
                                             {product.category}
                                         </span>
-                                
+
                                         <span className="pl-2 border-l text-red-300 font-semibold">
                                             {product.unit} * {product.weight}
                                         </span>
