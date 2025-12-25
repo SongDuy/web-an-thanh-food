@@ -330,7 +330,7 @@ const Search = ({ onClose }) => {
                         </p>
                     )}
 
-                    {hasKeyword && filteredProducts.map((product) => (
+                    {hasKeyword && filteredProducts.sort((a, b) => b.stock - a.stock).map((product) => (
                         <Link
                             key={product.id}
                             to={`/${toSlug(product.category)}/${toSlug(product.name)}?id=${product.id}`}
