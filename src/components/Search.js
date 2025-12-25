@@ -359,19 +359,7 @@ const Search = ({ onClose }) => {
                                     </div>
 
                                 </div>
-                                {/* <img
-                                    src={product.image}
-                                    alt={product.name}
-                                    className="w-[70px] h-[70px] rounded-lg object-cover flex-shrink-0"
-                                />
-                                <div className="absolute top-0 right-0 bg-yellow-500 text-white font-bold text-shadow-black px-1.5 rounded-bl-md z-10">
-                                    <span className="text-md">
-                                        {product.price}
-                                    </span>
-                                    <span className="text-[12px] align-top ml-0.5 underline underline-offset-2">
-                                        đ
-                                    </span>
-                                </div> */}
+                              
                                 {/* Info */}
                                 <div className="flex-1 overflow-hidden">
                                     <h3 className="text-sm font-semibold text-gray-800 line-clamp-1">
