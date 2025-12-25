@@ -53,8 +53,8 @@ const ProductCard = ({ product, index }) => {
             </button>
 
             <button className={`w-full shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ${product.stock === 0
-              ? "bg-gradient-to-t from-red-400 via-red-500 to-red-600 hover:bg-red-700"
-              : "bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:bg-green-700"
+              ? "bg-gradient-to-t from-red-400 via-red-500 to-red-600 hover:bg-red-700 border-b-2 border-red-500"
+              : "bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:bg-green-700 border-b-2 border-green-500"
               }`}
             >
               {product.stock === 0 ? "Hết hàng" : "Mua ngay"}
