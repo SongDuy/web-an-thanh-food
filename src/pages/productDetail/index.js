@@ -106,11 +106,22 @@ const ProductDetailPage = () => {
                                 [SỈ] 10KG Gạo Lứt Huyết Rồng Loại 1- Gạo lức trong thực dưỡng _ Gạo lứt cho người ăn kiêng, tiểu đường, xương khớp.
                             </h1>
                         </div>
-                        <div className="w-full h-[65px]">
-                            <h1 className="w-full h-full text-md text-gray-500 flex items-center">
+
+                        <div className="w-full h-[65px] flex ">
+                            <h3 className="w-full h-full text-md text-gray-500 flex items-center">
                                 Đánh Giá
-                            </h1>
+                            </h3>
+                            <h3 className="w-full h-full text-md text-gray-500 flex items-center">
+                                Đánh Giá
+                            </h3>
+                            <h3 className="w-full h-full text-md text-gray-500 flex items-center">
+                                Đánh Giá
+                            </h3>
+                            <h3 className="w-full h-full text-md text-gray-500 flex items-center">
+                                Đánh Giá
+                            </h3>
                         </div>
+
                         <div className="w-full h-[65px] bg-red-50 rounded">
                             <h1 className="w-full h-full flex items-center justify-center text-white text-shadow-black font-bold">
                                 <span className="text-[40px] tracking-tight mb-1">0</span>
@@ -118,8 +129,8 @@ const ProductDetailPage = () => {
                                     đ
                                 </span>
                             </h1>
-
                         </div>
+
                         <div className="w-full px-5">
                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
                                 <span className="h-full text-md text-gray-500 flex items-center">
