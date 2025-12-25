@@ -5,16 +5,22 @@ import StaplesPage from '../pages/staples';
 import GroceriesPage from '../pages/groceries';
 import RankingsPage from '../pages/rankings';
 import ProductDetailPage from '../pages/productDetail';
+import CartPage from'../pages/cart';
 
 const AppRoutes = () => {
     return (
         <Routes>
             {/* Trang chủ */}
             <Route path="/" element={<HomePage />} />
+
             <Route path="/luong-thuc" element={<StaplesPage />} />
             <Route path="/thuc-pham" element={<GroceriesPage />} />
             <Route path="/bang-xep-hang" element={<RankingsPage />} />
+
             <Route path="/:category/:id" element={<ProductDetailPage />} />
+
+            <Route path="/cart" element={<CartPage />} />
+
 
             {/* Trang 404 */}
             <Route path="/404" element={<NotFoundPage />} />
