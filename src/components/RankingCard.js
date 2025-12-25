@@ -52,7 +52,7 @@ const RankingCard = ({ product, index }) => {
                   className="w-full h-full object-contain rounded transition-transform duration-500"
                 />
 
-                <div className="absolute top-0 right-0 bg-yellow-500 text-white font-bold text-shadow-black px-1.5 rounded-bl-md z-10">
+                <div className="absolute top-0 right-0 bg-gradient-to-t from-red-50 via-red-100 to-red-200 shadow text-white font-bold text-shadow-black px-1.5 rounded-bl-md z-10">
                   <span className="text-md">
                     {product.price}
                   </span>
