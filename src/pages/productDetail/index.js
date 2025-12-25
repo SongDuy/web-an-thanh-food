@@ -123,7 +123,7 @@ const ProductDetailPage = () => {
                                     <StarIcon />
                                 </span>
                             </div>
-                            <div className="h-[30px] text-md px-5 border-r-2 text-gray-500 flex items-center gap-1">
+                            <div className="h-[30px] text-md px-5 border-r-2 text-gray-500 flex items-center gap-2">
                                 <span className="text-black">3,1k</span>
                                 <span>Đánh Giá</span>
                             </div>
