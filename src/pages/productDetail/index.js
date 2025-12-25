@@ -10,6 +10,8 @@ import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+
 import { Link } from 'react-router-dom';
 
 const ProductDetailPage = () => {
@@ -107,19 +109,22 @@ const ProductDetailPage = () => {
                             </h1>
                         </div>
 
-                        <div className="w-full h-[65px] flex ">
-                            <h3 className="w-full h-full text-md text-gray-500 flex items-center">
-                                Đánh Giá
-                            </h3>
-                            <h3 className="w-full h-full text-md text-gray-500 flex items-center">
-                                Đánh Giá
-                            </h3>
-                            <h3 className="w-full h-full text-md text-gray-500 flex items-center">
-                                Đánh Giá
-                            </h3>
-                            <h3 className="w-full h-full text-md text-gray-500 flex items-center">
-                                Đánh Giá
-                            </h3>
+                        <div className="w-full h-[65px] flex border">
+                            <div className="h-full text-md pr-5 border-r  text-gray-500 flex items-center">
+                                <span>4.9</span>
+                            </div>
+                            <div className="h-full text-md px-5 border-r text-gray-500 flex items-center">
+                                <span>3,1k</span>
+                                <span>Đánh Giá</span>
+                            </div>
+                            <div className="h-full text-md pl-5 border-r text-gray-500 flex items-center">
+                                <span>Đã Bán</span>
+                                <span>100k</span>
+                            </div>
+                            <div className="h-full ml-auto text-md border-r text-gray-500 flex items-center">
+                                <FavoriteBorderIcon />
+                                <span className="ml-2">Đã thích (41)</span>
+                            </div>
                         </div>
 
                         <div className="w-full h-[65px] bg-red-50 rounded">
