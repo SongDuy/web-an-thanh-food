@@ -48,18 +48,20 @@ const ProductCard = ({ product, index }) => {
           {/* Nút bấm: Sẽ luôn nằm ở đáy nhờ cấu trúc flex-col */}
 
           <div className="mt-auto grid grid-cols-2 gap-3 w-full">
-            <button className="w-full bg-gradient-to-tr from-gray-100 via-red-50 to-red-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium">
+            <div className="w-full h-full flex items-center justify-center bg-gradient-to-tr from-gray-100 via-red-50 to-red-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium">
               {Number(product.stock).toLocaleString("en-US")}
-            </button>
+            </div>
 
-            <button className={`w-full shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ${product.stock === 0
-              ? "bg-gradient-to-t from-red-400 via-red-500 to-red-600 hover:bg-red-700 border-b-2 border-red-500"
-              : "bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:bg-green-700 border-b-2 border-green-500"
-              }`}
-            >
-              {product.stock === 0 ? "Hết hàng" : "Mua ngay"}
-            </button>
-
+            <Link to={`/${toSlug(product.category)}/${toSlug(product.name)}?id=${product.id}`}>
+              <button className={`w-full shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ${product.stock === 0
+                ? "bg-gradient-to-t from-red-400 via-red-500 to-red-600 hover:bg-red-700 border-b-2 border-red-500 hover:text-yellow-500 hover:text-shadow-black"
+                : "bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:bg-green-700 border-b-2 border-green-500 hover:text-yellow-500 hover:text-shadow-black"
+                }`}
+              >
+                {product.stock === 0 ? "Hết hàng" : "Mua ngay"}
+              </button>
+            </Link>
+            
           </div>
         </div>
       </Link>
