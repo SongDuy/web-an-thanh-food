@@ -311,7 +311,7 @@ const Search = ({ onClose }) => {
                         value={keyword}
                         onChange={(e) => setKeyword(e.target.value)}
                         spellCheck={false}
-                        className="w-full h-10 px-3 border-2 border-gray-300 rounded-lg shadow-md text-sm transition-all duration-200 focus:outline-none focus:ring-0"
+                        className="w-full h-10 px-3 border-2 border-gray-300 rounded-lg shadow-md text-md transition-all duration-200 focus:outline-none focus:ring-0"
                         placeholder="Tìm sản phẩm..."
                     />
                 </div>
@@ -342,12 +342,36 @@ const Search = ({ onClose }) => {
                                 className="flex items-center gap-3 p-2 rounded-lg border shadow hover:bg-red-50 cursor-pointer transition"
                             >
                                 {/* Thumbnail */}
-                                <img
+                                <div className="relative w-[70px] h-[70px] overflow-hidden rounded flex-shrink-0">
+                                    <img
+                                        src={product.image}
+                                        alt={product.name}
+                                        className="w-full h-full object-cover rounded transition-transform duration-500"
+                                    />
+
+                                    <div className="absolute flex items-center top-0 right-0 bg-yellow-500 text-white text-shadow-black font-bold px-1 py-1 rounded-bl-[5px] z-10 leading-none">
+                                        <span className="text-[8px] leading-none">
+                                            {product.price}
+                                        </span>
+                                        <span className="text-[6px] ml-0.5 underline underline-offset-1 leading-none relative -top-[2px]">
+                                            đ
+                                        </span>
+                                    </div>
+
+                                </div>
+                                {/* <img
                                     src={product.image}
                                     alt={product.name}
                                     className="w-[70px] h-[70px] rounded-lg object-cover flex-shrink-0"
                                 />
-
+                                <div className="absolute top-0 right-0 bg-yellow-500 text-white font-bold text-shadow-black px-1.5 rounded-bl-md z-10">
+                                    <span className="text-md">
+                                        {product.price}
+                                    </span>
+                                    <span className="text-[12px] align-top ml-0.5 underline underline-offset-2">
+                                        đ
+                                    </span>
+                                </div> */}
                                 {/* Info */}
                                 <div className="flex-1 overflow-hidden">
                                     <h3 className="text-sm font-semibold text-gray-800 line-clamp-1">
