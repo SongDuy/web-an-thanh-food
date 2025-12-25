@@ -353,12 +353,12 @@ const Search = ({ onClose }) => {
                                         {product.name}
                                     </h3>
 
-                                    <div className="flex text-xs mt-0.5">
-                                        <span className="pr-2 text-red-300 font-bold">
+                                    <div className="flex items-center text-xs mt-0.5">
+                                        <span className="pr-2 border-r text-red-300  font-bold">
                                             {product.category}
                                         </span>
-                                        <span className="mx-2 h-3 w-px bg-gray-300" />
-                                        <span className="text-red-300 font-semibold">
+                                
+                                        <span className="pl-2 border-l text-red-300 font-semibold">
                                             {product.unit} * {product.weight}
                                         </span>
                                     </div>
