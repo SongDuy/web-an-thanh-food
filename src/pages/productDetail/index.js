@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -15,14 +15,37 @@ import { Link } from 'react-router-dom';
 const ProductDetailPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
 
+    // Tổng giây = 6 ngày 23 giờ 59 phút 59 giây
+    const initialSeconds = 6 * 24 * 3600 + 23 * 3600 + 59;
+    const [secondsLeft, setSecondsLeft] = useState(initialSeconds);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setSecondsLeft((prev) => {
+                if (prev <= 1) {
+                    clearInterval(interval);
+                    return 0;
+                }
+                return prev - 1;
+            });
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    const days = Math.floor(secondsLeft / (24 * 3600));
+    const hours = Math.floor((secondsLeft % (24 * 3600)) / 3600);
+    const minutes = Math.floor((secondsLeft % 3600) / 60);
+    const seconds = secondsLeft % 60;
+
     return (
         <>
-             <Header onOpenSearch={() => setOpenSearch(true)} />
+            <Header onOpenSearch={() => setOpenSearch(true)} />
 
             {openSearch && (
                 <Search onClose={() => setOpenSearch(false)} />
             )}
-            
+
             <div className="w-full h-full bg-gray-100 px-[160px] border pt-[100px] pb-[45px]">
                 {/* Hình ảnh sản phẩm và đặt hàng */}
                 <div className="w-full h-[35px] flex items-center">
@@ -104,7 +127,7 @@ const ProductDetailPage = () => {
                                 </span>
                                 <div className="h-full text-md text-black flex items-center">
                                     <LocalShippingOutlinedIcon />
-                                    <span className="ml-2 font-semibold text-red-500">
+                                    <span className="ml-2 font-semibold text-black">
                                         Miễn phí vận chuyển.
                                     </span>
                                 </div>
@@ -115,7 +138,7 @@ const ProductDetailPage = () => {
                                 </span>
                                 <span className="h-full text-md text-black flex items-center">
                                     <ShoppingBagOutlinedIcon />
-                                    <span className="ml-2 font-semibold text-red-500">
+                                    <span className="ml-2 font-semibold text-black">
                                         1 lượt.
                                     </span>
                                 </span>
@@ -129,7 +152,7 @@ const ProductDetailPage = () => {
                                 <span className="h-full text-md text-black flex items-center">
                                     <AccessTimeOutlinedIcon />
                                     <span className="ml-2 font-semibold text-red-500">
-                                        06 ngày 23 giờ 59 giây.
+                                        {days} ngày {hours} giờ {minutes} phút {seconds} giây.
                                     </span>
                                 </span>
                             </div>
