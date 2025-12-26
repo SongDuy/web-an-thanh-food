@@ -51,7 +51,7 @@ const ProductDetailPage = () => {
 
             <div className="w-full h-full bg-soft px-[160px] border pt-[100px] pb-[45px]">
                 {/* Hình ảnh sản phẩm và đặt hàng */}
-                <div className="w-full flex items-center pt-[5px] pb-[8px]">
+                <div className="w-full flex items-center mt-[5px] mb-[8px]">
                     <Link to="/">
                         <span className="text-blue-800 text-sm">
                             Trang chủ
