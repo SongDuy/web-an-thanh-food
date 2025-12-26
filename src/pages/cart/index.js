@@ -22,16 +22,16 @@ const CartPage = () => {
 
         <div className="w-full grid grid-cols-6 gap-5">
           <div className="col-span-4">
-            <div className="w-full h-[40px] font-semibold bg-white rounded flex items-center px-5">
+            <div className="w-full font-medium bg-white rounded-md flex items-center px-3 py-2">
               Tên sản phẩm
             </div>
 
-            <div className="w-full h-[480px] mt-[15px] bg-white rounded flex items-center px-5">
+            <div className="w-full h-[480px] mt-[15px] bg-white rounded-md flex items-center px-3 py-3">
               kkk
             </div>
           </div>
 
-          <div className="col-span-2 bg-white rounded px-5">
+          <div className="col-span-2 bg-white rounded-md px-3 py-3">
 
           </div>
         </div>
