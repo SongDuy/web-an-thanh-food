@@ -16,8 +16,10 @@ const CartPage = () => {
       )}
 
       <div className="w-full bg-soft px-[160px] pt-[100px] pb-[45px]">
-        <div className="flex items-center py-[35px]">
-          <h1 className="text-[22px] font-semibold uppercase"> Giỏ Hàng </h1>
+        <div className="w-full font-semibold uppercase py-[25px] flex items-center gap-1">
+          <h1 className="text-[22px] text-white text-shadow-black bg-gradient-to-tr from-gray-100 via-red-50 to-red-100 shadow border px-5 py-2 rounded-full">
+            Giỏ Hàng
+          </h1>
         </div>
 
         <div className="w-full grid grid-cols-6 gap-5">
