@@ -72,7 +72,7 @@ const banners = [
     title: '999 lá thư gửi cho chính mình**',
     subtitle: "12. Trong những năm tháng cuộc đời, người nào cố gắng nhất định sẽ thoát kén thành bướm. Bạn phải tin rằng, có một ngày bản thân sẽ phá kén thoát ra, trưởng thành hoàn mỹ hơn cả sự mong đợi của mọi người, nhưng quá trình này vốn vô cùng gian khổ, vất vả, có lúc sẽ cảm thấy nản lòng chùn bước. Ðối mặt với hiện thực tàn khốc, bạn cảm thấy bản thân vô cùng nhỏ bé, yếu đuối, nhưng đó chính là một phần của cuộc sống. Làm tốt những gì của hiện tại, sau đó tất cả sẽ dần tốt hơn.",
     author: "Miêu Công Tử",
-    bgImage: 'https://i.redd.it/pixel-lakes-sunny-and-sunset-pixel-art-landscape-series-v0-6zw068e2f0sb1.jpg?width=3840&format=pjpg&auto=webp&s=fba637e1021e836cab35621389105933768febc7',
+    bgImage: 'https://cdna.artstation.com/p/assets/images/images/085/156/062/original/aurora-alleyway-v6-main.gif?1740086262',
   },
 ];
 
