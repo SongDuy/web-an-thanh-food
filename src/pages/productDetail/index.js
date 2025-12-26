@@ -256,7 +256,7 @@ const ProductDetailPage = () => {
 
                             {/* Hạn sử dụng */}
                             <div className="grid grid-cols-5 px-4 py-4">
-                                <span className="text-gray-500">Đơn vị / Trọng lượng</span>
+                                <span className="text-gray-500">Đóng gói</span>
                                 <span className="col-span-4">1 túi * 1kg</span>
                             </div>
 
