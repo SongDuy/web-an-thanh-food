@@ -264,7 +264,7 @@ const GroceriesPage = () => {
                 <Search onClose={() => setOpenSearch(false)} />
             )}
 
-            <div className="px-[160px] pt-[100px] pb-[45px] bg-gray-100">
+            <div className="px-[160px] pt-[100px] pb-[45px] bg-soft">
                 <div className="w-full h-[60px] border-b border-gray-300 flex items-center">
                     <div>
                         <span className="text-black font-bold mr-1">{products.length}</span>

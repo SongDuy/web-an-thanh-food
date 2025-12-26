@@ -49,9 +49,9 @@ const ProductDetailPage = () => {
                 <Search onClose={() => setOpenSearch(false)} />
             )}
 
-            <div className="w-full h-full bg-gray-100 px-[160px] border pt-[100px] pb-[45px]">
+            <div className="w-full h-full bg-soft px-[160px] border pt-[100px] pb-[45px]">
                 {/* Hình ảnh sản phẩm và đặt hàng */}
-                <div className="w-full h-[35px] flex items-center">
+                <div className="w-full flex items-center pt-[5px] pb-[8px]">
                     <Link to="/">
                         <span className="text-blue-800 text-sm">
                             Trang chủ

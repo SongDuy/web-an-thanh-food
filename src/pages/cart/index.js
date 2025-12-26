@@ -1,15 +1,23 @@
+import { useState } from "react";
+
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Search from "../../components/Search";
 
 const CartPage = () => {
+  const [openSearch, setOpenSearch] = useState(false);
 
   return (
     <>
-      <Header />
+      <Header onOpenSearch={() => setOpenSearch(true)} />
 
-      <div className="w-full bg-gray-100 px-[160px] pt-[100px] pb-[45px]">
+      {openSearch && (
+        <Search onClose={() => setOpenSearch(false)} />
+      )}
+
+      <div className="w-full bg-soft px-[160px] pt-[100px] pb-[45px]">
         <h1 className="text-[22px] my-[35px] font-bold uppercase"> Giỏ Hàng </h1>
-        
+
         <div>
           <div>
 

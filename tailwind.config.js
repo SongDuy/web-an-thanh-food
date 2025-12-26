@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        soft: '#F5F5FA',
+      },
+      
       fontFamily: {
         serifBook: ['Merriweather', 'serif'],
         serifTitle: ['Playfair Display', 'serif'],
