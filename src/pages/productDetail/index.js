@@ -49,7 +49,7 @@ const ProductDetailPage = () => {
                 <Search onClose={() => setOpenSearch(false)} />
             )}
 
-            <div className="w-full h-full bg-soft px-[160px] border pt-[100px] pb-[45px]">
+            <div className="w-full h-full bg-soft px-[160px] border mt-[100px] mb-[45px]">
                 {/* Hình ảnh sản phẩm và đặt hàng */}
                 <div className="w-full flex items-center pt-[5px] pb-[8px]">
                     <Link to="/">
