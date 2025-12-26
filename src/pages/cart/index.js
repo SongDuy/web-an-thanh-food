@@ -16,8 +16,8 @@ const CartPage = () => {
       )}
 
       <div className="w-full bg-soft px-[160px] pt-[100px] pb-[45px]">
-        <div className="w-full font-semibold uppercase py-[25px] flex items-center gap-1">
-          <h1 className="text-[22px] text-white text-shadow-black bg-gradient-to-tr from-gray-100 via-red-50 to-red-100 shadow border px-5 py-2 rounded-full">
+        <div className="w-full py-[25px] flex items-center gap-1">
+          <h1 className="text-[22px] text-black font-semibold uppercase">
             Giỏ Hàng
           </h1>
         </div>
@@ -28,7 +28,7 @@ const CartPage = () => {
               Tên sản phẩm
             </div>
 
-            <div className="w-full h-[480px] mt-[15px] bg-white rounded-md flex items-center px-3 py-3">
+            <div className="w-full h-[500px] mt-[15px] bg-white rounded-md flex items-center px-3 py-3">
               kkk
             </div>
           </div>
