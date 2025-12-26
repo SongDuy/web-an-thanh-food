@@ -16,8 +16,10 @@ const CartPage = () => {
       )}
 
       <div className="w-full bg-soft px-[160px] pt-[100px] pb-[45px]">
-        <h1 className="text-[22px] my-[35px] font-medium uppercase"> Giỏ Hàng </h1>
-
+        <div className="flex items-center py-[35px]">
+          <h1 className="text-[22px] font-semibold uppercase"> Giỏ Hàng </h1>
+        </div>
+        
         <div className="">
           <div className="">
 
