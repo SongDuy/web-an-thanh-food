@@ -5,6 +5,8 @@ import Footer from "../../components/Footer";
 import Search from "../../components/Search";
 
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
+import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 
 const CartPage = () => {
   const [openSearch, setOpenSearch] = useState(false);
