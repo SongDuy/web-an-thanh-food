@@ -4,6 +4,8 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Search from "../../components/Search";
 
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+
 const CartPage = () => {
   const [openSearch, setOpenSearch] = useState(false);
 
@@ -29,37 +31,37 @@ const CartPage = () => {
                 <div className="w-full flex items-center">
                   Tên sản phẩm
                 </div>
-                <div className="w-full flex items-center">
+                <div className="w-full flex items-center justify-center">
                   Đóng gói
                 </div>
-                <div className="w-full flex items-center">
+                <div className="w-full flex items-center justify-center">
                   Số lượng
                 </div>
-                <div className="w-full flex items-center">
+                <div className="w-full flex items-center justify-center">
                   Giá tiền
                 </div>
-                <div className="w-full flex items-center">
-                  Xóa
+                <div className="w-full flex items-center justify-center">
+                  <DeleteOutlineOutlinedIcon />
                 </div>
               </div>
             </div>
 
             <div className="w-full h-[500px] mt-[15px] bg-white rounded-md px-3 py-3">
               <div className="w-full grid grid-cols-[5fr_1.5fr_1.5fr_1.5fr_0.5fr] gap-3">
-                <div className="w-full flex items-center">
+                <div className="w-full flex items-center justify-center">
                   Tên sản phẩm
                 </div>
-                <div className="w-full flex items-center">
-                  Đóng gói
+                <div className="w-full flex items-center justify-center">
+                  3 túi * 1 kg
                 </div>
-                <div className="w-full flex items-center">
+                <div className="w-full flex items-center justify-center">
                   Số lượng
                 </div>
-                <div className="w-full flex items-center">
-                  Giá tiền
+                <div className="w-full flex items-center justify-center">
+                  0đ
                 </div>
-                <div className="w-full flex items-center">
-                  Xóa
+                <div className="w-full flex items-center justify-center">
+                  <DeleteOutlineOutlinedIcon />
                 </div>
               </div>
             </div>
