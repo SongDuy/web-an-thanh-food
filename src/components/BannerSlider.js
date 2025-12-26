@@ -11,7 +11,7 @@ const banners = [
     title: '999 lá thư gửi cho chính mình**',
     subtitle: "2. Ðời người sẽ luôn có sự ấm áp bất ngờ và những hy vọng bất tận. Bất kể con đường phía trước có bao nhiêu khổ ải, chỉ cần phương hướng chính xác thì dù gập ghềnh khúc khuỷu đến mấy, cũng sẽ gần với hạnh phúc hơn là đứng ở vạch xuất phát.",
     author: "Miêu Công Tử",
-    bgImage: 'https://wallpaperxyz.com/wp-content/uploads/Gif-Animated-Wallpaper-Background-Full-HD-Free-Download-for-PC-Macbook-261121-Wallpaperxyz.com-13.gif',
+    bgImage: 'https://cdnb.artstation.com/p/assets/images/images/044/590/877/original/scene-unique-christmas-cabin-gif-2.gif?1640535540',
   },
   {
     title: '999 lá thư gửi cho chính mình**',
@@ -66,13 +66,13 @@ const banners = [
     title: '999 lá thư gửi cho chính mình**',
     subtitle: "11. Thật ra phấn đấu chính là mỗi ngày đều sống nghiêm túc, mỗi việc dù nhỏ cũng phải làm tốt, không dây dưa lề mề, không oán thán, không đùn đẩy trách nhiệm, không lười biếng trốn tránh. Nỗ lực từng ngày, từng ngày mới có thể hội tụ được tất cả sự dũng cảm giúp bạn kiên trì, dẫn bạn đến nơi mà bạn muốn.",
     author: "Miêu Công Tử",
-    bgImage: 'https://symbols.vn/wp-content/uploads/2022/01/Hinh-Nen-Anime-Chill-nu-ngoi-doc-sach-cuc-dep.jpg',
+    bgImage: 'https://i.pinimg.com/originals/7a/14/51/7a1451c07ba25f8c2f1ae81f8da4ad9f.gif',
   },
   {
     title: '999 lá thư gửi cho chính mình**',
     subtitle: "12. Trong những năm tháng cuộc đời, người nào cố gắng nhất định sẽ thoát kén thành bướm. Bạn phải tin rằng, có một ngày bản thân sẽ phá kén thoát ra, trưởng thành hoàn mỹ hơn cả sự mong đợi của mọi người, nhưng quá trình này vốn vô cùng gian khổ, vất vả, có lúc sẽ cảm thấy nản lòng chùn bước. Ðối mặt với hiện thực tàn khốc, bạn cảm thấy bản thân vô cùng nhỏ bé, yếu đuối, nhưng đó chính là một phần của cuộc sống. Làm tốt những gì của hiện tại, sau đó tất cả sẽ dần tốt hơn.",
     author: "Miêu Công Tử",
-    bgImage: 'https://i.ytimg.com/vi/snkg2CQM0HQ/maxresdefault.jpg',
+    bgImage: 'https://i.redd.it/pixel-lakes-sunny-and-sunset-pixel-art-landscape-series-v0-6zw068e2f0sb1.jpg?width=3840&format=pjpg&auto=webp&s=fba637e1021e836cab35621389105933768febc7',
   },
 ];
 
