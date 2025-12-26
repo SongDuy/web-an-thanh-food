@@ -71,7 +71,6 @@ const ProductDetailPage = () => {
                     <span className="text-black text-sm">
                         Chi tiết
                     </span>
-
                 </div>
 
                 <div className="w-full h-[600px] px-[25px] py-[25px] border rounded bg-white grid grid-cols-5 gap-5">

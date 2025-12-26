@@ -20,12 +20,18 @@ const CartPage = () => {
           <h1 className="text-[22px] font-semibold uppercase"> Giỏ Hàng </h1>
         </div>
 
-        <div className="">
-          <div className="w-full h-[38px] bg-white rounded">
-            kkk
+        <div className="w-full grid grid-cols-6 gap-5">
+          <div className="col-span-4">
+            <div className="w-full h-[40px] bg-white rounded flex items-center px-5">
+              kkk
+            </div>
+
+            <div className="w-full h-[480px] mt-[15px] bg-white rounded flex items-center px-5">
+              kkk
+            </div>
           </div>
 
-          <div>
+          <div className="col-span-2 bg-white rounded px-5">
 
           </div>
         </div>
