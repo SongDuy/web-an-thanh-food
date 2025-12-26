@@ -44,7 +44,7 @@ const CartPage = () => {
               </div>
             </div>
 
-            <div className="w-full h-[500px] mt-[15px] bg-white rounded-md flex items-center px-3 py-3">
+            <div className="w-full h-[500px] mt-[15px] bg-white rounded-md flex px-3 py-3">
               kkk
             </div>
           </div>
