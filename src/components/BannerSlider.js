@@ -11,7 +11,7 @@ const banners = [
     title: '999 lá thư gửi cho chính mình**',
     subtitle: "2. Ðời người sẽ luôn có sự ấm áp bất ngờ và những hy vọng bất tận. Bất kể con đường phía trước có bao nhiêu khổ ải, chỉ cần phương hướng chính xác thì dù gập ghềnh khúc khuỷu đến mấy, cũng sẽ gần với hạnh phúc hơn là đứng ở vạch xuất phát.",
     author: "Miêu Công Tử",
-    bgImage: 'https://i.pinimg.com/originals/7e/e6/cf/7ee6cf8b26cad7ef5df301f2aebc8bee.gif',
+    bgImage: 'https://wallpaperxyz.com/wp-content/uploads/Gif-Animated-Wallpaper-Background-Full-HD-Free-Download-for-PC-Macbook-261121-Wallpaperxyz.com-13.gif',
   },
   {
     title: '999 lá thư gửi cho chính mình**',
@@ -29,7 +29,7 @@ const banners = [
     title: '999 lá thư gửi cho chính mình**',
     subtitle: "5. Rất nhiều lần sau khi bạn đã nỗ lực phấn đấu hết mình nhưng không thể đạt được kết quả như mong muốn, tuyệt đối không phải do bạn không xứng đáng mà là cơ hội vẫn chưa tới. Ðiều bạn cần làm chính là, cắn chặt răng tiếp tục kiên trì nỗ lực, chỉ như vậy mà thôi.",
     author: "Miêu Công Tử",
-    bgImage: 'https://user-images.githubusercontent.com/36126914/154766367-2c3d9c80-3cdc-4790-b15c-7eba5eee9fd2.gif',
+    bgImage: 'https://i.redd.it/v7m0pcaa1cyb1.gif',
   },
   {
     title: '999 lá thư gửi cho chính mình**',
@@ -54,13 +54,13 @@ const banners = [
     title: '999 lá thư gửi cho chính mình**',
     subtitle: "9. Hiện tại chính là kết quả của mọi hành động trong quá khứ. Nếu bạn ghét bạn hiện tại, bạn nên suy nghĩ lại về chính mình. Vì mỗi thứ bạn không bằng lòng, đều do trước đây bạn chưa từng cố gắng.",
     author: "Miêu Công Tử",
-    bgImage: 'https://i.pinimg.com/originals/2f/10/ce/2f10ce69b96c0611989308b0abc68e70.gif',
+    bgImage: 'https://i.pinimg.com/originals/b7/f7/88/b7f788e000ffb2854a98d937b8a46593.gif',
   },
   {
     title: '999 lá thư gửi cho chính mình**',
     subtitle: "10. Tuổi trẻ chính là vào lúc đối mặt khó khăn vất vả, phải nỗ lực phấn đấu. Bạn nhất định phải tin tưởng, đằng sau mọi sự nỗ lực phần thưởng luôn được tăng lên gấp bội. Cuộc sống hôm nay là do sự quyết định của ba năm trước, nhưng nếu hôm nay bạn vẫn sống cuộc sống giống như ba năm trước, vậy thì ba năm sau bạn vẫn sẽ chỉ như vậy mà thôi.",
     author: "Miêu Công Tử",
-    bgImage: 'https://i.pinimg.com/originals/b7/f7/88/b7f788e000ffb2854a98d937b8a46593.gif',
+    bgImage: 'https://i.redd.it/fisnfas5ip7c1.gif',
   },
   {
     title: '999 lá thư gửi cho chính mình**',
