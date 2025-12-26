@@ -29,17 +29,21 @@ const CartPage = () => {
             <div className="w-full bg-white rounded-md px-3 py-2">
               <div className="w-full grid grid-cols-[5fr_1.5fr_1.5fr_1.5fr_0.5fr] gap-3">
                 <div className="w-full flex items-center">
-                  Tên sản phẩm
+                  <span> Tên sản phẩm </span>
                 </div>
+
                 <div className="w-full flex items-center justify-center">
-                  Đóng gói
+                  <span> Đóng gói </span>
                 </div>
+
                 <div className="w-full flex items-center justify-center">
-                  Số lượng
+                  <span> Số lượng </span>
                 </div>
+
                 <div className="w-full flex items-center justify-center">
-                  Giá tiền
+                  <span> Giá tiền </span>
                 </div>
+
                 <div className="w-full flex items-center justify-center">
                   <DeleteOutlineOutlinedIcon />
                 </div>
@@ -51,15 +55,29 @@ const CartPage = () => {
                 <div className="w-full flex items-center">
                   Tên sản phẩm
                 </div>
+
                 <div className="w-full flex items-center justify-center">
                   3 túi * 1 kg
                 </div>
-                <div className="w-full flex items-center justify-center">
-                  Số lượng
+
+                <div className="w-full flex items-center text-gray-300">
+                  <div className="flex border rounded overflow-hidden">
+                    <div className="w-10 h-[28px] flex items-center justify-center border-r">
+                      <RemoveOutlinedIcon />
+                    </div>
+                    <div className="w-10 h-[28px] text-lg font-semibold flex items-center justify-center border-l">
+                      1
+                    </div>
+                    <div className="w-10 h-[28px] flex items-center justify-center border-l">
+                      <AddOutlinedIcon />
+                    </div>
+                  </div>
                 </div>
-                <div className="w-full flex items-center justify-center">
+
+                <div className="w-full flex items-center justify-center text-lg font-bold text-red-500">
                   0đ
                 </div>
+
                 <div className="w-full flex items-center justify-center">
                   <DeleteOutlineOutlinedIcon />
                 </div>

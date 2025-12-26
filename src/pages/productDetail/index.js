@@ -174,18 +174,18 @@ const ProductDetailPage = () => {
                                     <span>chờ mua</span>
                                 </span>
 
-                                <span className="h-full text-md text-black flex items-center">
+                                <div className="h-full text-md text-black flex items-center">
                                     <AccessTimeOutlinedIcon />
                                     <span className="ml-2 font-semibold text-red-500">
                                         {days} ngày {hours} giờ {minutes} phút {seconds} giây.
                                     </span>
-                                </span>
+                                </div>
                             </div>
                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
                                 <span className="h-full text-md text-gray-500 flex items-center">
                                     Số lượng
                                 </span>
-                                <span className="h-full flex items-center text-gray-300">
+                                <div className="h-full flex items-center text-gray-300">
                                     <div className="flex border rounded overflow-hidden">
                                         <div className="w-10 h-[28px] flex items-center justify-center border-r">
                                             <RemoveOutlinedIcon />
@@ -197,7 +197,7 @@ const ProductDetailPage = () => {
                                             <AddOutlinedIcon />
                                         </div>
                                     </div>
-                                </span>
+                                </div>
                             </div>
 
                         </div>
