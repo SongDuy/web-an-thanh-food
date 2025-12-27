@@ -46,9 +46,11 @@ const CartPage = () => {
                   <span> Giá tiền </span>
                 </div>
 
-                <button className="w-full flex items-center justify-center">
-                  <DeleteOutlineOutlinedIcon />
-                </button>
+                <div className="w-full flex items-center border">
+                  <span>
+                    Xóa
+                  </span>
+                </div>
               </div>
             </div>
 
@@ -57,7 +59,7 @@ const CartPage = () => {
 
                 {/* Sẳm phẩm */}
                 <div className="w-full grid grid-cols-[5.5fr_1.5fr_1.3fr_1.2fr_0.5fr] gap-2 bg-red-50 shadow rounded border-b-2 border-red-100 pl-2.5 py-3">
-                  <div className="w-full flex items-center gap-3 border">
+                  <div className="w-full flex items-center gap-3">
                     <div className="w-[90px] h-[90px] bg-gray-300 rounded">
 
                     </div>
@@ -70,7 +72,7 @@ const CartPage = () => {
                     3 túi * 1 kg
                   </div>
 
-                  <div className="w-full flex items-center justify-center text-gray-500">
+                  <div className="w-full flex items-center justify-center text-gray-400">
                     <div className="flex border-2 border-gray-300 rounded overflow-hidden">
                       <div className="w-6 h-[22px] flex items-center justify-center font-bold border-r border-gray-300">
                         <RemoveOutlinedIcon sx={{ fontSize: 20 }} />
