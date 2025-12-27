@@ -29,7 +29,7 @@ const CartPage = () => {
         <div className="w-full grid grid-cols-6 gap-5">
           <div className="col-span-4">
             <div className="w-full bg-white rounded-md px-3 py-2">
-              <div className="w-full grid grid-cols-[5.5fr_1.5fr_1.3fr_1.2fr_0.5fr] gap-2 pl-2.5">
+              <div className="w-full grid grid-cols-[5.5fr_1.5fr_1.3fr_1.2fr_0.5fr] gap-2">
                 <div className="w-full flex items-center">
                   <span> Tất cả (1 sản phẩm)</span>
                 </div>
@@ -53,15 +53,15 @@ const CartPage = () => {
             </div>
 
             <div className="w-full min-h-[500px] mt-[15px] bg-white rounded-md px-3 py-3">
-              <div className="w-full grid grid-cols-1 gap-5 py-3 pl-2.5">
+              <div className="w-full grid grid-cols-1 gap-5 py-3 ">
 
                 {/* Sẳm phẩm */}
-                <div className="w-full h-[100px] grid grid-cols-[5.5fr_1.5fr_1.3fr_1.2fr_0.5fr] gap-2 ">
+                <div className="w-full grid grid-cols-[5.5fr_1.5fr_1.3fr_1.2fr_0.5fr] gap-2 bg-red-50 shadow rounded border-b-2 border-red-100 pl-2.5 py-3">
                   <div className="w-full flex items-center gap-3 border">
-                    <div className="w-[90px] h-[90px] bg-gray-100">
+                    <div className="w-[90px] h-[90px] bg-gray-300 rounded">
 
                     </div>
-                    <div>
+                    <div className="mb-auto">
                       kkk
                     </div>
                   </div>
