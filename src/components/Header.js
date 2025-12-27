@@ -4,7 +4,7 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 // import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsActiveOutlined';
 import { NavLink } from "react-router-dom";
 
-const Header = ({ onOpenSearch }) => {
+const Header = ({ onOpenSearch, onOpenNotify }) => {
   return (
     <header className="fixed top-0 left-0 w-full h-[100px] bg-white border-b border-gray-300 text-black flex items-center px-[60px] z-50">
       {/* logo web */}
@@ -67,10 +67,13 @@ const Header = ({ onOpenSearch }) => {
           </button>
         </NavLink>
 
-        <button className="w-[40px] h-[40px] flex items-center justify-center text-black shadow border rounded-full bg-gray-100 hover:bg-gray-200">
+        <button
+          onClick={onOpenNotify}
+          className="w-[40px] h-[40px] flex items-center justify-center text-black shadow border rounded-full bg-gray-100 hover:bg-gray-200"
+        >
           <NotificationsNoneOutlinedIcon />
         </button>
-        
+
         <button className="flex items-center justify-center gap-2 text-md font-semibold px-4 py-2 rounded-full border shadow bg-gray-100 hover:bg-gray-200 transition">
           Đăng Nhập
         </button>

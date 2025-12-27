@@ -264,12 +264,10 @@ const Search = ({ onClose }) => {
     const hasKeyword = keyword.trim().length > 0;
 
     const handleClose = () => {
+        if (isClosing) return; // 👈 CHỐT CHẶN
         setIsClosing(true);
-
         // Đợi animation chạy xong rồi mới đóng
-        setTimeout(() => {
-            onClose();
-        }, 1000); // = duration trong CSS
+        setTimeout(onClose, 1000);
     };
 
     const filteredProducts = products
@@ -279,7 +277,7 @@ const Search = ({ onClose }) => {
     return (
         <div
             onClick={handleClose}   // 👈 click nền mờ sẽ tắt
-            className={`fixed inset-0 z-50 flex ${isClosing ? "overlay-out" : "overlay-in"}`}
+            className={`fixed inset-0 z-50 flex ${isClosing ? "overlay-out pointer-events-none" : "overlay-in"}`}
         >
             {/* Sidebar */}
             <div
@@ -331,7 +329,7 @@ const Search = ({ onClose }) => {
                         </p>
                     )}
 
-                    {hasKeyword && filteredProducts.sort((a, b) => b.stock - a.stock).map((product) => (
+                    {hasKeyword && [...filteredProducts].sort((a, b) => b.stock - a.stock).map((product) => (
                         <Link
                             key={product.id}
                             to={`/${toSlug(product.category)}/${toSlug(product.name)}?id=${product.id}`}
@@ -358,7 +356,7 @@ const Search = ({ onClose }) => {
                                     </div>
 
                                 </div>
-                              
+
                                 {/* Info */}
                                 <div className="flex-1 overflow-hidden">
                                     <h3 className="text-sm font-semibold text-black line-clamp-1">
