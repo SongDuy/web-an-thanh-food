@@ -54,7 +54,7 @@ const CartPage = () => {
             </div>
 
             <div className="w-full min-h-[500px] mt-[15px] bg-white rounded-md px-3 py-3">
-              <div className="w-full grid grid-cols-1 gap-2 py-3 ">
+              <div className="w-full grid grid-cols-1 gap-3 py-3 ">
 
                 {/* Sẳm phẩm */}
                 <div className="w-full grid grid-cols-[5.3fr_1.55fr_1.35fr_1.25fr_0.55fr] gap-2 bg-red-50 shadow rounded border-b-2 border-red-100 pl-2.5 py-3">
@@ -121,141 +121,7 @@ const CartPage = () => {
                     </button>
                   </div>
                 </div>
-
                 
-                {/* Sẳm phẩm */}
-                <div className="w-full grid grid-cols-[5.3fr_1.55fr_1.35fr_1.25fr_0.55fr] gap-2 bg-red-50 shadow rounded border-b-2 border-red-100 pl-2.5 py-3">
-                  <div className="w-full flex items-center gap-3">
-                    <div className="w-[90px] h-[90px] bg-gray-300 rounded">
-                      <div className="w-[90px] h-[90px] bg-gray-300 rounded overflow-hidden">
-                        <img
-                          src="https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png"
-                          alt="Sữa tươi Vinamilk 1L"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="w-full h-full mb-auto flex items-center">
-                      <div className="flex flex-col">
-                        <h1 className="w-full h-[50px] text-md font-semibold text-gray-800 line-clamp-2">
-                          Sữa Tiệt Trùng - Không Đường
-                        </h1>
-                        <span className=" w-full text-sm font-semibold text-gray-400">
-                          HSD: 12 tháng
-                        </span>
-                        <div className="w-full">
-                          <span className="text-sm font-semibold text-gray-400 pr-2 border-r border-gray-300">
-                            Vinamilk
-                          </span>
-                          <span className="text-sm font-semibold text-gray-400 pl-2 border-l border-gray-300">
-                            Việt Nam
-                          </span>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="w-full flex items-center justify-center">
-                    3 túi * 1 kg
-                  </div>
-
-                  <div className="w-full flex items-center justify-center text-gray-400">
-                    <div className="flex border-2 border-gray-300 rounded overflow-hidden">
-                      <div className="w-6 h-[22px] flex items-center justify-center font-bold border-r border-gray-300">
-                        <RemoveOutlinedIcon sx={{ fontSize: 20 }} />
-                      </div>
-                      <div className="w-8 h-[22px] text-md font-semibold flex items-center justify-center border-l border-gray-300">
-                        1
-                      </div>
-                      <div className="w-6 h-[22px] flex items-center justify-center font-bold border-l border-gray-300">
-                        <AddOutlinedIcon sx={{ fontSize: 20 }} />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="w-full flex items-center justify-center text-lg font-bold text-white text-shadow-black">
-                    0
-                    <span className="text-sm ml-0.5 underline underline-offset-2 relative -top-1.5">
-                      đ
-                    </span>
-                  </div>
-
-                  <div className="w-full flex items-center justify-center">
-                    <button className="text-black hover:text-red-500">
-                      <DeleteForeverOutlinedIcon />
-                    </button>
-                  </div>
-                </div>
-
-                
-                {/* Sẳm phẩm */}
-                <div className="w-full grid grid-cols-[5.3fr_1.55fr_1.35fr_1.25fr_0.55fr] gap-2 bg-red-50 shadow rounded border-b-2 border-red-100 pl-2.5 py-3">
-                  <div className="w-full flex items-center gap-3">
-                    <div className="w-[90px] h-[90px] bg-gray-300 rounded">
-                      <div className="w-[90px] h-[90px] bg-gray-300 rounded overflow-hidden">
-                        <img
-                          src="https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png"
-                          alt="Sữa tươi Vinamilk 1L"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="w-full h-full mb-auto flex items-center">
-                      <div className="flex flex-col">
-                        <h1 className="w-full h-[50px] text-md font-semibold text-gray-800 line-clamp-2">
-                          Sữa Tiệt Trùng - Không Đường
-                        </h1>
-                        <span className=" w-full text-sm font-semibold text-gray-400">
-                          HSD: 12 tháng
-                        </span>
-                        <div className="w-full">
-                          <span className="text-sm font-semibold text-gray-400 pr-2 border-r border-gray-300">
-                            Vinamilk
-                          </span>
-                          <span className="text-sm font-semibold text-gray-400 pl-2 border-l border-gray-300">
-                            Việt Nam
-                          </span>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="w-full flex items-center justify-center">
-                    3 túi * 1 kg
-                  </div>
-
-                  <div className="w-full flex items-center justify-center text-gray-400">
-                    <div className="flex border-2 border-gray-300 rounded overflow-hidden">
-                      <div className="w-6 h-[22px] flex items-center justify-center font-bold border-r border-gray-300">
-                        <RemoveOutlinedIcon sx={{ fontSize: 20 }} />
-                      </div>
-                      <div className="w-8 h-[22px] text-md font-semibold flex items-center justify-center border-l border-gray-300">
-                        1
-                      </div>
-                      <div className="w-6 h-[22px] flex items-center justify-center font-bold border-l border-gray-300">
-                        <AddOutlinedIcon sx={{ fontSize: 20 }} />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="w-full flex items-center justify-center text-lg font-bold text-white text-shadow-black">
-                    0
-                    <span className="text-sm ml-0.5 underline underline-offset-2 relative -top-1.5">
-                      đ
-                    </span>
-                  </div>
-
-                  <div className="w-full flex items-center justify-center">
-                    <button className="text-black hover:text-red-500">
-                      <DeleteForeverOutlinedIcon />
-                    </button>
-                  </div>
-                </div>
-
               </div>
             </div>
           </div>
