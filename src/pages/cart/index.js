@@ -60,10 +60,34 @@ const CartPage = () => {
                 <div className="w-full grid grid-cols-[5.5fr_1.5fr_1.3fr_1.2fr_0.5fr] gap-2 bg-red-50 shadow rounded border-b-2 border-red-100 pl-2.5 py-3">
                   <div className="w-full flex items-center gap-3">
                     <div className="w-[90px] h-[90px] bg-gray-300 rounded">
-
+                      <div className="w-[90px] h-[90px] bg-gray-300 rounded overflow-hidden">
+                        <img
+                          src="https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png"
+                          alt="Sữa tươi Vinamilk 1L"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                     </div>
-                    <div className="mb-auto">
-                      kkk
+                    <div className="w-full h-full mb-auto flex items-center">
+                      <div className="flex flex-col gap-1.5">
+                        <h1 className="text-md font-semibold text-gray-800 line-clamp-1">
+                          Sữa Tiệt Trùng - Không Đường
+                        </h1>
+                        <span className="text-sm font-semibold text-gray-400">
+                          HSD: 12 tháng
+                        </span>
+                        <div className="">
+                          <span className="text-sm font-semibold text-gray-400 pr-2 border-r border-gray-300">
+                            Vinamilk
+                          </span>
+                          <span className="text-sm font-semibold text-gray-400 pl-2 border-l border-gray-300">
+                            Việt Nam
+                          </span>
+                        </div>
+
+                      </div>
+
+
                     </div>
                   </div>
 
@@ -87,15 +111,16 @@ const CartPage = () => {
 
                   <div className="w-full flex items-center justify-center text-lg font-bold text-white text-shadow-black">
                     0
-                    <span className="text-sm ml-0.5 underline underline-offset-1.5 relative -top-1.5">
+                    <span className="text-sm ml-1 underline underline-offset-1.5 relative -top-1.5">
                       đ
                     </span>
                   </div>
 
-
-                  <button className="w-full flex items-center justify-center">
-                    <DeleteForeverOutlinedIcon />
-                  </button>
+                  <div className="w-full flex items-center justify-center">
+                    <button className="text-black hover:text-red-500">
+                      <DeleteForeverOutlinedIcon />
+                    </button>
+                  </div>
                 </div>
 
               </div>

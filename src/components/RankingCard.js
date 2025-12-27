@@ -66,11 +66,11 @@ const RankingCard = ({ product, index }) => {
             <div className="w-full h-full">
               <div className="w-full flex flex-col gap-1.5">
                 <div className="w-full">
-                  <h3 className="w-full h-[50px] text-md font-semibold text-gray-800 line-clamp-2">
+                  <h3 className="w-full h-[50px] text-md font-semibold text-black line-clamp-2">
                     {product.name}
                   </h3>
 
-                  <span className="text-sm font-bold text-red-300 pr-2 border-r ">
+                  <span className="text-sm font-bold text-red-300 pr-2 border-r">
                     {product.category}
                   </span>
                   <span className="text-sm font-semibold text-red-300 pl-2 border-l">

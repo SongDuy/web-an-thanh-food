@@ -361,7 +361,7 @@ const Search = ({ onClose }) => {
                               
                                 {/* Info */}
                                 <div className="flex-1 overflow-hidden">
-                                    <h3 className="text-sm font-semibold text-gray-800 line-clamp-1">
+                                    <h3 className="text-sm font-semibold text-black line-clamp-1">
                                         {product.name}
                                     </h3>
 
