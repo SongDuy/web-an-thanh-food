@@ -85,8 +85,12 @@ const CartPage = () => {
                   </div>
 
                   <div className="w-full flex items-center justify-center text-lg font-bold text-red-500">
-                    0đ
+                    0
+                    <span className="text-sm ml-0.5 underline underline-offset-1.5 relative -top-1.5">
+                      đ
+                    </span>
                   </div>
+
 
                   <div className="w-full flex items-center justify-center">
                     <DeleteOutlineOutlinedIcon />
