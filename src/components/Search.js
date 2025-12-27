@@ -264,29 +264,32 @@ const Search = ({ onClose }) => {
     const hasKeyword = keyword.trim().length > 0;
 
     const handleClose = () => {
-        if (isClosing) return; // 👈 CHỐT CHẶN
+        if (isClosing) return;
         setIsClosing(true);
-        // Đợi animation chạy xong rồi mới đóng
-        setTimeout(onClose, 1000);
+        // Khớp với thời gian CSS (0.4s = 400ms)
+        setTimeout(() => {
+            onClose();
+        }, 800); 
     };
 
     const filteredProducts = products
-        .filter((item) => item.name.toLowerCase().includes(keyword.toLowerCase()))
-        .slice(0, 6); // 👈 Chỉ lấy 6 phần tử đầu tiên
+        .filter(item =>
+            item.name.toLowerCase().includes(keyword.toLowerCase())
+        )
+        .sort((a, b) => b.stock - a.stock)
+        .slice(0, 6);
+
 
     return (
         <div
             onClick={handleClose}   // 👈 click nền mờ sẽ tắt
-            className={`fixed inset-0 z-50 flex ${isClosing ? "overlay-out pointer-events-none" : "overlay-in"}`}
+            className={`overlay-base ${isClosing ? "overlay-out" : "overlay-in"}`}
         >
             {/* Sidebar */}
             <div
                 onClick={(e) => e.stopPropagation()} // 👈 chặn click lan
-                // className="w-[420px] h-full ml-auto bg-white shadow-xl px-5 py-4 flex flex-col"
-                className={`
-                    w-[420px] h-full ml-auto bg-white shadow-xl px-5 py-4 flex flex-col
-                    ${isClosing ? "slide-out" : "slide-in"}
-                `}
+                // className="w-[380px] h-full ml-auto bg-white shadow-xl px-5 py-4 flex flex-col"
+                className={`sidebar w-[420px] h-full ml-auto bg-white shadow-xl px-5 py-4 flex flex-col ${isClosing ? "slide-out" : "slide-in"}`}
             >
 
                 {/* Header */}
@@ -329,7 +332,7 @@ const Search = ({ onClose }) => {
                         </p>
                     )}
 
-                    {hasKeyword && [...filteredProducts].sort((a, b) => b.stock - a.stock).map((product) => (
+                    {hasKeyword && filteredProducts.map((product) => (
                         <Link
                             key={product.id}
                             to={`/${toSlug(product.category)}/${toSlug(product.name)}?id=${product.id}`}

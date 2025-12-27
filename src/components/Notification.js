@@ -7,18 +7,20 @@ const Notification = ({ onClose }) => {
     const handleClose = () => {
         if (isClosing) return; // 👈 CHỐT CHẶN
         setIsClosing(true);
-        setTimeout(onClose, 1000);
+        setTimeout(() => {
+            onClose();
+        }, 800);
     };
 
     return (
         <div
             onClick={handleClose}
-           className={`fixed inset-0 z-50 flex ${isClosing ? "overlay-out pointer-events-none" : "overlay-in"}`}
+            className={`overlay-base ${isClosing ? "overlay-out" : "overlay-in"}`}
         >
             {/* Sidebar */}
             <div
                 onClick={(e) => e.stopPropagation()}
-                className={`w-[380px] h-full ml-auto bg-white shadow-xl px-4 py-4 flex flex-col ${isClosing ? "slide-out" : "slide-in"}`}
+                className={`sidebar w-[420px] h-full ml-auto bg-white shadow-xl px-5 py-4 flex flex-col ${isClosing ? "slide-out" : "slide-in"}`}
             >
                 {/* Header */}
                 <div className="flex items-center justify-between border-b pb-2">
