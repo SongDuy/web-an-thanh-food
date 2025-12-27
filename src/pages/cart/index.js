@@ -69,14 +69,14 @@ const CartPage = () => {
                       </div>
                     </div>
                     <div className="w-full h-full mb-auto flex items-center">
-                      <div className="flex flex-col gap-1.5">
-                        <h1 className="text-md font-semibold text-gray-800 line-clamp-1">
-                          Sữa Tiệt Trùng - Không Đường
+                      <div className="flex flex-col">
+                        <h1 className="w-full h-[50px] text-md font-semibold text-gray-800 line-clamp-2">
+                          Sữa Tiệt Trùng - Không Đường Sữa Tiệt Trùng - Không ĐườngSữa Tiệt Trùng - Không ĐườngSữa Tiệt Trùng - Không ĐườngSữa Tiệt Trùng - Không Đường
                         </h1>
-                        <span className="text-sm font-semibold text-gray-400">
+                        <span className=" w-full text-sm font-semibold text-gray-400">
                           HSD: 12 tháng
                         </span>
-                        <div className="">
+                        <div className="w-full">
                           <span className="text-sm font-semibold text-gray-400 pr-2 border-r border-gray-300">
                             Vinamilk
                           </span>
@@ -86,8 +86,6 @@ const CartPage = () => {
                         </div>
 
                       </div>
-
-
                     </div>
                   </div>
 
