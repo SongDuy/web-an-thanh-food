@@ -46,10 +46,8 @@ const CartPage = () => {
                   <span> Giá tiền </span>
                 </div>
 
-                <div className="w-full flex items-center border">
-                  <span>
-                    Xóa
-                  </span>
+                <div className="w-full flex items-center justify-center">
+                  <DeleteOutlineOutlinedIcon />
                 </div>
               </div>
             </div>
