@@ -14,7 +14,6 @@ const MainLayout = ({ children }) => {
                 onOpenSearch={() => {  
                     setOpenNotification(false)
                     setOpenSearch(true)
-                  
                 }}
                 onOpenNotify={() => {
                     setOpenSearch(false)

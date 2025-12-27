@@ -264,7 +264,6 @@ const GroceriesPage = () => {
                 onOpenSearch={() => {
                     setOpenNotification(false)
                     setOpenSearch(true)
-
                 }}
                 onOpenNotify={() => {
                     setOpenSearch(false)

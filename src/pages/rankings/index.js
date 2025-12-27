@@ -339,7 +339,6 @@ const RankingsPage = () => {
         onOpenSearch={() => {
           setOpenNotification(false)
           setOpenSearch(true)
-
         }}
         onOpenNotify={() => {
           setOpenSearch(false)

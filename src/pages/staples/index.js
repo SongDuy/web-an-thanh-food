@@ -263,7 +263,6 @@ const StaplesPage = () => {
         onOpenSearch={() => {
           setOpenNotification(false)
           setOpenSearch(true)
-
         }}
         onOpenNotify={() => {
           setOpenSearch(false)
