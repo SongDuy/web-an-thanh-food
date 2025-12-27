@@ -46,9 +46,9 @@ const CartPage = () => {
                   <span> Giá tiền </span>
                 </div>
 
-                <div className="w-full flex items-center justify-center">
+                <button className="w-full flex items-center justify-center">
                   <DeleteOutlineOutlinedIcon />
-                </div>
+                </button>
               </div>
             </div>
 
@@ -92,9 +92,9 @@ const CartPage = () => {
                   </div>
 
 
-                  <div className="w-full flex items-center justify-center">
+                  <button className="w-full flex items-center justify-center">
                     <DeleteOutlineOutlinedIcon />
-                  </div>
+                  </button>
                 </div>
 
               </div>
