@@ -30,7 +30,7 @@ const CartPage = () => {
           <div className="col-span-4">
             <div className="w-full bg-white rounded-md pr-3 py-2">
 
-              <div className="w-full grid grid-cols-[5.5fr_1.5fr_1.3fr_1.2fr_0.5fr] gap-2 pl-5">
+              <div className="w-full grid grid-cols-[5.3fr_1.55fr_1.35fr_1.25fr_0.55fr] gap-2 pl-5">
                 <div className="w-full flex items-center">
                   <span> Tất cả (1 sản phẩm)</span>
                 </div>
@@ -57,7 +57,7 @@ const CartPage = () => {
               <div className="w-full grid grid-cols-1 gap-5 py-3 ">
 
                 {/* Sẳm phẩm */}
-                <div className="w-full grid grid-cols-[5.5fr_1.5fr_1.3fr_1.2fr_0.5fr] gap-2 bg-red-50 shadow rounded border-b-2 border-red-100 pl-2.5 py-3">
+                <div className="w-full grid grid-cols-[5.3fr_1.55fr_1.35fr_1.25fr_0.55fr] gap-2 bg-red-50 shadow rounded border-b-2 border-red-100 pl-2.5 py-3">
                   <div className="w-full flex items-center gap-3">
                     <div className="w-[90px] h-[90px] bg-gray-300 rounded">
                       <div className="w-[90px] h-[90px] bg-gray-300 rounded overflow-hidden">
@@ -68,10 +68,11 @@ const CartPage = () => {
                         />
                       </div>
                     </div>
+
                     <div className="w-full h-full mb-auto flex items-center">
                       <div className="flex flex-col">
                         <h1 className="w-full h-[50px] text-md font-semibold text-gray-800 line-clamp-2">
-                          Sữa Tiệt Trùng - Không Đường Sữa Tiệt Trùng - Không ĐườngSữa Tiệt Trùng - Không ĐườngSữa Tiệt Trùng - Không ĐườngSữa Tiệt Trùng - Không Đường
+                          Sữa Tiệt Trùng - Không Đường
                         </h1>
                         <span className=" w-full text-sm font-semibold text-gray-400">
                           HSD: 12 tháng
