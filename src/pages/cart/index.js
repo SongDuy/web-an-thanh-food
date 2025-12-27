@@ -57,9 +57,12 @@ const CartPage = () => {
 
                 {/* Sẳm phẩm */}
                 <div className="w-full h-[100px] grid grid-cols-[5.5fr_1.5fr_1.3fr_1.2fr_0.5fr] gap-2 ">
-                  <div className="w-full flex items-center border">
+                  <div className="w-full flex items-center gap-3 border">
                     <div className="w-[90px] h-[90px] bg-gray-100">
 
+                    </div>
+                    <div>
+                      kkk
                     </div>
                   </div>
 
