@@ -5,17 +5,18 @@ const Notification = ({ onClose }) => {
     const [isClosing, setIsClosing] = useState(false);
 
     const handleClose = () => {
-        if (isClosing) return; // 👈 CHỐT CHẶN
+        if (isClosing) return;
         setIsClosing(true);
+        // Giảm xuống 500ms để khớp với CSS mới, tạo cảm giác mượt và nhanh hơn
         setTimeout(() => {
             onClose();
-        }, 800);
+        }, 1000);
     };
 
     return (
         <div
             onClick={handleClose}
-            className={`overlay-base ${isClosing ? "overlay-out" : "overlay-in"}`}
+            className={`fixed inset-0 z-50 flex ${isClosing ? "overlay-out pointer-events-none" : "overlay-in"}`}
         >
             {/* Sidebar */}
             <div

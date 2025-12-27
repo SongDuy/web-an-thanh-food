@@ -269,7 +269,7 @@ const Search = ({ onClose }) => {
         // Khớp với thời gian CSS (0.4s = 400ms)
         setTimeout(() => {
             onClose();
-        }, 800); 
+        }, 1000);
     };
 
     const filteredProducts = products
@@ -283,7 +283,7 @@ const Search = ({ onClose }) => {
     return (
         <div
             onClick={handleClose}   // 👈 click nền mờ sẽ tắt
-            className={`overlay-base ${isClosing ? "overlay-out" : "overlay-in"}`}
+            className={`fixed inset-0 z-50 flex ${isClosing ? "overlay-out pointer-events-none" : "overlay-in"}`}
         >
             {/* Sidebar */}
             <div
@@ -291,7 +291,6 @@ const Search = ({ onClose }) => {
                 // className="w-[380px] h-full ml-auto bg-white shadow-xl px-5 py-4 flex flex-col"
                 className={`sidebar w-[420px] h-full ml-auto bg-white shadow-xl px-5 py-4 flex flex-col ${isClosing ? "slide-out" : "slide-in"}`}
             >
-
                 {/* Header */}
                 <div className="flex items-center justify-between">
                     <h2 className="text-lg font-semibold text-gray-800">
