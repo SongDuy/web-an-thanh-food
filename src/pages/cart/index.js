@@ -28,8 +28,9 @@ const CartPage = () => {
 
         <div className="w-full grid grid-cols-6 gap-5">
           <div className="col-span-4">
-            <div className="w-full bg-white rounded-md px-3 py-2">
-              <div className="w-full grid grid-cols-[5.5fr_1.5fr_1.3fr_1.2fr_0.5fr] gap-2">
+            <div className="w-full bg-white rounded-md pr-3 py-2">
+
+              <div className="w-full grid grid-cols-[5.5fr_1.5fr_1.3fr_1.2fr_0.5fr] gap-2 pl-5">
                 <div className="w-full flex items-center">
                   <span> Tất cả (1 sản phẩm)</span>
                 </div>
