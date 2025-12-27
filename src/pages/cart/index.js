@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Search from "../../components/Search";
+import Notification from "../../components/Notification";
 
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
@@ -10,13 +11,28 @@ import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 
 const CartPage = () => {
   const [openSearch, setOpenSearch] = useState(false);
+  const [openNotification, setOpenNotification] = useState(false);
 
   return (
     <>
-      <Header onOpenSearch={() => setOpenSearch(true)} />
+      <Header
+        onOpenSearch={() => {
+          setOpenNotification(false)
+          setOpenSearch(true)
+
+        }}
+        onOpenNotify={() => {
+          setOpenSearch(false)
+          setOpenNotification(true)
+        }}
+      />
 
       {openSearch && (
         <Search onClose={() => setOpenSearch(false)} />
+      )}
+
+      {openNotification && (
+        <Notification onClose={() => setOpenNotification(false)} />
       )}
 
       <div className="w-full bg-soft px-[160px] pt-[100px] pb-[45px]">
@@ -121,7 +137,7 @@ const CartPage = () => {
                     </button>
                   </div>
                 </div>
-                
+
               </div>
             </div>
           </div>

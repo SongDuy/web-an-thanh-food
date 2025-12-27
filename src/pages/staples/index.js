@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Search from '../../components/Search';
 import ProductCard from '../../components/ProductCard';
+import Notification from "../../components/Notification";
 
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
@@ -253,47 +254,62 @@ const products = [
 
 
 const StaplesPage = () => {
-    const [openSearch, setOpenSearch] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
+  const [openNotification, setOpenNotification] = useState(false);
 
-    return (
-        <>
-            <Header onOpenSearch={() => setOpenSearch(true)} />
+  return (
+    <>
+      <Header
+        onOpenSearch={() => {
+          setOpenNotification(false)
+          setOpenSearch(true)
 
-            {openSearch && (
-                <Search onClose={() => setOpenSearch(false)} />
-            )}
+        }}
+        onOpenNotify={() => {
+          setOpenSearch(false)
+          setOpenNotification(true)
+        }}
+      />
 
-            <div className="px-[160px] pt-[100px] pb-[45px] bg-soft">
-                <div className="w-full h-[60px] border-b border-gray-300 flex items-center">
-                    <div>
-                        <span className="text-black font-bold mr-1">{products.length}</span>
-                        <span className="text-gray-500">sản phẩm</span>
-                    </div>
-                    <div className="ml-auto">
-                        <button className="pr-3 border-r">
-                            <LocalMallOutlinedIcon fontSize="small" /> Phổ Biến
-                        </button>
-                        <button className="px-3 border-r text-gray-500">
-                            <StarBorderOutlinedIcon fontSize="small" /> Đánh Giá
-                        </button>
-                        <button className="pl-3 border-l text-gray-500">
-                            <FavoriteBorderOutlinedIcon fontSize="small" /> Yêu Thích
-                        </button>
-                    </div>
-                </div>
-                <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[25px]">
-                    {products.sort((a, b) => b.stock - a.stock).map((product, index) => (
-                        <ProductCard
-                            key={product.id}
-                            product={product}
-                            index={index}
-                        />
-                    ))}
-                </div>
-            </div>
-            <Footer />
-        </>
-    );
+      {openSearch && (
+        <Search onClose={() => setOpenSearch(false)} />
+      )}
+
+      {openNotification && (
+        <Notification onClose={() => setOpenNotification(false)} />
+      )}
+
+      <div className="px-[160px] pt-[100px] pb-[45px] bg-soft">
+        <div className="w-full h-[60px] border-b border-gray-300 flex items-center">
+          <div>
+            <span className="text-black font-bold mr-1">{products.length}</span>
+            <span className="text-gray-500">sản phẩm</span>
+          </div>
+          <div className="ml-auto">
+            <button className="pr-3 border-r">
+              <LocalMallOutlinedIcon fontSize="small" /> Phổ Biến
+            </button>
+            <button className="px-3 border-r text-gray-500">
+              <StarBorderOutlinedIcon fontSize="small" /> Đánh Giá
+            </button>
+            <button className="pl-3 border-l text-gray-500">
+              <FavoriteBorderOutlinedIcon fontSize="small" /> Yêu Thích
+            </button>
+          </div>
+        </div>
+        <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[25px]">
+          {products.sort((a, b) => b.stock - a.stock).map((product, index) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              index={index}
+            />
+          ))}
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
 };
 
 export default StaplesPage;

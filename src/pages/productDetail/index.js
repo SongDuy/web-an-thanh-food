@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Search from '../../components/Search';
+import Notification from "../../components/Notification";
 
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
@@ -17,6 +18,7 @@ import { Link } from 'react-router-dom';
 
 const ProductDetailPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
+    const [openNotification, setOpenNotification] = useState(false);
 
     // Tổng giây = 6 ngày 23 giờ 59 phút 59 giây
     const initialSeconds = 6 * 24 * 3600 + 23 * 3600 + 59;
@@ -43,10 +45,24 @@ const ProductDetailPage = () => {
 
     return (
         <>
-            <Header onOpenSearch={() => setOpenSearch(true)} />
+             <Header
+                onOpenSearch={() => {
+                    setOpenNotification(false)
+                    setOpenSearch(true)
+
+                }}
+                onOpenNotify={() => {
+                    setOpenSearch(false)
+                    setOpenNotification(true)
+                }}
+            />
 
             {openSearch && (
                 <Search onClose={() => setOpenSearch(false)} />
+            )}
+
+            {openNotification && (
+                <Notification onClose={() => setOpenNotification(false)} />
             )}
 
             <div className="w-full h-full bg-soft px-[160px] border pt-[100px] pb-[45px]">

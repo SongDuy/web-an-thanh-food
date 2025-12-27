@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import ProductCard from '../../components/ProductCard';
 import Search from '../../components/Search';
+import Notification from "../../components/Notification";
 
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
@@ -255,13 +256,28 @@ const products = [
 
 const GroceriesPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
+    const [openNotification, setOpenNotification] = useState(false);
 
     return (
         <>
-            <Header onOpenSearch={() => setOpenSearch(true)} />
+            <Header
+                onOpenSearch={() => {
+                    setOpenNotification(false)
+                    setOpenSearch(true)
+
+                }}
+                onOpenNotify={() => {
+                    setOpenSearch(false)
+                    setOpenNotification(true)
+                }}
+            />
 
             {openSearch && (
                 <Search onClose={() => setOpenSearch(false)} />
+            )}
+
+            {openNotification && (
+                <Notification onClose={() => setOpenNotification(false)} />
             )}
 
             <div className="px-[160px] pt-[100px] pb-[45px] bg-soft">

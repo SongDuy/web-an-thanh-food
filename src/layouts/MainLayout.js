@@ -30,7 +30,6 @@ const MainLayout = ({ children }) => {
                 <Notification onClose={() => setOpenNotification(false)} />
             )}
 
-
             <BannerSlider />
 
             <main className="px-[160px] pb-[45px] bg-soft">

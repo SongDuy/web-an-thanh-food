@@ -3,7 +3,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Search from '../../components/Search';
 import RankingCard from '../../components/RankingCard';
-
+import Notification from "../../components/Notification";
 import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
 
 const products = [
@@ -261,7 +261,7 @@ const products = [
     rating: 4.7,
     likes: 135,
     stock: 32
-  },{
+  }, {
     id: 18,
     name: "Đậu Đen Xanh Lòng",
     image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
@@ -275,7 +275,7 @@ const products = [
     rating: 4.6,
     likes: 125,
     stock: 32
-  },{
+  }, {
     id: 19,
     name: "Đậu Đen Xanh Lòng",
     image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
@@ -289,7 +289,7 @@ const products = [
     rating: 4.8,
     likes: 125,
     stock: 32
-  },{
+  }, {
     id: 20,
     name: "Đậu Đen Xanh Lòng",
     image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
@@ -303,7 +303,7 @@ const products = [
     rating: 4.2,
     likes: 125,
     stock: 32
-  },{
+  }, {
     id: 21,
     name: "Đậu Đen Xanh Lòng",
     image: "https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png",
@@ -330,40 +330,55 @@ const sortedProducts = [...products].sort((a, b) => {
 });
 
 const RankingsPage = () => {
-    const [openSearch, setOpenSearch] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
+  const [openNotification, setOpenNotification] = useState(false);
 
-    return (
-        <>
-            <Header onOpenSearch={() => setOpenSearch(true)} />
+  return (
+    <>
+      <Header
+        onOpenSearch={() => {
+          setOpenNotification(false)
+          setOpenSearch(true)
 
-            {openSearch && (
-                <Search onClose={() => setOpenSearch(false)} />
-            )}
+        }}
+        onOpenNotify={() => {
+          setOpenSearch(false)
+          setOpenNotification(true)
+        }}
+      />
 
-            <div className="px-[160px] pt-[100px] pb-[45px] bg-soft">
-                <div className="w-full h-[60px] border-b border-gray-300 flex items-center">
-                    <div>
-                        <span className="text-black font-bold mr-1">{products.length}</span>
-                        <span className="text-gray-500">sản phẩm</span>
-                    </div>
-                    <div className="ml-auto">
-                        <CheckOutlinedIcon fontSize="small" />
-                        <span className="text-black ml-1">Xếp hạng</span>
-                    </div>
-                </div>
-                <div className="w-full min-h-[650px] grid grid-cols-3 gap-3 mt-[25px]">
-                    {sortedProducts.map((product, index) => (
-                        <RankingCard
-                            key={product.id}
-                            product={product}
-                            index={index}
-                        />
-                    ))}
-                </div>
-            </div>
-            <Footer />
-        </>
-    );
+      {openSearch && (
+        <Search onClose={() => setOpenSearch(false)} />
+      )}
+
+      {openNotification && (
+        <Notification onClose={() => setOpenNotification(false)} />
+      )}
+
+      <div className="px-[160px] pt-[100px] pb-[45px] bg-soft">
+        <div className="w-full h-[60px] border-b border-gray-300 flex items-center">
+          <div>
+            <span className="text-black font-bold mr-1">{products.length}</span>
+            <span className="text-gray-500">sản phẩm</span>
+          </div>
+          <div className="ml-auto">
+            <CheckOutlinedIcon fontSize="small" />
+            <span className="text-black ml-1">Xếp hạng</span>
+          </div>
+        </div>
+        <div className="w-full min-h-[650px] grid grid-cols-3 gap-3 mt-[25px]">
+          {sortedProducts.map((product, index) => (
+            <RankingCard
+              key={product.id}
+              product={product}
+              index={index}
+            />
+          ))}
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
 };
 
 export default RankingsPage;
