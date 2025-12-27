@@ -111,7 +111,7 @@ const CartPage = () => {
 
                   <div className="w-full flex items-center justify-center text-lg font-bold text-white text-shadow-black">
                     0
-                    <span className="text-sm ml-1 underline underline-offset-1.5 relative -top-1.5">
+                    <span className="text-sm ml-0.5 underline underline-offset-2 relative -top-1.5">
                       đ
                     </span>
                   </div>
