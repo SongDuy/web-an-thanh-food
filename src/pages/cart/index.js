@@ -70,21 +70,21 @@ const CartPage = () => {
                     3 túi * 1 kg
                   </div>
 
-                  <div className="w-full flex items-center justify-center text-gray-400">
-                    <div className="flex border-2 rounded overflow-hidden">
-                      <div className="w-6 h-[22px] flex items-center justify-center font-bold border-r">
+                  <div className="w-full flex items-center justify-center text-gray-500">
+                    <div className="flex border-2 border-gray-300 rounded overflow-hidden">
+                      <div className="w-6 h-[22px] flex items-center justify-center font-bold border-r border-gray-300">
                         <RemoveOutlinedIcon sx={{ fontSize: 20 }} />
                       </div>
-                      <div className="w-8 h-[22px] text-md font-semibold flex items-center justify-center border-l">
+                      <div className="w-8 h-[22px] text-md font-semibold flex items-center justify-center border-l border-gray-300">
                         1
                       </div>
-                      <div className="w-6 h-[22px] flex items-center justify-center font-bold border-l">
+                      <div className="w-6 h-[22px] flex items-center justify-center font-bold border-l border-gray-300">
                         <AddOutlinedIcon sx={{ fontSize: 20 }} />
                       </div>
                     </div>
                   </div>
 
-                  <div className="w-full flex items-center justify-center text-lg font-bold text-red-500">
+                  <div className="w-full flex items-center justify-center text-lg font-bold text-white text-shadow-black">
                     0
                     <span className="text-sm ml-0.5 underline underline-offset-1.5 relative -top-1.5">
                       đ
