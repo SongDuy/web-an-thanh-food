@@ -73,7 +73,7 @@ const CartPage = () => {
               <div className="w-full grid grid-cols-1 gap-3 py-2 ">
 
                 {/* Sẳm phẩm */}
-                <div className="w-full grid grid-cols-[5.3fr_1.55fr_1.35fr_1.25fr_0.55fr] gap-2 bg-red-50 shadow rounded border-b-2 border-red-100 pl-2.5 py-3">
+                <div className="w-full grid grid-cols-[5.3fr_1.55fr_1.35fr_1.25fr_0.55fr] gap-2 bg-red-50 shadow rounded border border-b-2 border-red-100 pl-2.5 py-3">
                   <div className="w-full flex items-center gap-3">
                     <div className="w-[90px] h-[90px] bg-gray-300 rounded">
                       <div className="w-[90px] h-[90px] bg-gray-300 rounded overflow-hidden">
@@ -163,13 +163,12 @@ const CartPage = () => {
                   </span>
                 </div>
 
-                <div className="w-full ">
-                  <span className="w-[50px] text-green-400 px-2 bg-green-100 rounded-full flex items-center justify-center">
-                    Nhà
+                <div className="w-full inline-flex items-center gap-2">
+                  <span className="w-[35px] h-[35px] text-green-400 px-2 bg-green-100 rounded-md shadow flex items-center justify-center shrink-0">
+                    <HomeIcon />
                   </span>
-                  <span>
 
-                  </span>
+                  Số nhà 108, ấp Nhơn Hưng A, xã Nhơn Nghĩa, huyện Phong Điền, TP. Cần Thơ
                 </div>
 
               </div>
