@@ -200,7 +200,8 @@ const ProductDetailPage = () => {
                                 <span className="h-full text-md text-gray-500 flex items-center">
                                     Số lượng
                                 </span>
-                                <div className="h-full flex items-center text-gray-400">
+
+                                {/* <div className="h-full flex items-center text-gray-400">
                                     <div className="flex border-2 rounded overflow-hidden">
                                         <div className="w-10 h-[28px] flex items-center justify-center border-r">
                                             <RemoveOutlinedIcon />
@@ -209,6 +210,19 @@ const ProductDetailPage = () => {
                                             1
                                         </div>
                                         <div className="w-10 h-[28px] flex items-center justify-center border-l">
+                                            <AddOutlinedIcon />
+                                        </div>
+                                    </div>
+                                </div> */}
+                                <div className="w-full flex items-center text-black">
+                                    <div className="flex border-2 border-gray-300 rounded overflow-hidden">
+                                        <div className="w-10 h-[28px] flex items-center justify-center font-bold border-r border-gray-300">
+                                            <RemoveOutlinedIcon />
+                                        </div>
+                                        <div className="w-10 h-[28px] text-md font-semibold flex items-center justify-center border-l border-r border-gray-300">
+                                            1
+                                        </div>
+                                        <div className="w-10 h-[28px] flex items-center justify-center font-bold border-l border-gray-300">
                                             <AddOutlinedIcon />
                                         </div>
                                     </div>
