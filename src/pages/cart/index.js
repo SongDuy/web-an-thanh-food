@@ -8,6 +8,7 @@ import Notification from "../../components/Notification";
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
+import HomeIcon from '@mui/icons-material/Home';
 
 const CartPage = () => {
   const [openSearch, setOpenSearch] = useState(false);
@@ -152,7 +153,7 @@ const CartPage = () => {
                 </button>
               </div>
 
-              <div className="w-full flex flex-col items-center">
+              <div className="w-full flex flex-col items-center gap-2">
                 <div className="w-full">
                   <span className="text-[15px] text-black font-medium pr-2 border-r border-gray-300">
                     Lê Hoàng Song Duy
@@ -162,8 +163,13 @@ const CartPage = () => {
                   </span>
                 </div>
 
-                <div className="w-full">
-                  kkk
+                <div className="w-full ">
+                  <span className="w-[50px] text-green-400 px-2 bg-green-100 rounded-full flex items-center justify-center">
+                    Nhà
+                  </span>
+                  <span>
+
+                  </span>
                 </div>
 
               </div>
