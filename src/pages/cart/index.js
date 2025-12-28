@@ -44,7 +44,7 @@ const CartPage = () => {
 
         <div className="w-full grid grid-cols-10 gap-5">
           <div className="col-span-7">
-            <div className="w-full bg-white rounded-md pr-3 py-2">
+            <div className="w-full bg-white rounded-md pr-3 py-2 border">
 
               <div className="w-full grid grid-cols-[5.3fr_1.55fr_1.35fr_1.25fr_0.55fr] gap-2 pl-5">
                 <div className="w-full flex items-center">
@@ -69,7 +69,7 @@ const CartPage = () => {
               </div>
             </div>
 
-            <div className="w-full min-h-[500px] mt-[15px] bg-white rounded-md px-3 py-3">
+            <div className="w-full min-h-[500px] mt-[15px] bg-white rounded-md px-3 py-3 border">
               <div className="w-full grid grid-cols-1 gap-3 py-2 ">
 
                 {/* Sẳm phẩm */}
@@ -146,7 +146,7 @@ const CartPage = () => {
 
             <div className="w-full h-full grid grid-rows-[35%_1fr] gap-3">
               {/* Địa chỉ */}
-              <div className="w-full h-full flex flex-col gap-2 bg-white rounded-md px-4 pt-3 pb-4">
+              <div className="w-full h-full flex flex-col gap-2 bg-white rounded-md px-4 pt-3 pb-4 border">
                 <div className="w-full flex items-center">
                   <h1 className="text-lg text-gray-500">
                     Giao tới
@@ -178,7 +178,7 @@ const CartPage = () => {
               </div>
 
               {/* Thanh toán */}
-              <div className="w-full h-full flex flex-col gap-2 bg-white rounded-md px-4 pt-3 pb-4">
+              <div className="w-full h-full flex flex-col gap-2 bg-white rounded-md px-4 pt-3 pb-4 border">
                 <div className="w-full">
                   kk
                 </div>
