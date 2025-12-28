@@ -201,19 +201,6 @@ const ProductDetailPage = () => {
                                     Số lượng
                                 </span>
 
-                                {/* <div className="h-full flex items-center text-gray-400">
-                                    <div className="flex border-2 rounded overflow-hidden">
-                                        <div className="w-10 h-[28px] flex items-center justify-center border-r">
-                                            <RemoveOutlinedIcon />
-                                        </div>
-                                        <div className="w-10 h-[28px] text-lg font-semibold flex items-center justify-center border-l">
-                                            1
-                                        </div>
-                                        <div className="w-10 h-[28px] flex items-center justify-center border-l">
-                                            <AddOutlinedIcon />
-                                        </div>
-                                    </div>
-                                </div> */}
                                 <div className="w-full flex items-center text-black">
                                     <div className="flex border-2 border-gray-300 rounded overflow-hidden">
                                         <div className="w-10 h-[28px] flex items-center justify-center font-bold border-r border-gray-300">
