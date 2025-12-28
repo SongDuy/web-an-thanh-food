@@ -142,8 +142,53 @@ const CartPage = () => {
             </div>
           </div>
 
-          <div className="col-span-3 w-full h-[555px]  bg-white rounded-md px-4 pt-3 pb-4">
-            <div className="w-full h-full flex flex-col gap-2">
+          <div className="col-span-3 w-full h-[555px]">
+
+            <div className="w-full h-full grid grid-rows-[35%_1fr] gap-3">
+              {/* Địa chỉ */}
+              <div className="w-full h-full flex flex-col gap-2 bg-white rounded-md px-4 pt-3 pb-4">
+
+                <div className="w-full flex items-center">
+                  <h1 className="text-lg text-gray-500">
+                    Giao tới
+                  </h1>
+                  <button className="ml-auto text-sm font-medium text-blue-500 hover:text-blue-600">
+                    Thay đổi
+                  </button>
+                </div>
+
+                <div className="w-full flex flex-col items-center gap-2">
+                  <div className="w-full">
+                    <span className="text-[15px] text-black font-medium pr-2 border-r border-gray-300">
+                      Lê Hoàng Song Duy
+                    </span>
+                    <span className="text-[15px] text-black font-medium pl-2 border-l border-gray-300">
+                      0437789776
+                    </span>
+                  </div>
+
+                  <div className="w-full inline-flex items-center gap-3 text-gray-500">
+                    <span className="w-[35px] h-[35px] text-green-400 px-2 bg-green-100 rounded-md shadow flex items-center justify-center shrink-0">
+                      <HomeIcon />
+                    </span>
+
+                    Số nhà 108, ấp Nhơn Hưng A, xã Nhơn Nghĩa, huyện Phong Điền, TP. Cần Thơ
+                  </div>
+
+                </div>
+              </div>
+
+              {/* Thanh toán */}
+              <div className="bg-white rounded-md px-4 pt-3 pb-4">
+
+              </div>
+            </div>
+
+
+
+
+
+            {/* <div className="w-full h-full flex flex-col gap-2 border">
               <div className="w-full flex items-center">
                 <h1 className="text-lg text-gray-500">
                   Giao tới
@@ -163,7 +208,7 @@ const CartPage = () => {
                   </span>
                 </div>
 
-                <div className="w-full inline-flex items-center gap-2">
+                <div className="w-full inline-flex items-center gap-2 text-gray-500">
                   <span className="w-[35px] h-[35px] text-green-400 px-2 bg-green-100 rounded-md shadow flex items-center justify-center shrink-0">
                     <HomeIcon />
                   </span>
@@ -172,9 +217,9 @@ const CartPage = () => {
                 </div>
 
               </div>
-
-              <div className="w-full flex items-center">
-                <h1 className="text-lg text-gray-500">
+ 
+              <div className="w-full   flex items-center border">
+                <h1 className="text-lg mt-auto text-gray-500">
                   Giao tới
                 </h1>
 
@@ -183,7 +228,7 @@ const CartPage = () => {
               <button className="w-full h-[50px] mt-auto text-md text-white font-medium shadow rounded bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-green-500">
                 Mua hàng
               </button>
-            </div>
+            </div> */}
           </div>
 
         </div>
