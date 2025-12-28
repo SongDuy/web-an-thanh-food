@@ -147,9 +147,9 @@ const CartPage = () => {
                 <h1 className="text-lg text-gray-500">
                   Giao tới
                 </h1>
-                <span className="ml-auto text-sm font-medium text-blue-500">
+                <button className="ml-auto text-sm font-medium text-blue-500 hover:text-blue-600">
                   Thay đổi
-                </span>
+                </button>
               </div>
 
               <button className="w-full h-[50px] text-md text-white font-medium shadow rounded bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-green-500">
