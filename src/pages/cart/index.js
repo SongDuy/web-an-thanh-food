@@ -50,19 +50,19 @@ const CartPage = () => {
                   <span> Tất cả (1 sản phẩm)</span>
                 </div>
 
-                <div className="w-full flex items-center justify-center">
+                <div className="w-full flex items-center justify-center text-gray-500">
                   <span> Đóng gói </span>
                 </div>
 
-                <div className="w-full flex items-center justify-center">
+                <div className="w-full flex items-center justify-center text-gray-500">
                   <span> Số lượng </span>
                 </div>
 
-                <div className="w-full flex items-center justify-center">
+                <div className="w-full flex items-center justify-center text-gray-500">
                   <span> Giá tiền </span>
                 </div>
 
-                <div className="w-full flex items-center justify-center">
+                <div className="w-full flex items-center justify-center text-gray-500">
                   <DeleteOutlineIcon />
                 </div>
               </div>
@@ -109,12 +109,12 @@ const CartPage = () => {
                     3 túi * 1 kg
                   </div>
 
-                  <div className="w-full flex items-center justify-center text-gray-400">
+                  <div className="w-full flex items-center justify-center text-black">
                     <div className="flex border-2 border-gray-300 rounded overflow-hidden">
                       <div className="w-6 h-[22px] flex items-center justify-center font-bold border-r border-gray-300">
                         <RemoveOutlinedIcon sx={{ fontSize: 20 }} />
                       </div>
-                      <div className="w-8 h-[22px] text-md font-semibold flex items-center justify-center border-l border-gray-300">
+                      <div className="w-8 h-[22px] text-md font-semibold flex items-center justify-center border-l border-r border-gray-300">
                         1
                       </div>
                       <div className="w-6 h-[22px] flex items-center justify-center font-bold border-l border-gray-300">
@@ -131,7 +131,7 @@ const CartPage = () => {
                   </div>
 
                   <div className="w-full flex items-center justify-center">
-                    <button className="text-black hover:text-red-500">
+                    <button className="text-gray-500 hover:text-red-500">
                       <DeleteOutlineIcon />
                     </button>
                   </div>
