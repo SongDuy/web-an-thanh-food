@@ -141,7 +141,7 @@ const CartPage = () => {
             </div>
           </div>
 
-          <div className="col-span-3 w-full h-[555px]  bg-white rounded-md px-4 pt-3 pb-5">
+          <div className="col-span-3 w-full h-[555px]  bg-white rounded-md px-4 pt-3 pb-4">
             <div className="w-full h-full flex flex-col justify-between">
               <div className="w-full flex items-center">
                 <h1 className="text-lg text-gray-500">
