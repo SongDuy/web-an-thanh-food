@@ -142,7 +142,7 @@ const CartPage = () => {
           </div>
 
           <div className="col-span-3 w-full h-[555px]  bg-white rounded-md px-4 pt-3 pb-4">
-            <div className="w-full h-full flex flex-col gap-1">
+            <div className="w-full h-full flex flex-col gap-2">
               <div className="w-full flex items-center">
                 <h1 className="text-lg text-gray-500">
                   Giao tới
@@ -152,13 +152,20 @@ const CartPage = () => {
                 </button>
               </div>
 
-              <div className="w-full flex items-center">
-                <span className="text-[15px] text-black font-medium pr-2 border-r border-gray-300">
-                  Lê Hoàng Song Duy
-                </span>
-                <span className="text-[15px] text-black font-medium pl-2 border-l border-gray-300">
-                  0437789776
-                </span>
+              <div className="w-full flex flex-col items-center">
+                <div className="w-full">
+                  <span className="text-[15px] text-black font-medium pr-2 border-r border-gray-300">
+                    Lê Hoàng Song Duy
+                  </span>
+                  <span className="text-[15px] text-black font-medium pl-2 border-l border-gray-300">
+                    0437789776
+                  </span>
+                </div>
+
+                <div className="w-full">
+                  kkk
+                </div>
+
               </div>
 
               <div className="w-full flex items-center">
