@@ -179,6 +179,9 @@ const CartPage = () => {
 
               {/* Thanh toán */}
               <div className="w-full h-full flex flex-col gap-2 bg-white rounded-md px-4 pt-3 pb-4">
+                <div className="w-full">
+                  kk
+                </div>
 
                 <button className="w-full h-[50px] mt-auto text-md text-white font-medium shadow rounded bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-green-500">
                   Mua hàng
