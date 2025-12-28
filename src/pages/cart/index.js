@@ -142,8 +142,11 @@ const CartPage = () => {
           </div>
 
           <div className="w-full h-[555px] col-span-2 bg-white rounded-md px-4 py-3">
-            <div className="text-lg text-gray-500">
-            Giao tới
+            <div className="text-lg text-gray-500 flex items-center">
+              <h1> Giao tới </h1>
+              <span className="ml-auto text-sm font-medium text-blue-500">
+                Thay đổi
+              </span>
             </div>
           </div>
         </div>
