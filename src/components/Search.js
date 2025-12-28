@@ -279,7 +279,6 @@ const Search = ({ onClose }) => {
         .sort((a, b) => b.stock - a.stock)
         .slice(0, 6);
 
-
     return (
         <div
             onClick={handleClose}   // 👈 click nền mờ sẽ tắt

@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 import Search from "../../components/Search";
 import Notification from "../../components/Notification";
 
-import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 
@@ -63,13 +63,13 @@ const CartPage = () => {
                 </div>
 
                 <div className="w-full flex items-center justify-center">
-                  <DeleteForeverOutlinedIcon />
+                  <DeleteOutlineIcon />
                 </div>
               </div>
             </div>
 
             <div className="w-full min-h-[500px] mt-[15px] bg-white rounded-md px-3 py-3">
-              <div className="w-full grid grid-cols-1 gap-3 py-3 ">
+              <div className="w-full grid grid-cols-1 gap-3 py-2 ">
 
                 {/* Sẳm phẩm */}
                 <div className="w-full grid grid-cols-[5.3fr_1.55fr_1.35fr_1.25fr_0.55fr] gap-2 bg-red-50 shadow rounded border-b-2 border-red-100 pl-2.5 py-3">
@@ -132,7 +132,7 @@ const CartPage = () => {
 
                   <div className="w-full flex items-center justify-center">
                     <button className="text-black hover:text-red-500">
-                      <DeleteForeverOutlinedIcon />
+                      <DeleteOutlineIcon />
                     </button>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ const CartPage = () => {
             </div>
           </div>
 
-          <div className="col-span-2 bg-white rounded-md px-3 py-3">
+          <div className="w-full h-[555px] col-span-2 bg-white rounded-md px-3 py-3">
 
           </div>
         </div>
