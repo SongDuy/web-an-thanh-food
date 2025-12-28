@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 import Search from "../../components/Search";
 import Notification from "../../components/Notification";
 
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import HomeIcon from '@mui/icons-material/Home';
@@ -64,7 +64,7 @@ const CartPage = () => {
                 </div>
 
                 <div className="w-full flex items-center justify-center text-gray-500">
-                  <DeleteOutlineIcon />
+                  <DeleteForeverIcon />
                 </div>
               </div>
             </div>
@@ -133,7 +133,7 @@ const CartPage = () => {
 
                   <div className="w-full flex items-center justify-center">
                     <button className="text-gray-500 hover:text-red-500">
-                      <DeleteOutlineIcon />
+                      <DeleteForeverIcon />
                     </button>
                   </div>
                 </div>
