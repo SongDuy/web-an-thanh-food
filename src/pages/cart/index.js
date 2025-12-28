@@ -142,8 +142,8 @@ const CartPage = () => {
           </div>
 
           <div className="col-span-3 w-full h-[555px]  bg-white rounded-md px-4 pt-3 pb-4">
-            <div className="w-full h-full flex flex-col justify-between">
-              <div className="w-full flex items-center">
+            <div className="w-full h-full flex flex-col">
+              <div className="w-full flex items-center border">
                 <h1 className="text-lg text-gray-500">
                   Giao tới
                 </h1>
@@ -152,7 +152,25 @@ const CartPage = () => {
                 </button>
               </div>
 
-              <button className="w-full h-[50px] text-md text-white font-medium shadow rounded bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-green-500">
+              <div className="w-full flex items-center border">
+                <h1 className="text-lg text-gray-500">
+                  Giao tới
+                </h1>
+                <button className="ml-auto text-sm font-medium text-blue-500 hover:text-blue-600">
+                  Thay đổi
+                </button>
+              </div>
+
+              <div className="w-full flex items-center border">
+                <h1 className="text-lg text-gray-500">
+                  Giao tới
+                </h1>
+                <button className="ml-auto text-sm font-medium text-blue-500 hover:text-blue-600">
+                  Thay đổi
+                </button>
+              </div>
+
+              <button className="w-full h-[50px] mt-auto text-md text-white font-medium shadow rounded bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-green-500">
                 Mua hàng
               </button>
             </div>
