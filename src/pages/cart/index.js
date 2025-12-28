@@ -156,8 +156,8 @@ const CartPage = () => {
                 Mua hàng
               </button>
             </div>
-
           </div>
+
         </div>
 
       </div>
