@@ -45,7 +45,7 @@ const ProductDetailPage = () => {
 
     return (
         <>
-             <Header
+            <Header
                 onOpenSearch={() => {
                     setOpenNotification(false)
                     setOpenSearch(true)
@@ -218,13 +218,13 @@ const ProductDetailPage = () => {
                         </div>
                         <div className="w-full h-[65px] flex items-center justify-center">
                             <div className="h-[50px] grid grid-cols-2 gap-3">
-                                <div className="w-[200px] h-[50px] flex items-center justify-center bg-gradient-to-tr from-gray-100 via-red-50 to-red-100 shadow border text-black text-md px-1 py-1 rounded transition-colors font-medium ">
+                                <div className="w-[200px] h-[50px] flex items-center justify-center text-black text-md rounded bg-gradient-to-tr from-gray-100 via-red-50 to-red-100 shadow border  transition-colors font-medium ">
                                     {Number(10).toLocaleString("vi-VN")}
                                 </div>
-                                {/* <button className="w-[200px] h-[50px] bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:bg-green-600 border-b-2 border-green-500 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
-                                Mua ngay
-                            </button> */}
-                                <button className="w-[200px] h-[50px] bg-gradient-to-t from-red-400 via-red-500 to-red-600 hover:bg-red-600 border-b-2 border-red-500 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium ">
+                                {/* <button className="w-[200px] h-[50px] text-white text-md rounded font-medium shadow bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-green-500">
+                                    Mua ngay
+                                </button> */}
+                                <button className="w-[200px] h-[50px] text-white text-md rounded font-medium shadow bg-gradient-to-t from-red-400 via-red-500 to-red-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-red-500">
                                     Hết hàng
                                 </button>
                             </div>

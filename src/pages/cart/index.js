@@ -41,8 +41,8 @@ const CartPage = () => {
           </h1>
         </div>
 
-        <div className="w-full grid grid-cols-6 gap-5">
-          <div className="col-span-4">
+        <div className="w-full grid grid-cols-10 gap-5">
+          <div className="col-span-7">
             <div className="w-full bg-white rounded-md pr-3 py-2">
 
               <div className="w-full grid grid-cols-[5.3fr_1.55fr_1.35fr_1.25fr_0.55fr] gap-2 pl-5">
@@ -141,16 +141,22 @@ const CartPage = () => {
             </div>
           </div>
 
-          <div className="w-full h-[555px] col-span-2 bg-white rounded-md px-4 py-3">
-            <div className="text-lg text-gray-500 flex items-center">
-              <h1> Giao tới </h1>
-              <span className="ml-auto text-sm font-medium text-blue-500">
-                Thay đổi
-              </span>
+          <div className="col-span-3 w-full h-[555px]  bg-white rounded-md px-4 pt-3 pb-5">
+            <div className="w-full h-full flex flex-col justify-between">
+              <div className="w-full flex items-center">
+                <h1 className="text-lg text-gray-500">
+                  Giao tới
+                </h1>
+                <span className="ml-auto text-sm font-medium text-blue-500">
+                  Thay đổi
+                </span>
+              </div>
+
+              <button className="w-full h-[50px] text-md text-white font-medium shadow rounded bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-green-500">
+                Mua hàng
+              </button>
             </div>
-            <div className="mt-auto">
-              kk
-            </div>
+
           </div>
         </div>
 
