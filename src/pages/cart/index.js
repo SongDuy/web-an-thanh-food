@@ -195,7 +195,7 @@ const CartPage = () => {
                   <h1 className="text-md text-gray-500">
                     Phí vận chuyển
                   </h1>
-                  <button className="ml-auto text-md font-medium text-green-500">
+                  <button className="ml-auto text-md font-medium text-green-600">
                     Miễn phí
                   </button>
                 </div>
@@ -210,6 +210,16 @@ const CartPage = () => {
                       đ
                     </span>
                   </div>
+                </div>
+
+                <div className="w-full mt-3 flex flex-col items-center justify-center gap-2 rounded-xl border border-gray-200 bg-gray-50 p-4 shadow">
+                  <span className="text-sm text-gray-500 font-medium">
+                    Thời gian xác nhận mua hàng
+                  </span>
+
+                  <span className="text-2xl font-bold text-green-600">
+                    5 phút
+                  </span>
                 </div>
 
                 <button className="w-full h-[50px] mt-auto text-md text-white font-medium shadow rounded bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-green-500">

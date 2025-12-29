@@ -191,7 +191,7 @@ const ProductDetailPage = () => {
 
                                 <div className="h-full text-md text-black flex items-center">
                                     <AccessTimeOutlinedIcon />
-                                    <span className="ml-2 font-semibold text-red-500">
+                                    <span className="ml-2 font-semibold text-green-600">
                                         {days} ngày {hours} giờ {minutes} phút {seconds} giây.
                                     </span>
                                 </div>
