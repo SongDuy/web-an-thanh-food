@@ -17,7 +17,7 @@ const RegisterPage = ({ isModal = false }) => {
     else navigate("/");
   }, [isModal, navigate]);
 
-  /* ===== ESC để đóng + lock scroll ===== */
+  /* ===== ESC để đóng (KHÔNG lock scroll) ===== */
   useEffect(() => {
     if (!isModal) return;
 
@@ -26,12 +26,7 @@ const RegisterPage = ({ isModal = false }) => {
     };
 
     document.addEventListener("keydown", handleEsc);
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.removeEventListener("keydown", handleEsc);
-      document.body.style.overflow = "auto";
-    };
+    return () => document.removeEventListener("keydown", handleEsc);
   }, [isModal, handleClose]);
 
   /* ===== Submit ===== */
@@ -74,7 +69,10 @@ const RegisterPage = ({ isModal = false }) => {
         className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
         onClick={handleClose}
       >
-        <div onClick={(e) => e.stopPropagation()}>
+        <div
+          className="pointer-events-auto"
+          onClick={(e) => e.stopPropagation()}
+        >
           {children}
         </div>
       </div>
@@ -87,6 +85,7 @@ const RegisterPage = ({ isModal = false }) => {
   return (
     <Wrapper>
       <div className="relative w-full max-w-md rounded-xl bg-white p-6 shadow-lg">
+        {/* Close */}
         {isModal && (
           <button
             onClick={handleClose}
@@ -111,7 +110,7 @@ const RegisterPage = ({ isModal = false }) => {
           <input
             type="email"
             placeholder="Email"
-            className="w-full rounded-lg border px-3 py-2"
+            className="w-full rounded-lg border px-3 py-2 focus:border-blue-500 focus:outline-none"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             autoFocus
@@ -120,7 +119,7 @@ const RegisterPage = ({ isModal = false }) => {
           <input
             type="password"
             placeholder="Mật khẩu"
-            className="w-full rounded-lg border px-3 py-2"
+            className="w-full rounded-lg border px-3 py-2 focus:border-blue-500 focus:outline-none"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -128,7 +127,7 @@ const RegisterPage = ({ isModal = false }) => {
           <input
             type="password"
             placeholder="Xác nhận mật khẩu"
-            className="w-full rounded-lg border px-3 py-2"
+            className="w-full rounded-lg border px-3 py-2 focus:border-blue-500 focus:outline-none"
             value={confirmPassword}
             onChange={(e) =>
               setConfirmPassword(e.target.value)
@@ -138,7 +137,7 @@ const RegisterPage = ({ isModal = false }) => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-lg bg-blue-600 py-2 text-white disabled:opacity-50"
+            className="w-full rounded-lg bg-blue-600 py-2 text-white hover:bg-blue-700 disabled:opacity-50"
           >
             {loading ? "Đang đăng ký..." : "Đăng ký"}
           </button>

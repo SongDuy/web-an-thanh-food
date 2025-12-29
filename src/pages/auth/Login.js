@@ -16,7 +16,7 @@ const LoginPage = ({ isModal = false }) => {
     else navigate("/");
   }, [isModal, navigate]);
 
-  /* ===== ESC để đóng + lock scroll ===== */
+  /* ===== ESC để đóng (KHÔNG lock scroll) ===== */
   useEffect(() => {
     if (!isModal) return;
 
@@ -25,12 +25,7 @@ const LoginPage = ({ isModal = false }) => {
     };
 
     document.addEventListener("keydown", handleEsc);
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.removeEventListener("keydown", handleEsc);
-      document.body.style.overflow = "auto";
-    };
+    return () => document.removeEventListener("keydown", handleEsc);
   }, [isModal, handleClose]);
 
   /* ===== Submit ===== */
@@ -46,12 +41,11 @@ const LoginPage = ({ isModal = false }) => {
     try {
       setLoading(true);
 
-      // 👉 GỌI API LOGIN Ở ĐÂY
+      // 👉 CALL API LOGIN
       // await authService.login({ email, password });
 
       await new Promise((r) => setTimeout(r, 1000));
 
-      // redirect về trang trước hoặc trang chủ
       const redirectTo =
         location.state?.background?.pathname || "/";
       navigate(redirectTo, { replace: true });
@@ -69,7 +63,10 @@ const LoginPage = ({ isModal = false }) => {
         className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
         onClick={handleClose}
       >
-        <div onClick={(e) => e.stopPropagation()}>
+        <div
+          className="pointer-events-auto"
+          onClick={(e) => e.stopPropagation()}
+        >
           {children}
         </div>
       </div>
