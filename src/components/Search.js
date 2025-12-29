@@ -365,7 +365,7 @@ const Search = ({ onClose }) => {
                                     </h3>
 
                                     <div className="flex items-center text-xs mt-0.5">
-                                        <span className="pr-2 border-r text-gray-400 font-medium">
+                                        <span className="pr-2 border-r text-red-300 font-medium">
                                             {product.category}
                                         </span>
 
