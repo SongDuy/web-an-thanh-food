@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import HomePage from '../pages/home';
 import NotFoundPage from '../pages/notFound';
 import StaplesPage from '../pages/staples';
@@ -13,41 +13,32 @@ import ResetPassword from "../pages/auth/ResetPassword"
 
 const AppRoutes = () => {
 
-    const location = useLocation();
-    const background = location.state?.background;
-
     return (
-        <>
-            {/* Routes chính */}
-            <Routes location={background || location}>
-                <Route path="/" element={<HomePage />} />
+        <Routes>
+            {/* Home - page */}
+            <Route path="/" element={<HomePage />} />
 
-                <Route path="/luong-thuc" element={<StaplesPage />} />
-                <Route path="/thuc-pham" element={<GroceriesPage />} />
-                <Route path="/bang-xep-hang" element={<RankingsPage />} />
+            {/* Danh mục - page */}
+            <Route path="/luong-thuc" element={<StaplesPage />} />
+            <Route path="/thuc-pham" element={<GroceriesPage />} />
+            <Route path="/bang-xep-hang" element={<RankingsPage />} />
 
-                <Route path="/:category/:id" element={<ProductDetailPage />} />
-                <Route path="/cart" element={<CartPage />} />
+            {/* Chi tiết sản phẩm - page */}
+            <Route path="/:category/:id" element={<ProductDetailPage />} />
 
-                {/* Auth - page */}
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="/register" element={<RegisterPage />} />
-                <Route path="/forgot-password" element={<ForgotPassword />} />
-                <Route path="/reset-password" element={<ResetPassword />} />
+            {/* Giỏ hàng - page */}
+            <Route path="/cart" element={<CartPage />} />
 
-                {/* 404 */}
-                <Route path="/404" element={<NotFoundPage />} />
-                <Route path="*" element={<Navigate to="/404" replace />} />
-            </Routes>
+            {/* Auth - page */}
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
 
-            {/* Auth - modal */}
-            {background && (
-                <Routes>
-                    <Route path="/login" element={<LoginPage isModal />} />
-                    <Route path="/register" element={<RegisterPage isModal />} />
-                </Routes>
-            )}
-        </>
+            {/* 404 */}
+            <Route path="/404" element={<NotFoundPage />} />
+            <Route path="*" element={<Navigate to="/404" replace />} />
+        </Routes>
     );
 };
 
