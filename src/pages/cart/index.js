@@ -171,7 +171,7 @@ const CartPage = () => {
                       <HomeIcon />
                     </span>
 
-                    Số nhà 108, ấp Nhơn Hưng A, xã Nhơn Nghĩa, huyện Phong Điền, TP. Cần Thơ
+                    Số nhà 112, ấp Nhơn Khánh A, xã Nhơn Ái, huyện Phong Điền, TP. Cần Thơ
                   </div>
 
                 </div>
