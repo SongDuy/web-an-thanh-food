@@ -156,7 +156,7 @@ const CartPage = () => {
                   </button>
                 </div>
 
-                <div className="w-full flex flex-col items-center gap-2">
+                <div className="w-full flex flex-col items-center gap-3">
                   <div className="w-full">
                     <span className="text-[15px] text-black font-medium pr-2 border-r border-gray-300">
                       Lê Hoàng Song Duy
@@ -167,7 +167,7 @@ const CartPage = () => {
                   </div>
 
                   <div className="w-full inline-flex items-center gap-3 text-gray-500">
-                    <span className="w-[35px] h-[35px] text-green-400 px-2 bg-green-100 rounded-md shadow flex items-center justify-center shrink-0">
+                    <span className="w-[35px] h-[35px] text-green-500 px-2 bg-green-100 rounded-md shadow flex items-center justify-center shrink-0">
                       <HomeIcon />
                     </span>
 
@@ -178,9 +178,35 @@ const CartPage = () => {
               </div>
 
               {/* Thanh toán */}
-              <div className="w-full h-full flex flex-col gap-2 bg-white rounded-md px-4 pt-3 pb-4 border">
-                <div className="w-full">
-                  kk
+              <div className="w-full h-full flex flex-col gap-3 bg-white rounded-md px-4 pt-3 pb-4 border">
+                <div className="w-full flex items-center">
+                  <h1 className="text-md text-gray-500">
+                    Tổng tiền hàng
+                  </h1>
+                  <div className="ml-auto text-lg flex items-center justify-center font-bold text-white text-shadow-black">
+                    0
+                    <span className="ml-0.5 text-sm underline underline-offset-2 relative -top-1.5">
+                      đ
+                    </span>
+                  </div>
+                </div>
+
+                <div className="w-full flex items-center">
+                  <h1 className="text-md text-gray-500">
+                    Phí vận chuyển
+                  </h1>
+                  <button className="ml-auto text-sm font-medium text-green-500">
+                    Miễn phí
+                  </button>
+                </div>
+
+                <div className="w-full flex items-center">
+                  <h1 className="text-md text-gray-500">
+                    Thời gian mua hàng
+                  </h1>
+                  <button className="ml-auto text-sm font-medium text-blue-500 hover:text-blue-600">
+                    Thay đổi
+                  </button>
                 </div>
 
                 <button className="w-full h-[50px] mt-auto text-md text-white font-medium shadow rounded bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-green-500">
