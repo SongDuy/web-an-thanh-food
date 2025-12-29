@@ -151,10 +151,10 @@ const ProductDetailPage = () => {
                             </div>
                         </div>
 
-                        <div className="w-full h-[65px] bg-red-50 rounded">
-                            <h1 className="w-full h-full flex items-center justify-center text-white text-shadow-black font-bold">
-                                <span className="text-[40px] tracking-tight mb-1">0</span>
-                                <span className="text-[25px] ml-1 underline underline-offset-2 relative -top-[10px]">
+                        <div className="w-full h-[65px] bg-gray-50 rounded">
+                            <h1 className="w-full h-full flex items-center justify-center text-red-500 font-semibold">
+                                <span className="text-[32px] tracking-tight mb-1">0</span>
+                                <span className="text-[20px] ml-1 underline underline-offset-2 relative -top-[10px]">
                                     đ
                                 </span>
                             </h1>
@@ -167,7 +167,7 @@ const ProductDetailPage = () => {
                                 </span>
                                 <div className="h-full text-md text-black flex items-center">
                                     <LocalShippingOutlinedIcon />
-                                    <span className="ml-2 font-semibold text-black">
+                                    <span className="ml-2 font-semibold text-green-600">
                                         Miễn phí vận chuyển.
                                     </span>
                                 </div>
@@ -178,7 +178,7 @@ const ProductDetailPage = () => {
                                 </span>
                                 <span className="h-full text-md text-black flex items-center">
                                     <ShoppingBagOutlinedIcon />
-                                    <span className="ml-2 font-semibold text-black">
+                                    <span className="ml-2 font-semibold text-green-600">
                                         1 lượt.
                                     </span>
                                 </span>
