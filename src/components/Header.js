@@ -2,9 +2,12 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 // import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsActiveOutlined';
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Header = ({ onOpenSearch, onOpenNotify }) => {
+
+  const location = useLocation();
+
   return (
     <header className="fixed top-0 left-0 w-full h-[100px] bg-white border-b border-gray-300 text-black flex items-center px-[60px] z-50">
       {/* logo web */}
@@ -74,9 +77,13 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
           <NotificationsNoneOutlinedIcon />
         </button>
 
-        <button className="flex items-center justify-center gap-2 text-md font-semibold px-4 py-2 rounded-full border shadow bg-gray-100 hover:bg-gray-200 transition">
-          Đăng Nhập
-        </button>
+        <NavLink
+          to="/login"
+          state={{ background: location }}>
+          <button className="flex items-center justify-center gap-2 text-md font-semibold px-4 py-2 rounded-full border shadow bg-gray-100 hover:bg-gray-200 transition">
+            Đăng Nhập
+          </button>
+        </NavLink>
 
         <button
           onClick={onOpenSearch}
