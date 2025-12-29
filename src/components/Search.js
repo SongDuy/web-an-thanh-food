@@ -292,7 +292,7 @@ const Search = ({ onClose }) => {
             >
                 {/* Header */}
                 <div className="flex items-center justify-between">
-                    <h2 className="text-lg font-semibold text-gray-800">
+                    <h2 className="text-lg font-medium text-black">
                         Tìm kiếm
                     </h2>
                     <button
@@ -360,21 +360,21 @@ const Search = ({ onClose }) => {
 
                                 {/* Info */}
                                 <div className="flex-1 overflow-hidden">
-                                    <h3 className="text-sm font-semibold text-black line-clamp-1">
+                                    <h3 className="text-sm font-medium text-black line-clamp-1">
                                         {product.name}
                                     </h3>
 
                                     <div className="flex items-center text-xs mt-0.5">
-                                        <span className="pr-2 border-r text-red-300  font-bold">
+                                        <span className="pr-2 border-r text-gray-400 font-medium">
                                             {product.category}
                                         </span>
 
-                                        <span className="pl-2 border-l text-red-300 font-semibold">
+                                        <span className="pl-2 border-l text-gray-400 font-medium">
                                             {product.unit} * {product.weight}
                                         </span>
                                     </div>
 
-                                    <div className="flex items-center gap-3 text-xs font-semibold mt-1">
+                                    <div className="flex items-center gap-3 text-xs font-medium mt-1">
                                         <div className="flex items-center gap-1 text-yellow-500">
                                             <StarIcon fontSize="inherit" />
                                             {product.rating}

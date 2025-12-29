@@ -73,7 +73,7 @@ const CartPage = () => {
               <div className="w-full grid grid-cols-1 gap-3 py-2 ">
 
                 {/* Sẳm phẩm */}
-                <div className="w-full grid grid-cols-[5.3fr_1.55fr_1.35fr_1.25fr_0.55fr] gap-2 bg-red-50 shadow rounded border border-b-2 border-red-100 pl-2.5 py-3">
+                <div className="w-full grid grid-cols-[5.3fr_1.55fr_1.35fr_1.25fr_0.55fr] gap-2 bg-red-50 shadow rounded border border-b-2 border-gray-200 pl-2.5 py-3">
                   <div className="w-full flex items-center gap-3">
                     <div className="w-[90px] h-[90px] bg-gray-300 rounded">
                       <div className="w-[90px] h-[90px] bg-gray-300 rounded overflow-hidden">
@@ -87,17 +87,17 @@ const CartPage = () => {
 
                     <div className="w-full h-full mb-auto flex items-center">
                       <div className="flex flex-col">
-                        <h1 className="w-full h-[50px] text-md font-semibold text-gray-800 line-clamp-2">
+                        <h1 className="w-full h-[50px] text-md font-medium text-black line-clamp-2">
                           Sữa Tiệt Trùng - Không Đường
                         </h1>
-                        <span className=" w-full text-sm font-semibold text-gray-400">
+                        <span className=" w-full text-sm font-medium text-gray-400">
                           HSD: 12 tháng
                         </span>
                         <div className="w-full">
-                          <span className="text-sm font-semibold text-gray-400 pr-2 border-r border-gray-300">
+                          <span className="text-sm font-medium text-gray-400 pr-2 border-r border-gray-300">
                             Vinamilk
                           </span>
-                          <span className="text-sm font-semibold text-gray-400 pl-2 border-l border-gray-300">
+                          <span className="text-sm font-medium text-gray-400 pl-2 border-l border-gray-300">
                             Việt Nam
                           </span>
                         </div>
@@ -106,25 +106,25 @@ const CartPage = () => {
                     </div>
                   </div>
 
-                  <div className="w-full flex items-center justify-center">
+                  <div className="w-full flex items-center justify-center font-medium">
                     3 túi * 1 kg
                   </div>
 
                   <div className="w-full flex items-center justify-center text-black">
                     <div className="flex border-2 border-gray-300 rounded overflow-hidden">
-                      <div className="w-6 h-[22px] flex items-center justify-center font-bold border-r border-gray-300">
+                      <div className="w-6 h-[22px] flex items-center justify-center font-medium border-r border-gray-300">
                         <RemoveOutlinedIcon sx={{ fontSize: 20 }} />
                       </div>
-                      <div className="w-8 h-[22px] text-md font-semibold flex items-center justify-center border-l border-r border-gray-300">
+                      <div className="w-8 h-[22px] text-md font-medium flex items-center justify-center border-l border-r border-gray-300">
                         1
                       </div>
-                      <div className="w-6 h-[22px] flex items-center justify-center font-bold border-l border-gray-300">
+                      <div className="w-6 h-[22px] flex items-center justify-center font-medium border-l border-gray-300">
                         <AddOutlinedIcon sx={{ fontSize: 20 }} />
                       </div>
                     </div>
                   </div>
 
-                  <div className="w-full flex items-center justify-center text-lg font-medium text-red-600">
+                  <div className="w-full flex items-center justify-center text-lg font-medium text-red-500">
                     0
                     <span className="text-sm ml-0.5 underline underline-offset-2 relative -top-1.5">
                       đ
@@ -212,7 +212,7 @@ const CartPage = () => {
                   </div>
                 </div>
 
-                <div className="w-full mt-3 flex flex-col items-center justify-center gap-2 rounded-xl border border-gray-100 bg-gray-50 p-4 shadow">
+                <div className="w-full mt-3 flex flex-col items-center justify-center gap-2 rounded bg-gray-100 p-4">
                   <span className="text-sm text-gray-500 font-medium">
                     Thời gian xác nhận mua hàng
                   </span>

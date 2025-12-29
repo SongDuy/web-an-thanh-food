@@ -151,8 +151,8 @@ const ProductDetailPage = () => {
                             </div>
                         </div>
 
-                        <div className="w-full h-[65px] bg-gray-50 rounded">
-                            <h1 className="w-full h-full flex items-center justify-center text-red-500 font-semibold">
+                        <div className="w-full h-[65px] bg-gray-100 rounded">
+                            <h1 className="w-full h-full flex items-center justify-center text-red-500 font-medium">
                                 <span className="text-[32px] tracking-tight mb-1">0</span>
                                 <span className="text-[20px] ml-1 underline underline-offset-2 relative -top-[10px]">
                                     đ
@@ -167,7 +167,7 @@ const ProductDetailPage = () => {
                                 </span>
                                 <div className="h-full text-md text-black flex items-center">
                                     <LocalShippingOutlinedIcon />
-                                    <span className="ml-2 font-semibold text-green-600">
+                                    <span className="ml-2 font-medium text-green-600">
                                         Miễn phí vận chuyển.
                                     </span>
                                 </div>
@@ -178,7 +178,7 @@ const ProductDetailPage = () => {
                                 </span>
                                 <span className="h-full text-md text-black flex items-center">
                                     <ShoppingBagOutlinedIcon />
-                                    <span className="ml-2 font-semibold text-green-600">
+                                    <span className="ml-2 font-medium text-green-600">
                                         1 lượt.
                                     </span>
                                 </span>
@@ -191,7 +191,7 @@ const ProductDetailPage = () => {
 
                                 <div className="h-full text-md text-black flex items-center">
                                     <AccessTimeOutlinedIcon />
-                                    <span className="ml-2 font-semibold text-green-600">
+                                    <span className="ml-2 font-medium text-green-600">
                                         {days} ngày {hours} giờ {minutes} phút {seconds} giây.
                                     </span>
                                 </div>
@@ -203,13 +203,13 @@ const ProductDetailPage = () => {
 
                                 <div className="w-full flex items-center text-black">
                                     <div className="flex border-2 border-gray-300 rounded overflow-hidden">
-                                        <div className="w-10 h-[28px] flex items-center justify-center font-bold border-r border-gray-300">
+                                        <div className="w-10 h-[28px] flex items-center justify-center font-medium border-r border-gray-300">
                                             <RemoveOutlinedIcon />
                                         </div>
-                                        <div className="w-10 h-[28px] text-md font-semibold flex items-center justify-center border-l border-r border-gray-300">
+                                        <div className="w-10 h-[28px] text-lg font-medium flex items-center justify-center border-l border-r border-gray-300">
                                             1
                                         </div>
-                                        <div className="w-10 h-[28px] flex items-center justify-center font-bold border-l border-gray-300">
+                                        <div className="w-10 h-[28px] flex items-center justify-center font-medium border-l border-gray-300">
                                             <AddOutlinedIcon />
                                         </div>
                                     </div>

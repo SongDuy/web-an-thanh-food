@@ -37,10 +37,10 @@ const ProductCard = ({ product, index }) => {
 
           {/* Nội dung text: flex-grow giúp vùng này chiếm không gian còn lại */}
           <div className="flex-grow">
-            <h3 className="w-full h-[50px] text-md font-semibold text-black line-clamp-2">
+            <h3 className="w-full h-[50px] text-md font-medium text-black line-clamp-2">
               {product.name}
             </h3>
-            <p className="text-sm font-semibold text-red-300">
+            <p className="text-sm font-medium text-gray-400">
               {product.unit} * {product.weight}
             </p>
           </div>
