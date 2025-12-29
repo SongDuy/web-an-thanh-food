@@ -212,7 +212,7 @@ const CartPage = () => {
                   </div>
                 </div>
 
-                <div className="w-full mt-3 flex flex-col items-center justify-center gap-2 rounded-xl border border-gray-200 bg-gray-50 p-4 shadow">
+                <div className="w-full mt-3 flex flex-col items-center justify-center gap-2 rounded-xl border border-gray-100 bg-gray-50 p-4 shadow">
                   <span className="text-sm text-gray-500 font-medium">
                     Thời gian xác nhận mua hàng
                   </span>
