@@ -124,7 +124,7 @@ const CartPage = () => {
                     </div>
                   </div>
 
-                  <div className="w-full flex items-center justify-center text-lg font-bold text-white text-shadow-black">
+                  <div className="w-full flex items-center justify-center text-lg font-medium text-black">
                     0
                     <span className="text-sm ml-0.5 underline underline-offset-2 relative -top-1.5">
                       đ
@@ -183,7 +183,7 @@ const CartPage = () => {
                   <h1 className="text-md text-gray-500">
                     Tổng tiền hàng
                   </h1>
-                  <div className="ml-auto text-lg flex items-center justify-center font-bold text-white text-shadow-black">
+                  <div className="ml-auto text-lg flex items-center justify-center font-medium text-black">
                     0
                     <span className="ml-0.5 text-sm underline underline-offset-2 relative -top-1.5">
                       đ
@@ -195,18 +195,21 @@ const CartPage = () => {
                   <h1 className="text-md text-gray-500">
                     Phí vận chuyển
                   </h1>
-                  <button className="ml-auto text-sm font-medium text-green-500">
+                  <button className="ml-auto text-md font-medium text-green-500">
                     Miễn phí
                   </button>
                 </div>
 
-                <div className="w-full flex items-center">
-                  <h1 className="text-md text-gray-500">
-                    Thời gian mua hàng
+                <div className="w-full flex items-center border-t-2 pt-2">
+                  <h1 className="text-md text-black">
+                    Tổng tiền thanh toán
                   </h1>
-                  <button className="ml-auto text-sm font-medium text-blue-500 hover:text-blue-600">
-                    Thay đổi
-                  </button>
+                  <div className="ml-auto text-2xl flex items-center justify-center font-bold text-white text-shadow-black">
+                    0
+                    <span className="ml-0.5 text-sm underline underline-offset-2 relative -top-1.5">
+                      đ
+                    </span>
+                  </div>
                 </div>
 
                 <button className="w-full h-[50px] mt-auto text-md text-white font-medium shadow rounded bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-green-500">
