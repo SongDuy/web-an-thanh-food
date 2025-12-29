@@ -369,7 +369,7 @@ const Search = ({ onClose }) => {
                                             {product.category}
                                         </span>
 
-                                        <span className="pl-2 border-l text-gray-400 font-medium">
+                                        <span className="pl-2 border-l text-red-300 font-medium">
                                             {product.unit} * {product.weight}
                                         </span>
                                     </div>

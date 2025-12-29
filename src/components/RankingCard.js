@@ -70,10 +70,10 @@ const RankingCard = ({ product, index }) => {
                     {product.name}
                   </h3>
 
-                  <span className="text-sm font-medium text-gray-400 pr-2 border-r">
+                  <span className="text-sm font-medium text-red-300 pr-2 border-r">
                     {product.category}
                   </span>
-                  <span className="text-sm font-medium text-gray-400 pl-2 border-l">
+                  <span className="text-sm font-medium text-red-300 pl-2 border-l">
                     {product.unit} * {product.weight}
                   </span>
                 </div>
@@ -98,11 +98,6 @@ const RankingCard = ({ product, index }) => {
                 </div>
               </div>
 
-              {/* <div className="w-full flex items-center">
-            <button className="w-full h-[35px] bg-green-500 hover:bg-green-600 shadow text-white text-md px-1 py-1 rounded transition-colors font-medium">
-              Mua ngay
-            </button>
-          </div> */}
             </div>
 
           </div>
