@@ -127,8 +127,8 @@ const products = [
         brand: "Fami",
         origin: "Việt Nam",
         expiryDate: "2026-05-20",
-        rating: 4.5,
-        likes: 125,
+        rating: 4.8,
+        likes: 43,
         stock: 32
     },
     {
@@ -143,7 +143,7 @@ const products = [
         origin: "Việt Nam",
         expiryDate: "2026-05-20",
         rating: 4.5,
-        likes: 125,
+        likes: 15,
         stock: 32
     },
     {
@@ -157,8 +157,8 @@ const products = [
         brand: "ST",
         origin: "Sóc Trăng, Việt Nam",
         expiryDate: "2027-01-15",
-        rating: 4.5,
-        likes: 125,
+        rating: 4.7,
+        likes: 15,
         stock: 0
     },
     {
@@ -172,8 +172,8 @@ const products = [
         brand: "ST",
         origin: "Sóc Trăng, Việt Nam",
         expiryDate: "2027-01-15",
-        rating: 4.5,
-        likes: 125,
+        rating: 4.1,
+        likes: 35,
         stock: 32
     },
     {
@@ -187,8 +187,8 @@ const products = [
         brand: "ST",
         origin: "Sóc Trăng, Việt Nam",
         expiryDate: "2027-02-01",
-        rating: 4.5,
-        likes: 125,
+        rating: 4.8,
+        likes: 25,
         stock: 0
     },
     {
@@ -202,8 +202,8 @@ const products = [
         brand: "ST",
         origin: "Sóc Trăng, Việt Nam",
         expiryDate: "2027-02-01",
-        rating: 4.5,
-        likes: 125,
+        rating: 4.0,
+        likes: 5,
         stock: 32
     },
     {
@@ -217,7 +217,7 @@ const products = [
         brand: "CJ",
         origin: "Hàn Quốc",
         expiryDate: "2026-12-31",
-        rating: 4.5,
+        rating: 4.6,
         likes: 125,
         stock: 32
     },
@@ -233,7 +233,7 @@ const products = [
         origin: "Việt Nam",
         expiryDate: "2026-11-30",
         rating: 4.5,
-        likes: 125,
+        likes: 51,
         stock: 0
     },
     {
@@ -248,7 +248,7 @@ const products = [
         origin: "Việt Nam",
         expiryDate: "2027-03-10",
         rating: 4.5,
-        likes: 125,
+        likes: 12,
         stock: 32
     }
 ];
@@ -257,6 +257,21 @@ const products = [
 const GroceriesPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
+
+    const [sortType, setSortType] = useState("stock");
+    // stock | rating | likes
+
+    const sortedProducts = [...products].sort((a, b) => {
+        switch (sortType) {
+            case "rating":
+                return b.rating - a.rating;
+            case "likes":
+                return b.likes - a.likes;
+            case "stock":
+            default:
+                return b.stock - a.stock;
+        }
+    });
 
     return (
         <>
@@ -286,19 +301,28 @@ const GroceriesPage = () => {
                         <span className="text-gray-500">sản phẩm</span>
                     </div>
                     <div className="ml-auto">
-                        <button className="pr-3 border-r border-gray-300">
+                        <button
+                            onClick={() => setSortType("stock")}
+                            className={`pr-3 border-r items-center gap-1 border-gray-300 ${sortType === "stock" ? "text-black" : "text-gray-500 hover:text-black"} `}
+                        >
                             <LocalMallOutlinedIcon fontSize="small" /> Phổ Biến
                         </button>
-                        <button className="px-3 border-l border-r text-gray-500 hover:text-black border-gray-300">
+                        <button
+                            onClick={() => setSortType("rating")}
+                            className={`px-3 border-l border-r items-center gap-1 border-gray-300 ${sortType === "rating" ? "text-black" : "text-gray-500 hover:text-black"} `}
+                        >
                             <StarBorderOutlinedIcon fontSize="small" /> Đánh Giá
                         </button>
-                        <button className="pl-3 border-l text-gray-500 hover:text-black border-gray-300">
+                        <button
+                            onClick={() => setSortType("likes")}
+                            className={`pl-3 border-l items-center gap-1 border-gray-300 ${sortType === "likes" ? "text-black" : "text-gray-500 hover:text-black"} `}
+                        >
                             <FavoriteBorderOutlinedIcon fontSize="small" /> Yêu Thích
                         </button>
                     </div>
                 </div>
                 <div className="w-full min-h-[650px] grid grid-cols-5 gap-3 mt-[25px]">
-                    {products.sort((a, b) => b.stock - a.stock).map((product, index) => (
+                    {sortedProducts.map((product, index) => (
                         <ProductCard
                             key={product.id}
                             product={product}
