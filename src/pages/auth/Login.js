@@ -44,19 +44,19 @@ const LoginPage = () => {
 
           {/* Title */}
           <h1 className="text-[25px] font-semibold text-center mt-2">
-            Log In
+            Đăng Nhập
           </h1>
 
           {/* Subtitle */}
           <p className="text-center py-3 text-gray-600">
-            Welcome back! Let's take you to your account.
+            Chào mừng bạn quay lại! Hãy đăng nhập để tiếp tục.
           </p>
 
           {/* Form */}
           <div className="grid gap-y-3">
             <input
               type="email"
-              placeholder="Email Address"
+              placeholder="Địa chỉ Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="h-[50px] px-3 border rounded shadow"
@@ -64,7 +64,7 @@ const LoginPage = () => {
 
             <input
               type="password"
-              placeholder="Password"
+              placeholder="Mật khẩu"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="h-[50px] px-3 border rounded shadow"
@@ -74,21 +74,21 @@ const LoginPage = () => {
               to="/forgot-password"
               className="text-blue-700 text-sm w-fit"
             >
-              Reset your password?
+              Quên mật khẩu?
             </Link>
 
             <button className="h-[50px] bg-black text-white rounded font-semibold hover:bg-gray-800">
-              Continue
+              Tiếp tục
             </button>
 
             {/* Register */}
             <div className="h-[50px] border rounded flex items-center justify-center gap-x-1">
               <span>
-                Don't have an account?
+                Chưa có tài khoản?
               </span>
 
               <Link to="/register" className="text-blue-700 font-semibold">
-                Sign up
+                Đăng ký
               </Link>
             </div>
           </div>
@@ -97,7 +97,7 @@ const LoginPage = () => {
           <div className="flex items-center my-5">
             <hr className="flex-1 border-gray-300" />
             <span className="px-4 text-sm">
-              OR
+              HOẶC
             </span>
             <hr className="flex-1 border-gray-300" />
           </div>
@@ -106,7 +106,7 @@ const LoginPage = () => {
           <button className="h-[50px] w-full bg-red-50 hover:bg-red-100 shadow-md rounded flex items-center px-5">
             <GoogleIcon />
             <span className="mx-auto font-semibold">
-              Continue with Google
+              Tiếp tục với Google
             </span>
           </button>
         </div>

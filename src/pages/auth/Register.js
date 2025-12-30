@@ -44,12 +44,12 @@ const RegisterPage = () => {
 
           {/* Title */}
           <h1 className="text-[25px] font-semibold text-center">
-            Sign Up
+            Đăng Ký
           </h1>
 
           {/* Subtitle */}
           <p className="pt-3 pb-5 text-center text-gray-600">
-            Welcome! Let's take you to your registration page.
+            Chào mừng bạn! Hãy tạo tài khoản mới.
           </p>
 
           {/* Form */}
@@ -59,7 +59,7 @@ const RegisterPage = () => {
             <div className="grid grid-cols-2 gap-3">
               <input
                 type="text"
-                placeholder="Full name"
+                placeholder="Họ và tên"
                 value={displayName}
                 onChange={(e) => setDisplayName(e.target.value)}
                 className="h-[50px] px-2 border rounded shadow"
@@ -77,7 +77,7 @@ const RegisterPage = () => {
             {/* Email */}
             <input
               type="email"
-              placeholder="Email address"
+              placeholder="Địa chỉ email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="h-[50px] px-2 border rounded shadow"
@@ -86,7 +86,7 @@ const RegisterPage = () => {
             {/* Password */}
             <input
               type="password"
-              placeholder="Password"
+              placeholder="Mật khẩu"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="h-[50px] px-2 border rounded shadow"
@@ -97,22 +97,22 @@ const RegisterPage = () => {
               to="/forgot-password"
               className="text-blue-800 text-sm w-fit"
             >
-              Reset your password?
+              Quên mật khẩu?
             </Link>
 
             {/* Submit button */}
             <button className="h-[50px] bg-black text-white rounded font-semibold hover:bg-gray-800">
-              Continue to Verify Email
+              Tiếp tục xác thực Email
             </button>
 
             {/* Login redirect */}
             <div className="h-[50px] border rounded flex items-center justify-center gap-x-1">
               <span>
-                Already have an account?
+                Đã có tài khoản?
               </span>
 
               <Link to="/login" className="text-blue-800 font-semibold">
-                Login
+                Đăng nhập
               </Link>
             </div>
           </div>
