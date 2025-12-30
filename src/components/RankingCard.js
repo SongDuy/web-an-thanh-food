@@ -34,9 +34,9 @@ const RankingCard = ({ product, index, total, sortOrder }) => {
   if (!product) return null; // QUAN TRỌNG
 
   const rank =
-    sortOrder === "desc"
-      ? index + 1           // cao → thấp
-      : total - index;      // thấp → cao
+    total && sortOrder === "asc"
+      ? total - index            // cao → thấp
+      : index + 1;              // thấp → cao
 
   return (
     <>
