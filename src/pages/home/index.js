@@ -46,7 +46,7 @@ const products = [
     brand: "Vinamilk",
     origin: "Việt Nam",
     expiryDate: "2026-07-15",
-    rating: 4.5,
+    rating: 4.2,
     likes: 75,
     stock: 10
   },
@@ -136,7 +136,7 @@ const products = [
     brand: "Fami",
     origin: "Việt Nam",
     expiryDate: "2026-05-20",
-    rating: 4.5,
+    rating: 4.6,
     likes: 125,
     stock: 37
   },
@@ -151,7 +151,7 @@ const products = [
     brand: "ST",
     origin: "Sóc Trăng, Việt Nam",
     expiryDate: "2027-01-15",
-    rating: 4.5,
+    rating: 4.3,
     likes: 125,
     stock: 0
   },
@@ -181,8 +181,8 @@ const products = [
     brand: "ST",
     origin: "Sóc Trăng, Việt Nam",
     expiryDate: "2027-02-01",
-    rating: 4.5,
-    likes: 125,
+    rating: 4.4,
+    likes: 55,
     stock: 0
   },
   {
@@ -196,8 +196,8 @@ const products = [
     brand: "ST",
     origin: "Sóc Trăng, Việt Nam",
     expiryDate: "2027-02-01",
-    rating: 4.5,
-    likes: 125,
+    rating: 4.2,
+    likes: 25,
     stock: 0
   },
   {
@@ -211,8 +211,8 @@ const products = [
     brand: "CJ",
     origin: "Hàn Quốc",
     expiryDate: "2026-12-31",
-    rating: 4.5,
-    likes: 125,
+    rating: 4.3,
+    likes: 15,
     stock: 0
   },
   {
@@ -227,7 +227,7 @@ const products = [
     origin: "Việt Nam",
     expiryDate: "2026-11-30",
     rating: 4.5,
-    likes: 125,
+    likes: 57,
     stock: 0
   },
   {
@@ -241,7 +241,7 @@ const products = [
     brand: "Nông sản Việt",
     origin: "Việt Nam",
     expiryDate: "2027-03-10",
-    rating: 4.5,
+    rating: 4.1,
     likes: 125,
     stock: 0
   },
@@ -257,7 +257,7 @@ const products = [
     origin: "Việt Nam",
     expiryDate: "2027-03-10",
     rating: 4.5,
-    likes: 135,
+    likes: 31,
     stock: 0
   },{
     id: 18,
@@ -271,7 +271,7 @@ const products = [
     origin: "Việt Nam",
     expiryDate: "2027-03-10",
     rating: 4.5,
-    likes: 125,
+    likes: 33,
     stock: 0
   },{
     id: 19,
@@ -285,7 +285,7 @@ const products = [
     origin: "Việt Nam",
     expiryDate: "2027-03-10",
     rating: 4.5,
-    likes: 125,
+    likes: 45,
     stock: 0
   },{
     id: 20,
@@ -299,7 +299,7 @@ const products = [
     origin: "Việt Nam",
     expiryDate: "2027-03-10",
     rating: 4.5,
-    likes: 125,
+    likes: 25,
     stock: 0
   },{
     id: 21,
@@ -313,7 +313,7 @@ const products = [
     origin: "Việt Nam",
     expiryDate: "2027-03-10",
     rating: 4.5,
-    likes: 125,
+    likes: 15,
     stock: 0
   },
 ];
