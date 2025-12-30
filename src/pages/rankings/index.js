@@ -393,7 +393,7 @@ const RankingsPage = () => {
             onClick={handleToggleSort}
           >
             <SortIcon />
-            <span className="text-black ml-1">Xếp hạng</span>
+            <span className="text-black ml-1">Xếp Hạng</span>
           </button>
 
         </div>
