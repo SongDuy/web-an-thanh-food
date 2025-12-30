@@ -43,20 +43,20 @@ const ForgotPasswordPage = () => {
 
           {/* Title */}
           <h1 className="text-[25px] font-semibold text-center">
-            Forgot Password?
+            Quên Mật Khẩu?
           </h1>
 
           {/* Description */}
           <div className="pt-3 pb-5 text-center text-gray-600">
-            <p>We will send you a link to reset your password.</p>
-            <p>Enter your email address below.</p>
+            <p>Chúng tôi sẽ gửi cho bạn một liên kết để đặt lại mật khẩu.</p>
+            <p>Vui lòng nhập địa chỉ email của bạn bên dưới.</p>
           </div>
 
           {/* Form */}
           <div className="grid gap-y-3">
             <input
               type="email"
-              placeholder="Email Address"
+              placeholder="Địa chỉ Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="h-[50px] px-3 border rounded shadow"
@@ -65,7 +65,7 @@ const ForgotPasswordPage = () => {
             {/* Success message (demo) */}
             {success && (
               <p className="text-green-600 text-sm text-center">
-                A password reset email has been sent. Please check your inbox.
+                Email đặt lại mật khẩu đã được gửi. Vui lòng kiểm tra hộp thư của bạn.
               </p>
             )}
 
@@ -73,17 +73,17 @@ const ForgotPasswordPage = () => {
               className="h-[50px] bg-black text-white rounded font-semibold hover:bg-gray-800"
               onClick={() => setSuccess(true)}
             >
-              Continue
+              Tiếp tục
             </button>
 
             {/* Register link */}
             <div className="h-[50px] border rounded flex items-center justify-center gap-x-1">
               <span>
-                Don't have an account?
+                Chưa có tài khoản?
               </span>
 
               <Link to="/register" className="text-blue-800 font-semibold">
-                Sign up
+                Đăng ký
               </Link>
             </div>
           </div>
