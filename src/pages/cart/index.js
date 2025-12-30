@@ -201,7 +201,7 @@ const CartPage = () => {
                 </div>
 
                 <div className="w-full flex items-center border-t-2 pt-2">
-                  <h1 className="text-md text-black">
+                  <h1 className="text-md text-black font-medium">
                     Tổng tiền thanh toán
                   </h1>
                   <div className="ml-auto text-2xl flex items-center justify-center font-semibold text-red-500">
@@ -218,7 +218,7 @@ const CartPage = () => {
                   </span>
 
                   <span className="text-2xl font-bold text-green-600">
-                    5 phút
+                    4:59
                   </span>
                 </div>
 
