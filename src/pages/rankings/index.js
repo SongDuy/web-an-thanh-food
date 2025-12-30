@@ -4,7 +4,8 @@ import Footer from '../../components/Footer';
 import Search from '../../components/Search';
 import RankingCard from '../../components/RankingCard';
 import Notification from "../../components/Notification";
-import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 const products = [
   {
@@ -320,18 +321,44 @@ const products = [
   },
 ];
 
-const sortedProducts = [...products].sort((a, b) => {
-  // So sánh rating trước
-  if (b.rating !== a.rating) {
-    return b.rating - a.rating;
-  }
-  // Nếu rating bằng nhau thì so sánh likes
-  return b.likes - a.likes;
-});
+// const sortedProducts = [...products].sort((a, b) => {
+//   // So sánh rating trước
+//   if (b.rating !== a.rating) {
+//     return b.rating - a.rating;
+//   }
+//   // Nếu rating bằng nhau thì so sánh likes
+//   return b.likes - a.likes;
+// });
 
 const RankingsPage = () => {
   const [openSearch, setOpenSearch] = useState(false);
   const [openNotification, setOpenNotification] = useState(false);
+
+  const [sortOrder, setSortOrder] = useState("desc"); // desc | asc
+
+  const handleToggleSort = () => {
+    setSortOrder(prev => (prev === "desc" ? "asc" : "desc"));
+  };
+
+  const sortedProducts = [...products].sort((a, b) => {
+    let result = 0;
+
+    // ưu tiên rating
+    if (b.rating !== a.rating) {
+      result = b.rating - a.rating;
+    } else {
+      result = b.likes - a.likes;
+    }
+
+    return sortOrder === "desc" ? result : -result;
+  });
+
+  const SortIcon = () =>
+    sortOrder === "desc" ? (
+      <ArrowDownwardIcon fontSize="small" />
+    ) : (
+      <ArrowUpwardIcon fontSize="small" />
+    );
 
   return (
     <>
@@ -360,10 +387,15 @@ const RankingsPage = () => {
             <span className="text-black font-bold mr-1">{products.length}</span>
             <span className="text-gray-500">sản phẩm</span>
           </div>
-          <div className="ml-auto">
-            <CheckOutlinedIcon fontSize="small" />
+
+          <button
+            className="ml-auto select-none"
+            onClick={handleToggleSort}
+          >
+            <SortIcon />
             <span className="text-black ml-1">Xếp hạng</span>
-          </div>
+          </button>
+
         </div>
         <div className="w-full min-h-[650px] grid grid-cols-3 gap-3 mt-[25px]">
           {sortedProducts.map((product, index) => (
@@ -371,6 +403,8 @@ const RankingsPage = () => {
               key={product.id}
               product={product}
               index={index}
+              total={sortedProducts.length}
+              sortOrder={sortOrder}
             />
           ))}
         </div>

@@ -30,8 +30,13 @@ function formatLikes(num) {
   return b % 1 === 0 ? `${Math.floor(b)}B` : `${b}B`;
 }
 
-const RankingCard = ({ product, index }) => {
+const RankingCard = ({ product, index, total, sortOrder }) => {
   if (!product) return null; // QUAN TRỌNG
+
+  const rank =
+    sortOrder === "desc"
+      ? index + 1           // cao → thấp
+      : total - index;      // thấp → cao
 
   return (
     <>
@@ -42,7 +47,7 @@ const RankingCard = ({ product, index }) => {
             <div className="flex items-center justify-center gap-3">
 
               <div className="min-w-[50px] h-[50px] bg-gradient-to-tr from-gray-100 via-red-50 to-red-100 shadow border border-gray-200 text-black font-serifBook rounded-full text-[35px] leading-none flex items-center justify-center">
-                {index + 1}
+                {rank}
               </div>
 
               <div className="relative w-[100px] h-[100px] overflow-hidden rounded flex-shrink-0">
