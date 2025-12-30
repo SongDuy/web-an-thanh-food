@@ -285,13 +285,13 @@ const StaplesPage = () => {
             <span className="text-gray-500">sản phẩm</span>
           </div>
           <div className="ml-auto">
-            <button className="pr-3 border-r">
+            <button className="pr-3 border-r border-gray-300">
               <LocalMallOutlinedIcon fontSize="small" /> Phổ Biến
             </button>
-            <button className="px-3 border-r text-gray-500">
+            <button className="px-3 border-l border-r text-gray-500 border-gray-300">
               <StarBorderOutlinedIcon fontSize="small" /> Đánh Giá
             </button>
-            <button className="pl-3 border-l text-gray-500">
+            <button className="pl-3 border-l text-gray-500 border-gray-300">
               <FavoriteBorderOutlinedIcon fontSize="small" /> Yêu Thích
             </button>
           </div>
