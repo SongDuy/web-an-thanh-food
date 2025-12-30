@@ -38,9 +38,9 @@ const LoginPage = () => {
         <Notification onClose={() => setOpenNotification(false)} />
       )}
 
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-30">
+      <div className="w-full h-[650px] flex items-center justify-center mt-[100px] py-[45px] bg-soft">
 
-        <div className="w-[400px] bg-white rounded-lg shadow px-5 pt-5 pb-8">
+        <div className="w-[400px] bg-white rounded-lg shadow border px-5 pt-5 pb-8">
 
           {/* Title */}
           <h1 className="text-[25px] font-semibold text-center mt-2">
