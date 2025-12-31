@@ -218,7 +218,7 @@ const CartPage = () => {
                   </span>
 
                   <span className="text-2xl font-bold text-green-600">
-                    4:59
+                    4: 59
                   </span>
                 </div>
 
