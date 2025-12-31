@@ -167,7 +167,7 @@ const BannerSlider = () => {
               onClick={prevSlide}
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-8 h-14 rounded-md shadow bg-black/30 hover:bg-black text-white text-2xl opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-8 h-14 rounded-md shadow bg-black/30 hover:bg-black text-white text-2xl flex items-center justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto"
             >
               <ArrowBackIosNewIcon />
             </button>
@@ -177,7 +177,7 @@ const BannerSlider = () => {
               onClick={nextSlide}
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-8 h-14 rounded-md shadow bg-black/30 hover:bg-black text-white text-2xl opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-8 h-14 rounded-md shadow bg-black/30 hover:bg-black text-white text-2xl flex items-center justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto"
             >
               <ArrowForwardIosIcon />
             </button>
