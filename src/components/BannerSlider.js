@@ -26,7 +26,7 @@ const banners = [
     title: '999 lá thư gửi cho chính mình**',
     subtitle: "4. Thời gian thay đổi, con người cũng thay đổi. Cuộc đời là một bộ phim tuyệt bản không cách nào phát lại, có những việc cho dù bạn có nỗ lực đến đâu, không thể quay trở lại. Khoảng cách xa nhất trên thế giới này không phải yêu, chẳng phải hận, mà là người thân quen dần dần trở thành xa lạ.",
     author: "Miêu Công Tử",
-    bgImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyTu31a5ml7dSQkVPr-vDZkV1BELq0mPgGsA&s',
+    bgImage: 'https://i.pinimg.com/originals/b2/2a/a2/b22aa22b2f3f55b6468361158d52e2e7.gif',
   },
   {
     title: '999 lá thư gửi cho chính mình**',
