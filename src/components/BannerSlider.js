@@ -1,5 +1,8 @@
 import { useEffect, useState, useCallback } from 'react';
 
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
 const banners = [
   {
     title: "999 lá thư gửi cho chính mình**",
@@ -113,6 +116,14 @@ const BannerSlider = () => {
     return () => clearInterval(timer);
   }, [isPaused, current, updateSlide]);
 
+  const prevSlide = () => {
+    updateSlide((current - 1 + banners.length) % banners.length);
+  };
+
+  const nextSlide = () => {
+    updateSlide((current + 1) % banners.length);
+  };
+
   const banner = banners[current];
 
   return (
@@ -135,7 +146,7 @@ const BannerSlider = () => {
 
           {/* VÙNG CHỨA BANNER CHÍNH */}
           <div
-            className="relative w-[1120px] h-full overflow-hidden z-10 shadow-2xl cursor-pointer"
+            className="relative w-[1120px] h-full overflow-hidden z-10 shadow-2xl group"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
@@ -150,6 +161,30 @@ const BannerSlider = () => {
               className="absolute inset-0 bg-cover bg-center animate-fade-in"
               style={{ backgroundImage: `url(${banner.bgImage})` }}
             />
+
+            {/* PREV BUTTON */}
+            <button
+              onClick={prevSlide}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-black/40 hover:bg-black/70 text-white text-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto"
+            >
+
+              <ArrowBackIosNewIcon />
+
+            </button>
+
+            {/* NEXT BUTTON */}
+            <button
+              onClick={nextSlide}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-black/40 hover:bg-black/70 text-white text-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto"
+            >
+
+              <ArrowForwardIosIcon />
+
+            </button>
 
             {/* Title - Tăng z-index lên 30 để đảm bảo bao văn bản được */}
             <div className="absolute top-[50px] left-0 right-0 flex items-center justify-center z-20">
