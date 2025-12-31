@@ -167,11 +167,9 @@ const BannerSlider = () => {
               onClick={prevSlide}
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-black/40 hover:bg-black/70 text-white text-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-8 h-16 rounded-lg bg-black/40 hover:bg-black/70 text-white text-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto"
             >
-
               <ArrowBackIosNewIcon />
-
             </button>
 
             {/* NEXT BUTTON */}
@@ -179,11 +177,9 @@ const BannerSlider = () => {
               onClick={nextSlide}
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-black/40 hover:bg-black/70 text-white text-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-8 h-16 rounded-lg bg-black/40 hover:bg-black/70 text-white text-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto"
             >
-
               <ArrowForwardIosIcon />
-
             </button>
 
             {/* Title - Tăng z-index lên 30 để đảm bảo bao văn bản được */}
@@ -195,14 +191,7 @@ const BannerSlider = () => {
 
             {/* VÙNG NỘI DUNG CHÍNH */}
             <div className="absolute inset-0 flex justify-center z-10">
-              <div className="w-full h-full overflow-y-scroll overflow-x-hidden overscroll-contain 
-                  [scrollbar-gutter:stable]
-                  [scrollbar-width:thin] 
-                  [scrollbar-color:rgba(255,255,255,0.4)_transparent]
-                  [&::-webkit-scrollbar]:w-2
-                  [&::-webkit-scrollbar-track]:bg-transparent
-                 [&::-webkit-scrollbar-thumb]:bg-white/40
-                  [&::-webkit-scrollbar-thumb]:rounded-full">
+              <div className="w-full h-full overflow-y-scroll overflow-x-hidden overscroll-contain [scrollbar-gutter:stable] [scrollbar-width:thin] [scrollbar-color:rgba(255,255,255,0.4)_transparent] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/40 [&::-webkit-scrollbar-thumb]:rounded-full">
                 {/* Thêm py-10 để đảm bảo khi cuộn lên xuống không bị dính sát mép trên/dưới */}
                 <div className="w-full min-h-full flex items-center justify-center py-10 px-6">
                   <p
