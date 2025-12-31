@@ -44,7 +44,7 @@ const banners = [
     title: '999 lá thư gửi cho chính mình**',
     subtitle: `7. Miyaki Hayao từng nói trong phim của mình: "Tôi luôn tin tưởng trên thế giới này nhất định có một cái tôi khác, làm những việc tôi không dám làm, sống cuộc đời mà tôi muốn sống." Thực ra, mỗi người đều có một cái tôi khác, chỉ cần chúng ta bằng lòng, vậy thì sẽ chẳng có việc gì chúng ta không dám làm, và chúng ta sẽ sống cuộc đời mình muốn.`,
     author: "Miêu Công Tử",
-    bgImage: 'https://i.pinimg.com/originals/c6/a1/c9/c6a1c9f91f82c3fe5af6c5d83cc0bf7e.gif',
+    bgImage: 'https://haycafe.vn/wp-content/uploads/2021/12/Anh-gif-dep-binh-yen.gif',
   },
 
   {
