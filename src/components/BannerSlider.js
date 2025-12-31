@@ -14,7 +14,7 @@ const banners = [
     title: '999 lá thư gửi cho chính mình**',
     subtitle: "2. Ðời người sẽ luôn có sự ấm áp bất ngờ và những hy vọng bất tận. Bất kể con đường phía trước có bao nhiêu khổ ải, chỉ cần phương hướng chính xác thì dù gập ghềnh khúc khuỷu đến mấy, cũng sẽ gần với hạnh phúc hơn là đứng ở vạch xuất phát.",
     author: "Miêu Công Tử",
-    bgImage: 'https://cdnb.artstation.com/p/assets/images/images/044/590/877/original/scene-unique-christmas-cabin-gif-2.gif?1640535540',
+    bgImage: 'https://wallpapers-clan.com/wp-content/uploads/2024/03/starfall-night-sky-mountains-aesthetic-gif-preview-desktop-wallpaper.gif',
   },
   {
     title: '999 lá thư gửi cho chính mình**',
