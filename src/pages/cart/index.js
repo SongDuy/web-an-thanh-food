@@ -195,7 +195,7 @@ const CartPage = () => {
                   <h1 className="text-md text-gray-500">
                     Phí vận chuyển
                   </h1>
-                  <button className="ml-auto text-md text-green-600">
+                  <button className="ml-auto text-md font-medium text-green-600">
                     Miễn phí
                   </button>
                 </div>
