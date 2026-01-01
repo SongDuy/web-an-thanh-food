@@ -204,7 +204,7 @@ const CartPage = () => {
                   <h1 className="text-md text-black font-medium">
                     Tổng tiền thanh toán
                   </h1>
-                  <div className="ml-auto text-2xl flex items-center justify-center font-semibold text-red-500">
+                  <div className="ml-auto text-lg flex items-center justify-center font-medium text-red-500">
                     0
                     <span className="ml-0.5 text-sm underline underline-offset-2 relative -top-1.5">
                       đ
