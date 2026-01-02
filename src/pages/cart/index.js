@@ -300,19 +300,16 @@ const CartPage = () => {
                       <button
                         onClick={handleSendOtp}
                         disabled={countdown > 0}
-                        className={`text-sm font-medium ${countdown > 0
-                            ? "text-gray-400 cursor-not-allowed"
-                            : "text-blue-500 hover:text-blue-600"
-                          }`}
+                        className={`text-sm font-medium ${countdown > 0 ? "text-gray-400 cursor-not-allowed" : "text-blue-500 hover:text-blue-600"}`}
                       >
                         {countdown > 0 ? `Gửi lại (${countdown}s)` : "Gửi lại"}
                       </button>
                     )}
                   </div>
 
-
                 </div>
 
+                {/* Nút mua hàng */}
                 <button className="w-full h-[50px] mt-auto text-md text-white font-medium shadow rounded bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-green-500">
                   Mua hàng
                 </button>
