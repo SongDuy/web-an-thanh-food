@@ -14,6 +14,41 @@ const CartPage = () => {
   const [openSearch, setOpenSearch] = useState(false);
   const [openNotification, setOpenNotification] = useState(false);
 
+  // Chức năng gửi mã OTP
+  const [otp, setOtp] = useState(Array(6).fill(""));
+  const [sent, setSent] = useState(false);
+
+  const handleOtpChange = (value, index) => {
+    if (!/^\d?$/.test(value)) return; // chỉ cho nhập số
+
+    const newOtp = [...otp];
+    newOtp[index] = value;
+    setOtp(newOtp);
+
+    // Tự động nhảy sang ô tiếp theo
+    if (value && index < 5) {
+      document.getElementById(`otp-${index + 1}`)?.focus();
+    }
+  };
+
+  const handleOtpKeyDown = (e, index) => {
+    if (e.key === "Backspace" && !otp[index] && index > 0) {
+      document.getElementById(`otp-${index - 1}`)?.focus();
+    }
+  };
+
+  const handleSendOtp = () => {
+    console.log("Send OTP");
+
+    setSent(true);            // chuyển sang trạng thái đã gửi
+    setOtp(Array(6).fill("")); // reset OTP cũ (nếu có)
+
+    // focus vào ô OTP đầu tiên
+    setTimeout(() => {
+      document.getElementById("otp-0")?.focus();
+    }, 100);
+  };
+
   return (
     <>
       <Header
@@ -211,8 +246,8 @@ const CartPage = () => {
                   </div>
                 </div>
 
-                <div className="w-full h-[100px] mt-3 flex flex-col gap-2 rounded bg-gray-100 p-3">
-                  {/* Phần thời gian hủy đơn hàng */}
+                <div className="w-full h-[120px] flex flex-col justify-between rounded bg-gray-100 px-3 py-2">
+                  {/* Phần thời gian xác nhận mua hàng */}
                   <div className="w-full flex">
                     <span className="text-sm text-gray-500 font-medium">
                       Thời gian xác nhận mua hàng
@@ -222,10 +257,43 @@ const CartPage = () => {
                     </button>
                   </div>
 
-                  {/* Phần nhập và gửi OTP */}
-                  <div>
-
+                  {/* OTP ở giữa */}
+                  <div className="w-full flex justify-center">
+                    <div className="flex gap-2">
+                      {otp.map((digit, index) => (
+                        <input
+                          key={index}
+                          id={`otp-${index}`}
+                          type="text"
+                          maxLength={1}
+                          value={digit}
+                          onChange={(e) => handleOtpChange(e.target.value, index)}
+                          onKeyDown={(e) => handleOtpKeyDown(e, index)}
+                          className="w-10 h-10 text-center text-md font-medium border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                        />
+                      ))}
+                    </div>
                   </div>
+
+                  {/* Nút ở dưới cùng bên phải */}
+                  <div className="w-full flex justify-end">
+                    {!sent ? (
+                      <button
+                        onClick={handleSendOtp}
+                        className="text-sm font-medium text-blue-500 hover:text-blue-600"
+                      >
+                        Gửi OTP
+                      </button>
+                    ) : (
+                      <button
+                        onClick={handleSendOtp}
+                        className="text-sm font-medium text-blue-500 hover:text-blue-600"
+                      >
+                        Gửi lại
+                      </button>
+                    )}
+                  </div>
+
                 </div>
 
                 <button className="w-full h-[50px] mt-auto text-md text-white font-medium shadow rounded bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-green-500">
