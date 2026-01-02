@@ -1,6 +1,7 @@
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 
 import { NavLink } from "react-router-dom";
 
@@ -76,13 +77,66 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
           <NotificationsNoneOutlinedIcon />
         </button>
 
-        <NavLink
+        {/* <NavLink
           to="/login"
         >
           <button className="flex items-center justify-center gap-2 text-md font-semibold px-4 py-2 rounded-full border shadow bg-gray-100 hover:bg-gray-200 transition">
             Đăng Nhập
           </button>
-        </NavLink>
+        </NavLink> */}
+
+        <div className="relative group">
+          <button className="flex items-center justify-center gap-1 text-md font-semibold pl-2 pr-3 py-2 rounded-full border shadow bg-gray-100 hover:bg-gray-200 transition">
+            <AccountCircleOutlinedIcon />
+            Tài Khoản
+          </button>
+
+          {/* Dropdown */}
+          <div className="absolute right-0 mt-2 w-56 bg-white border rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <ul className="py-2 text-sm">
+              <li>
+                <NavLink
+                  to="/account/profile"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  👤 Thông tin tài khoản
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/account/orders"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  📦 Đơn hàng
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/account/address"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  📍 Địa chỉ
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/account/settings"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  ⚙️ Cài đặt
+                </NavLink>
+              </li>
+               <li>
+                <NavLink
+                  to="/"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Đăng xuất
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
 
         <button
           onClick={onOpenSearch}
