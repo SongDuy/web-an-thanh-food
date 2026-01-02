@@ -211,7 +211,7 @@ const CartPage = () => {
                   </div>
                 </div>
 
-                <div className="w-full h-[100px] mt-3 flex flex-col gap-2 rounded bg-gray-100 p-4">
+                <div className="w-full h-[100px] mt-3 flex flex-col gap-2 rounded bg-gray-100 p-3">
                   {/* Phần thời gian hủy đơn hàng */}
                   <div className="w-full flex">
                     <span className="text-sm text-gray-500 font-medium">
