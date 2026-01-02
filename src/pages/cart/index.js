@@ -158,10 +158,10 @@ const CartPage = () => {
 
                 <div className="w-full flex flex-col items-center gap-3">
                   <div className="w-full">
-                    <span className="text-[15px] text-black font-medium pr-2 border-r border-gray-300">
+                    <span className="text-md text-black font-medium pr-2 border-r border-gray-300">
                       Lê Hoàng Song Duy
                     </span>
-                    <span className="text-[15px] text-black font-medium pl-2 border-l border-gray-300">
+                    <span className="text-md text-black font-medium pl-2 border-l border-gray-300">
                       0437789776
                     </span>
                   </div>
