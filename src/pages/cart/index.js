@@ -225,26 +225,6 @@ const CartPage = () => {
 
               {/* Thanh toán */}
               <div className="w-full h-full flex flex-col gap-3 bg-white rounded-md px-4 pt-3 pb-4 border">
-                <div className="w-full flex items-center">
-                  <h1 className="text-md text-gray-500">
-                    Tổng tiền hàng
-                  </h1>
-                  <div className="ml-auto text-lg flex items-center justify-center font-medium text-black">
-                    0
-                    <span className="ml-0.5 text-sm underline underline-offset-2 relative -top-1.5">
-                      đ
-                    </span>
-                  </div>
-                </div>
-
-                <div className="w-full flex items-center">
-                  <h1 className="text-md text-gray-500">
-                    Phí vận chuyển
-                  </h1>
-                  <button className="ml-auto text-md font-medium text-green-600">
-                    Miễn phí
-                  </button>
-                </div>
 
                 <div className="w-full h-[120px] flex flex-col justify-between rounded bg-gray-100 px-3 py-2">
                   {/* Phần thời gian xác nhận mua hàng */}
@@ -295,6 +275,27 @@ const CartPage = () => {
                     )}
                   </div>
 
+                </div>
+
+                <div className="w-full flex items-center">
+                  <h1 className="text-md text-gray-500">
+                    Tổng tiền hàng
+                  </h1>
+                  <div className="ml-auto text-lg flex items-center justify-center font-medium text-black">
+                    0
+                    <span className="ml-0.5 text-sm underline underline-offset-2 relative -top-1.5">
+                      đ
+                    </span>
+                  </div>
+                </div>
+
+                <div className="w-full flex items-center">
+                  <h1 className="text-md text-gray-500">
+                    Phí vận chuyển
+                  </h1>
+                  <button className="ml-auto text-md font-medium text-green-600">
+                    Miễn phí
+                  </button>
                 </div>
 
                 <div className="w-full flex items-center border-t-2 pt-2">
