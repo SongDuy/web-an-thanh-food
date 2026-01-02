@@ -173,7 +173,6 @@ const CartPage = () => {
 
                     Số nhà 112, ấp Nhơn Khánh A, xã Nhơn Ái, huyện Phong Điền, TP. Cần Thơ
                   </div>
-
                 </div>
               </div>
 
