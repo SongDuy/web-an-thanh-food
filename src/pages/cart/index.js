@@ -246,18 +246,6 @@ const CartPage = () => {
                   </button>
                 </div>
 
-                <div className="w-full flex items-center border-t-2 pt-2">
-                  <h1 className="text-md text-black font-medium">
-                    Tổng tiền thanh toán
-                  </h1>
-                  <div className="ml-auto text-lg flex items-center justify-center font-medium text-red-500">
-                    0
-                    <span className="ml-0.5 text-sm underline underline-offset-2 relative -top-1.5">
-                      đ
-                    </span>
-                  </div>
-                </div>
-
                 <div className="w-full h-[120px] flex flex-col justify-between rounded bg-gray-100 px-3 py-2">
                   {/* Phần thời gian xác nhận mua hàng */}
                   <div className="w-full flex">
@@ -307,6 +295,18 @@ const CartPage = () => {
                     )}
                   </div>
 
+                </div>
+
+                <div className="w-full flex items-center border-t-2 pt-2">
+                  <h1 className="text-md text-black font-medium">
+                    Tổng tiền thanh toán
+                  </h1>
+                  <div className="ml-auto text-lg flex items-center justify-center font-medium text-red-500">
+                    0
+                    <span className="ml-0.5 text-sm underline underline-offset-2 relative -top-1.5">
+                      đ
+                    </span>
+                  </div>
                 </div>
 
                 {/* Nút mua hàng */}
