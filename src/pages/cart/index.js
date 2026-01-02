@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -13,48 +13,6 @@ import HomeIcon from '@mui/icons-material/Home';
 const CartPage = () => {
   const [openSearch, setOpenSearch] = useState(false);
   const [openNotification, setOpenNotification] = useState(false);
-
-  const OTP_TIME = 90; // 1 phút 30 giây
-  const [timeLeft, setTimeLeft] = useState(OTP_TIME);
-  const [otp, setOtp] = useState("");
-  const [isExpired, setIsExpired] = useState(false);
-  const [isSent, setIsSent] = useState(false);
-
-  // Countdown
-  useEffect(() => {
-    if (!isSent || timeLeft <= 0) return;
-
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => prev - 1);
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [isSent, timeLeft]);
-
-  // Hết hạn OTP
-  useEffect(() => {
-    if (timeLeft === 0) {
-      setIsExpired(true);
-    }
-  }, [timeLeft]);
-
-  const formatTime = (seconds) => {
-    const m = Math.floor(seconds / 60);
-    const s = seconds % 60;
-    return `${m}:${s.toString().padStart(2, "0")}`;
-  };
-
-  const handleSendOtp = () => {
-    // TODO: call API gửi OTP
-    setIsSent(true);
-    setIsExpired(false);
-    setTimeLeft(OTP_TIME);
-  };
-
-  const handleConfirmOtp = () => {
-    // TODO: call API xác nhận OTP
-    console.log("OTP nhập:", otp);
-  };
 
   return (
     <>
@@ -253,52 +211,14 @@ const CartPage = () => {
                   </div>
                 </div>
 
-                <div className="w-full mt-3 flex flex-col items-center gap-4 rounded bg-gray-100 p-4">
-
+                <div className="w-full mt-3 flex flex-col items-center justify-center gap-2 rounded bg-gray-100 p-4">
                   <span className="text-sm text-gray-500 font-medium">
                     Thời gian xác nhận mua hàng
                   </span>
 
-                  <span className={`text-2xl font-bold ${isExpired ? "text-red-500" : "text-green-600"
-                    }`}>
-                    {isSent ? formatTime(timeLeft) : "1:30"}
+                  <span className="text-2xl font-bold text-green-600">
+                    1:30
                   </span>
-
-                  {!isSent && (
-                    <button
-                      onClick={handleSendOtp}
-                      className="w-full rounded bg-blue-600 py-2 text-white font-semibold hover:bg-blue-700"
-                    >
-                      Gửi OTP qua điện thoại
-                    </button>
-                  )}
-
-                  {isSent && !isExpired && (
-                    <>
-                      <input
-                        type="text"
-                        value={otp}
-                        onChange={(e) => setOtp(e.target.value)}
-                        maxLength={6}
-                        placeholder="Nhập mã OTP"
-                        className="w-full rounded border px-3 py-2 text-center text-lg tracking-widest"
-                      />
-
-                      <button
-                        onClick={handleConfirmOtp}
-                        disabled={otp.length < 6}
-                        className="w-full rounded bg-green-600 py-2 text-white font-semibold disabled:bg-gray-400"
-                      >
-                        Xác nhận mua hàng
-                      </button>
-                    </>
-                  )}
-
-                  {isExpired && (
-                    <span className="text-sm text-red-500 font-medium">
-                      OTP đã hết hạn. Vui lòng đặt mua lại.
-                    </span>
-                  )}
                 </div>
 
                 <button className="w-full h-[50px] mt-auto text-md text-white font-medium shadow rounded bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-green-500">
