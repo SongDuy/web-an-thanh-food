@@ -86,8 +86,8 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
         </NavLink> */}
 
         <div className="relative group">
-          <button className="flex items-center justify-center gap-1 text-md font-semibold pl-2 pr-3 py-2 rounded-full border shadow bg-gray-100 hover:bg-gray-200 transition">
-            <AccountCircleOutlinedIcon />
+          <button className="flex items-center justify-center gap-1 text-md font-semibold px-4 py-2 rounded-full border shadow bg-gray-100 hover:bg-gray-200 transition">
+            {/* <AccountCircleOutlinedIcon /> */}
             Tài Khoản
           </button>
 
