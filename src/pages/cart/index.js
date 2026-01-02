@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -17,6 +17,7 @@ const CartPage = () => {
   // Chức năng gửi mã OTP
   const [otp, setOtp] = useState(Array(6).fill(""));
   const [sent, setSent] = useState(false);
+  const [countdown, setCountdown] = useState(0);
 
   const handleOtpChange = (value, index) => {
     if (!/^\d?$/.test(value)) return; // chỉ cho nhập số
@@ -40,14 +41,25 @@ const CartPage = () => {
   const handleSendOtp = () => {
     console.log("Send OTP");
 
-    setSent(true);            // chuyển sang trạng thái đã gửi
-    setOtp(Array(6).fill("")); // reset OTP cũ (nếu có)
+    setSent(true);
+    setOtp(Array(6).fill(""));
+    setCountdown(30);
 
-    // focus vào ô OTP đầu tiên
+    // focus ô đầu
     setTimeout(() => {
       document.getElementById("otp-0")?.focus();
     }, 100);
   };
+
+  useEffect(() => {
+    if (countdown === 0) return;
+
+    const timer = setInterval(() => {
+      setCountdown((prev) => prev - 1);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [countdown]);
 
   return (
     <>
@@ -258,7 +270,7 @@ const CartPage = () => {
                   </div>
 
                   {/* OTP ở giữa */}
-                  <div className="w-full flex justify-center">
+                  <div className="w-full flex items-center justify-center">
                     <div className="flex gap-2">
                       {otp.map((digit, index) => (
                         <input
@@ -269,7 +281,7 @@ const CartPage = () => {
                           value={digit}
                           onChange={(e) => handleOtpChange(e.target.value, index)}
                           onKeyDown={(e) => handleOtpKeyDown(e, index)}
-                          className="w-10 h-10 text-center text-md font-medium border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                          className="w-10 h-10 text-center text-md font-medium border rounded-md focus:outline-none focus:ring-1 focus:ring-green-500"
                         />
                       ))}
                     </div>
@@ -287,12 +299,17 @@ const CartPage = () => {
                     ) : (
                       <button
                         onClick={handleSendOtp}
-                        className="text-sm font-medium text-blue-500 hover:text-blue-600"
+                        disabled={countdown > 0}
+                        className={`text-sm font-medium ${countdown > 0
+                            ? "text-gray-400 cursor-not-allowed"
+                            : "text-blue-500 hover:text-blue-600"
+                          }`}
                       >
-                        Gửi lại
+                        {countdown > 0 ? `Gửi lại (${countdown}s)` : "Gửi lại"}
                       </button>
                     )}
                   </div>
+
 
                 </div>
 
