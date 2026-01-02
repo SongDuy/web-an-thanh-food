@@ -211,14 +211,21 @@ const CartPage = () => {
                   </div>
                 </div>
 
-                <div className="w-full mt-3 flex flex-col items-center justify-center gap-2 rounded bg-gray-100 p-4">
-                  <span className="text-sm text-gray-500 font-medium">
-                    Thời gian xác nhận mua hàng
-                  </span>
+                <div className="w-full h-[100px] mt-3 flex flex-col gap-2 rounded bg-gray-100 p-4">
+                  {/* Phần thời gian hủy đơn hàng */}
+                  <div className="w-full flex">
+                    <span className="text-sm text-gray-500 font-medium">
+                      Thời gian xác nhận mua hàng
+                    </span>
+                    <button className="ml-auto text-md font-medium text-green-600 px-2 bg-green-100 rounded-md shadow shrink-0">
+                      1:30
+                    </button>
+                  </div>
 
-                  <span className="text-2xl font-bold text-green-600">
-                    1:30
-                  </span>
+                  {/* Phần nhập và gửi OTP */}
+                  <div>
+
+                  </div>
                 </div>
 
                 <button className="w-full h-[50px] mt-auto text-md text-white font-medium shadow rounded bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-green-500">
