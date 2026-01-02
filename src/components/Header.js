@@ -1,7 +1,7 @@
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+// import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 
 import { NavLink } from "react-router-dom";
 
@@ -107,7 +107,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
                   to="/account/orders"
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
-                  📦 Đơn hàng
+                  📦 Đơn hàng đã mua
                 </NavLink>
               </li>
               <li>
@@ -115,7 +115,15 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
                   to="/account/address"
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
-                  📍 Địa chỉ
+                  📍 Địa chỉ nhận hàng
+                </NavLink>
+              </li>
+               <li>
+                <NavLink
+                  to="/account/address"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  📍 Sản phẩm yêu thích
                 </NavLink>
               </li>
               <li>
