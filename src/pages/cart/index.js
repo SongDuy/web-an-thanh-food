@@ -213,12 +213,14 @@ const CartPage = () => {
                     </span>
                   </div>
 
-                  <div className="w-full inline-flex items-center gap-3 text-gray-500">
+                  <div className="w-full h-[75px] inline-flex items-center gap-3">
                     <span className="w-[35px] h-[35px] text-green-500 px-2 bg-green-100 rounded-md shadow flex items-center justify-center shrink-0">
                       <HomeIcon />
                     </span>
 
-                    Số nhà 112, ấp Nhơn Khánh A, xã Nhơn Ái, huyện Phong Điền, TP. Cần Thơ
+                    <span className="w-full h-full text-gray-500">
+                      Số nhà 112, ấp Nhơn Khánh A, xã Nhơn Ái, huyện Phong Điền, TP. Cần Thơ
+                    </span>
                   </div>
                 </div>
               </div>
