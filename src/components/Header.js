@@ -8,6 +8,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import HomeIcon from '@mui/icons-material/Home';
 import InventoryIcon from '@mui/icons-material/Inventory';
+import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
 
 import { NavLink } from "react-router-dom";
 
@@ -122,11 +123,21 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
           {/* Dropdown */}
           {openAccount && (
             <div className="absolute right-0 mt-2 w-56 bg-white border rounded-xl shadow-lg z-50">
-              <ul className="px-2 py-2 text-sm">
+              <ul className="px-2 py-2 text-sm flex flex-col gap-2">
+                <li className="flex w-full h-[50px] border rounded-md bg-gray-50 shadow items-center justify-center gap-2">
+                  <div className="w-[40px] h-[40px] rounded-full bg-blue-100 flex items-center justify-center">
+                    <div className="w-[30px] h-[30px] text-blue-600 rounded-full bg-blue-200 flex items-center justify-center">
+                      <SentimentVerySatisfiedIcon />
+                    </div>
+                  </div>
+                  <span className="text-black text-md font-medium">
+                    Lê Hoàng Song Duy
+                  </span>
+                </li>
                 <li>
                   <NavLink
                     to="/account/profile"
-                    className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100 hover:shadow"
+                    className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100"
                     onClick={() => setOpenAccount(false)}
                   >
                     <AccountCircleIcon />
@@ -137,7 +148,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
                 <li>
                   <NavLink
                     to="/account/orders"
-                    className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100 hover:shadow"
+                    className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100"
                     onClick={() => setOpenAccount(false)}
                   >
                     <InventoryIcon />
@@ -148,7 +159,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
                 <li>
                   <NavLink
                     to="/account/address"
-                    className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100 hover:shadow"
+                    className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100"
                     onClick={() => setOpenAccount(false)}
                   >
                     <HomeIcon />
@@ -159,7 +170,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
                 <li>
                   <NavLink
                     to="/account/favorites"
-                    className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100 hover:shadow"
+                    className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100"
                     onClick={() => setOpenAccount(false)}
                   >
                     <FavoriteIcon />
@@ -170,7 +181,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
                 <li>
                   <NavLink
                     to="/account/settings"
-                    className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100 hover:shadow"
+                    className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100"
                     onClick={() => setOpenAccount(false)}
                   >
                     <SettingsIcon />
@@ -181,7 +192,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
                 <li>
                   <NavLink
                     to="/"
-                    className="flex w-full h-[40px] items-center justify-center px-2 py-2 hover:rounded-md hover:bg-gray-100 hover:shadow text-md font-semibold text-red-500"
+                    className="flex w-full h-[40px] items-center justify-center px-2 py-2 hover:rounded-md hover:bg-red-50 hover:shadow text-md font-semibold text-red-500"
                     onClick={() => setOpenAccount(false)}
                   >
                     Đăng Xuất
