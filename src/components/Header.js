@@ -3,11 +3,11 @@ import { useState, useEffect, useRef } from "react";
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import SettingsIcon from '@mui/icons-material/Settings';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import HomeIcon from '@mui/icons-material/Home';
-import InventoryIcon from '@mui/icons-material/Inventory';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
 import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
 
 import { NavLink } from "react-router-dom";
@@ -142,7 +142,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
                     className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100"
                     onClick={() => setOpenAccount(false)}
                   >
-                    <AccountCircleIcon />
+                    <AccountCircleOutlinedIcon />
                     <span> Thông tin tài khoản </span>
                   </NavLink>
                 </li>
@@ -153,7 +153,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
                     className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100"
                     onClick={() => setOpenAccount(false)}
                   >
-                    <InventoryIcon />
+                    <Inventory2OutlinedIcon />
                     <span> Đơn hàng đã mua </span>
                   </NavLink>
                 </li>
@@ -164,7 +164,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
                     className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100"
                     onClick={() => setOpenAccount(false)}
                   >
-                    <HomeIcon />
+                    <HomeOutlinedIcon />
                     <span> Địa chỉ nhận hàng </span>
                   </NavLink>
                 </li>
@@ -175,7 +175,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
                     className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100"
                     onClick={() => setOpenAccount(false)}
                   >
-                    <FavoriteIcon />
+                    <FavoriteBorderOutlinedIcon />
                     <span> Sản phẩm yêu thích </span>
                   </NavLink>
                 </li>
@@ -186,7 +186,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
                     className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100"
                     onClick={() => setOpenAccount(false)}
                   >
-                    <SettingsIcon />
+                    <SettingsOutlinedIcon />
                     <span> Cài đặt hệ thống </span>
                   </NavLink>
                 </li>
