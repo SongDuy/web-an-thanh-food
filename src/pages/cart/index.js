@@ -8,7 +8,7 @@ import Notification from "../../components/Notification";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
-import HomeIcon from '@mui/icons-material/Home';
+import HomeWorkOutlinedIcon from '@mui/icons-material/HomeWorkOutlined';
 
 const CartPage = () => {
   const [openSearch, setOpenSearch] = useState(false);
@@ -215,7 +215,7 @@ const CartPage = () => {
 
                   <div className="w-full h-[75px] inline-flex items-center gap-3">
                     <div className="w-[35px] h-[35px] text-green-500 px-2 bg-green-100 rounded-md shadow flex items-center justify-center shrink-0">
-                      <HomeIcon />
+                      <HomeWorkOutlinedIcon />
                     </div>
 
                     <div className="w-full h-full text-gray-500 overflow-y-auto pr-1">

@@ -6,7 +6,7 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import HomeWorkOutlinedIcon from '@mui/icons-material/HomeWorkOutlined';
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
 import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
 
@@ -164,7 +164,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
                     className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100"
                     onClick={() => setOpenAccount(false)}
                   >
-                    <HomeOutlinedIcon />
+                    <HomeWorkOutlinedIcon />
                     <span> Địa chỉ nhận hàng </span>
                   </NavLink>
                 </li>
