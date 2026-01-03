@@ -1,11 +1,36 @@
+import { useState, useEffect, useRef } from "react";
+
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-// import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import SettingsIcon from '@mui/icons-material/Settings';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import HomeIcon from '@mui/icons-material/Home';
+import InventoryIcon from '@mui/icons-material/Inventory';
 
 import { NavLink } from "react-router-dom";
 
 const Header = ({ onOpenSearch, onOpenNotify }) => {
+
+  const [openAccount, setOpenAccount] = useState(false);
+  const accountRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        accountRef.current &&
+        !accountRef.current.contains(event.target)
+      ) {
+        setOpenAccount(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 w-full h-[100px] bg-white border-b border-gray-300 text-black flex items-center px-[60px] z-50">
@@ -85,65 +110,87 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
           </button>
         </NavLink> */}
 
-        <div className="relative group">
-          <button className="flex items-center justify-center gap-1 text-md font-semibold px-4 py-2 rounded-full border shadow bg-gray-100 hover:bg-gray-200 transition">
-            {/* <AccountCircleOutlinedIcon /> */}
+        {/* Chức năng tài khoản */}
+        <div ref={accountRef} className="relative">
+          <button
+            onClick={() => setOpenAccount(!openAccount)}
+            className="flex items-center justify-center gap-1 text-md font-semibold px-4 py-2 rounded-full border shadow bg-gray-100 hover:bg-gray-200 transition"
+          >
             Tài Khoản
           </button>
 
           {/* Dropdown */}
-          <div className="absolute right-0 mt-2 w-56 bg-white border rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <ul className="py-2 text-sm">
-              <li>
-                <NavLink
-                  to="/account/profile"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  👤 Thông tin tài khoản
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/account/orders"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  📦 Đơn hàng đã mua
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/account/address"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  📍 Địa chỉ nhận hàng
-                </NavLink>
-              </li>
-               <li>
-                <NavLink
-                  to="/account/address"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  📍 Sản phẩm yêu thích
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/account/settings"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  ⚙️ Cài đặt hệ thống
-                </NavLink>
-              </li>
-               <li>
-                <NavLink
-                  to="/"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Đăng xuất
-                </NavLink>
-              </li>
-            </ul>
-          </div>
+          {openAccount && (
+            <div className="absolute right-0 mt-2 w-56 bg-white border rounded-xl shadow-lg z-50">
+              <ul className="px-2 py-2 text-sm">
+                <li>
+                  <NavLink
+                    to="/account/profile"
+                    className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100 hover:shadow"
+                    onClick={() => setOpenAccount(false)}
+                  >
+                    <AccountCircleIcon />
+                    <span> Thông tin tài khoản </span>
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink
+                    to="/account/orders"
+                    className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100 hover:shadow"
+                    onClick={() => setOpenAccount(false)}
+                  >
+                    <InventoryIcon />
+                    <span> Đơn hàng đã mua </span>
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink
+                    to="/account/address"
+                    className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100 hover:shadow"
+                    onClick={() => setOpenAccount(false)}
+                  >
+                    <HomeIcon />
+                    <span> Địa chỉ nhận hàng </span>
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink
+                    to="/account/favorites"
+                    className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100 hover:shadow"
+                    onClick={() => setOpenAccount(false)}
+                  >
+                    <FavoriteIcon />
+                    <span> Sản phẩm yêu thích </span>
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink
+                    to="/account/settings"
+                    className="flex w-full h-[40px] items-center px-2 py-2 gap-5 hover:rounded-md hover:bg-gray-100 hover:shadow"
+                    onClick={() => setOpenAccount(false)}
+                  >
+                    <SettingsIcon />
+                    <span> Cài đặt hệ thống </span>
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink
+                    to="/"
+                    className="flex w-full h-[40px] items-center justify-center px-2 py-2 hover:rounded-md hover:bg-gray-100 hover:shadow text-md font-semibold text-red-500"
+                    onClick={() => setOpenAccount(false)}
+                  >
+                    Đăng Xuất
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          )}
+
         </div>
 
         <button
