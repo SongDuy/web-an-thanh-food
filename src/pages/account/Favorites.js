@@ -31,7 +31,9 @@ const FavoritesPage = () => {
             )}
 
             <div className="w-full bg-soft px-[160px] pt-[100px] pb-[45px]">
-
+                <div className="w-full h-[650px]">
+                    kk
+                </div>
             </div>
 
             <Footer />
