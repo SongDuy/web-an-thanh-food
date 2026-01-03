@@ -125,7 +125,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
             <div className="absolute right-0 mt-2 w-56 bg-white border rounded-xl shadow-lg z-50">
               <ul className="px-2 py-2 text-sm flex flex-col">
 
-                <li className="flex w-full h-[50px] mb-2 border border-b-2 border-gray-100 rounded-md bg-gray-50 shadow items-center justify-center gap-2">
+                <li className="flex w-full h-[50px] mb-2 border border-b-2 border-gray-100 rounded-md bg-white shadow items-center justify-center gap-2">
                   <div className="w-[40px] h-[40px] rounded-full bg-blue-100 flex items-center justify-center">
                     <div className="w-[30px] h-[30px] text-blue-600 rounded-full bg-blue-200 flex items-center justify-center">
                       <SentimentVerySatisfiedIcon />
