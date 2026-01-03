@@ -39,7 +39,7 @@ const AppRoutes = () => {
             <Route path="/account/orders" element={<OrdersPage />} />
             <Route path="/account/address" element={<AddressPage />} />
             <Route path="/account/favorites" element={<FavoritesPage />} />
-            <Route path="/account/setting" element={<SettingsPage />} />
+            <Route path="/account/settings" element={<SettingsPage />} />
 
             {/* Auth - page */}
             <Route path="/login" element={<LoginPage />} />
