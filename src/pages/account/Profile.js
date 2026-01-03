@@ -31,7 +31,7 @@ const ProfilePage = () => {
             )}
 
             <div className="w-full bg-soft px-[160px] pt-[100px] pb-[45px]">
-                <div className="w-full h-[650px]">
+                <div className="w-full h-[650px] bg-white rounded">
                     kk
                 </div>
             </div>
