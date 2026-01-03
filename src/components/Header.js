@@ -91,14 +91,14 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
         <NavLink
           to="/cart"
         >
-          <button className="w-[40px] h-[40px] flex items-center justify-center text-black shadow border rounded-full bg-gray-100 hover:bg-gray-200">
+          <button className="w-[40px] h-[40px] flex items-center justify-center text-black shadow border rounded-full bg-gray-100 hover:bg-red-50">
             <ShoppingCartOutlinedIcon />
           </button>
         </NavLink>
 
         <button
           onClick={onOpenNotify}
-          className="w-[40px] h-[40px] flex items-center justify-center text-black shadow border rounded-full bg-gray-100 hover:bg-gray-200"
+          className="w-[40px] h-[40px] flex items-center justify-center text-black shadow border rounded-full bg-gray-100 hover:bg-red-50"
         >
           <NotificationsNoneOutlinedIcon />
         </button>
@@ -106,7 +106,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
         {/* <NavLink
           to="/login"
         >
-          <button className="flex items-center justify-center gap-2 text-md font-semibold px-4 py-2 rounded-full border shadow bg-gray-100 hover:bg-gray-200 transition">
+          <button className="flex items-center justify-center gap-2 text-md font-semibold px-4 py-2 rounded-full border shadow bg-gray-100 hover:bg-red-50 transition">
             Đăng Nhập
           </button>
         </NavLink> */}
@@ -115,7 +115,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
         <div ref={accountRef} className="relative">
           <button
             onClick={() => setOpenAccount(!openAccount)}
-            className="flex items-center justify-center gap-1 text-md font-semibold px-4 py-2 rounded-full border shadow bg-gray-100 hover:bg-gray-200 transition"
+            className="flex items-center justify-center gap-1 text-md font-semibold px-4 py-2 rounded-full border shadow bg-gray-100 hover:bg-red-50 transition"
           >
             Tài Khoản
           </button>
@@ -208,7 +208,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
 
         <button
           onClick={onOpenSearch}
-          className="w-[40px] h-[40px] flex items-center justify-center text-black shadow border rounded-full bg-gray-100 hover:bg-gray-200"
+          className="w-[40px] h-[40px] flex items-center justify-center text-black shadow border rounded-full bg-gray-100 hover:bg-red-50"
         >
           <SearchIcon />
         </button>
