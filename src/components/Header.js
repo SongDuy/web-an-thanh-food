@@ -154,7 +154,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
                     onClick={() => setOpenAccount(false)}
                   >
                     <Inventory2OutlinedIcon />
-                    <span> Đơn hàng đã mua </span>
+                    <span> Đơn hàng của tôi </span>
                   </NavLink>
                 </li>
 
