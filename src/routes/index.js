@@ -10,6 +10,11 @@ import LoginPage from "../pages/auth/Login";
 import RegisterPage from "../pages/auth/Register";
 import ForgotPassword from "../pages/auth/ForgotPassword";
 import ResetPassword from "../pages/auth/ResetPassword"
+import ProfilePage from '../pages/account/Profile';
+import OrdersPage from '../pages/account/Orders';
+import AddressPage from '../pages/account/Address';
+import FavoritesPage from '../pages/account/Favorites';
+import SettingsPage from '../pages/account/Settings';
 
 const AppRoutes = () => {
 
@@ -28,6 +33,13 @@ const AppRoutes = () => {
 
             {/* Giỏ hàng - page */}
             <Route path="/cart" element={<CartPage />} />
+
+            {/* Danh mục Tài Khoản */}
+            <Route path="/account/profile" element={<ProfilePage />} />
+            <Route path="/account/orders" element={<OrdersPage />} />
+            <Route path="/account/address" element={<AddressPage />} />
+            <Route path="/account/favorites" element={<FavoritesPage />} />
+            <Route path="/account/setting" element={<SettingsPage />} />
 
             {/* Auth - page */}
             <Route path="/login" element={<LoginPage />} />
