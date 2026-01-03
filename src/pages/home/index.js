@@ -332,7 +332,7 @@ const HomePage = () => {
       <div>
         <div className="w-full h-full">
           <div className="flex items-center py-[35px]">
-            <h1 className="text-[22px] font-medium uppercase "> Danh mục lương thực </h1>
+            <h1 className="text-[22px] font-semibold uppercase "> Danh mục lương thực </h1>
             <Link
               to="/luong-thuc"
               className="ml-auto text-gray-500 hover:text-black flex items-center justify-center"
@@ -353,7 +353,7 @@ const HomePage = () => {
         </div>
         <div className="w-full h-full">
           <div className="flex items-center py-[35px]">
-            <h1 className="text-[22px] font-medium uppercase">Danh mục thực phẩm </h1>
+            <h1 className="text-[22px] font-semibold uppercase">Danh mục thực phẩm </h1>
             <Link
               to="/thuc-pham"
               className="ml-auto text-gray-500 hover:text-black flex items-center justify-center"
@@ -375,7 +375,7 @@ const HomePage = () => {
         </div>
         <div className="w-full h-full">
           <div className="flex items-center py-[35px]">
-            <h1 className="text-[22px] font-medium uppercase">Bảng Xếp Hạng </h1>
+            <h1 className="text-[22px] font-semibold uppercase">Bảng Xếp Hạng </h1>
             <Link
               to="/bang-xep-hang"
               className="ml-auto text-gray-500 hover:text-black flex items-center justify-center"
