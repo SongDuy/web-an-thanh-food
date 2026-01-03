@@ -37,7 +37,7 @@ const ProfilePage = () => {
                     </h1>
                 </div>
                 
-                <div className="w-full h-[555px] bg-white rounded">
+                <div className="w-full h-[555px] bg-white rounded border">
                     kk
                 </div>
             </div>
