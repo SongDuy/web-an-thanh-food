@@ -155,7 +155,7 @@ const ProfilePage = () => {
                                     </button>
                                 </div>
 
-                                <div className="w-full min-h-[115px] mt-3">
+                                <div className="w-full min-h-[110px] mt-3">
                                     {showEditEmail && (
                                         <div className="w-full flex flex-col gap-8">
                                             <div className="w-full h-[35px] border">
