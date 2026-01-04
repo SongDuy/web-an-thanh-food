@@ -82,8 +82,16 @@ const ProfilePage = () => {
                                     <h1 className="w-[75px] whitespace-nowrap">
                                         Ngày sinh
                                     </h1>
-                                    <div className="border w-full h-full flex items-center">
-                                        kk
+                                    <div className="w-full h-full grid grid-cols-3 items-center gap-3">
+                                        <div className="w-full h-full border-2">
+
+                                        </div>
+                                        <div className="w-full h-full border-2">
+
+                                        </div>
+                                        <div className="w-full h-full border-2">
+
+                                        </div>
                                     </div>
 
                                 </div>
@@ -92,7 +100,7 @@ const ProfilePage = () => {
                                     <h1 className="w-[75px] whitespace-nowrap">
                                         Giới tính
                                     </h1>
-                                    <div className="border w-full h-full flex items-center">
+                                    <div className="border-2 w-full h-full flex items-center">
                                         kk
                                     </div>
 
@@ -102,7 +110,7 @@ const ProfilePage = () => {
                                     <h1 className="w-[75px] whitespace-nowrap">
                                         Quốc tịch
                                     </h1>
-                                    <div className="border w-full h-full flex items-center">
+                                    <div className="border-2 w-full h-full flex items-center">
                                         kk
                                     </div>
 
