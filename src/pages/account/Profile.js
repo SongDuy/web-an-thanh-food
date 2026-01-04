@@ -13,6 +13,12 @@ const ProfilePage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
 
+    // Ẩn cập nhật Email
+    const [showEditEmail, setShowEditEmail] = useState(false);
+
+    //Ẩn cập nhật Mật khẩu
+    const [showEditPassword, setShowEditPassword] = useState(false);
+
     return (
         <>
             <Header
@@ -141,23 +147,29 @@ const ProfilePage = () => {
                                         <span className="text-black">Địa chỉ Email</span>
                                     </div>
 
-                                    <button className="ml-auto h-8 px-3 rounded-md border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600">
+                                    <button
+                                        onClick={() => setShowEditEmail(v => !v)}
+                                        className="ml-auto h-8 px-3 rounded-md border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600"
+                                    >
                                         Cập nhật
                                     </button>
                                 </div>
 
-                                <div className="w-full flex flex-col gap-8 mt-3">
-                                    <div className="w-full h-[35px] border">
+                                <div className="w-full min-h-[115px] mt-3">
+                                    {showEditEmail && (
+                                        <div className="w-full flex flex-col gap-8">
+                                            <div className="w-full h-[35px] border">
 
-                                    </div>
-                                    <div className="w-full flex items-center justify-center">
-                                        <button className="w-[200px] h-full px-3 py-2 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
-                                            Lưu thay đổi
-                                        </button>
+                                            </div>
+                                            <div className="w-full flex items-center justify-center">
+                                                <button className="w-[200px] h-full px-3 py-2 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
+                                                    Lưu thay đổi
+                                                </button>
 
-                                    </div>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
-
                             </div>
 
                             <div className="w-full">
@@ -169,29 +181,35 @@ const ProfilePage = () => {
                                         <span className="text-black">Thiết lập mật khẩu</span>
                                     </div>
 
-                                    <button className="ml-auto h-8 px-3 rounded-md border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600">
+                                    <button
+                                        onClick={() => setShowEditPassword(v => !v)}
+                                        className="ml-auto h-8 px-3 rounded-md border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600"
+                                    >
                                         Cập nhật
                                     </button>
                                 </div>
 
-                                <div className="w-full flex flex-col gap-8 mt-3">
+                                <div className="w-full min-h-[180px] mt-3">
+                                    {showEditPassword && (
+                                        <div className="w-full flex flex-col gap-8 ">
 
-                                    <div className="w-full h-[35px] border">
+                                            <div className="w-full h-[35px] border">
 
-                                    </div>
+                                            </div>
 
-                                    <div className="w-full h-[35px] border">
+                                            <div className="w-full h-[35px] border">
 
-                                    </div>
+                                            </div>
 
-                                    <div className="w-full flex items-center justify-center">
-                                        <button className="w-[200px] h-full px-3 py-2 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
-                                            Lưu thay đổi
-                                        </button>
+                                            <div className="w-full flex items-center justify-center">
+                                                <button className="w-[200px] h-full px-3 py-2 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
+                                                    Lưu thay đổi
+                                                </button>
 
-                                    </div>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
-
                             </div>
 
                         </div>
