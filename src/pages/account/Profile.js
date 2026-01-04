@@ -45,47 +45,67 @@ const ProfilePage = () => {
                             </h1>
                         </div>
 
-                        <div className="w-full grid grid-cols-1 gap-10">
+                        <div className="w-full grid grid-cols-1 gap-8">
                             <div className="w-full h-[120px] px-10 mt-5">
-                                <div className="w-full h-full flex items-center gap-10 border">
+                                <div className="w-full h-full flex items-center gap-5">
+
                                     <div className="w-[120px] h-[120px] rounded-full border-4 border-blue-200 flex items-center justify-center">
                                         kkkk
                                     </div>
-                                    <div className="grid grid-cols-1 gap-8 border">
-                                        <div>
-                                            <h1>
-                                                kk
-                                            </h1>
-                                            <div>
 
+                                    {/* 👇 PHẢI CÓ flex-1 */}
+                                    <div className="grid grid-cols-1 gap-8 flex-1 min-w-0">
+                                        <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
+                                            <h1 className="w-[75px] whitespace-nowrap">
+                                                Họ & Tên
+                                            </h1>
+                                            <div className="border w-full h-full flex items-center">
+                                                kk
                                             </div>
                                         </div>
 
-                                        <div>
-                                            <h1>
-                                                kk
+                                        <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
+                                            <h1 className="w-[75px] whitespace-nowrap">
+                                                Nickname
                                             </h1>
-                                            <div>
-
+                                            <div className="border w-full h-full flex items-center">
+                                                kk
                                             </div>
                                         </div>
                                     </div>
 
                                 </div>
-
                             </div>
 
-                            <div className="w-full grid grid-cols-1 gap-10 px-[100px]">
-                                <div className="w-full h-[40px] flex items-center border">
-                                    kk
+                            <div className="w-full grid grid-cols-1 gap-8 px-[100px]">
+                                <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
+                                    <h1 className="w-[75px] whitespace-nowrap">
+                                        Ngày sinh
+                                    </h1>
+                                    <div className="border w-full h-full flex items-center">
+                                        kk
+                                    </div>
+
                                 </div>
 
-                                <div className="w-full h-[40px] flex items-center">
-                                    kk
+                                <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
+                                    <h1 className="w-[75px] whitespace-nowrap">
+                                        Giới tính
+                                    </h1>
+                                    <div className="border w-full h-full flex items-center">
+                                        kk
+                                    </div>
+
                                 </div>
 
-                                <div className="w-full h-[40px] flex items-center">
-                                    kk
+                                <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
+                                    <h1 className="w-[75px] whitespace-nowrap">
+                                        Quốc tịch
+                                    </h1>
+                                    <div className="border w-full h-full flex items-center">
+                                        kk
+                                    </div>
+
                                 </div>
                             </div>
 
