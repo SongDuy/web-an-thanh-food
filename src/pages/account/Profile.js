@@ -55,31 +55,52 @@ const ProfilePage = () => {
         return { value: year, label: year };
     });
 
-    const selectStyles = {
-        control: (base) => ({
-            ...base,
-            minHeight: "38px",
-            height: "38px",
-            borderRadius: "6px",
-            borderColor: "#d1d5db", // gray-300
-            boxShadow: "none",
-            "&:hover": {
-                borderColor: "#60a5fa", // blue-400
-            },
-        }),
-        valueContainer: (base) => ({
-            ...base,
-            padding: "0 8px",
-        }),
-        indicatorsContainer: (base) => ({
-            ...base,
-            height: "38px",
-        }),
-        menuList: (base) => ({
-            ...base,
-            maxHeight: "200px", // scroll đẹp
-        }),
-    };
+ const selectStyles = {
+    control: (base, state) => ({
+        ...base,
+        minHeight: "38px",
+        height: "38px",
+        borderRadius: "6px",
+        borderColor: state.isFocused ? "#60a5fa" : "#d1d5db",
+        boxShadow: "none",
+        ":hover": {
+            borderColor: "#60a5fa",
+        },
+        display: "flex",
+        alignItems: "center",
+    }),
+
+    valueContainer: (base) => ({
+        ...base,
+        height: "38px",
+        padding: "0 8px",
+        display: "flex",
+        alignItems: "center",
+    }),
+
+    indicatorsContainer: (base) => ({
+        ...base,
+        height: "38px",
+        display: "flex",
+        alignItems: "center",
+    }),
+
+    /** ⭐ QUAN TRỌNG NHẤT */
+    indicatorSeparator: (base) => ({
+        ...base,
+        width: "1.5px",              // 👉 dày hơn
+        height: "18px",            // 👉 đều nhau
+        backgroundColor: "#d1d5db", // gray-400
+        margin: "0 6px",
+        alignSelf: "center",
+    }),
+
+    menuList: (base) => ({
+        ...base,
+        maxHeight: "200px",
+    }),
+};
+
 
     // Chọn quốc gia 
     const options = useMemo(() => {
