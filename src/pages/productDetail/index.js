@@ -64,7 +64,7 @@ const ProductDetailPage = () => {
                 <Notification onClose={() => setOpenNotification(false)} />
             )}
 
-            <div className="w-full h-full bg-soft px-[160px] border pt-[100px] pb-[45px]">
+            <div className="w-full h-full bg-soft px-[160px] border pt-[100px] pb-[50px]">
                 {/* Hình ảnh sản phẩm và đặt hàng */}
                 <div className="w-full flex items-center mt-[5px] mb-[8px]">
                     <Link to="/">

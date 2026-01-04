@@ -294,7 +294,7 @@ const GroceriesPage = () => {
                 <Notification onClose={() => setOpenNotification(false)} />
             )}
 
-            <div className="px-[160px] pt-[100px] pb-[45px] bg-soft">
+            <div className="px-[160px] pt-[100px] pb-[50px] bg-soft">
                 <div className="w-full h-[60px] border-b border-gray-300 flex items-center">
                     <div>
                         <span className="text-black font-bold mr-1">{products.length}</span>
