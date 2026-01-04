@@ -132,8 +132,8 @@ const ProfilePage = () => {
                     </div>
 
                     <div className="col-span-4 px-4 py-3 border-l">
-                        <div className="flex flex-col gap-10">
-                            <div className="w-full">
+                        <div className="w-full h-full flex flex-col gap-10">
+                            <div className="w-full h-1/2">
                                 <h1 className="text-lg text-gray-500">
                                     Email
                                 </h1>
@@ -157,7 +157,7 @@ const ProfilePage = () => {
                                 </div>
                             </div>
 
-                            <div className="w-full">
+                            <div className="w-full h-1/2">
                                 <h1 className="text-lg text-gray-500">
                                     Bảo mật
                                 </h1>
