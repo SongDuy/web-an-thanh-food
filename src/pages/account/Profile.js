@@ -56,20 +56,23 @@ const ProfilePage = () => {
                                 </div>
                             </div>
 
-                            <div className="w-full">
+                            <div className="w-full px-10">
                                 kk
                             </div>
 
-                            <div className="w-full">
+                            <div className="w-full px-10">
                                 kk
                             </div>
 
-                            <div className="w-full">
+                            <div className="w-full px-10">
                                 kk
                             </div>
 
-                            <div className="w-full">
-                                kk
+                            <div className="w-full flex items-center justify-center">
+                                <button className="w-[200px] px-2 py-2 bg-blue-500 rounded-md text-white">
+                                    Lưu thay đổi
+                                </button>
+                               
                             </div>
                         </div>
                     </div>
