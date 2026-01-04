@@ -133,47 +133,41 @@ const ProfilePage = () => {
 
                     <div className="col-span-4 px-4 py-3 border-l">
                         <div className="w-full h-full flex flex-col gap-10">
-                            <div className="w-full h-1/2">
-                                <h1 className="text-lg text-gray-500">
-                                    Email
-                                </h1>
+                            <div className="w-full">
+                                <h1 className="text-lg text-gray-500">Email</h1>
 
-                                <div className="w-full mt-6 flex items-center">
-                                    <div className="flex flex-col">
-                                        <span className="flex gap-2 text-gray-500">
+                                <div className="mt-6 flex items-center">
+                                    <div className="flex flex-col text-gray-500">
+                                        <div className="flex items-center gap-2">
                                             <EmailOutlinedIcon />
-                                            <span className="text-black">
-                                                Địa chỉ Email
-                                            </span>
-                                        </span>
-                                        <span className="ml-8">
+                                            <span className="text-black">Địa chỉ Email</span>
+                                        </div>
+                                        <span className="ml-8 text-black">
                                             dlehoanganthanh55@gmail.com
                                         </span>
                                     </div>
 
-                                    <button className="ml-auto h-[32px] border-2 border-blue-400 px-3 rounded-md text-sm font-medium text-blue-500 hover:text-blue-600">
+                                    <button className="ml-auto h-8 px-3 rounded-md border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600">
                                         Cập nhật
                                     </button>
                                 </div>
                             </div>
 
-                            <div className="w-full h-1/2">
-                                <h1 className="text-lg text-gray-500">
-                                    Bảo mật
-                                </h1>
+                            <div className="w-full">
+                                <h1 className="text-lg text-gray-500">Bảo mật</h1>
 
-                                <div className="w-full mt-6 flex">
-                                    <span className="flex items-center gap-2 text-gray-500">
+                                <div className="mt-6 flex items-center">
+                                    <div className="flex items-center gap-2 text-gray-500">
                                         <LockIcon />
-                                        <span className="text-black">
-                                            Thiết lập mật khẩu
-                                        </span>
-                                    </span>
-                                    <button className="ml-auto h-[32px] border-2 border-blue-400 px-3 rounded-md text-sm font-medium text-blue-500 hover:text-blue-600">
+                                        <span className="text-black">Thiết lập mật khẩu</span>
+                                    </div>
+
+                                    <button className="ml-auto h-8 px-3 rounded-md border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600">
                                         Cập nhật
                                     </button>
                                 </div>
                             </div>
+
                         </div>
 
                     </div>
