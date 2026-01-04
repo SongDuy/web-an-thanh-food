@@ -138,12 +138,18 @@ const ProfilePage = () => {
                                     Email
                                 </h1>
 
-                                <div className="w-full mt-7 border flex">
-                                    <span className="flex gap-2">
-                                        <EmailOutlinedIcon />
-                                        Địa chỉ Email
-                                    </span>
-                                    <button className="ml-auto border-2 border-blue-500 px-3 py-1 rounded-md text-sm font-medium text-blue-500 hover:text-blue-600">
+                                <div className="w-full mt-6 flex items-center">
+                                    <div className="flex flex-col">
+                                        <span className="flex gap-2">
+                                            <EmailOutlinedIcon />
+                                            Địa chỉ Email
+                                        </span>
+                                        <span className="ml-8">
+                                           dlehoanganthanh55@gmail.com
+                                        </span>
+                                    </div>
+
+                                    <button className="ml-auto h-[32px] border-2 border-blue-400 px-3 rounded-md text-sm font-medium text-blue-500 hover:text-blue-600">
                                         Cập nhật
                                     </button>
                                 </div>
@@ -154,12 +160,12 @@ const ProfilePage = () => {
                                     Bảo mật
                                 </h1>
 
-                                <div className="w-full mt-7 border flex">
-                                    <span className="flex gap-2">
+                                <div className="w-full mt-6 flex">
+                                    <span className="flex items-center gap-2">
                                         <LockIcon />
                                         Thiết lập mật khẩu
                                     </span>
-                                    <button className="ml-auto border-2 border-blue-500 px-3 py-1 rounded-md text-sm font-medium text-blue-500 hover:text-blue-600">
+                                    <button className="ml-auto h-[32px] border-2 border-blue-400 px-3 rounded-md text-sm font-medium text-blue-500 hover:text-blue-600">
                                         Cập nhật
                                     </button>
                                 </div>
