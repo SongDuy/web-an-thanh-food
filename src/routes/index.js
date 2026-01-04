@@ -1,20 +1,25 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
+
 import HomePage from '../pages/home';
-import NotFoundPage from '../pages/notFound';
+
 import StaplesPage from '../pages/staples';
 import GroceriesPage from '../pages/groceries';
 import RankingsPage from '../pages/rankings';
+
 import ProductDetailPage from '../pages/productDetail';
 import CartPage from '../pages/cart';
+
 import LoginPage from "../pages/auth/Login";
 import RegisterPage from "../pages/auth/Register";
 import ForgotPassword from "../pages/auth/ForgotPassword";
-import ResetPassword from "../pages/auth/ResetPassword"
+
 import ProfilePage from '../pages/account/Profile';
 import OrdersPage from '../pages/account/Orders';
 import AddressPage from '../pages/account/Address';
 import FavoritesPage from '../pages/account/Favorites';
 import SettingsPage from '../pages/account/Settings';
+
+import NotFoundPage from '../pages/notFound';
 
 const AppRoutes = () => {
 
@@ -45,7 +50,6 @@ const AppRoutes = () => {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
-            <Route path="/reset-password" element={<ResetPassword />} />
 
             {/* 404 */}
             <Route path="/404" element={<NotFoundPage />} />
