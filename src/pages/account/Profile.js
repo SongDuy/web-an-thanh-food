@@ -21,8 +21,23 @@ const ProfilePage = () => {
     // Ẩn cập nhật Email
     const [showEditEmail, setShowEditEmail] = useState(false);
 
-    //Ẩn cập nhật Mật khẩu
+    // Ẩn cập nhật Mật khẩu
     const [showEditPassword, setShowEditPassword] = useState(false);
+
+    // Nhập họ và tên
+    const [fullName, setFullName] = useState("");
+
+    // Nhập Nickname
+    const [nickname, setNickname] = useState("");
+
+    // Nhập Email
+    const [email, setEmail] = useState("");
+
+    // Nhập mật khẩu mới
+    const [newPassword, setNewPassword] = useState("");
+
+    //Nhập lại mật khẩu mới
+    const [confirmPassword, setConfirmPassword] = useState("");
 
     // Chọn Ngày tháng năm
     const dayOptions = Array.from({ length: 31 }, (_, i) => ({
@@ -112,7 +127,7 @@ const ProfilePage = () => {
                             </h1>
                         </div>
 
-                        <div className="w-full grid grid-cols-1 gap-8">
+                        <div className="w-full grid grid-cols-1 gap-[25px]">
                             <div className="w-full h-[120px] px-10 mt-5">
                                 <div className="w-full h-full flex items-center gap-5">
 
@@ -126,26 +141,34 @@ const ProfilePage = () => {
                                             <span className="w-[75px] whitespace-nowrap">
                                                 Họ & Tên
                                             </span>
-                                            <div className="border w-full h-full flex items-center">
-                                                kk
-                                            </div>
+                                            <input
+                                                type="text"
+                                                value={fullName}
+                                                onChange={(e) => setFullName(e.target.value)}
+                                                placeholder="Thêm họ tên"
+                                                className="w-full h-full border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
+                                            />
                                         </div>
 
                                         <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
                                             <span className="w-[75px] whitespace-nowrap">
                                                 Nickname
                                             </span>
-                                            <div className="border w-full h-full flex items-center">
-                                                kk
-                                            </div>
+                                            <input
+                                                type="text"
+                                                value={nickname}
+                                                onChange={(e) => setNickname(e.target.value)}
+                                                placeholder="Thêm Nickname"
+                                                className="w-full h-full border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
+                                            />
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
 
-                            <div className="w-full grid grid-cols-1 gap-8 px-[100px]">
-                                <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
+                            <div className="w-full grid grid-cols-1 px-[100px]">
+                                <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14 mb-[25px]">
                                     <span className="w-[75px] whitespace-nowrap">
                                         Ngày sinh
                                     </span>
@@ -213,7 +236,7 @@ const ProfilePage = () => {
 
                                 </div>
 
-                                <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
+                                <div className="w-full grid grid-cols-[auto_1fr] items-center gap-14 mt-[25px]">
                                     <span className="w-[75px] whitespace-nowrap">
                                         Quốc tịch
                                     </span>
@@ -227,18 +250,17 @@ const ProfilePage = () => {
                                         styles={{
                                             menuPortal: (base) => ({ ...base, zIndex: 9999 }),
                                         }}
-                                        className="w-full"
+                                        className="w-full h-full"
                                     />
-
                                 </div>
                             </div>
 
-
-                            <div className="w-full flex items-center justify-center">
+                            <div className="w-full flex items-center justify-center mt-2">
                                 <button className="w-[200px] px-2 py-2 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
                                     Lưu thay đổi
                                 </button>
                             </div>
+
                         </div>
                     </div>
 
@@ -264,9 +286,14 @@ const ProfilePage = () => {
                                 <div className="w-full min-h-[110px] mt-3">
                                     {showEditEmail && (
                                         <div className="w-full flex flex-col gap-8">
-                                            <div className="w-full h-[35px] border">
+                                            <input
+                                                type="email"
+                                                value={email}
+                                                onChange={(e) => setEmail(e.target.value)}
+                                                placeholder="Nhập Email"
+                                                className="w-full h-[35px] border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
+                                            />
 
-                                            </div>
                                             <div className="w-full flex items-center justify-center">
                                                 <button className="w-[200px] h-full px-3 py-2 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
                                                     Lưu thay đổi
@@ -298,20 +325,28 @@ const ProfilePage = () => {
                                 <div className="w-full min-h-[180px] mt-3">
                                     {showEditPassword && (
                                         <div className="w-full flex flex-col gap-8 ">
+                                            {/* Mật khẩu mới */}
+                                            <input
+                                                type="password"
+                                                value={newPassword}
+                                                onChange={(e) => setNewPassword(e.target.value)}
+                                                placeholder="Nhập mật khẩu mới"
+                                                className="w-full h-[35px] border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
+                                            />
 
-                                            <div className="w-full h-[35px] border">
-
-                                            </div>
-
-                                            <div className="w-full h-[35px] border">
-
-                                            </div>
+                                            {/* Nhập lại mật khẩu */}
+                                            <input
+                                                type="password"
+                                                value={confirmPassword}
+                                                onChange={(e) => setConfirmPassword(e.target.value)}
+                                                placeholder="Nhập lại mật khẩu mới"
+                                                className="w-full h-[35px] border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
+                                            />
 
                                             <div className="w-full flex items-center justify-center">
                                                 <button className="w-[200px] h-full px-3 py-2 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
                                                     Lưu thay đổi
                                                 </button>
-
                                             </div>
                                         </div>
                                     )}
