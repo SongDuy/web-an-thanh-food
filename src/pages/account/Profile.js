@@ -126,37 +126,42 @@ const ProfilePage = () => {
                                 <button className="w-[200px] px-2 py-2 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
                                     Lưu thay đổi
                                 </button>
-
                             </div>
                         </div>
                     </div>
 
                     <div className="col-span-4 px-4 py-3 border-l">
-                        <div className="w-full h-full flex flex-col gap-10">
+                        <div className="w-full h-full flex flex-col gap-8">
                             <div className="w-full">
                                 <h1 className="text-lg text-gray-500">Email</h1>
 
-                                <div className="mt-6 flex items-center">
-                                    <div className="flex flex-col text-gray-500">
-                                        <div className="flex items-center gap-2">
-                                            <EmailOutlinedIcon />
-                                            <span className="text-black">Địa chỉ Email</span>
-                                        </div>
-                                        <span className="ml-8 text-black">
-                                            dlehoanganthanh55@gmail.com
-                                        </span>
+                                <div className="mt-5 flex items-center">
+                                    <div className="flex items-center gap-2 text-gray-500">
+                                        <EmailOutlinedIcon />
+                                        <span className="text-black">Địa chỉ Email</span>
                                     </div>
 
                                     <button className="ml-auto h-8 px-3 rounded-md border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600">
                                         Cập nhật
                                     </button>
                                 </div>
+                                <div className="w-full flex flex-col gap-3 mt-3">
+                                    <div className="w-full h-[35px] border">
+
+                                    </div>
+                                    <div className="w-full h-[35px] flex items-center justify-center">
+                                        <button className="h-full px-3 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
+                                            Cập nhật
+                                        </button>
+
+                                    </div>
+                                </div>
                             </div>
 
                             <div className="w-full">
                                 <h1 className="text-lg text-gray-500">Bảo mật</h1>
 
-                                <div className="mt-6 flex items-center">
+                                <div className="mt-5 flex items-center">
                                     <div className="flex items-center gap-2 text-gray-500">
                                         <LockIcon />
                                         <span className="text-black">Thiết lập mật khẩu</span>
@@ -165,6 +170,26 @@ const ProfilePage = () => {
                                     <button className="ml-auto h-8 px-3 rounded-md border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600">
                                         Cập nhật
                                     </button>
+                                </div>
+
+                                <div className="w-full flex flex-col gap-3 mt-3">
+
+                                    <div className="w-full h-[50px]">
+                                        <div className="w-full h-[35px] border">
+
+                                        </div>
+                                    </div>
+
+                                    <div className="w-full h-[35px] border">
+
+                                    </div>
+
+                                    <div className="w-full h-[35px] flex items-center justify-center">
+                                        <button className="h-full px-3 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
+                                            Cập nhật
+                                        </button>
+
+                                    </div>
                                 </div>
                             </div>
 
