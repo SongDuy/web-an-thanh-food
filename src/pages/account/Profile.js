@@ -1,4 +1,7 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import Select from "react-select";
+import countries from "i18n-iso-countries";
+import vi from "i18n-iso-countries/langs/vi.json";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -9,6 +12,8 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import LockIcon from '@mui/icons-material/Lock';
 
+countries.registerLocale(vi);
+
 const ProfilePage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
@@ -18,6 +23,58 @@ const ProfilePage = () => {
 
     //Ẩn cập nhật Mật khẩu
     const [showEditPassword, setShowEditPassword] = useState(false);
+
+    // Chọn Ngày tháng năm
+    const dayOptions = Array.from({ length: 31 }, (_, i) => ({
+        value: i + 1,
+        label: i + 1,
+    }));
+
+    const monthOptions = Array.from({ length: 12 }, (_, i) => ({
+        value: i + 1,
+        label: i + 1,
+    }));
+
+    const yearOptions = Array.from({ length: 100 }, (_, i) => {
+        const year = new Date().getFullYear() - i;
+        return { value: year, label: year };
+    });
+
+    const selectStyles = {
+        control: (base) => ({
+            ...base,
+            minHeight: "35px",
+            height: "35px",
+            borderRadius: "6px",
+            borderColor: "#d1d5db", // gray-300
+            boxShadow: "none",
+            "&:hover": {
+                borderColor: "#60a5fa", // blue-400
+            },
+        }),
+        valueContainer: (base) => ({
+            ...base,
+            padding: "0 8px",
+        }),
+        indicatorsContainer: (base) => ({
+            ...base,
+            height: "35px",
+        }),
+        menuList: (base) => ({
+            ...base,
+            maxHeight: "200px", // scroll đẹp
+        }),
+    };
+
+    // Chọn quốc gia 
+    const options = useMemo(() => {
+        return Object.entries(
+            countries.getNames("vi", { select: "official" })
+        ).map(([code, name]) => ({
+            value: code,
+            label: name, // 👉 Có dấu tiếng Việt
+        }));
+    }, []);
 
     return (
         <>
@@ -92,16 +149,28 @@ const ProfilePage = () => {
                                     <span className="w-[75px] whitespace-nowrap">
                                         Ngày sinh
                                     </span>
-                                    <div className="w-full h-full grid grid-cols-3 items-center gap-3">
-                                        <div className="w-full h-full border-2">
 
-                                        </div>
-                                        <div className="w-full h-full border-2">
+                                    <div className="grid grid-cols-3 gap-3 h-full">
+                                        {/* Ngày */}
+                                        <Select
+                                            options={dayOptions}
+                                            placeholder="Ngày"
+                                            styles={selectStyles}
+                                        />
 
-                                        </div>
-                                        <div className="w-full h-full border-2">
+                                        {/* Tháng */}
+                                        <Select
+                                            options={monthOptions}
+                                            placeholder="Tháng"
+                                            styles={selectStyles}
+                                        />
 
-                                        </div>
+                                        {/* Năm */}
+                                        <Select
+                                            options={yearOptions}
+                                            placeholder="Năm"
+                                            styles={selectStyles}
+                                        />
                                     </div>
 
                                 </div>
@@ -110,8 +179,36 @@ const ProfilePage = () => {
                                     <span className="w-[75px] whitespace-nowrap">
                                         Giới tính
                                     </span>
-                                    <div className="border-2 w-full h-full flex items-center">
-                                        kk
+                                    <div className="w-full h-full flex items-center px-3 gap-6">
+                                        <label className="flex items-center gap-2 cursor-pointer">
+                                            <input
+                                                type="radio"
+                                                name="gender"
+                                                value="male"
+                                                className="scale-150 accent-blue-500"
+                                            />
+                                            <span>Nam</span>
+                                        </label>
+
+                                        <label className="flex items-center gap-2 cursor-pointer">
+                                            <input
+                                                type="radio"
+                                                name="gender"
+                                                value="female"
+                                                className="scale-150 accent-blue-500"
+                                            />
+                                            <span>Nữ</span>
+                                        </label>
+
+                                        <label className="flex items-center gap-2 cursor-pointer">
+                                            <input
+                                                type="radio"
+                                                name="gender"
+                                                value="other"
+                                                className="scale-150 accent-blue-500"
+                                            />
+                                            <span>Khác</span>
+                                        </label>
                                     </div>
 
                                 </div>
@@ -120,9 +217,20 @@ const ProfilePage = () => {
                                     <span className="w-[75px] whitespace-nowrap">
                                         Quốc tịch
                                     </span>
-                                    <div className="border-2 w-full h-full flex items-center">
-                                        kk
-                                    </div>
+
+                                    <Select
+                                        options={options}
+                                        placeholder="Chọn quốc gia"
+                                        menuPortalTarget={document.body}
+                                        menuPosition="fixed"
+                                        menuPlacement="auto"
+                                        styles={{
+                                            menuPortal: (base) => ({ ...base, zIndex: 9999 }),
+                                        }}
+                                        className="w-full"
+                                    />
+
+
 
                                 </div>
                             </div>
