@@ -140,12 +140,14 @@ const ProfilePage = () => {
 
                                 <div className="w-full mt-6 flex items-center">
                                     <div className="flex flex-col">
-                                        <span className="flex gap-2">
+                                        <span className="flex gap-2 text-gray-500">
                                             <EmailOutlinedIcon />
-                                            Địa chỉ Email
+                                            <span className="text-black">
+                                                Địa chỉ Email
+                                            </span>
                                         </span>
                                         <span className="ml-8">
-                                           dlehoanganthanh55@gmail.com
+                                            dlehoanganthanh55@gmail.com
                                         </span>
                                     </div>
 
@@ -161,9 +163,11 @@ const ProfilePage = () => {
                                 </h1>
 
                                 <div className="w-full mt-6 flex">
-                                    <span className="flex items-center gap-2">
+                                    <span className="flex items-center gap-2 text-gray-500">
                                         <LockIcon />
-                                        Thiết lập mật khẩu
+                                        <span className="text-black">
+                                            Thiết lập mật khẩu
+                                        </span>
                                     </span>
                                     <button className="ml-auto h-[32px] border-2 border-blue-400 px-3 rounded-md text-sm font-medium text-blue-500 hover:text-blue-600">
                                         Cập nhật
