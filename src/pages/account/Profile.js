@@ -6,6 +6,8 @@ import Search from "../../components/Search";
 import Notification from "../../components/Notification";
 
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import LockIcon from '@mui/icons-material/Lock';
 
 const ProfilePage = () => {
     const [openSearch, setOpenSearch] = useState(false);
@@ -51,25 +53,25 @@ const ProfilePage = () => {
                             <div className="w-full h-[120px] px-10 mt-5">
                                 <div className="w-full h-full flex items-center gap-5">
 
-                                    <div className="w-[120px] h-[120px] rounded-full border-4 border-blue-200 text-blue-400 flex items-center justify-center">
-                                        <PersonOutlineOutlinedIcon sx={{ fontSize: '85px' }}/>
+                                    <div className="w-[120px] h-[120px] rounded-full border-4 border-blue-200 text-blue-500 flex items-center justify-center">
+                                        <PersonOutlineOutlinedIcon sx={{ fontSize: '85px' }} />
                                     </div>
 
                                     {/* 👇 PHẢI CÓ flex-1 */}
                                     <div className="grid grid-cols-1 gap-8 flex-1 min-w-0">
                                         <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
-                                            <h1 className="w-[75px] whitespace-nowrap">
+                                            <span className="w-[75px] whitespace-nowrap">
                                                 Họ & Tên
-                                            </h1>
+                                            </span>
                                             <div className="border w-full h-full flex items-center">
                                                 kk
                                             </div>
                                         </div>
 
                                         <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
-                                            <h1 className="w-[75px] whitespace-nowrap">
+                                            <span className="w-[75px] whitespace-nowrap">
                                                 Nickname
-                                            </h1>
+                                            </span>
                                             <div className="border w-full h-full flex items-center">
                                                 kk
                                             </div>
@@ -81,9 +83,9 @@ const ProfilePage = () => {
 
                             <div className="w-full grid grid-cols-1 gap-8 px-[100px]">
                                 <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
-                                    <h1 className="w-[75px] whitespace-nowrap">
+                                    <span className="w-[75px] whitespace-nowrap">
                                         Ngày sinh
-                                    </h1>
+                                    </span>
                                     <div className="w-full h-full grid grid-cols-3 items-center gap-3">
                                         <div className="w-full h-full border-2">
 
@@ -99,9 +101,9 @@ const ProfilePage = () => {
                                 </div>
 
                                 <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
-                                    <h1 className="w-[75px] whitespace-nowrap">
+                                    <span className="w-[75px] whitespace-nowrap">
                                         Giới tính
-                                    </h1>
+                                    </span>
                                     <div className="border-2 w-full h-full flex items-center">
                                         kk
                                     </div>
@@ -109,9 +111,9 @@ const ProfilePage = () => {
                                 </div>
 
                                 <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
-                                    <h1 className="w-[75px] whitespace-nowrap">
+                                    <span className="w-[75px] whitespace-nowrap">
                                         Quốc tịch
-                                    </h1>
+                                    </span>
                                     <div className="border-2 w-full h-full flex items-center">
                                         kk
                                     </div>
@@ -130,17 +132,40 @@ const ProfilePage = () => {
                     </div>
 
                     <div className="col-span-4 px-4 py-3 border-l">
-                        <div className="w-full h-1/2 border-b">
-                            <h1 className="text-lg text-gray-500">
-                                Địa chỉ Email
-                            </h1>
+                        <div className="flex flex-col gap-10">
+                            <div className="w-full">
+                                <h1 className="text-lg text-gray-500">
+                                    Email
+                                </h1>
+
+                                <div className="w-full mt-7 border flex">
+                                    <span className="flex gap-2">
+                                        <EmailOutlinedIcon />
+                                        Địa chỉ Email
+                                    </span>
+                                    <button className="ml-auto border-2 border-blue-500 px-3 py-1 rounded-md text-sm font-medium text-blue-500 hover:text-blue-600">
+                                        Cập nhật
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div className="w-full">
+                                <h1 className="text-lg text-gray-500">
+                                    Bảo mật
+                                </h1>
+
+                                <div className="w-full mt-7 border flex">
+                                    <span className="flex gap-2">
+                                        <LockIcon />
+                                        Thiết lập mật khẩu
+                                    </span>
+                                    <button className="ml-auto border-2 border-blue-500 px-3 py-1 rounded-md text-sm font-medium text-blue-500 hover:text-blue-600">
+                                        Cập nhật
+                                    </button>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="w-full h-1/2 border-t pt-3">
-                            <h1 className="text-lg text-gray-500">
-                                Bảo mật
-                            </h1>
-                        </div>
                     </div>
                 </div>
             </div>
