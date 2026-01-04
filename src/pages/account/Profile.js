@@ -146,7 +146,7 @@ const ProfilePage = () => {
                                                 value={fullName}
                                                 onChange={(e) => setFullName(e.target.value)}
                                                 placeholder="Thêm họ tên"
-                                                className="w-full h-full border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
+                                                className="w-full h-full border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
                                             />
                                         </div>
 
@@ -159,7 +159,7 @@ const ProfilePage = () => {
                                                 value={nickname}
                                                 onChange={(e) => setNickname(e.target.value)}
                                                 placeholder="Thêm Nickname"
-                                                className="w-full h-full border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
+                                                className="w-full h-full border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
                                             />
                                         </div>
                                     </div>
@@ -291,7 +291,7 @@ const ProfilePage = () => {
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
                                                 placeholder="Nhập Email"
-                                                className="w-full h-[38px] border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
+                                                className="w-full h-[38px] border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
                                             />
 
                                             <div className="w-full flex items-center justify-center">
@@ -331,7 +331,7 @@ const ProfilePage = () => {
                                                 value={newPassword}
                                                 onChange={(e) => setNewPassword(e.target.value)}
                                                 placeholder="Nhập mật khẩu mới"
-                                                className="w-full h-[38px] border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
+                                                className="w-full h-[38px] border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
                                             />
 
                                             {/* Nhập lại mật khẩu */}
@@ -340,7 +340,7 @@ const ProfilePage = () => {
                                                 value={confirmPassword}
                                                 onChange={(e) => setConfirmPassword(e.target.value)}
                                                 placeholder="Nhập lại mật khẩu mới"
-                                                className="w-full h-[38px] border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
+                                                className="w-full h-[38px] border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
                                             />
 
                                             <div className="w-full flex items-center justify-center">
