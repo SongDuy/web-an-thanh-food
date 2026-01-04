@@ -5,6 +5,8 @@ import Footer from "../../components/Footer";
 import Search from "../../components/Search";
 import Notification from "../../components/Notification";
 
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+
 const ProfilePage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
@@ -49,8 +51,8 @@ const ProfilePage = () => {
                             <div className="w-full h-[120px] px-10 mt-5">
                                 <div className="w-full h-full flex items-center gap-5">
 
-                                    <div className="w-[120px] h-[120px] rounded-full border-4 border-blue-200 flex items-center justify-center">
-                                        kkkk
+                                    <div className="w-[120px] h-[120px] rounded-full border-4 border-blue-200 text-blue-400 flex items-center justify-center">
+                                        <PersonOutlineOutlinedIcon sx={{ fontSize: '85px' }}/>
                                     </div>
 
                                     {/* 👇 PHẢI CÓ flex-1 */}
