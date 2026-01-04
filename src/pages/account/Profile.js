@@ -58,8 +58,8 @@ const ProfilePage = () => {
     const selectStyles = {
         control: (base) => ({
             ...base,
-            minHeight: "35px",
-            height: "35px",
+            minHeight: "38px",
+            height: "38px",
             borderRadius: "6px",
             borderColor: "#d1d5db", // gray-300
             boxShadow: "none",
@@ -73,7 +73,7 @@ const ProfilePage = () => {
         }),
         indicatorsContainer: (base) => ({
             ...base,
-            height: "35px",
+            height: "38px",
         }),
         menuList: (base) => ({
             ...base,
@@ -127,7 +127,7 @@ const ProfilePage = () => {
                             </h1>
                         </div>
 
-                        <div className="w-full grid grid-cols-1 gap-[25px]">
+                        <div className="w-full grid grid-cols-1 gap-7">
                             <div className="w-full h-[120px] px-10 mt-5">
                                 <div className="w-full h-full flex items-center gap-5">
 
@@ -137,7 +137,7 @@ const ProfilePage = () => {
 
                                     {/* 👇 PHẢI CÓ flex-1 */}
                                     <div className="grid grid-cols-1 gap-8 flex-1 min-w-0">
-                                        <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
+                                        <div className="w-full h-[38px] grid grid-cols-[auto_1fr] items-center gap-14">
                                             <span className="w-[75px] whitespace-nowrap">
                                                 Họ & Tên
                                             </span>
@@ -150,7 +150,7 @@ const ProfilePage = () => {
                                             />
                                         </div>
 
-                                        <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
+                                        <div className="w-full h-[38px] grid grid-cols-[auto_1fr] items-center gap-14">
                                             <span className="w-[75px] whitespace-nowrap">
                                                 Nickname
                                             </span>
@@ -168,7 +168,7 @@ const ProfilePage = () => {
                             </div>
 
                             <div className="w-full grid grid-cols-1 px-[100px]">
-                                <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14 mb-[25px]">
+                                <div className="w-full h-[38px] grid grid-cols-[auto_1fr] items-center gap-14 mb-[25px]">
                                     <span className="w-[75px] whitespace-nowrap">
                                         Ngày sinh
                                     </span>
@@ -198,7 +198,7 @@ const ProfilePage = () => {
 
                                 </div>
 
-                                <div className="w-full h-[35px] grid grid-cols-[auto_1fr] items-center gap-14">
+                                <div className="w-full h-[38px] grid grid-cols-[auto_1fr] items-center gap-14">
                                     <span className="w-[75px] whitespace-nowrap">
                                         Giới tính
                                     </span>
@@ -236,7 +236,7 @@ const ProfilePage = () => {
 
                                 </div>
 
-                                <div className="w-full grid grid-cols-[auto_1fr] items-center gap-14 mt-[25px]">
+                                <div className="w-full h-[38px] grid grid-cols-[auto_1fr] items-center gap-14 mt-[22px]">
                                     <span className="w-[75px] whitespace-nowrap">
                                         Quốc tịch
                                     </span>
@@ -255,7 +255,7 @@ const ProfilePage = () => {
                                 </div>
                             </div>
 
-                            <div className="w-full flex items-center justify-center mt-2">
+                            <div className="w-full flex items-center justify-center mt-1.5">
                                 <button className="w-[200px] px-2 py-2 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
                                     Lưu thay đổi
                                 </button>
@@ -283,7 +283,7 @@ const ProfilePage = () => {
                                     </button>
                                 </div>
 
-                                <div className="w-full min-h-[110px] mt-3">
+                                <div className="w-full min-h-[112px] mt-3">
                                     {showEditEmail && (
                                         <div className="w-full flex flex-col gap-8">
                                             <input
@@ -291,7 +291,7 @@ const ProfilePage = () => {
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
                                                 placeholder="Nhập Email"
-                                                className="w-full h-[35px] border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
+                                                className="w-full h-[38px] border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
                                             />
 
                                             <div className="w-full flex items-center justify-center">
@@ -331,7 +331,7 @@ const ProfilePage = () => {
                                                 value={newPassword}
                                                 onChange={(e) => setNewPassword(e.target.value)}
                                                 placeholder="Nhập mật khẩu mới"
-                                                className="w-full h-[35px] border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
+                                                className="w-full h-[38px] border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
                                             />
 
                                             {/* Nhập lại mật khẩu */}
@@ -340,7 +340,7 @@ const ProfilePage = () => {
                                                 value={confirmPassword}
                                                 onChange={(e) => setConfirmPassword(e.target.value)}
                                                 placeholder="Nhập lại mật khẩu mới"
-                                                className="w-full h-[35px] border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
+                                                className="w-full h-[38px] border-2 rounded-md px-3 outline-none focus:ring-1 focus:ring-blue-400"
                                             />
 
                                             <div className="w-full flex items-center justify-center">
