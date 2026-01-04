@@ -45,7 +45,7 @@ const ProfilePage = () => {
                             </h1>
                         </div>
 
-                        <div className="w-full grid grid-cols-1 gap-10">
+                        <div className="w-full grid grid-cols-1 gap-10 px-10">
                             <div className="w-full h-[120px] flex items-center justify-center gap-10 mt-5">
                                 <div className="w-[120px] h-[120px] rounded-full border-4 border-blue-200 flex items-center justify-center">
                                     kkkk
@@ -56,20 +56,20 @@ const ProfilePage = () => {
                                 </div>
                             </div>
 
-                            <div className="w-full px-10">
+                            <div className="w-full">
                                 kk
                             </div>
 
-                            <div className="w-full px-10">
+                            <div className="w-full">
                                 kk
                             </div>
 
-                            <div className="w-full px-10">
+                            <div className="w-full">
                                 kk
                             </div>
 
                             <div className="w-full flex items-center justify-center">
-                                <button className="w-[200px] px-2 py-2 bg-blue-500 rounded-md text-white">
+                                <button className="w-[200px] px-2 py-2 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
                                     Lưu thay đổi
                                 </button>
                                
