@@ -38,12 +38,26 @@ const ProfilePage = () => {
                 </div>
 
                 <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded border">
-                    <div className="col-span-7 px-3 py-3 border-r">
-                        kk
+                    <div className="col-span-7 px-4 py-3 border-r">
+                        <div className="w-full">
+                            <h1 className="text-lg text-gray-500">
+                                Thông tin cá nhân
+                            </h1>
+                        </div>
                     </div>
 
-                    <div className="col-span-4 px-3 py-3 border-l">
-                        kk
+                    <div className="col-span-4 px-4 py-3 border-l">
+                        <div className="w-full h-1/2 border-b">
+                            <h1 className="text-lg text-gray-500">
+                                Địa chỉ Email
+                            </h1>
+                        </div>
+
+                        <div className="w-full h-1/2 border-t pt-3">
+                            <h1 className="text-lg text-gray-500">
+                                Bảo mật
+                            </h1>
+                        </div>
                     </div>
                 </div>
             </div>
