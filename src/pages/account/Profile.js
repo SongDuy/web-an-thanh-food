@@ -45,34 +45,56 @@ const ProfilePage = () => {
                             </h1>
                         </div>
 
-                        <div className="w-full grid grid-cols-1 gap-10 px-10">
-                            <div className="w-full h-[120px] flex items-center justify-center gap-10 mt-5">
-                                <div className="w-[120px] h-[120px] rounded-full border-4 border-blue-200 flex items-center justify-center">
-                                    kkkk
+                        <div className="w-full grid grid-cols-1 gap-10">
+                            <div className="w-full h-[120px] px-10 mt-5">
+                                <div className="w-full h-full flex items-center gap-10 border">
+                                    <div className="w-[120px] h-[120px] rounded-full border-4 border-blue-200 flex items-center justify-center">
+                                        kkkk
+                                    </div>
+                                    <div className="grid grid-cols-1 gap-8 border">
+                                        <div>
+                                            <h1>
+                                                kk
+                                            </h1>
+                                            <div>
+
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <h1>
+                                                kk
+                                            </h1>
+                                            <div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
 
-                                <div>
+                            </div>
+
+                            <div className="w-full grid grid-cols-1 gap-10 px-[100px]">
+                                <div className="w-full h-[40px] border">
+                                    kk
+                                </div>
+
+                                <div className="w-full h-[40px]">
+                                    kk
+                                </div>
+
+                                <div className="w-full h-[40px]">
                                     kk
                                 </div>
                             </div>
 
-                            <div className="w-full">
-                                kk
-                            </div>
-
-                            <div className="w-full">
-                                kk
-                            </div>
-
-                            <div className="w-full">
-                                kk
-                            </div>
 
                             <div className="w-full flex items-center justify-center">
                                 <button className="w-[200px] px-2 py-2 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
                                     Lưu thay đổi
                                 </button>
-                               
+
                             </div>
                         </div>
                     </div>
