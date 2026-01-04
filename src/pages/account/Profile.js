@@ -90,7 +90,7 @@ const ProfilePage = () => {
         ...base,
         width: "1.5px",              // 👉 dày hơn
         height: "18px",            // 👉 đều nhau
-        backgroundColor: "#d1d5db", // gray-400
+        backgroundColor: "#d1d5db", // gray-300
         margin: "0 6px",
         alignSelf: "center",
     }),
