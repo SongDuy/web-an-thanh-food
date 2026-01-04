@@ -76,15 +76,15 @@ const ProfilePage = () => {
                             </div>
 
                             <div className="w-full grid grid-cols-1 gap-10 px-[100px]">
-                                <div className="w-full h-[40px] border">
+                                <div className="w-full h-[40px] flex items-center border">
                                     kk
                                 </div>
 
-                                <div className="w-full h-[40px]">
+                                <div className="w-full h-[40px] flex items-center">
                                     kk
                                 </div>
 
-                                <div className="w-full h-[40px]">
+                                <div className="w-full h-[40px] flex items-center">
                                     kk
                                 </div>
                             </div>
