@@ -179,7 +179,7 @@ const ProfilePage = () => {
                                     <span className="w-[75px] whitespace-nowrap">
                                         Giới tính
                                     </span>
-                                    <div className="w-full h-full flex items-center px-3 gap-6">
+                                    <div className="w-full h-full flex items-center px-3 gap-8">
                                         <label className="flex items-center gap-2 cursor-pointer">
                                             <input
                                                 type="radio"
@@ -220,7 +220,7 @@ const ProfilePage = () => {
 
                                     <Select
                                         options={options}
-                                        placeholder="Chọn quốc gia"
+                                        placeholder="Quốc gia"
                                         menuPortalTarget={document.body}
                                         menuPosition="fixed"
                                         menuPlacement="auto"
@@ -229,8 +229,6 @@ const ProfilePage = () => {
                                         }}
                                         className="w-full"
                                     />
-
-
 
                                 </div>
                             </div>
