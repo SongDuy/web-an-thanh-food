@@ -37,12 +37,12 @@ const ProfilePage = () => {
                     </h1>
                 </div>
 
-                <div className="w-full h-[555px] grid grid-cols-10 gap-5 bg-white rounded border">
-                    <div className="col-span-7 bg-gray-100 px-3 py-3">
+                <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded border">
+                    <div className="col-span-7 px-3 py-3 border-r">
                         kk
                     </div>
 
-                    <div className="col-span-3 bg-gray-200 px-3 py-3">
+                    <div className="col-span-4 px-3 py-3 border-l">
                         kk
                     </div>
                 </div>
