@@ -44,6 +44,34 @@ const ProfilePage = () => {
                                 Thông tin cá nhân
                             </h1>
                         </div>
+
+                        <div className="w-full grid grid-cols-1 gap-10">
+                            <div className="w-full h-[120px] flex items-center justify-center gap-10 mt-5">
+                                <div className="w-[120px] h-[120px] rounded-full border-4 border-blue-200 flex items-center justify-center">
+                                    kkkk
+                                </div>
+
+                                <div>
+                                    kk
+                                </div>
+                            </div>
+
+                            <div className="w-full">
+                                kk
+                            </div>
+
+                            <div className="w-full">
+                                kk
+                            </div>
+
+                            <div className="w-full">
+                                kk
+                            </div>
+
+                            <div className="w-full">
+                                kk
+                            </div>
+                        </div>
                     </div>
 
                     <div className="col-span-4 px-4 py-3 border-l">
