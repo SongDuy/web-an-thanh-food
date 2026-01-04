@@ -13,6 +13,12 @@ const ProfilePage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
 
+    //Ẩn thay đổi Email
+    const [showEditEmail, setShowEditEmail] = useState(false);
+
+    //Ẩn thay đổi Mật khẩu
+    const [showEditPassword, setShowEditPassword] = useState(false);
+
     return (
         <>
             <Header
@@ -131,7 +137,7 @@ const ProfilePage = () => {
                     </div>
 
                     <div className="col-span-4 px-4 py-3 border-l">
-                        <div className="w-full h-full flex flex-col gap-8">
+                        <div className="w-full h-full flex flex-col gap-10">
                             <div className="w-full">
                                 <h1 className="text-lg text-gray-500">Email</h1>
 
@@ -141,21 +147,27 @@ const ProfilePage = () => {
                                         <span className="text-black">Địa chỉ Email</span>
                                     </div>
 
-                                    <button className="ml-auto h-8 px-3 rounded-md border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600">
+                                    <button
+                                        onClick={() => setShowEditEmail(prev => !prev)}
+                                        className="ml-auto h-8 px-3 rounded-md border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600"
+                                    >
                                         Cập nhật
                                     </button>
                                 </div>
-                                <div className="w-full flex flex-col gap-3 mt-3">
+
+                                {showEditEmail && (
+                                <div className="w-full flex flex-col gap-8 mt-3">
                                     <div className="w-full h-[35px] border">
 
                                     </div>
-                                    <div className="w-full h-[35px] flex items-center justify-center">
-                                        <button className="h-full px-3 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
-                                            Cập nhật
+                                    <div className="w-full flex items-center justify-center">
+                                        <button className="w-[200px] h-full px-3 py-2 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
+                                            Lưu thay đổi
                                         </button>
 
                                     </div>
                                 </div>
+                                 )}
                             </div>
 
                             <div className="w-full">
@@ -167,30 +179,33 @@ const ProfilePage = () => {
                                         <span className="text-black">Thiết lập mật khẩu</span>
                                     </div>
 
-                                    <button className="ml-auto h-8 px-3 rounded-md border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600">
+                                    <button
+                                        onClick={() => setShowEditPassword(prev => !prev)}
+                                        className="ml-auto h-8 px-3 rounded-md border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600"
+                                    >
                                         Cập nhật
                                     </button>
                                 </div>
 
-                                <div className="w-full flex flex-col gap-3 mt-3">
+                                {showEditPassword && (
+                                    <div className="w-full flex flex-col gap-8 mt-3">
 
-                                    <div className="w-full h-[50px]">
                                         <div className="w-full h-[35px] border">
 
                                         </div>
+
+                                        <div className="w-full h-[35px] border">
+
+                                        </div>
+
+                                        <div className="w-full flex items-center justify-center">
+                                            <button className="w-[200px] h-full px-3 py-2 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
+                                                Lưu thay đổi
+                                            </button>
+
+                                        </div>
                                     </div>
-
-                                    <div className="w-full h-[35px] border">
-
-                                    </div>
-
-                                    <div className="w-full h-[35px] flex items-center justify-center">
-                                        <button className="h-full px-3 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
-                                            Cập nhật
-                                        </button>
-
-                                    </div>
-                                </div>
+                                )}
                             </div>
 
                         </div>
