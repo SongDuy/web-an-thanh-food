@@ -308,7 +308,6 @@ const ProfilePage = () => {
                                         />
 
                                     </div>
-
                                 </div>
 
                                 <div className="w-full h-[38px] grid grid-cols-[auto_1fr] items-center gap-14">
