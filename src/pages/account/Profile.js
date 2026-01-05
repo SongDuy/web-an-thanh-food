@@ -148,7 +148,7 @@ const ProfilePage = () => {
                             </h1>
                         </div>
 
-                        <div className="w-full grid grid-cols-1 gap-7">
+                        <div className="w-full flex flex-col gap-7">
                             <div className="w-full h-[120px] px-10 mt-5">
                                 <div className="w-full h-full flex items-center gap-5">
 
@@ -188,7 +188,7 @@ const ProfilePage = () => {
                                 </div>
                             </div>
 
-                            <div className="w-full grid grid-cols-1 px-[100px]">
+                            <div className="w-full flex flex-col px-[100px]">
                                 <div className="w-full h-[38px] grid grid-cols-[auto_1fr] items-center gap-14 mb-[25px]">
                                     <span className="w-[75px] whitespace-nowrap">
                                         Ngày sinh

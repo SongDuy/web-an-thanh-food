@@ -37,17 +37,17 @@ const OrdersPage = () => {
                     </h1>
                 </div>
 
-                <div className="w-full min-h-[555px] rounded border">
+                <div className="w-full min-h-[555px] flex flex-col gap-3 rounded border">
                     <div className="w-full">
-
+                        kk
                     </div>
 
                     <div className="w-full">
-
+                        kk
                     </div>
 
                     <div className="w-full">
-
+                        kk
                     </div>
                 </div>
             </div>
