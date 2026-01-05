@@ -68,7 +68,7 @@ const OrdersPage = () => {
                         </ul>
                     </div>
 
-                    <div className="w-full h-[38px]">
+                    <div className="w-full h-[38px] grid grid-cols-1">
                         <input
                             type="text"
                             // value={email}
