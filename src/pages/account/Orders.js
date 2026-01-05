@@ -192,9 +192,7 @@ const OrdersPage = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
 
