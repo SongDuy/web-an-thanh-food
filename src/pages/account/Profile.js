@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import Select from "react-select";
 import countries from "i18n-iso-countries";
 import vi from "i18n-iso-countries/langs/vi.json";
@@ -11,6 +11,7 @@ import Notification from "../../components/Notification";
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import LockIcon from '@mui/icons-material/Lock';
+import ClearIcon from '@mui/icons-material/Clear';
 
 countries.registerLocale(vi);
 
@@ -55,51 +56,51 @@ const ProfilePage = () => {
         return { value: year, label: year };
     });
 
- const selectStyles = {
-    control: (base, state) => ({
-        ...base,
-        minHeight: "38px",
-        height: "38px",
-        borderRadius: "6px",
-        borderColor: state.isFocused ? "#60a5fa" : "#d1d5db",
-        boxShadow: "none",
-        ":hover": {
-            borderColor: "#60a5fa",
-        },
-        display: "flex",
-        alignItems: "center",
-    }),
+    const selectStyles = {
+        control: (base, state) => ({
+            ...base,
+            minHeight: "38px",
+            height: "38px",
+            borderRadius: "6px",
+            borderColor: state.isFocused ? "#60a5fa" : "#d1d5db",
+            boxShadow: "none",
+            ":hover": {
+                borderColor: "#60a5fa",
+            },
+            display: "flex",
+            alignItems: "center",
+        }),
 
-    valueContainer: (base) => ({
-        ...base,
-        height: "38px",
-        padding: "0 8px",
-        display: "flex",
-        alignItems: "center",
-    }),
+        valueContainer: (base) => ({
+            ...base,
+            height: "38px",
+            padding: "0 8px",
+            display: "flex",
+            alignItems: "center",
+        }),
 
-    indicatorsContainer: (base) => ({
-        ...base,
-        height: "38px",
-        display: "flex",
-        alignItems: "center",
-    }),
+        indicatorsContainer: (base) => ({
+            ...base,
+            height: "38px",
+            display: "flex",
+            alignItems: "center",
+        }),
 
-    /** ⭐ QUAN TRỌNG NHẤT */
-    indicatorSeparator: (base) => ({
-        ...base,
-        width: "1.5px",              // 👉 dày hơn
-        height: "18px",            // 👉 đều nhau
-        backgroundColor: "#d1d5db", // gray-300
-        margin: "0 6px",
-        alignSelf: "center",
-    }),
+        /** ⭐ QUAN TRỌNG NHẤT */
+        indicatorSeparator: (base) => ({
+            ...base,
+            width: "1.5px",              // 👉 dày hơn
+            height: "18px",            // 👉 đều nhau
+            backgroundColor: "#d1d5db", // gray-300
+            margin: "0 6px",
+            alignSelf: "center",
+        }),
 
-    menuList: (base) => ({
-        ...base,
-        maxHeight: "200px",
-    }),
-};
+        menuList: (base) => ({
+            ...base,
+            maxHeight: "200px",
+        }),
+    };
 
 
     // Chọn quốc gia 
@@ -111,6 +112,13 @@ const ProfilePage = () => {
             label: name, // 👉 Có dấu tiếng Việt
         }));
     }, []);
+
+    // chống bị nhảy ô nhập khi nhấn clear
+    const fullNameRef = useRef(null);
+    const nicknameRef = useRef(null);
+    const emailRef = useRef(null);
+    const newPasswordRef = useRef(null);
+    const confirmPasswordRef = useRef(null);
 
     return (
         <>
@@ -162,26 +170,60 @@ const ProfilePage = () => {
                                             <span className="w-[75px] whitespace-nowrap">
                                                 Họ & Tên
                                             </span>
-                                            <input
-                                                type="text"
-                                                value={fullName}
-                                                onChange={(e) => setFullName(e.target.value)}
-                                                placeholder="Thêm họ tên"
-                                                className="w-full h-full border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
-                                            />
+                                            <div className="relative w-full h-[38px]">
+                                                <input
+                                                    ref={fullNameRef}   // 👈 thiếu dòng này
+                                                    type="text"
+                                                    value={fullName}
+                                                    onChange={(e) => setFullName(e.target.value)}
+                                                    placeholder="Thêm họ tên"
+                                                    className="w-full h-full border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                                />
+
+                                                {fullName && (
+                                                    <button
+                                                        type="button"
+                                                        onMouseDown={(e) => {
+                                                            e.preventDefault(); // 🔥 ngăn mất focus
+                                                            setFullName("");
+                                                            fullNameRef.current?.focus(); // giữ focus
+                                                        }}
+                                                        className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                                    >
+                                                        <ClearIcon />
+                                                    </button>
+                                                )}
+                                            </div>
                                         </div>
 
                                         <div className="w-full h-[38px] grid grid-cols-[auto_1fr] items-center gap-14">
                                             <span className="w-[75px] whitespace-nowrap">
                                                 Nickname
                                             </span>
-                                            <input
-                                                type="text"
-                                                value={nickname}
-                                                onChange={(e) => setNickname(e.target.value)}
-                                                placeholder="Thêm Nickname"
-                                                className="w-full h-full border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
-                                            />
+                                            <div className="relative w-full h-[38px]">
+                                                <input
+                                                    ref={nicknameRef}   // 👈 thiếu dòng này
+                                                    type="text"
+                                                    value={nickname}
+                                                    onChange={(e) => setNickname(e.target.value)}
+                                                    placeholder="Thêm Nickname"
+                                                    className="w-full h-full border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                                />
+
+                                                {nickname && (
+                                                    <button
+                                                        type="button"
+                                                        onMouseDown={(e) => {
+                                                            e.preventDefault(); // 🔥 ngăn mất focus
+                                                            setNickname("");
+                                                            nicknameRef.current?.focus(); // giữ focus
+                                                        }}
+                                                        className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                                    >
+                                                        <ClearIcon />
+                                                    </button>
+                                                )}
+                                            </div>
                                         </div>
                                     </div>
 
@@ -307,14 +349,30 @@ const ProfilePage = () => {
                                 <div className="w-full min-h-[112px] mt-3">
                                     {showEditEmail && (
                                         <div className="w-full flex flex-col gap-8">
-                                            <input
-                                                type="email"
-                                                value={email}
-                                                onChange={(e) => setEmail(e.target.value)}
-                                                placeholder="Nhập Email"
-                                                className="w-full h-[38px] border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
-                                            />
+                                            <div className="relative w-full h-[38px]">
+                                                <input
+                                                    ref={emailRef}   // 👈 thiếu dòng này
+                                                    type="email"
+                                                    value={email}
+                                                    onChange={(e) => setEmail(e.target.value)}
+                                                    placeholder="Nhập Email"
+                                                    className="w-full h-[38px] border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                                />
 
+                                                {email && (
+                                                    <button
+                                                        type="button"
+                                                        onMouseDown={(e) => {
+                                                            e.preventDefault(); // 🔥 ngăn mất focus
+                                                            setEmail("");
+                                                            emailRef.current?.focus(); // giữ focus
+                                                        }}
+                                                        className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                                    >
+                                                        <ClearIcon />
+                                                    </button>
+                                                )}
+                                            </div>
                                             <div className="w-full flex items-center justify-center">
                                                 <button className="w-[200px] h-full px-3 py-2 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
                                                     Lưu thay đổi
@@ -346,23 +404,57 @@ const ProfilePage = () => {
                                 <div className="w-full min-h-[180px] mt-3">
                                     {showEditPassword && (
                                         <div className="w-full flex flex-col gap-8 ">
+
                                             {/* Mật khẩu mới */}
-                                            <input
-                                                type="password"
-                                                value={newPassword}
-                                                onChange={(e) => setNewPassword(e.target.value)}
-                                                placeholder="Nhập mật khẩu mới"
-                                                className="w-full h-[38px] border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
-                                            />
+                                            <div className="relative w-full h-[38px]">
+                                                <input
+                                                    ref={newPasswordRef}   // 👈 thiếu dòng này
+                                                    type="password"
+                                                    value={newPassword}
+                                                    onChange={(e) => setNewPassword(e.target.value)}
+                                                    placeholder="Nhập mật khẩu mới"
+                                                    className="w-full h-full border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                                />
+                                                {newPassword && (
+                                                    <button
+                                                        type="button"
+                                                        onMouseDown={(e) => {
+                                                            e.preventDefault(); // 🔥 ngăn mất focus
+                                                            setNewPassword("");
+                                                            newPasswordRef.current?.focus(); // giữ focus
+                                                        }}
+                                                        className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                                    >
+                                                        <ClearIcon />
+                                                    </button>
+                                                )}
+                                            </div>
 
                                             {/* Nhập lại mật khẩu */}
-                                            <input
-                                                type="password"
-                                                value={confirmPassword}
-                                                onChange={(e) => setConfirmPassword(e.target.value)}
-                                                placeholder="Nhập lại mật khẩu mới"
-                                                className="w-full h-[38px] border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
-                                            />
+                                            <div className="relative w-full h-[38px]">
+                                                <input
+                                                    ref={confirmPasswordRef}   // 👈 thiếu dòng này
+                                                    type="password"
+                                                    value={confirmPassword}
+                                                    onChange={(e) => setConfirmPassword(e.target.value)}
+                                                    placeholder="Nhập lại mật khẩu mới"
+                                                    className="w-full h-full border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                                />
+
+                                                {confirmPassword && (
+                                                    <button
+                                                        type="button"
+                                                        onMouseDown={(e) => {
+                                                            e.preventDefault(); // 🔥 ngăn mất focus
+                                                            setConfirmPassword("");
+                                                            confirmPasswordRef.current?.focus(); // giữ focus
+                                                        }}
+                                                        className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                                    >
+                                                        <ClearIcon />
+                                                    </button>
+                                                )}
+                                            </div>
 
                                             <div className="w-full flex items-center justify-center">
                                                 <button className="w-[200px] h-full px-3 py-2 text-md text-white font-medium shadow rounded bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">

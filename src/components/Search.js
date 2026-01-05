@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+
 import { Link } from "react-router-dom";
 
 import CloseIcon from "@mui/icons-material/Close";
 import StarIcon from "@mui/icons-material/Star";
 import InventoryIcon from "@mui/icons-material/Inventory";
+import ClearIcon from '@mui/icons-material/Clear';
 
 const products = [
     {
@@ -279,6 +281,10 @@ const Search = ({ onClose }) => {
         .sort((a, b) => b.stock - a.stock)
         .slice(0, 6);
 
+
+    // chống bị nhảy ô nhập khi clear
+    const inputRef = useRef(null);
+
     return (
         <div
             onClick={handleClose}   // 👈 click nền mờ sẽ tắt
@@ -304,15 +310,30 @@ const Search = ({ onClose }) => {
                 </div>
 
                 {/* Search input */}
-                <div className="mt-5">
+                <div className="relative w-full h-[38px] mt-5">
                     <input
+                        ref={inputRef}   // 👈 thiếu dòng này
                         autoFocus
                         value={keyword}
                         onChange={(e) => setKeyword(e.target.value)}
                         spellCheck={false}
-                        className="w-full h-[38px] px-3 border-2 border-gray-300 rounded-md shadow text-md transition-all duration-200 focus:outline-none focus:ring-0"
+                        className="w-full h-full px-3 border-2 border-gray-300 rounded-md shadow text-md transition-all duration-200 focus:outline-none focus:ring-0"
                         placeholder="Tìm sản phẩm..."
                     />
+
+                    {keyword && (
+                        <button
+                            type="button"
+                            onMouseDown={(e) => {
+                                e.preventDefault(); // 🔥 ngăn mất focus
+                                setKeyword("");
+                                inputRef.current?.focus(); // giữ focus
+                            }}
+                            className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                        >
+                            <ClearIcon />
+                        </button>
+                    )}
                 </div>
 
                 {/* Result list */}

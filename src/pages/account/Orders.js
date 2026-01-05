@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -23,8 +23,10 @@ const OrdersPage = () => {
     const [active, setActive] = useState(0);
 
     // Tìm đơn hàng
-    const [value, setValue] = useState("");
+    const [valueSearch, setValueSearch] = useState("");
 
+    // chống bị nhảy ô nhập khi clear
+    const inputRef = useRef(null);
     return (
         <>
             <Header
@@ -73,19 +75,24 @@ const OrdersPage = () => {
                         </ul>
                     </div>
 
-                    <div className="relative w-full">
+                    <div className="relative w-full h-[38px]">
                         <input
+                            ref={inputRef}   // 👈 thiếu dòng này
                             type="text"
-                            value={value}
-                            onChange={(e) => setValue(e.target.value)}
+                            value={valueSearch}
+                            onChange={(e) => setValueSearch(e.target.value)}
                             placeholder="Tìm đơn hàng theo Mã đơn hàng, Tên sản phẩm"
-                            className="w-full h-[38px] border-2 rounded-md px-2.5 pr-8 outline-none focus:ring-1 focus:ring-blue-400"
+                            className="w-full h-full border-2 rounded-md px-2.5 pr-8 outline-none focus:ring-1 focus:ring-blue-400"
                         />
 
-                        {value && (
+                        {valueSearch && (
                             <button
                                 type="button"
-                                onClick={() => setValue("")}
+                                onMouseDown={(e) => {
+                                    e.preventDefault(); // 🔥 ngăn mất focus
+                                    setValueSearch("");
+                                    inputRef.current?.focus(); // giữ focus
+                                }}
                                 className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
                             >
                                 <ClearIcon />
