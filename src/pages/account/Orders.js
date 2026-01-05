@@ -49,7 +49,7 @@ const OrdersPage = () => {
                 </div>
 
                 <div className="w-full min-h-[555px] flex flex-col gap-3">
-                    <div className="w-full h-[45px] flex items-center rounded-md border bg-white">
+                    <div className="w-full h-[45px] flex items-center rounded-t-md border bg-white">
                         <ul className="w-full h-full grid grid-cols-5 items-center justify-center">
                             {tabs.map((tab, index) => (
                                 <li
