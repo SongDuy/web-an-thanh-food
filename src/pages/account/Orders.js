@@ -112,7 +112,8 @@ const OrdersPage = () => {
                             <div className="w-full h-[120px] flex items-center border-t border-b">
 
                                 {/* Sản phẩm */}
-                                <div className="w-full flex gap-2">
+                                <div className="w-full grid grid-cols-[8fr_2fr] gap-2">
+
                                     <div className="w-full flex items-center gap-3">
                                         <div className="w-[100px] h-[100px] bg-gray-300 rounded overflow-hidden">
                                             <img
@@ -124,10 +125,16 @@ const OrdersPage = () => {
 
                                         <div className="w-full h-full mb-auto flex items-center">
                                             <div className="flex flex-col">
-                                                <h1 className="w-full h-[50px] text-md font-medium text-black line-clamp-2">
-                                                    Sữa Tiệt Trùng - Không Đường
-                                                    <span className="text-blue-700"> (4 hộp * 180 ml)</span>
-                                                </h1>
+                                                <div className="flex w-full h-[50px] text-md text-black font-medium items-center gap-1">
+                                                    <h1 className="flex-1 line-clamp-2 leading-snug">
+                                                        Sữa Tiệt Trùng - Không Đường
+                                                    </h1>
+
+                                                    <span className="text-blue-700 whitespace-nowrap">
+                                                        (4 hộp * 180 ml)
+                                                    </span>
+                                                </div>
+
                                                 <span className=" w-full text-sm font-medium text-blue-700">
                                                     HSD: 12 tháng
                                                 </span>
