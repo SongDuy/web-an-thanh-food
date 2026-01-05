@@ -61,7 +61,7 @@ const OrdersPage = () => {
                             {tabs.map((tab, index) => (
                                 <li
                                     key={index}
-                                    className={`w-full h-full border-b-2 ${active === index ? "border-blue-500" : "border-transparent"
+                                    className={`w-full h-full border-b-2 ${active === index ? "border-blue-500 text-blue-700" : "border-transparent text-gray-500"
                                         }`}
                                 >
                                     <button
@@ -101,9 +101,20 @@ const OrdersPage = () => {
                     </div>
 
                     <div className="w-full grid grid-cols-1 gap-3">
-                        <div className="w-full h-[260px] flex px-3 py-3 rounded-md border bg-white">
-                            kk
+                        <div className="w-full h-[260px] flex flex-col px-4 py-3 rounded-md border bg-white">
+                            <div className="w-full h-[38px] text-gray-500 font-medium border-b">
+                                Giao hàng thành công
+                            </div>
+
+                            <div>
+
+                            </div>
+
+                            <div className="mt-auto w-full h-[80px] border-t">
+                                kk
+                            </div>
                         </div>
+
                         <div className="w-full h-[260px] flex px-3 py-3 rounded-md border bg-white">
                             kk
                         </div>
