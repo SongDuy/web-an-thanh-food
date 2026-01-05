@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import { Link } from "react-router-dom";
+
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Search from "../../components/Search";
@@ -198,9 +200,11 @@ const CartPage = () => {
                   <h1 className="text-lg text-gray-500">
                     Giao tới
                   </h1>
-                  <button className="ml-auto text-sm font-medium text-blue-500 hover:text-blue-600">
+                  <Link to="/account/address"
+                    className="ml-auto text-sm font-medium text-blue-500 hover:text-blue-600"
+                  >
                     Thay đổi
-                  </button>
+                  </Link>
                 </div>
 
                 <div className="w-full flex flex-col items-center gap-3">
