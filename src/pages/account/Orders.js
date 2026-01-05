@@ -101,16 +101,16 @@ const OrdersPage = () => {
                     </div>
 
                     <div className="w-full grid grid-cols-1 gap-3">
-                        <div className="w-full h-[260px] flex flex-col px-4 py-3 rounded-md border bg-white">
-                            <div className="w-full h-[38px] text-gray-500 font-medium border-b">
+                        <div className="w-full h-[260px] flex flex-col gap-3 px-4 py-3 rounded-md border bg-white">
+                            <div className="w-full text-gray-500 font-medium">
                                 Giao hàng thành công
                             </div>
 
-                            <div>
+                            <div className="w-full h-[120px] border-t border-b">
 
                             </div>
 
-                            <div className="mt-auto w-full h-[80px] border-t">
+                            <div className="mt-auto w-full h-[75px]">
                                 kk
                             </div>
                         </div>
@@ -118,18 +118,7 @@ const OrdersPage = () => {
                         <div className="w-full h-[260px] flex px-3 py-3 rounded-md border bg-white">
                             kk
                         </div>
-                        <div className="w-full h-[260px] flex px-3 py-3 rounded-md border bg-white">
-                            kk
-                        </div>
-                        <div className="w-full h-[260px] flex px-3 py-3 rounded-md border bg-white">
-                            kk
-                        </div>
-                        <div className="w-full h-[260px] flex px-3 py-3 rounded-md border bg-white">
-                            kk
-                        </div>
-                        <div className="w-full h-[260px] flex px-3 py-3 rounded-md border bg-white">
-                            kk
-                        </div>
+                       
                     </div>
 
                 </div>
