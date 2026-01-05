@@ -54,7 +54,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
             <NavLink
               to="/luong-thuc"
               className={({ isActive }) =>
-                `uppercase text-black text-lg font-bold transition
+                `uppercase text-black text-lg font-bold transition-all duration-300 ease-in-out
                 ${isActive ? "text-yellow-500 text-shadow-black" : "hover:text-yellow-500 hover:text-shadow-black"}`
               }
             >
@@ -65,7 +65,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
             <NavLink
               to="/thuc-pham"
               className={({ isActive }) =>
-                `uppercase text-black text-lg font-bold transition
+                `uppercase text-black text-lg font-bold transition-all duration-300 ease-in-out
                 ${isActive ? "text-yellow-500 text-shadow-black" : "hover:text-yellow-500 hover:text-shadow-black"}`
               }
             >
@@ -76,7 +76,7 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
             <NavLink
               to="/bang-xep-hang"
               className={({ isActive }) =>
-                `uppercase text-black text-lg font-bold transition
+                `uppercase text-black text-lg font-bold transition-all duration-300 ease-in-out
                 ${isActive ? "text-yellow-500 text-shadow-black" : "hover:text-yellow-500 hover:text-shadow-black"}`
               }
             >
