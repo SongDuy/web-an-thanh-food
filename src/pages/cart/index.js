@@ -139,14 +139,14 @@ const CartPage = () => {
                         <h1 className="w-full h-[50px] text-md font-medium text-black line-clamp-2">
                           Sữa Tiệt Trùng - Không Đường
                         </h1>
-                        <span className=" w-full text-sm font-medium text-red-300">
+                        <span className=" w-full text-sm font-medium text-blue-700">
                           HSD: 12 tháng
                         </span>
                         <div className="w-full">
-                          <span className="text-sm font-medium text-red-300 pr-2 border-r border-gray-300">
+                          <span className="text-sm font-medium text-blue-700 pr-2 border-r border-gray-300">
                             Vinamilk
                           </span>
-                          <span className="text-sm font-medium text-red-300 pl-2 border-l border-gray-300">
+                          <span className="text-sm font-medium text-blue-700 pl-2 border-l border-gray-300">
                             Việt Nam
                           </span>
                         </div>
@@ -155,7 +155,7 @@ const CartPage = () => {
                     </div>
                   </div>
 
-                  <div className="w-full flex items-center justify-center text-gray-500 font-medium">
+                  <div className="w-full flex items-center justify-center text-blue-700 font-medium">
                     3 túi * 1 kg
                   </div>
 

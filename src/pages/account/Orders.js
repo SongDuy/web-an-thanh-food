@@ -110,8 +110,46 @@ const OrdersPage = () => {
                             </div>
 
                             <div className="w-full h-[120px] flex items-center border-t border-b">
-                                <div className="w-[100px] h-[100px] rounded bg-gray-300">
 
+                                {/* Sản phẩm */}
+                                <div className="w-full flex gap-2">
+                                    <div className="w-full flex items-center gap-3">
+                                        <div className="w-[100px] h-[100px] bg-gray-300 rounded overflow-hidden">
+                                            <img
+                                                src="https://product.hstatic.net/1000141988/product/sua_tuoi_tiet_trung_co_duong_vinamilk_viet_nam__1l__2f553e41e7f54abba37116456aa94db3_grande.png"
+                                                alt="Sữa tươi Vinamilk 1L"
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+
+                                        <div className="w-full h-full mb-auto flex items-center">
+                                            <div className="flex flex-col">
+                                                <h1 className="w-full h-[50px] text-md font-medium text-black line-clamp-2">
+                                                    Sữa Tiệt Trùng - Không Đường 
+                                                    <span className="text-blue-700"> (4 hộp * 180 ml)</span>
+                                                </h1>
+                                                <span className=" w-full text-sm font-medium text-blue-700">
+                                                    HSD: 12 tháng
+                                                </span>
+                                                <div className="w-full">
+                                                    <span className="text-sm font-medium text-blue-700 pr-2 border-r border-gray-300">
+                                                        Vinamilk
+                                                    </span>
+                                                    <span className="text-sm font-medium text-blue-700 pl-2 border-l border-gray-300">
+                                                        Việt Nam
+                                                    </span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="ml-auto flex items-center justify-center text-lg font-medium text-black">
+                                        0
+                                        <span className="text-sm ml-0.5 underline underline-offset-2 relative -top-1.5">
+                                            đ
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
 
@@ -121,7 +159,7 @@ const OrdersPage = () => {
                                         <h1 className="text-md text-black font-medium">
                                             Tổng tiền thanh toán:
                                         </h1>
-                                        <div className="ml-auto text-lg flex items-center justify-center font-medium text-red-500">
+                                        <div className="ml-auto text-lg flex items-center justify-center font-medium text-black">
                                             0
                                             <span className="ml-0.5 text-sm underline underline-offset-2 relative -top-1.5">
                                                 đ
@@ -130,10 +168,10 @@ const OrdersPage = () => {
                                     </div>
 
                                     <div className="w-full flex items-center gap-2">
-                                        <button className="px-3 py-1 rounded border-2 border-blue-400 font-medium text-blue-500 hover:text-blue-600">
+                                        <button className="w-[95px] px-3 py-1 rounded border-2 border-blue-400 font-medium text-blue-500 hover:text-blue-600">
                                             Đánh giá
                                         </button>
-                                        <button className="px-3 py-1 rounded border-2 border-blue-400 font-medium text-blue-500 hover:text-blue-600">
+                                        <button className="w-[115px] px-3 py-1 rounded border-2 border-blue-400 font-medium text-blue-500 hover:text-blue-600">
                                             Xem chi tiết
                                         </button>
                                     </div>
