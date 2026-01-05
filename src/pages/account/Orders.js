@@ -102,20 +102,20 @@ const OrdersPage = () => {
 
                     <div className="w-full grid grid-cols-1 gap-3">
                         {/* Đơn hàng */}
-                        <div className="w-full h-[260px] flex flex-col gap-3 px-4 py-3 rounded-md border bg-white">
-                            <div className="w-full">
+                        <div className="w-full h-[260px] flex flex-col px-4 py-3 rounded-md border bg-white">
+                            <div className="w-full mb-3">
                                 <span className="text-gray-500 font-medium">
                                     Giao hàng thành công
                                 </span>
                             </div>
 
-                            <div className="w-full h-[110px] flex items-center border-t border-b">
+                            <div className="w-full h-[120px] flex items-center border-t border-b">
                                 <div className="w-[100px] h-[100px] rounded bg-gray-300">
 
                                 </div>
                             </div>
 
-                            <div className="w-full flex">
+                            <div className="w-full flex mt-2">
                                 <div className="ml-auto flex flex-col gap-2">
                                     <div className="w-full flex items-center gap-2">
                                         <h1 className="text-md text-black font-medium">
