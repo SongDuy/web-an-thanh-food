@@ -73,7 +73,7 @@ const OrdersPage = () => {
                             type="text"
                             // value={email}
                             // onChange={(e) => setEmail(e.target.value)}
-                            placeholder="Nhập đơn hàng"
+                            placeholder="Tìm đơn hàng theo Mã đơn hàng, Tên sản phẩm"
                             className="w-full h-[38px] border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
                         />
                     </div>
