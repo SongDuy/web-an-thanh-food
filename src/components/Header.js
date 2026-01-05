@@ -54,8 +54,8 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
             <NavLink
               to="/luong-thuc"
               className={({ isActive }) =>
-                `uppercase text-lg font-bold transition
-                ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`
+                `uppercase text-black text-lg font-bold transition
+                ${isActive ? "text-blue-700" : "hover:text-blue-700"}`
               }
             >
               Lương Thực
@@ -65,8 +65,8 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
             <NavLink
               to="/thuc-pham"
               className={({ isActive }) =>
-                `uppercase text-lg font-bold transition
-                ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`
+                `uppercase text-black text-lg font-bold transition
+                ${isActive ? "text-blue-700" : "hover:text-blue-700"}`
               }
             >
               Thực Phẩm
@@ -76,8 +76,8 @@ const Header = ({ onOpenSearch, onOpenNotify }) => {
             <NavLink
               to="/bang-xep-hang"
               className={({ isActive }) =>
-                `uppercase text-lg font-bold transition
-                ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`
+                `uppercase text-black text-lg font-bold transition
+                ${isActive ? "text-blue-700" : "hover:text-blue-700"}`
               }
             >
               Bảng Xếp Hạng
