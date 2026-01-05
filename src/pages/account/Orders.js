@@ -125,7 +125,7 @@ const OrdersPage = () => {
                                         <div className="w-full h-full mb-auto flex items-center">
                                             <div className="flex flex-col">
                                                 <h1 className="w-full h-[50px] text-md font-medium text-black line-clamp-2">
-                                                    Sữa Tiệt Trùng - Không Đường 
+                                                    Sữa Tiệt Trùng - Không Đường
                                                     <span className="text-blue-700"> (4 hộp * 180 ml)</span>
                                                 </h1>
                                                 <span className=" w-full text-sm font-medium text-blue-700">
@@ -168,19 +168,28 @@ const OrdersPage = () => {
                                     </div>
 
                                     <div className="w-full flex items-center gap-2">
-                                        <button className="w-[95px] px-3 py-1 rounded border-2 border-blue-400 font-medium text-blue-500 hover:text-blue-600">
-                                            Đánh giá
-                                        </button>
                                         <button className="w-[115px] px-3 py-1 rounded border-2 border-blue-400 font-medium text-blue-500 hover:text-blue-600">
                                             Xem chi tiết
                                         </button>
+
+                                        <button className="w-[95px] px-3 py-1 rounded border-2 border-blue-400 font-medium text-blue-500 hover:text-blue-600">
+                                            Đánh giá
+                                        </button>
+
+                                        {/* <button className="w-[95px] px-3 py-1 rounded border-2 border-blue-400 font-medium text-blue-500 hover:text-blue-600">
+                                            Mua lại
+                                        </button>
+
+                                        <button className="w-[95px] px-3 py-1 rounded border-2 border-blue-400 font-medium text-blue-500 hover:text-blue-600">
+                                            Hủy đơn
+                                        </button>
+
+                                        <button className="w-[95px] px-3 py-1 rounded border-2 border-blue-400 font-medium text-blue-500 hover:text-blue-600">
+                                            Đã nhận
+                                        </button> */}
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className="w-full h-[260px] flex px-3 py-3 rounded-md border bg-white">
-                            kk
                         </div>
 
                     </div>
