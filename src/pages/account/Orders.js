@@ -36,9 +36,19 @@ const OrdersPage = () => {
                         Đơn Hàng Của Tôi
                     </h1>
                 </div>
-                
-                <div className="w-full h-[555px] bg-white rounded border">
-                    kk
+
+                <div className="w-full min-h-[555px] rounded border">
+                    <div className="w-full">
+
+                    </div>
+
+                    <div className="w-full">
+
+                    </div>
+
+                    <div className="w-full">
+
+                    </div>
                 </div>
             </div>
 
