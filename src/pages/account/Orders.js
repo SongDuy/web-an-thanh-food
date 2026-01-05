@@ -38,8 +38,11 @@ const OrdersPage = () => {
                 </div>
 
                 <div className="w-full min-h-[555px] flex flex-col gap-3 rounded border">
-                    <div className="w-full">
-                        kk
+                    <div className="w-full h-[45px] flex items-center px-3 rounded bg-white">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
 
                     <div className="w-full">
