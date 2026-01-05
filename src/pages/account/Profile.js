@@ -140,7 +140,7 @@ const ProfilePage = () => {
                     </h1>
                 </div>
 
-                <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded border">
+                <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded-md border">
                     <div className="col-span-7 px-4 py-3 border-r">
                         <div className="w-full">
                             <h1 className="text-lg text-gray-500">
@@ -298,7 +298,7 @@ const ProfilePage = () => {
 
                                     <button
                                         onClick={() => setShowEditEmail(v => !v)}
-                                        className="ml-auto h-8 px-3 rounded-md border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600"
+                                        className="ml-auto h-8 px-3 rounded border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600"
                                     >
                                         Cập nhật
                                     </button>
@@ -337,7 +337,7 @@ const ProfilePage = () => {
 
                                     <button
                                         onClick={() => setShowEditPassword(v => !v)}
-                                        className="ml-auto h-8 px-3 rounded-md border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600"
+                                        className="ml-auto h-8 px-3 rounded border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600"
                                     >
                                         Cập nhật
                                     </button>

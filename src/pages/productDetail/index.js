@@ -88,7 +88,7 @@ const ProductDetailPage = () => {
                     </span>
                 </div>
 
-                <div className="w-full h-[600px] px-[25px] py-[25px] border rounded bg-white grid grid-cols-5 gap-5">
+                <div className="w-full h-[600px] px-[25px] py-[25px] border rounded-md bg-white grid grid-cols-5 gap-5">
                     {/* 1/3 */}
                     <div className="col-span-2 bg-white">
                         <div className="w-full h-full grid grid-cols-1 gap-3">
@@ -234,7 +234,7 @@ const ProductDetailPage = () => {
                     </div>
                 </div>
 
-                <div className="w-full h-full mt-[15px] rounded border bg-white">
+                <div className="w-full h-full mt-[15px] rounded-md border bg-white">
                     {/* Thông tin mô tả của sản phẩm */}
                     <div className="w-full h-[370px] px-[25px] py-[25px]">
                         {/* Header */}
@@ -333,7 +333,7 @@ const ProductDetailPage = () => {
 
                 </div>
 
-                <div className="w-full h-[650px] mt-[15px] rounded border bg-white">
+                <div className="w-full h-[650px] mt-[15px] rounded-md border bg-white">
                     <div className=" w-full h-[310px] px-[25px] py-[25px]">
                         <div className="w-full h-[50px] px-3 bg-white rounded">
                             <h1 className="w-full h-full flex items-center text-[21px] line-clamp-1 uppercase  border-b-2">

@@ -310,7 +310,7 @@ const Search = ({ onClose }) => {
                         value={keyword}
                         onChange={(e) => setKeyword(e.target.value)}
                         spellCheck={false}
-                        className="w-full h-[38px] px-3 border-2 border-gray-300 rounded-lg shadow text-md transition-all duration-200 focus:outline-none focus:ring-0"
+                        className="w-full h-[38px] px-3 border-2 border-gray-300 rounded-md shadow text-md transition-all duration-200 focus:outline-none focus:ring-0"
                         placeholder="Tìm sản phẩm..."
                     />
                 </div>
@@ -337,7 +337,7 @@ const Search = ({ onClose }) => {
                             onClick={handleClose}
                         >
                             <div
-                                className="flex items-center gap-3 p-2 rounded-lg border shadow hover:bg-red-50 cursor-pointer transition"
+                                className="flex items-center gap-3 p-2 rounded border shadow hover:bg-red-50 cursor-pointer transition"
                             >
                                 {/* Thumbnail */}
                                 <div className="relative w-[70px] h-[70px] overflow-hidden rounded flex-shrink-0">

@@ -38,7 +38,7 @@ const OrdersPage = () => {
                 </div>
 
                 <div className="w-full min-h-[555px] flex flex-col gap-3">
-                    <div className="w-full h-[45px] flex items-center px-3 rounded border bg-white">
+                    <div className="w-full h-[45px] flex items-center px-3 rounded-md border bg-white">
                        <ul className="w-full h-full">
                         <li></li>
                         <li></li>
@@ -47,11 +47,11 @@ const OrdersPage = () => {
                        </ul>
                     </div>
 
-                    <div className="w-full h-[38px] flex items-center px-3 rounded border bg-white">
+                    <div className="w-full h-[38px] flex items-center px-3 rounded-md border bg-white">
                         kk
                     </div>
 
-                    <div className="w-full h-[260px] flex px-3 py-3 rounded border bg-white">
+                    <div className="w-full h-[260px] flex px-3 py-3 rounded-md border bg-white">
                         kk
                     </div>
                 </div>
