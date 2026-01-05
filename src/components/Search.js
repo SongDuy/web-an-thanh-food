@@ -317,7 +317,7 @@ const Search = ({ onClose }) => {
                         value={keyword}
                         onChange={(e) => setKeyword(e.target.value)}
                         spellCheck={false}
-                        className="w-full h-full px-3 border-2 border-gray-300 rounded-md shadow text-md transition-all duration-200 focus:outline-none focus:ring-0"
+                        className="w-full h-full border rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
                         placeholder="Tìm sản phẩm..."
                     />
 

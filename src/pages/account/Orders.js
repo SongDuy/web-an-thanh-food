@@ -82,7 +82,7 @@ const OrdersPage = () => {
                             value={valueSearch}
                             onChange={(e) => setValueSearch(e.target.value)}
                             placeholder="Tìm đơn hàng theo Mã đơn hàng, Tên sản phẩm"
-                            className="w-full h-full border-2 rounded-md px-2.5 pr-8 outline-none focus:ring-1 focus:ring-blue-400"
+                            className="w-full h-full border rounded-md px-2.5 pr-8 outline-none focus:ring-1 focus:ring-blue-400"
                         />
 
                         {valueSearch && (

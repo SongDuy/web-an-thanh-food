@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import Select from "react-select";
 import countries from "i18n-iso-countries";
 import vi from "i18n-iso-countries/langs/vi.json";
@@ -41,10 +41,24 @@ const ProfilePage = () => {
     const [confirmPassword, setConfirmPassword] = useState("");
 
     // Chọn Ngày tháng năm
-    const dayOptions = Array.from({ length: 31 }, (_, i) => ({
-        value: i + 1,
-        label: i + 1,
-    }));
+    const [day, setDay] = useState(null);
+    const [month, setMonth] = useState(null);
+    const [year, setYear] = useState(null);
+
+    // Hàm xử lý năm nhuận
+    const getDaysInMonth = (month, year) => {
+        if (!month || !year) return 31;
+        return new Date(year, month, 0).getDate();
+    };
+
+    const dayOptions = useMemo(() => {
+        const days = getDaysInMonth(month?.value, year?.value);
+
+        return Array.from({ length: days }, (_, i) => ({
+            value: i + 1,
+            label: i + 1,
+        }));
+    }, [month, year]);
 
     const monthOptions = Array.from({ length: 12 }, (_, i) => ({
         value: i + 1,
@@ -56,12 +70,26 @@ const ProfilePage = () => {
         return { value: year, label: year };
     });
 
+
+
+    //RESET ngày nếu đổi tháng / năm mà ngày cũ không hợp lệ
+    useEffect(() => {
+        if (day && month && year) {
+            const maxDay = getDaysInMonth(month.value, year.value);
+            if (day.value > maxDay) {
+                setDay(null);
+            }
+        }
+    }, [day, month, year]);
+
+    // Chỉnh css cho ô cuộn
     const selectStyles = {
         control: (base, state) => ({
             ...base,
             minHeight: "38px",
             height: "38px",
             borderRadius: "6px",
+            borderWidth: "1px",
             borderColor: state.isFocused ? "#60a5fa" : "#d1d5db",
             boxShadow: "none",
             ":hover": {
@@ -79,6 +107,12 @@ const ProfilePage = () => {
             alignItems: "center",
         }),
 
+        /** ⭐ FIX PLACEHOLDER */
+        placeholder: (base, state) => ({
+            ...base,
+            display: state.isFocused ? "none" : "block", // 🔥 biến mất khi focus
+        }),
+
         indicatorsContainer: (base) => ({
             ...base,
             height: "38px",
@@ -86,21 +120,21 @@ const ProfilePage = () => {
             alignItems: "center",
         }),
 
-        /** ⭐ QUAN TRỌNG NHẤT */
         indicatorSeparator: (base) => ({
             ...base,
-            width: "1.5px",              // 👉 dày hơn
-            height: "18px",            // 👉 đều nhau
-            backgroundColor: "#d1d5db", // gray-300
+            width: "1.5px",
+            height: "18px",
+            backgroundColor: "#d1d5db",
             margin: "0 6px",
             alignSelf: "center",
         }),
 
         menuList: (base) => ({
             ...base,
-            maxHeight: "200px",
+            maxHeight: "175px",
         }),
     };
+
 
 
     // Chọn quốc gia 
@@ -177,7 +211,7 @@ const ProfilePage = () => {
                                                     value={fullName}
                                                     onChange={(e) => setFullName(e.target.value)}
                                                     placeholder="Thêm họ tên"
-                                                    className="w-full h-full border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                                    className="w-full h-full border rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
                                                 />
 
                                                 {fullName && (
@@ -207,7 +241,7 @@ const ProfilePage = () => {
                                                     value={nickname}
                                                     onChange={(e) => setNickname(e.target.value)}
                                                     placeholder="Thêm Nickname"
-                                                    className="w-full h-full border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                                    className="w-full h-full border rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
                                                 />
 
                                                 {nickname && (
@@ -241,6 +275,9 @@ const ProfilePage = () => {
                                         <Select
                                             options={dayOptions}
                                             placeholder="Ngày"
+                                            value={day}
+                                            onChange={setDay}
+                                            isDisabled={!year || !month}
                                             styles={selectStyles}
                                         />
 
@@ -248,6 +285,12 @@ const ProfilePage = () => {
                                         <Select
                                             options={monthOptions}
                                             placeholder="Tháng"
+                                            value={month}
+                                            onChange={(m) => {
+                                                setMonth(m);
+                                                setDay(null); // reset ngày khi đổi tháng
+                                            }}
+                                            isDisabled={!year}
                                             styles={selectStyles}
                                         />
 
@@ -255,8 +298,15 @@ const ProfilePage = () => {
                                         <Select
                                             options={yearOptions}
                                             placeholder="Năm"
+                                            value={year}
+                                            onChange={(y) => {
+                                                setYear(y);
+                                                setMonth(null);
+                                                setDay(null);
+                                            }}
                                             styles={selectStyles}
                                         />
+
                                     </div>
 
                                 </div>
@@ -311,6 +361,7 @@ const ProfilePage = () => {
                                         menuPosition="fixed"
                                         menuPlacement="auto"
                                         styles={{
+                                            ...selectStyles, // ⭐ QUAN TRỌNG
                                             menuPortal: (base) => ({ ...base, zIndex: 9999 }),
                                         }}
                                         className="w-full h-full"
@@ -356,7 +407,7 @@ const ProfilePage = () => {
                                                     value={email}
                                                     onChange={(e) => setEmail(e.target.value)}
                                                     placeholder="Nhập Email"
-                                                    className="w-full h-[38px] border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                                    className="w-full h-[38px] border rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
                                                 />
 
                                                 {email && (
@@ -413,7 +464,7 @@ const ProfilePage = () => {
                                                     value={newPassword}
                                                     onChange={(e) => setNewPassword(e.target.value)}
                                                     placeholder="Nhập mật khẩu mới"
-                                                    className="w-full h-full border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                                    className="w-full h-full border rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
                                                 />
                                                 {newPassword && (
                                                     <button
@@ -438,7 +489,7 @@ const ProfilePage = () => {
                                                     value={confirmPassword}
                                                     onChange={(e) => setConfirmPassword(e.target.value)}
                                                     placeholder="Nhập lại mật khẩu mới"
-                                                    className="w-full h-full border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                                    className="w-full h-full border rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
                                                 />
 
                                                 {confirmPassword && (
