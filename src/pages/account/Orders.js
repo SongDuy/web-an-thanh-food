@@ -69,7 +69,13 @@ const OrdersPage = () => {
                     </div>
 
                     <div className="w-full h-[38px] flex items-center px-3 rounded-md border bg-white">
-                        kk
+                        <input
+                            type="text"
+                            // value={email}
+                            // onChange={(e) => setEmail(e.target.value)}
+                            placeholder="Nhập đơn hàng"
+                            className="w-full h-[38px] border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                        />
                     </div>
 
                     <div className="w-full grid grid-cols-1 gap-3">
