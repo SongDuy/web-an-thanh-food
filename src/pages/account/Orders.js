@@ -101,18 +101,42 @@ const OrdersPage = () => {
                     </div>
 
                     <div className="w-full grid grid-cols-1 gap-3">
+                        {/* Đơn hàng */}
                         <div className="w-full h-[260px] flex flex-col gap-3 px-4 py-3 rounded-md border bg-white">
-                            <div className="w-full text-gray-500 font-medium">
-                                Giao hàng thành công
+                            <div className="w-full">
+                                <span className="text-gray-500 font-medium">
+                                    Giao hàng thành công
+                                </span>
                             </div>
 
-                            <div className="w-full h-[120px] border-t border-b">
+                            <div className="w-full h-[110px] flex items-center border-t border-b">
+                                <div className="w-[100px] h-[100px] rounded bg-gray-300">
 
+                                </div>
                             </div>
 
                             <div className="w-full flex">
-                                <div className="ml-auto">
-                                    kk
+                                <div className="ml-auto flex flex-col gap-2">
+                                    <div className="w-full flex items-center gap-2">
+                                        <h1 className="text-md text-black font-medium">
+                                            Tổng tiền thanh toán:
+                                        </h1>
+                                        <div className="ml-auto text-lg flex items-center justify-center font-medium text-red-500">
+                                            0
+                                            <span className="ml-0.5 text-sm underline underline-offset-2 relative -top-1.5">
+                                                đ
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div className="w-full flex items-center gap-2">
+                                        <button className="px-3 py-1 rounded border-2 border-blue-400 font-medium text-blue-500 hover:text-blue-600">
+                                            Đánh giá
+                                        </button>
+                                        <button className="px-3 py-1 rounded border-2 border-blue-400 font-medium text-blue-500 hover:text-blue-600">
+                                            Xem chi tiết
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
