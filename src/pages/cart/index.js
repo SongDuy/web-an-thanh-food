@@ -307,7 +307,7 @@ const CartPage = () => {
 
                   <div className="w-full flex items-center border-t-2 pt-2">
                     <h1 className="text-md text-black font-medium">
-                      Tổng tiền thanh toán
+                      Tổng tiền thanh toán:
                     </h1>
                     <div className="ml-auto text-lg flex items-center justify-center font-medium text-red-500">
                       0

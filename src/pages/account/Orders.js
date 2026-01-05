@@ -144,7 +144,7 @@ const OrdersPage = () => {
                                         </div>
                                     </div>
 
-                                    <div className="ml-auto flex items-center justify-center text-lg font-medium text-red-500">
+                                    <div className="ml-auto flex items-center justify-center text-lg font-medium text-black">
                                         0
                                         <span className="text-sm ml-0.5 underline underline-offset-2 relative -top-1.5">
                                             đ
@@ -157,9 +157,9 @@ const OrdersPage = () => {
                                 <div className="ml-auto flex flex-col gap-2">
                                     <div className="w-full flex items-center gap-2">
                                         <h1 className="text-md text-black font-medium">
-                                            Tổng tiền thanh toán
+                                            Tổng tiền thanh toán:
                                         </h1>
-                                        <div className="ml-auto text-lg flex items-center justify-center font-medium text-black">
+                                        <div className="ml-auto text-lg flex items-center justify-center font-medium text-red-500">
                                             0
                                             <span className="ml-0.5 text-sm underline underline-offset-2 relative -top-1.5">
                                                 đ
