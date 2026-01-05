@@ -380,17 +380,17 @@ const Search = ({ onClose }) => {
                                 </div>
 
                                 {/* Info */}
-                                <div className="flex-1 overflow-hidden">
-                                    <h3 className="text-sm font-medium text-black line-clamp-1">
-                                        {product.name}
+                                <div className="flex-1 items-center overflow-hidden">
+                                    <h3 className="w-full mb-2 text-sm font-medium text-black line-clamp-1">
+                                        {product.name} 
                                     </h3>
 
                                     <div className="flex items-center text-xs mt-0.5">
-                                        <span className="pr-2 border-r text-red-300 font-medium">
+                                        <span className="pr-2 border-r text-blue-700 font-medium">
                                             {product.category}
                                         </span>
 
-                                        <span className="pl-2 border-l text-red-300 font-medium">
+                                        <span className="pl-2 border-l text-blue-700 font-medium">
                                             {product.unit} * {product.weight}
                                         </span>
                                     </div>

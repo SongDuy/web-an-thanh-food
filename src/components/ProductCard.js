@@ -40,7 +40,7 @@ const ProductCard = ({ product, index }) => {
             <h3 className="w-full h-[50px] text-md font-medium text-black line-clamp-2">
               {product.name}
             </h3>
-            <p className="text-sm font-medium text-red-300">
+            <p className="text-sm font-medium text-blue-700">
               {product.unit} * {product.weight}
             </p>
           </div>

@@ -75,10 +75,10 @@ const RankingCard = ({ product, index, total, sortOrder }) => {
                     {product.name}
                   </h3>
 
-                  <span className="text-sm font-medium text-red-300 pr-2 border-r">
+                  <span className="text-sm font-medium text-blue-700 pr-2 border-r">
                     {product.category}
                   </span>
-                  <span className="text-sm font-medium text-red-300 pl-2 border-l">
+                  <span className="text-sm font-medium text-blue-700 pl-2 border-l">
                     {product.unit} * {product.weight}
                   </span>
                 </div>
