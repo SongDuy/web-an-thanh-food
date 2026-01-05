@@ -110,15 +110,17 @@ const OrdersPage = () => {
 
                             </div>
 
-                            <div className="mt-auto w-full h-[75px]">
-                                kk
+                            <div className="w-full flex">
+                                <div className="ml-auto">
+                                    kk
+                                </div>
                             </div>
                         </div>
 
                         <div className="w-full h-[260px] flex px-3 py-3 rounded-md border bg-white">
                             kk
                         </div>
-                       
+
                     </div>
 
                 </div>
