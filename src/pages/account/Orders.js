@@ -5,6 +5,8 @@ import Footer from "../../components/Footer";
 import Search from "../../components/Search";
 import Notification from "../../components/Notification";
 
+import ClearIcon from '@mui/icons-material/Clear';
+
 const tabs = [
     "Tất cả đơn",
     "Đang xử lý",
@@ -17,8 +19,11 @@ const OrdersPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
 
-    // dnh sách đơn hàng
+    // danh sách đơn hàng
     const [active, setActive] = useState(0);
+
+    // Tìm đơn hàng
+    const [value, setValue] = useState("");
 
     return (
         <>
@@ -68,14 +73,24 @@ const OrdersPage = () => {
                         </ul>
                     </div>
 
-                    <div className="w-full h-[38px] grid grid-cols-1">
+                    <div className="relative w-full">
                         <input
                             type="text"
-                            // value={email}
-                            // onChange={(e) => setEmail(e.target.value)}
+                            value={value}
+                            onChange={(e) => setValue(e.target.value)}
                             placeholder="Tìm đơn hàng theo Mã đơn hàng, Tên sản phẩm"
-                            className="w-full h-[38px] border-2 rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                            className="w-full h-[38px] border-2 rounded-md px-2.5 pr-8 outline-none focus:ring-1 focus:ring-blue-400"
                         />
+
+                        {value && (
+                            <button
+                                type="button"
+                                onClick={() => setValue("")}
+                                className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                            >
+                                <ClearIcon />
+                            </button>
+                        )}
                     </div>
 
                     <div className="w-full grid grid-cols-1 gap-3">
