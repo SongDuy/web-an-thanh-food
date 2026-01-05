@@ -37,19 +37,21 @@ const OrdersPage = () => {
                     </h1>
                 </div>
 
-                <div className="w-full min-h-[555px] flex flex-col gap-3 rounded border">
-                    <div className="w-full h-[45px] flex items-center px-3 rounded bg-white">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                <div className="w-full min-h-[555px] flex flex-col gap-3">
+                    <div className="w-full h-[45px] flex items-center px-3 rounded border bg-white">
+                       <ul className="w-full h-full">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                       </ul>
                     </div>
 
-                    <div className="w-full">
+                    <div className="w-full h-[38px] flex items-center px-3 rounded border bg-white">
                         kk
                     </div>
 
-                    <div className="w-full">
+                    <div className="w-full h-[260px] flex px-3 py-3 rounded border bg-white">
                         kk
                     </div>
                 </div>

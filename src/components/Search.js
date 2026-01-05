@@ -310,7 +310,7 @@ const Search = ({ onClose }) => {
                         value={keyword}
                         onChange={(e) => setKeyword(e.target.value)}
                         spellCheck={false}
-                        className="w-full h-10 px-3 border-2 border-gray-300 rounded-lg shadow-md text-md transition-all duration-200 focus:outline-none focus:ring-0"
+                        className="w-full h-[38px] px-3 border-2 border-gray-300 rounded-lg shadow text-md transition-all duration-200 focus:outline-none focus:ring-0"
                         placeholder="Tìm sản phẩm..."
                     />
                 </div>
