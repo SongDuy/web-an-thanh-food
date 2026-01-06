@@ -45,12 +45,18 @@ const CartPage = () => {
 
     setSent(true);
     setOtp(Array(6).fill(""));
-    setCountdown(100);
+    setCountdown(90);
 
     // focus ô đầu
     setTimeout(() => {
       document.getElementById("otp-0")?.focus();
     }, 100);
+  };
+
+  const formatTime = (seconds) => {
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    return `${m}:${s.toString().padStart(2, "0")}`;
   };
 
   useEffect(() => {
@@ -276,7 +282,7 @@ const CartPage = () => {
                         disabled={countdown > 0}
                         className={`text-sm font-medium ${countdown > 0 ? "text-gray-400 cursor-not-allowed" : "text-blue-500 hover:text-blue-600"}`}
                       >
-                        {countdown > 0 ? `Gửi lại (${countdown}s)` : "Gửi lại"}
+                        {countdown > 0 ? `Gửi lại (${formatTime(countdown)})` : "Gửi lại"}
                       </button>
                     )}
                   </div>
