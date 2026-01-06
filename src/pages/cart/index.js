@@ -284,7 +284,7 @@ const CartPage = () => {
                       >
                         <span>Gửi lại</span>
 
-                        <span className="inline-block w-[35px] text-right tabular-nums">
+                        <span className="inline-block w-[30px] text-right tabular-nums">
                           {countdown > 0 ? formatTime(countdown) : ""}
                         </span>
                       </button>
