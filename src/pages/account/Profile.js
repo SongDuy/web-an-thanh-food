@@ -12,6 +12,7 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import LockIcon from '@mui/icons-material/Lock';
 import ClearIcon from '@mui/icons-material/Clear';
+import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 
 countries.registerLocale(vi);
 
@@ -194,9 +195,20 @@ const ProfilePage = () => {
                             <div className="w-full h-[120px] px-10 mt-5">
                                 <div className="w-full h-full flex items-center gap-5">
 
-                                    <div className="w-[120px] h-[120px] rounded-full border-4 border-blue-200 text-blue-500 flex items-center justify-center">
-                                        <PersonOutlineOutlinedIcon sx={{ fontSize: '85px' }} />
+                                    <div className="relative w-[120px] h-[120px]">
+                                        {/* Avatar */}
+                                        <div className="w-full h-full rounded-full border-4 border-blue-300 text-blue-500 flex items-center justify-center bg-white">
+                                            <PersonOutlineOutlinedIcon sx={{ fontSize: '80px' }} />
+                                        </div>
+
+                                        {/* Camera button */}
+                                        <button
+                                            className="absolute bottom-0 right-0 w-[35px] h-[35px] rounded-full bg-red-50 text-black flex items-center justify-center border-t border-l shadow border-gray-200 hover:bg-red-100"
+                                        >
+                                            <PhotoCameraIcon sx={{ fontSize: 20 }} />
+                                        </button>
                                     </div>
+
 
                                     {/* 👇 PHẢI CÓ flex-1 */}
                                     <div className="grid grid-cols-1 gap-8 flex-1 min-w-0">

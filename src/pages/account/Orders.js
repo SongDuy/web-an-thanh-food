@@ -138,6 +138,7 @@ const OrdersPage = () => {
                                                 <span className=" w-full text-sm font-medium text-blue-700">
                                                     HSD: 12 tháng
                                                 </span>
+
                                                 <div className="w-full">
                                                     <span className="text-sm font-medium text-blue-700 pr-2 border-r border-gray-300">
                                                         Vinamilk
@@ -146,7 +147,6 @@ const OrdersPage = () => {
                                                         Việt Nam
                                                     </span>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
