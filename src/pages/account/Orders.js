@@ -6,6 +6,7 @@ import Search from "../../components/Search";
 import Notification from "../../components/Notification";
 
 import ClearIcon from '@mui/icons-material/Clear';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 
 const tabs = [
     "Tất cả đơn",
@@ -103,7 +104,8 @@ const OrdersPage = () => {
                     <div className="w-full grid grid-cols-1 gap-3">
                         {/* Đơn hàng */}
                         <div className="w-full h-[260px] flex flex-col px-4 py-3 rounded-md border bg-white">
-                            <div className="w-full mb-3">
+                            <div className="w-full mb-3 text-gray-500 flex gap-1">
+                                <LocalShippingIcon />
                                 <span className="text-gray-500 font-medium">
                                     Giao hàng thành công
                                 </span>
