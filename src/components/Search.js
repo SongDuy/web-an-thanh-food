@@ -303,9 +303,9 @@ const Search = ({ onClose }) => {
                     </h2>
                     <button
                         onClick={handleClose}
-                        className="w-9 h-9 flex items-center justify-center rounded-md bg-gray-100 hover:bg-red-500 hover:text-white transition"
+                        className="w-9 h-9 flex items-center justify-center rounded-md bg-gray-200 hover:bg-red-500 hover:text-white transition-all duration-300 ease-in-out"
                     >
-                        <CloseIcon sx={{ fontSize: 22 }} />
+                        <CloseIcon sx={{ fontSize: 25 }} />
                     </button>
                 </div>
 
