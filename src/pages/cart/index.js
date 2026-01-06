@@ -45,7 +45,7 @@ const CartPage = () => {
 
     setSent(true);
     setOtp(Array(6).fill(""));
-    setCountdown(30);
+    setCountdown(100);
 
     // focus ô đầu
     setTimeout(() => {
@@ -239,7 +239,7 @@ const CartPage = () => {
                       Thời gian xác nhận mua hàng
                     </span>
                     <button className="ml-auto text-md font-medium text-green-600 px-2 bg-green-100 rounded-md shadow shrink-0">
-                      1:30
+                      5:00
                     </button>
                   </div>
 
