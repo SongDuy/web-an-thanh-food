@@ -280,13 +280,15 @@ const CartPage = () => {
                       <button
                         onClick={handleSendOtp}
                         disabled={countdown > 0}
-                        className={`text-sm font-medium ${countdown > 0 ? "text-gray-400 cursor-not-allowed" : "text-blue-500 hover:text-blue-600"}`}
+                        className={`flex items-center gap-1 text-sm font-medium ${countdown > 0 ? "text-gray-400 cursor-not-allowed" : "text-blue-500 hover:text-blue-600"}`}
                       >
-                        <span>Gửi lại</span>
-                        <span className="inline-block w-[38px] text-right">
-                          {countdown > 0 ? `(${formatTime(countdown)})` : ""}
+                        <span>Gửi lại mã</span>
+
+                        <span className="inline-block w-[42px] text-right tabular-nums">
+                          {countdown > 0 ? formatTime(countdown) : ""}
                         </span>
                       </button>
+
                     )}
                   </div>
 
