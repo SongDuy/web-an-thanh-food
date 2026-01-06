@@ -136,9 +136,9 @@ const CartPage = () => {
 
                     <div className="w-full h-full mb-auto flex items-center">
                       <div className="flex flex-col">
-                        <h1 className="w-full h-[50px] text-md font-medium text-black line-clamp-2">
+                        <h3 className="w-full h-[50px] text-md font-medium text-black line-clamp-2">
                           Sữa Tiệt Trùng - Không Đường
-                        </h1>
+                        </h3>
                         <span className=" w-full text-sm font-medium text-blue-700">
                           HSD: 12 tháng
                         </span>

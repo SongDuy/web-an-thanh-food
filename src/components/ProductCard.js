@@ -40,9 +40,9 @@ const ProductCard = ({ product, index }) => {
             <h3 className="w-full h-[50px] text-md font-medium text-black line-clamp-2">
               {product.name}
             </h3>
-            <p className="text-sm font-medium text-blue-700">
+            <span className="text-sm font-medium text-blue-700">
               {product.unit} * {product.weight}
-            </p>
+            </span>
           </div>
 
           {/* Nút bấm: Sẽ luôn nằm ở đáy nhờ cấu trúc flex-col */}
