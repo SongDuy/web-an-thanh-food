@@ -37,8 +37,13 @@ const AddressPage = () => {
                     </h1>
                 </div>
 
-               <div className="w-full h-[555px] bg-white rounded border">
-                    kk
+                <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded-md border">
+                    <div className="col-span-7 px-4 py-3 border-r">
+
+                    </div>
+                    <div className="col-span-4 px-4 py-3 border-l">
+
+                    </div>
                 </div>
             </div>
 
