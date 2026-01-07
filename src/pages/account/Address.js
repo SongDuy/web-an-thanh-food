@@ -41,10 +41,10 @@ const AddressPage = () => {
                     <div className="col-span-7 px-4 py-3 border-r">
                         <div className="w-full">
                             <h1 className="text-lg text-gray-500">
-                                Họ & tên người nhận
+                                Tên người nhận
                             </h1>
                             <h1 className="text-lg text-gray-500">
-                                Số điện thoại liên hệ
+                                Số điện thoại
                             </h1>
                             <h1 className="text-lg text-gray-500">
                                 Địa chỉ nhận hàng
