@@ -380,12 +380,14 @@ const Search = ({ onClose }) => {
                                 </div>
 
                                 {/* Info */}
-                                <div className="flex-1 items-center overflow-hidden">
-                                    <h3 className="w-full mb-2 text-sm font-medium text-black line-clamp-1">
-                                        {product.name} 
-                                    </h3>
+                                <div className="w-full flex flex-col gap-1">
+                                    <div className="w-full mb-1.5">
+                                        <h3 className="w-full text-sm font-medium text-black line-clamp-1">
+                                            {product.name}
+                                        </h3>
+                                    </div>
 
-                                    <div className="flex items-center text-xs mt-0.5">
+                                    <div className="flex text-xs">
                                         <span className="pr-2 border-r text-blue-700 font-medium">
                                             {product.category}
                                         </span>
@@ -395,7 +397,7 @@ const Search = ({ onClose }) => {
                                         </span>
                                     </div>
 
-                                    <div className="flex items-center gap-3 text-xs font-medium mt-1">
+                                    <div className="flex gap-3 text-xs font-medium">
                                         <div className="flex items-center gap-1 text-yellow-500">
                                             <StarIcon fontSize="inherit" />
                                             {product.rating}
