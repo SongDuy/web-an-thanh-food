@@ -16,10 +16,10 @@ const ProductCard = ({ product, index }) => {
   return (
     <>
       <Link to={`/${toSlug(product.category)}/${toSlug(product.name)}?id=${product.id}`}>
-        <div className="border p-4 rounded shadow hover:bg-red-50 transition-all duration-300 bg-white max-w-[230px] h-[320px] flex flex-col">
+        <div className="max-w-[230px] h-[320px] flex flex-col border p-4 rounded shadow hover:bg-red-50 transition-all duration-300 bg-white ">
 
           {/* Khu vực ảnh: Giữ nguyên h-40 (~160px) */}
-          <div className=" relative w-full h-[160px] mb-3 overflow-hidden rounded flex-shrink-0">
+          <div className="relative w-full h-[160px] overflow-hidden rounded flex-shrink-0">
             <img
               src={product.image}
               alt={product.name}
@@ -36,7 +36,7 @@ const ProductCard = ({ product, index }) => {
           </div>
 
           {/* Nội dung text: flex-grow giúp vùng này chiếm không gian còn lại */}
-          <div className="flex-grow">
+          <div className="flex-grow pt-2">
             <h3 className="w-full h-[50px] text-md font-medium text-black line-clamp-2">
               {product.name}
             </h3>

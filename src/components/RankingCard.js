@@ -68,41 +68,41 @@ const RankingCard = ({ product, index, total, sortOrder }) => {
               </div>
             </div>
 
-            <div className="w-full h-full">
-              <div className="w-full flex flex-col gap-1.5">
-                <div className="w-full">
-                  <h3 className="w-full h-[50px] text-md font-medium text-black line-clamp-2">
-                    {product.name}
-                  </h3>
+            <div className="w-full flex flex-col">
 
-                  <span className="text-sm font-medium text-blue-700 pr-2 border-r">
-                    {product.category}
-                  </span>
-                  <span className="text-sm font-medium text-blue-700 pl-2 border-l">
-                    {product.unit} * {product.weight}
-                  </span>
-                </div>
-
-                {/* Buttons sát đáy */}
-                <div className="w-full mt-auto grid grid-cols-2 gap-3">
-                  <div className="w-full border shadow rounded text-yellow-400 font-normal flex items-center justify-center gap-0.5 py-0.5">
-                    <StarOutlinedIcon fontSize="small" />
-                    <span className="text-black">
-                      {Number(product.rating).toFixed(1)}
-                    </span>
-                  </div>
-
-                  <div className="w-full border shadow rounded text-red-400  font-normal flex items-center justify-center gap-0.5 py-0.5">
-
-                    <FavoriteOutlinedIcon fontSize="small" />
-                    <span className="text-black">
-                      {/* {product.likes} */}
-                      {formatLikes(Number(product.likes))}
-                    </span>
-                  </div>
-                </div>
+              <div className="w-full">
+                <h3 className="w-full h-[48px] text-md font-medium text-black line-clamp-2">
+                  {product.name}
+                </h3>
               </div>
 
+              <div className="w-full">
+                <span className="text-sm font-medium text-blue-700 pr-2 border-r">
+                  {product.category}
+                </span>
+                <span className="text-sm font-medium text-blue-700 pl-2 border-l">
+                  {product.unit} * {product.weight}
+                </span>
+              </div>
+
+              {/* Buttons sát đáy */}
+              <div className="w-full mt-auto grid grid-cols-2 gap-3">
+                <div className="w-full border shadow rounded text-yellow-400 font-normal flex items-center justify-center gap-0.5 py-0.5">
+                  <StarOutlinedIcon fontSize="small" />
+                  <span className="text-black">
+                    {Number(product.rating).toFixed(1)}
+                  </span>
+                </div>
+
+                <div className="w-full border shadow rounded text-red-400  font-normal flex items-center justify-center gap-0.5 py-0.5">
+
+                  <FavoriteOutlinedIcon fontSize="small" />
+                  <span className="text-black">
+                    {/* {product.likes} */}
+                    {formatLikes(Number(product.likes))}
+                  </span>
+                </div>
+              </div>
             </div>
 
           </div>
