@@ -45,7 +45,7 @@ const AddressPage = () => {
     const sendOtp = () => {
         setOtp("");
         setOtpSent(true);
-        setCountdown(60);
+        setCountdown(90);
     };
 
     const verifyOtp = () => {
