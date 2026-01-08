@@ -127,7 +127,7 @@ const OrdersPage = () => {
 
                                         <div className="w-full h-full mb-auto flex items-center">
                                             <div className="flex flex-col">
-                                                <div className="flex w-full h-[50px] text-md text-black font-medium items-center gap-1">
+                                                <div className="flex w-full h-[50px] text-md text-black font-medium gap-1">
                                                     <h3 className="flex-1 line-clamp-2 leading-snug">
                                                         Sữa Tiệt Trùng - Không Đường
                                                     </h3>
