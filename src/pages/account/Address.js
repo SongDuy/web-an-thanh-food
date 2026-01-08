@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -15,15 +15,16 @@ const AddressPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
 
-    // FORM STATE
+    // FORM
     const [fullName, setFullName] = useState("");
     const [phone, setPhone] = useState("");
     const [address, setAddress] = useState("");
     const [isDefault, setIsDefault] = useState(false);
 
-    // PHONE VERIFY
+    // VERIFY
     const [otpSent, setOtpSent] = useState(false);
     const [otp, setOtp] = useState("");
+    const [countdown, setCountdown] = useState(0);
     const [phoneVerified, setPhoneVerified] = useState(false);
 
     const canSave =
@@ -31,6 +32,30 @@ const AddressPage = () => {
         phone.trim() &&
         address.trim() &&
         phoneVerified;
+
+    /* ===== OTP ===== */
+    useEffect(() => {
+        if (countdown === 0) return;
+        const timer = setInterval(() => {
+            setCountdown((prev) => prev - 1);
+        }, 1000);
+        return () => clearInterval(timer);
+    }, [countdown]);
+
+    const sendOtp = () => {
+        setOtp("");
+        setOtpSent(true);
+        setCountdown(60);
+    };
+
+    const verifyOtp = () => {
+        if (otp === "123456") {
+            setPhoneVerified(true);
+        }
+    };
+
+    const formatTime = (s) =>
+        `${Math.floor(s / 60)}:${(s % 60).toString().padStart(2, "0")}`;
 
     return (
         <>
@@ -51,47 +76,49 @@ const AddressPage = () => {
             )}
 
             <div className="w-full bg-soft px-[160px] pt-[100px] pb-[50px]">
-                <div className="w-full py-[25px]">
-                    <h1 className="text-[22px] font-semibold uppercase">
-                        Địa Chỉ Nhận Hàng
+
+                <div className="w-full py-[25px] flex items-center gap-1">
+                    <h1 className="text-[22px] text-black font-semibold uppercase">
+                        Địa chỉ nhận hàng
                     </h1>
                 </div>
 
-                <div className="grid grid-cols-11 bg-white rounded-md border min-h-[555px]">
-                    {/* LEFT */}
-                    <div className="col-span-7 px-6 py-5 border-r">
-                        <h2 className="text-lg text-gray-500 mb-5">
-                            Địa chỉ đã lưu
-                        </h2>
+                <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded-md border">
+                    <div className="col-span-7 px-4 py-3 border-r">
+                        <div className="w-full">
+                            <h1 className="text-lg text-gray-500">
+                                Địa chỉ đã lưu
+                            </h1>
 
-                        <div className="border rounded-lg p-5 flex gap-4">
-                            <LocationOnOutlinedIcon className="text-blue-500" />
-                            <div className="flex-1">
-                                <div className="flex items-center gap-3">
-                                    <span className="font-semibold">
-                                        Nguyễn Văn A
-                                    </span>
-                                    <span className="text-sm text-gray-500">
-                                        | 0909 123 456
-                                    </span>
-                                    <span className="text-xs px-2 py-0.5 rounded bg-blue-50 text-blue-600 border">
-                                        Mặc định
-                                    </span>
+                            <div className="border rounded-lg p-4 flex gap-3">
+                                <LocationOnOutlinedIcon className="text-blue-500" />
+                                <div>
+                                    <div className="flex items-center gap-2">
+                                        <span className="font-medium">
+                                            Nguyễn Văn A
+                                        </span>
+                                        <span className="text-sm text-gray-500">
+                                            | 0909 123 456
+                                        </span>
+                                        <span className="text-xs px-2 py-0.5 rounded bg-blue-50 text-blue-600 border">
+                                            Mặc định
+                                        </span>
+                                    </div>
+                                    <p className="text-sm text-gray-600 mt-1">
+                                        123 Nguyễn Trãi, Quận 1, TP.HCM
+                                    </p>
                                 </div>
-                                <p className="text-sm text-gray-600 mt-1">
-                                    123 Nguyễn Trãi, Quận 1, TP.HCM
-                                </p>
                             </div>
                         </div>
                     </div>
 
-                    {/* RIGHT */}
-                    <div className="col-span-4 px-6 py-5">
-                        <h2 className="text-lg text-gray-500 mb-5">
+                    <div className="col-span-4 px-4 py-3 border-l">
+                        {/* RIGHT */}
+                        <h2 className="text-gray-500 mb-4">
                             Thêm địa chỉ mới
                         </h2>
 
-                        <div className="flex flex-col gap-5">
+                        <div className="flex flex-col gap-4">
                             {/* NAME */}
                             <div className="relative">
                                 <PersonOutlineOutlinedIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
@@ -99,7 +126,7 @@ const AddressPage = () => {
                                     value={fullName}
                                     onChange={(e) => setFullName(e.target.value)}
                                     placeholder="Họ và tên người nhận"
-                                    className="w-full h-[40px] pl-10 pr-3 border rounded-md focus:ring-1 focus:ring-blue-400"
+                                    className="w-full h-10 pl-10 pr-3 border rounded focus:ring-1 focus:ring-blue-400"
                                 />
                             </div>
 
@@ -115,43 +142,45 @@ const AddressPage = () => {
                                             setOtpSent(false);
                                         }}
                                         placeholder="Số điện thoại"
-                                        className="w-full h-[40px] pl-10 pr-24 border rounded-md focus:ring-1 focus:ring-blue-400"
+                                        className="w-full h-10 pl-10 pr-24 border rounded focus:ring-1 focus:ring-blue-400"
                                     />
 
                                     {!phoneVerified && (
                                         <button
-                                            type="button"
-                                            onClick={() => setOtpSent(true)}
-                                            className="absolute right-2 top-1/2 -translate-y-1/2 text-sm px-3 py-1 border rounded text-blue-500 hover:bg-blue-50"
+                                            onClick={sendOtp}
+                                            disabled={countdown > 0}
+                                            className={`absolute right-2 top-1/2 -translate-y-1/2 text-sm px-3 py-1 rounded border
+                                            ${countdown
+                                                    ? "text-gray-400 cursor-not-allowed"
+                                                    : "text-blue-500 hover:bg-blue-50"
+                                                }`}
                                         >
-                                            Gửi OTP
+                                            {countdown
+                                                ? formatTime(countdown)
+                                                : "Gửi OTP"}
                                         </button>
                                     )}
                                 </div>
 
                                 {phoneVerified && (
-                                    <div className="text-sm text-green-600 flex items-center gap-1 mt-1">
+                                    <div className="mt-1 text-sm text-green-600 flex items-center gap-1">
                                         <VerifiedOutlinedIcon fontSize="small" />
-                                        Số điện thoại đã xác minh
+                                        Đã xác minh
                                     </div>
                                 )}
                             </div>
 
                             {/* OTP */}
                             {otpSent && !phoneVerified && (
-                                <div className="flex gap-3">
+                                <div className="flex gap-2">
                                     <input
                                         value={otp}
                                         onChange={(e) => setOtp(e.target.value)}
-                                        placeholder="Nhập mã OTP"
-                                        className="flex-1 h-[38px] border rounded-md px-3 focus:ring-1 focus:ring-blue-400"
+                                        placeholder="Nhập OTP"
+                                        className="flex-1 h-10 border rounded px-3 focus:ring-1 focus:ring-blue-400"
                                     />
                                     <button
-                                        onClick={() => {
-                                            if (otp === "123456") {
-                                                setPhoneVerified(true);
-                                            }
-                                        }}
+                                        onClick={verifyOtp}
                                         className="px-4 rounded bg-blue-500 text-white hover:bg-blue-600"
                                     >
                                         Xác minh
@@ -167,7 +196,7 @@ const AddressPage = () => {
                                     onChange={(e) => setAddress(e.target.value)}
                                     rows={3}
                                     placeholder="Địa chỉ chi tiết"
-                                    className="w-full pl-10 pr-3 py-2 border rounded-md focus:ring-1 focus:ring-blue-400 resize-none"
+                                    className="w-full pl-10 pr-3 py-2 border rounded focus:ring-1 focus:ring-blue-400 resize-none"
                                 />
                             </div>
 
@@ -176,8 +205,10 @@ const AddressPage = () => {
                                 <input
                                     type="checkbox"
                                     checked={isDefault}
-                                    onChange={(e) => setIsDefault(e.target.checked)}
-                                    className="scale-125 accent-blue-500"
+                                    onChange={(e) =>
+                                        setIsDefault(e.target.checked)
+                                    }
+                                    className="accent-blue-500 scale-125"
                                 />
                                 Đặt làm địa chỉ mặc định
                             </label>
@@ -185,9 +216,9 @@ const AddressPage = () => {
                             {/* SAVE */}
                             <button
                                 disabled={!canSave}
-                                className={`w-full py-2.5 rounded font-medium transition
-                                    ${canSave
-                                        ? "bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 text-white hover:brightness-110"
+                                className={`w-full py-2.5 rounded font-medium
+                                ${canSave
+                                        ? "bg-blue-500 text-white hover:bg-blue-600"
                                         : "bg-gray-300 text-gray-500 cursor-not-allowed"
                                     }`}
                             >
@@ -197,7 +228,6 @@ const AddressPage = () => {
                     </div>
                 </div>
             </div>
-
             <Footer />
         </>
     );
