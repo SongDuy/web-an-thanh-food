@@ -186,9 +186,9 @@ const ProfilePage = () => {
                 <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded-md border">
                     <div className="col-span-7 px-4 py-3 border-r">
                         <div className="w-full">
-                            <h1 className="text-lg text-gray-500">
+                            <h2 className="text-lg text-gray-500">
                                 Thông tin cá nhân
-                            </h1>
+                            </h2>
                         </div>
 
                         <div className="w-full flex flex-col gap-7">
@@ -392,7 +392,9 @@ const ProfilePage = () => {
                     <div className="col-span-4 px-4 py-3 border-l">
                         <div className="w-full h-full flex flex-col gap-10">
                             <div className="w-full">
-                                <h1 className="text-lg text-gray-500">Email</h1>
+                                <h2 className="text-lg text-gray-500">
+                                    Email
+                                </h2>
 
                                 <div className="mt-5 flex items-center">
                                     <div className="flex items-center gap-2 text-gray-500">
@@ -447,7 +449,9 @@ const ProfilePage = () => {
                             </div>
 
                             <div className="w-full">
-                                <h1 className="text-lg text-gray-500">Bảo mật</h1>
+                                <h2 className="text-lg text-gray-500">
+                                    Bảo mật
+                                </h2>
 
                                 <div className="mt-5 flex items-center">
                                     <div className="flex items-center gap-2 text-gray-500">

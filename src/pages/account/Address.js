@@ -61,16 +61,19 @@ const AddressPage = () => {
         <>
             <Header
                 onOpenSearch={() => {
-                    setOpenNotification(false);
-                    setOpenSearch(true);
+                    setOpenNotification(false)
+                    setOpenSearch(true)
                 }}
                 onOpenNotify={() => {
-                    setOpenSearch(false);
-                    setOpenNotification(true);
+                    setOpenSearch(false)
+                    setOpenNotification(true)
                 }}
             />
 
-            {openSearch && <Search onClose={() => setOpenSearch(false)} />}
+            {openSearch && (
+                <Search onClose={() => setOpenSearch(false)} />
+            )}
+
             {openNotification && (
                 <Notification onClose={() => setOpenNotification(false)} />
             )}
@@ -86,9 +89,9 @@ const AddressPage = () => {
                 <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded-md border">
                     <div className="col-span-7 px-4 py-3 border-r">
                         <div className="w-full">
-                            <h1 className="text-lg text-gray-500">
+                            <h2 className="text-lg text-gray-500">
                                 Địa chỉ đã lưu
-                            </h1>
+                            </h2>
 
                             <div className="border rounded-lg p-4 flex gap-3">
                                 <LocationOnOutlinedIcon className="text-blue-500" />
@@ -228,6 +231,7 @@ const AddressPage = () => {
                     </div>
                 </div>
             </div>
+
             <Footer />
         </>
     );
