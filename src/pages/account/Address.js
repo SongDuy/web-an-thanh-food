@@ -141,7 +141,7 @@ const AddressPage = () => {
                                 <PhoneOutlinedIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                                 <input
                                     type="text"
-                                    placeholder="Số điện thoại"
+                                    placeholder="Số điện thoại liên hệ"
                                     className="w-full h-[40px] pl-10 pr-3 border rounded-md outline-none focus:ring-1 focus:ring-blue-400"
                                 />
                             </div>
@@ -151,7 +151,7 @@ const AddressPage = () => {
                                 <AddLocationAltOutlinedIcon className="absolute left-3 top-3 text-gray-400" />
                                 <textarea
                                     rows={3}
-                                    placeholder="Địa chỉ chi tiết (Số nhà, đường, phường/xã, quận/huyện...)"
+                                    placeholder="Địa chỉ chi tiết (Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố)"
                                     className="w-full pl-10 pr-3 py-2 border rounded-md outline-none focus:ring-1 focus:ring-blue-400 resize-none"
                                 />
                             </div>
