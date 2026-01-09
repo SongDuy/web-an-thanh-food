@@ -399,7 +399,7 @@ const ProfilePage = () => {
                                 <div className="mt-5 flex items-center">
                                     <div className="flex items-center gap-2 text-gray-500">
                                         <EmailOutlinedIcon />
-                                        <span className="text-black">Địa chỉ Email</span>
+                                        <h3 className="text-black">Địa chỉ Email</h3>
                                     </div>
 
                                     <button
@@ -456,7 +456,7 @@ const ProfilePage = () => {
                                 <div className="mt-5 flex items-center">
                                     <div className="flex items-center gap-2 text-gray-500">
                                         <LockIcon />
-                                        <span className="text-black">Thiết lập mật khẩu</span>
+                                        <h3 className="text-black">Thiết lập mật khẩu</h3>
                                     </div>
 
                                     <button

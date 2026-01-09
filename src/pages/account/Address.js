@@ -130,70 +130,68 @@ const AddressPage = () => {
                             <div className="flex flex-col gap-4">
                                 {/* NAME */}
                                 <div className="w-full">
-                                    <div className="w-full">
-                                        <h3>
-                                            Họ và tên người nhận
-                                        </h3>
+                                    <div className="flex items-center">
+                                        <div className="flex items-center gap-2 text-gray-500">
+                                            <PersonOutlineOutlinedIcon />
+                                            <h3 className="text-black">Họ và tên</h3>
+                                        </div>
                                     </div>
 
-                                    <div className="relative">
-                                        <PersonOutlineOutlinedIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                                    <div className="w-full mt-3">
                                         <input
                                             value={fullName}
                                             onChange={(e) => setFullName(e.target.value)}
-                                            placeholder="Họ và tên người nhận"
-                                            className="w-full h-10 pl-10 pr-3 border rounded focus:ring-1 focus:ring-blue-400"
+                                            placeholder="Nhập họ và tên người nhận"
+                                            className="w-full h-10 pl-2.5 border rounded focus:ring-1 focus:ring-blue-400"
                                         />
                                     </div>
                                 </div>
 
 
                                 {/* PHONE */}
-                                <div className="w-full">
-                                    <div className="w-full">
-                                        <h3>
-                                            Số điện thoại liên hệ
-                                        </h3>
+                                <div className="w-full space-y-3">
+                                    <div className="flex items-center">
+                                        <div className="flex items-center gap-2 text-gray-500">
+                                            <PhoneOutlinedIcon />
+                                            <h3 className="text-black">Số điện thoại</h3>
+                                        </div>
                                     </div>
 
-                                    <div>
-                                        <div className="relative">
-                                            <PhoneOutlinedIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                                            <input
-                                                value={phone}
-                                                onChange={(e) => {
-                                                    setPhone(e.target.value);
-                                                    setPhoneVerified(false);
-                                                    setOtpSent(false);
-                                                }}
-                                                placeholder="Số điện thoại"
-                                                className="w-full h-10 pl-10 pr-24 border rounded focus:ring-1 focus:ring-blue-400"
-                                            />
+                                    <div className="w-full relative mt-3">
+                                        <input
+                                            value={phone}
+                                            onChange={(e) => {
+                                                setPhone(e.target.value);
+                                                setPhoneVerified(false);
+                                                setOtpSent(false);
+                                            }}
+                                            placeholder="Nhập số điện thoại liên hệ"
+                                            className="w-full h-10 pl-2.5 border rounded focus:ring-1 focus:ring-blue-400"
+                                        />
 
-                                            {!phoneVerified && (
-                                                <button
-                                                    onClick={sendOtp}
-                                                    disabled={countdown > 0}
-                                                    className={`absolute right-2 top-1/2 -translate-y-1/2 text-sm px-3 py-1 rounded border
+                                        {!phoneVerified && (
+                                            <button
+                                                onClick={sendOtp}
+                                                disabled={countdown > 0}
+                                                className={`absolute right-2 top-1/2 -translate-y-1/2 text-sm px-3 py-1 rounded border
                                             ${countdown
-                                                            ? "text-gray-400 cursor-not-allowed"
-                                                            : "text-blue-500 hover:bg-blue-50"
-                                                        }`}
-                                                >
-                                                    {countdown
-                                                        ? formatTime(countdown)
-                                                        : "Gửi OTP"}
-                                                </button>
-                                            )}
-                                        </div>
-
-                                        {phoneVerified && (
-                                            <div className="mt-1 text-sm text-green-600 flex items-center gap-1">
-                                                <VerifiedOutlinedIcon fontSize="small" />
-                                                Đã xác minh
-                                            </div>
+                                                        ? "text-gray-400 cursor-not-allowed"
+                                                        : "text-blue-500 hover:bg-blue-50"
+                                                    }`}
+                                            >
+                                                {countdown
+                                                    ? formatTime(countdown)
+                                                    : "Gửi OTP"}
+                                            </button>
                                         )}
                                     </div>
+
+                                    {phoneVerified && (
+                                        <div className="mt-1 text-sm text-green-600 flex items-center gap-1">
+                                            <VerifiedOutlinedIcon fontSize="small" />
+                                            Đã xác minh
+                                        </div>
+                                    )}
 
                                     {/* OTP */}
                                     {otpSent && !phoneVerified && (
@@ -217,20 +215,20 @@ const AddressPage = () => {
 
                                 {/* ADDRESS */}
                                 <div className="w-full">
-                                    <div className="w-full">
-                                        <h3>
-                                            Địa chỉ nhận hàng
-                                        </h3>
+                                    <div className="flex items-center">
+                                        <div className="flex items-center gap-2 text-gray-500">
+                                            <AddLocationAltOutlinedIcon />
+                                            <h3 className="text-black">Địa chỉ</h3>
+                                        </div>
                                     </div>
 
-                                    <div className="relative">
-                                        <AddLocationAltOutlinedIcon className="absolute left-3 top-3 text-gray-400" />
+                                    <div className="w-full mt-3">
                                         <textarea
                                             value={address}
                                             onChange={(e) => setAddress(e.target.value)}
                                             rows={3}
-                                            placeholder="Địa chỉ chi tiết"
-                                            className="w-full pl-10 pr-3 py-2 border rounded focus:ring-1 focus:ring-blue-400 resize-none"
+                                            placeholder="Nhập địa chỉ chi tiết"
+                                            className="w-full pl-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400 resize-none"
                                         />
                                     </div>
                                 </div>
