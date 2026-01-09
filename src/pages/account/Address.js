@@ -147,7 +147,7 @@ const AddressPage = () => {
                                         value={fullName}
                                         onChange={(e) => setFullName(e.target.value)}
                                         placeholder="Thêm họ và tên"
-                                        className="w-full h-[38px] border rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                        className="w-full h-[38px] border rounded-md pl-2.5 pr-[35px] outline-none focus:ring-1 focus:ring-blue-400"
                                     />
 
                                     {fullName && (
@@ -188,7 +188,7 @@ const AddressPage = () => {
                                                     setOtpSent(false);
                                                 }}
                                                 placeholder="Thêm số điện thoại"
-                                                className="w-full h-[38px] pl-3 pr-[100px] border rounded-md outline-none focus:ring-1 focus:ring-blue-400"
+                                                className="w-full h-[38px] pl-3 pr-[130px] border rounded-md outline-none focus:ring-1 focus:ring-blue-400"
                                             />
 
                                             {phone && (
@@ -236,7 +236,7 @@ const AddressPage = () => {
                                                     value={otp}
                                                     onChange={(e) => setOtp(e.target.value)}
                                                     placeholder="Nhập OTP"
-                                                    className="w-full h-[38px] pl-3 pr-[100px] border rounded-md outline-none focus:ring-1 focus:ring-blue-400"
+                                                    className="w-full h-[38px] pl-3 pr-[130px] border rounded-md outline-none focus:ring-1 focus:ring-blue-400"
                                                 />
 
                                                 {otp && (

@@ -223,7 +223,7 @@ const ProfilePage = () => {
                                                     value={fullName}
                                                     onChange={(e) => setFullName(e.target.value)}
                                                     placeholder="Thêm họ tên"
-                                                    className="w-full h-full border rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                                    className="w-full h-full border rounded-md pl-2.5 pr-[35px] outline-none focus:ring-1 focus:ring-blue-400"
                                                 />
 
                                                 {fullName && (
@@ -253,7 +253,7 @@ const ProfilePage = () => {
                                                     value={nickname}
                                                     onChange={(e) => setNickname(e.target.value)}
                                                     placeholder="Thêm Nickname"
-                                                    className="w-full h-full border rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                                    className="w-full h-full border rounded-md pl-2.5 pr-[35px] outline-none focus:ring-1 focus:ring-blue-400"
                                                 />
 
                                                 {nickname && (
@@ -420,7 +420,7 @@ const ProfilePage = () => {
                                                     value={email}
                                                     onChange={(e) => setEmail(e.target.value)}
                                                     placeholder="Nhập Email"
-                                                    className="w-full h-[38px] border rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                                    className="w-full h-[38px] border rounded-md pl-2.5 pr-[35px] outline-none focus:ring-1 focus:ring-blue-400"
                                                 />
 
                                                 {email && (
@@ -479,7 +479,7 @@ const ProfilePage = () => {
                                                     value={newPassword}
                                                     onChange={(e) => setNewPassword(e.target.value)}
                                                     placeholder="Nhập mật khẩu mới"
-                                                    className="w-full h-full border rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                                    className="w-full h-full border rounded-md pl-2.5 pr-[35px] outline-none focus:ring-1 focus:ring-blue-400"
                                                 />
                                                 {newPassword && (
                                                     <button
@@ -504,7 +504,7 @@ const ProfilePage = () => {
                                                     value={confirmPassword}
                                                     onChange={(e) => setConfirmPassword(e.target.value)}
                                                     placeholder="Nhập lại mật khẩu mới"
-                                                    className="w-full h-full border rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
+                                                    className="w-full h-full border rounded-md pl-2.5 pr-[35px] outline-none focus:ring-1 focus:ring-blue-400"
                                                 />
 
                                                 {confirmPassword && (
