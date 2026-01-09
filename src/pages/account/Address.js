@@ -125,147 +125,144 @@ const AddressPage = () => {
                             </h2>
                         </div>
 
-                        <div className="w-full py-4">
-                            <div className="flex flex-col gap-4">
-                                {/* NAME */}
-                                <div className="w-full">
-                                    <div className="flex items-center">
-                                        <div className="flex items-center gap-2 text-gray-500">
-                                            <PersonIcon />
-                                            <h3 className="text-black">Họ và tên</h3>
-                                        </div>
-                                    </div>
-
-                                    <div className="w-full mt-4">
-                                        <input
-                                            value={fullName}
-                                            onChange={(e) => setFullName(e.target.value)}
-                                            placeholder="Thêm họ và tên"
-                                            className="w-full h-[38px] px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400"
-                                        />
+                        <div className="w-full flex flex-col py-4 gap-4 box-border">
+                            {/* NAME */}
+                            <div className="w-full">
+                                <div className="flex items-center">
+                                    <div className="flex items-center gap-2 text-gray-500">
+                                        <PersonIcon />
+                                        <h3 className="text-black">Họ và tên</h3>
                                     </div>
                                 </div>
 
+                                <div className="w-full mt-4">
+                                    <input
+                                        value={fullName}
+                                        onChange={(e) => setFullName(e.target.value)}
+                                        placeholder="Thêm họ và tên"
+                                        className="w-full h-[38px] px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400"
+                                    />
+                                </div>
+                            </div>
 
-                                {/* PHONE */}
-                                <div className="w-full">
-                                    <div className="flex items-center">
-                                        <div className="flex items-center gap-2 text-gray-500">
-                                            <PhoneIcon />
-                                            <h3 className="text-black">Số điện thoại</h3>
-                                        </div>
+
+                            {/* PHONE */}
+                            <div className="w-full">
+                                <div className="flex items-center">
+                                    <div className="flex items-center gap-2 text-gray-500">
+                                        <PhoneIcon />
+                                        <h3 className="text-black">Số điện thoại</h3>
+                                    </div>
+                                </div>
+
+                                <div className="w-full mt-4">
+                                    <div className="w-full relative">
+                                        <input
+                                            value={phone}
+                                            onChange={(e) => {
+                                                setPhone(e.target.value);
+                                                setPhoneVerified(false);
+                                                setOtpSent(false);
+                                            }}
+                                            placeholder="Thêm số điện thoại"
+                                            className="w-full h-[38px] pl-3 pr-[100px] border rounded focus:ring-1 focus:ring-blue-400"
+                                        />
+
+                                        {!phoneVerified && (
+                                            <button
+                                                onClick={sendOtp}
+                                                disabled={countdown > 0}
+                                                className={`absolute right-0 top-0 h-full w-[95px] text-sm border rounded-r font-medium
+                                                    ${countdown
+                                                        ? "text-gray-400 cursor-not-allowed bg-gray-50"
+                                                        : "text-blue-500 hover:text-blue-600 hover:bg-blue-50"
+                                                    }`}
+                                            >
+                                                {countdown ? formatTime(countdown) : "Gửi OTP"}
+                                            </button>
+                                        )}
                                     </div>
 
-                                    <div className="w-full mt-4">
-                                        <div className="w-full relative">
+                                    {phoneVerified && (
+                                        <div className="mt-2 text-sm text-green-600 flex items-center gap-1">
+                                            <VerifiedOutlinedIcon fontSize="small" />
+                                            Đã xác minh
+                                        </div>
+                                    )}
+
+                                    {/* OTP */}
+                                    {otpSent && !phoneVerified && (
+                                        <div className="w-full relative mt-3">
                                             <input
-                                                value={phone}
-                                                onChange={(e) => {
-                                                    setPhone(e.target.value);
-                                                    setPhoneVerified(false);
-                                                    setOtpSent(false);
-                                                }}
-                                                placeholder="Thêm số điện thoại"
+                                                value={otp}
+                                                onChange={(e) => setOtp(e.target.value)}
+                                                placeholder="Nhập OTP"
                                                 className="w-full h-[38px] pl-3 pr-[100px] border rounded focus:ring-1 focus:ring-blue-400"
                                             />
-
-                                            {!phoneVerified && (
-                                                <button
-                                                    onClick={sendOtp}
-                                                    disabled={countdown > 0}
-                                                    className={`absolute right-0 top-0 h-full w-[95px] text-sm border rounded-r font-medium
-                                                    ${countdown
-                                                            ? "text-gray-400 cursor-not-allowed bg-gray-50"
-                                                            : "text-blue-500 hover:text-blue-600 hover:bg-blue-50"
-                                                        }`}
-                                                >
-                                                    {countdown ? formatTime(countdown) : "Gửi OTP"}
-                                                </button>
-                                            )}
+                                            <button
+                                                onClick={verifyOtp}
+                                                className="absolute right-0 top-0 h-full w-[95px] text-sm border rounded-r bg-blue-500 hover:bg-blue-600 text-white font-medium"
+                                            >
+                                                Xác minh
+                                            </button>
                                         </div>
-
-                                        {phoneVerified && (
-                                            <div className="mt-2 text-sm text-green-600 flex items-center gap-1">
-                                                <VerifiedOutlinedIcon fontSize="small" />
-                                                Đã xác minh
-                                            </div>
-                                        )}
-
-                                        {/* OTP */}
-                                        {otpSent && !phoneVerified && (
-                                            <div className="w-full relative mt-3">
-                                                <input
-                                                    value={otp}
-                                                    onChange={(e) => setOtp(e.target.value)}
-                                                    placeholder="Nhập OTP"
-                                                    className="w-full h-[38px] pl-3 pr-[100px] border rounded focus:ring-1 focus:ring-blue-400"
-                                                />
-                                                <button
-                                                    onClick={verifyOtp}
-                                                    className="absolute right-0 top-0 h-full w-[95px] text-sm border rounded-r bg-blue-500 hover:bg-blue-600 text-white font-medium"
-                                                >
-                                                    Xác minh
-                                                </button>
-                                            </div>
-                                        )}
-                                    </div>
+                                    )}
                                 </div>
-
-                                {/* ADDRESS */}
-                                <div className="w-full">
-                                    <div className="flex items-center">
-                                        <div className="flex items-center gap-2 text-gray-500">
-                                            <HomeWorkIcon />
-                                            <h3 className="text-black">Địa chỉ</h3>
-                                        </div>
-                                    </div>
-
-                                    <div className="w-full mt-4">
-                                        <textarea
-                                            value={address}
-                                            onChange={(e) => setAddress(e.target.value)}
-                                            rows={3}
-                                            placeholder="Thêm địa chỉ"
-                                            className="w-full px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400 resize-none"
-                                        />
-                                    </div>
-                                </div>
-
-                                {/* DEFAULT */}
-                                <div className="w-full">
-                                    <label className="flex items-center gap-2 text-sm">
-                                        <input
-                                            type="checkbox"
-                                            checked={isDefault}
-                                            onChange={(e) =>
-                                                setIsDefault(e.target.checked)
-                                            }
-                                            className="accent-blue-500 scale-125"
-                                        />
-                                        <span className="h-full flex items-center pb-1">
-                                            Đặt làm địa chỉ mặc định
-                                        </span>
-                                    </label>
-                                </div>
-
-
-                                {/* SAVE */}
-                                <div className="w-full flex items-center justify-center mt-3">
-                                    <button
-                                        disabled={!canSave}
-                                        className={`w-[200px] h-full px-3 py-2 text-md  font-medium shadow rounded
-                                         ${canSave
-                                                ? "text-white bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500 "
-                                                : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                                            }`}
-                                    >
-                                        Lưu địa chỉ
-                                    </button>
-                                </div>
-
                             </div>
-                        </div>
 
+                            {/* ADDRESS */}
+                            <div className="w-full">
+                                <div className="flex items-center">
+                                    <div className="flex items-center gap-2 text-gray-500">
+                                        <HomeWorkIcon />
+                                        <h3 className="text-black">Địa chỉ</h3>
+                                    </div>
+                                </div>
+
+                                <div className="w-full mt-4">
+                                    <textarea
+                                        value={address}
+                                        onChange={(e) => setAddress(e.target.value)}
+                                        rows={3}
+                                        placeholder="Thêm địa chỉ"
+                                        className="w-full px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400 resize-none"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* DEFAULT */}
+                            <div className="w-full">
+                                <label className="flex items-center gap-2 text-sm">
+                                    <input
+                                        type="checkbox"
+                                        checked={isDefault}
+                                        onChange={(e) =>
+                                            setIsDefault(e.target.checked)
+                                        }
+                                        className="accent-blue-500 scale-125"
+                                    />
+                                    <span className="h-full flex items-center pb-1">
+                                        Đặt làm địa chỉ mặc định
+                                    </span>
+                                </label>
+                            </div>
+
+
+                            {/* SAVE */}
+                            <div className="w-full mt-1 flex items-center justify-center">
+                                <button
+                                    disabled={!canSave}
+                                    className={`w-[200px] h-full px-3 py-2 text-md  font-medium shadow rounded
+                                         ${canSave
+                                            ? "text-white bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500 "
+                                            : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                                        }`}
+                                >
+                                    Lưu địa chỉ
+                                </button>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
