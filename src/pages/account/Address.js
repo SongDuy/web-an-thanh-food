@@ -256,7 +256,7 @@ const AddressPage = () => {
 
                                             <button
                                                 onClick={verifyOtp}
-                                                className="absolute w-[95px] h-full right-0 top-0  text-sm border rounded-r bg-blue-500 hover:bg-blue-600 text-white font-medium"
+                                                className="absolute w-[95px] h-full right-0 top-0 text-sm border hover:border-r rounded-r-md bg-blue-500 hover:bg-blue-600 text-white font-medium"
                                             >
                                                 Xác minh
                                             </button>
