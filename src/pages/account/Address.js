@@ -136,11 +136,11 @@ const AddressPage = () => {
                                         </div>
                                     </div>
 
-                                    <div className="w-full mt-3">
+                                    <div className="w-full mt-4">
                                         <input
                                             value={fullName}
                                             onChange={(e) => setFullName(e.target.value)}
-                                            placeholder="Nhập họ và tên người nhận"
+                                            placeholder="Thêm họ tên người nhận"
                                             className="w-full h-[38px] px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400"
                                         />
                                     </div>
@@ -148,7 +148,7 @@ const AddressPage = () => {
 
 
                                 {/* PHONE */}
-                                <div className="w-full space-y-3">
+                                <div className="w-full">
                                     <div className="flex items-center">
                                         <div className="flex items-center gap-2 text-gray-500">
                                             <PhoneIcon />
@@ -156,57 +156,59 @@ const AddressPage = () => {
                                         </div>
                                     </div>
 
-                                    <div className="w-full relative mt-3">
-                                        <input
-                                            value={phone}
-                                            onChange={(e) => {
-                                                setPhone(e.target.value);
-                                                setPhoneVerified(false);
-                                                setOtpSent(false);
-                                            }}
-                                            placeholder="Nhập số điện thoại liên hệ"
-                                            className="w-full h-[38px] pl-3 pr-[100px] border rounded focus:ring-1 focus:ring-blue-400"
-                                        />
-
-                                        {!phoneVerified && (
-                                            <button
-                                                onClick={sendOtp}
-                                                disabled={countdown > 0}
-                                                className={`absolute right-0 top-0 h-full w-[95px] text-sm border rounded-r font-medium
-                                                    ${countdown
-                                                        ? "text-gray-400 cursor-not-allowed bg-gray-50"
-                                                        : "text-blue-500 hover:text-blue-600 hover:bg-blue-50"
-                                                    }`}
-                                            >
-                                                {countdown ? formatTime(countdown) : "Gửi OTP"}
-                                            </button>
-                                        )}
-                                    </div>
-
-                                    {phoneVerified && (
-                                        <div className="mt-1 text-sm text-green-600 flex items-center gap-1">
-                                            <VerifiedOutlinedIcon fontSize="small" />
-                                            Đã xác minh
-                                        </div>
-                                    )}
-
-                                    {/* OTP */}
-                                    {otpSent && !phoneVerified && (
+                                    <div className="w-full mt-4">
                                         <div className="w-full relative">
                                             <input
-                                                value={otp}
-                                                onChange={(e) => setOtp(e.target.value)}
-                                                placeholder="Nhập OTP"
+                                                value={phone}
+                                                onChange={(e) => {
+                                                    setPhone(e.target.value);
+                                                    setPhoneVerified(false);
+                                                    setOtpSent(false);
+                                                }}
+                                                placeholder="Thêm số điện thoại liên hệ"
                                                 className="w-full h-[38px] pl-3 pr-[100px] border rounded focus:ring-1 focus:ring-blue-400"
                                             />
-                                            <button
-                                                onClick={verifyOtp}
-                                                className="absolute right-0 top-0 h-full w-[95px] text-sm border rounded-r bg-blue-500 hover:bg-blue-600 text-white font-medium"
-                                            >
-                                                Xác minh
-                                            </button>
+
+                                            {!phoneVerified && (
+                                                <button
+                                                    onClick={sendOtp}
+                                                    disabled={countdown > 0}
+                                                    className={`absolute right-0 top-0 h-full w-[95px] text-sm border rounded-r font-medium
+                                                    ${countdown
+                                                            ? "text-gray-400 cursor-not-allowed bg-gray-50"
+                                                            : "text-blue-500 hover:text-blue-600 hover:bg-blue-50"
+                                                        }`}
+                                                >
+                                                    {countdown ? formatTime(countdown) : "Gửi OTP"}
+                                                </button>
+                                            )}
                                         </div>
-                                    )}
+
+                                        {phoneVerified && (
+                                            <div className="mt-2 text-sm text-green-600 flex items-center gap-1">
+                                                <VerifiedOutlinedIcon fontSize="small" />
+                                                Đã xác minh
+                                            </div>
+                                        )}
+
+                                        {/* OTP */}
+                                        {otpSent && !phoneVerified && (
+                                            <div className="w-full relative mt-3">
+                                                <input
+                                                    value={otp}
+                                                    onChange={(e) => setOtp(e.target.value)}
+                                                    placeholder="Nhập OTP"
+                                                    className="w-full h-[38px] pl-3 pr-[100px] border rounded focus:ring-1 focus:ring-blue-400"
+                                                />
+                                                <button
+                                                    onClick={verifyOtp}
+                                                    className="absolute right-0 top-0 h-full w-[95px] text-sm border rounded-r bg-blue-500 hover:bg-blue-600 text-white font-medium"
+                                                >
+                                                    Xác minh
+                                                </button>
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
 
                                 {/* ADDRESS */}
@@ -218,33 +220,34 @@ const AddressPage = () => {
                                         </div>
                                     </div>
 
-                                    <div className="w-full mt-3">
+                                    <div className="w-full mt-4">
                                         <textarea
                                             value={address}
                                             onChange={(e) => setAddress(e.target.value)}
                                             rows={3}
-                                            placeholder="Nhập địa chỉ chi tiết"
+                                            placeholder="Thêm địa chỉ chi tiết"
                                             className="w-full px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400 resize-none"
                                         />
                                     </div>
                                 </div>
 
-
                                 {/* DEFAULT */}
-                                <label className="flex items-center gap-2 text-sm">
-                                    <input
-                                        type="checkbox"
-                                        checked={isDefault}
-                                        onChange={(e) =>
-                                            setIsDefault(e.target.checked)
-                                        }
-                                        className="accent-blue-500 scale-125"
-                                    />
-                                    <span className="h-full flex items-center pb-1">
-                                        Đặt làm địa chỉ mặc định
-                                    </span>
+                                <div className="w-full">
+                                    <label className="flex items-center gap-2 text-sm">
+                                        <input
+                                            type="checkbox"
+                                            checked={isDefault}
+                                            onChange={(e) =>
+                                                setIsDefault(e.target.checked)
+                                            }
+                                            className="accent-blue-500 scale-125"
+                                        />
+                                        <span className="h-full flex items-center pb-1">
+                                            Đặt làm địa chỉ mặc định
+                                        </span>
+                                    </label>
+                                </div>
 
-                                </label>
 
                                 {/* SAVE */}
                                 <div className="w-full flex items-center justify-center mt-3">
