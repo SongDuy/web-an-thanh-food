@@ -72,6 +72,31 @@ const AddressPage = () => {
             .join(" ");
     };
 
+    const handleChange = (e) => {
+        let value = e.target.value;
+
+        // Chỉ chặn số & ký tự đặc biệt — KHÔNG đụng tới space
+        value = value.replace(/[0-9~`!@#$%^&*()_+=\[\]{};:"\\|<>/?.,]/g, "");
+
+        setFullName(value);
+    };
+
+    const handleBlur = () => {
+        let value = fullName;
+
+        // Gộp space
+        value = value.replace(/\s+/g, " ").trim();
+
+        // Viết hoa chữ cái đầu mỗi từ
+        value = value
+            .toLowerCase()
+            .split(" ")
+            .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+            .join(" ");
+
+        setFullName(value);
+    };
+
     return (
         <>
             <Header
@@ -155,23 +180,8 @@ const AddressPage = () => {
                                     <input
                                         type="text"
                                         value={fullName}
-                                        onChange={(e) => {
-                                            let value = e.target.value;
-
-                                            // 1. Không cho nhập số & ký tự đặc biệt (nhưng KHÔNG phá IME)
-                                            value = value.replace(/[0-9~`!@#$%^&*()_+=\[\]{};:"\\|<>/?.,]/g, "");
-
-                                            // 2. Gộp nhiều khoảng trắng
-                                            value = value.replace(/\s+/g, " ");
-
-                                            // 3. Không cho space ở đầu
-                                            value = value.trimStart();
-
-                                            // 4. Tự động viết hoa chữ cái đầu mỗi từ
-                                            value = capitalizeName(value);
-
-                                            setFullName(value);
-                                        }}
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
                                         placeholder="Ví dụ: Nguyễn Văn A"
                                         autoComplete="name"
                                         maxLength={100}
