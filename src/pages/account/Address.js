@@ -76,31 +76,6 @@ const AddressPage = () => {
     };
 
 
-    const handleChange = (e) => {
-        let value = e.target.value;
-
-        // Chỉ chặn số & ký tự đặc biệt — KHÔNG đụng tới space
-        value = value.replace(/[0-9~`!@#$%^&*()_+=\[\]{};:"\\|<>/?.,]/g, "");
-
-        setFullName(value);
-    };
-
-    const handleBlur = () => {
-        let value = fullName;
-
-        // Gộp space
-        value = value.replace(/\s+/g, " ").trim();
-
-        // Viết hoa chữ cái đầu mỗi từ
-        value = value
-            .toLowerCase()
-            .split(" ")
-            .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-            .join(" ");
-
-        setFullName(value);
-    };
-
     return (
         <>
             <Header
@@ -187,22 +162,31 @@ const AddressPage = () => {
                                         onCompositionStart={() => setIsComposing(true)}
                                         onCompositionEnd={(e) => {
                                             setIsComposing(false);
-                                            // khi gõ tiếng Việt xong → mới format
-                                            setFullName(capitalizeName(e.target.value));
+
+                                            const formatted = e.target.value
+                                                .toLowerCase()
+                                                .replace(/\s+/g, " ")
+                                                .replace(/\b\p{L}/gu, (c) => c.toUpperCase());
+
+                                            setFullName(formatted);
                                         }}
                                         onChange={(e) => {
                                             let value = e.target.value;
 
-                                            // Chỉ chặn số & ký tự đặc biệt (KHÔNG phá IME)
+                                            // Chặn số & ký tự đặc biệt (không phá IME)
                                             value = value.replace(/[0-9~`!@#$%^&*()_+=\[\]{};:"\\|<>/?.,]/g, "");
+
+                                            // Nếu KHÔNG đang gõ dấu → format realtime
+                                            if (!isComposing) {
+                                                value = value
+                                                    .toLowerCase()
+                                                    .replace(/\s+/g, " ")
+                                                    .replace(/\b\p{L}/gu, (c) => c.toUpperCase());
+                                            }
 
                                             setFullName(value);
                                         }}
-                                        onBlur={() => {
-                                            if (!isComposing) {
-                                                setFullName(capitalizeName(fullName));
-                                            }
-                                        }}
+
                                         placeholder="Ví dụ: Nguyễn Văn A"
                                         autoComplete="name"
                                         maxLength={100}
