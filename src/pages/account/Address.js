@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -9,6 +9,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import PhoneIcon from '@mui/icons-material/Phone';
 import HomeWorkIcon from '@mui/icons-material/HomeWork';
 import VerifiedOutlinedIcon from "@mui/icons-material/VerifiedOutlined";
+import ClearIcon from '@mui/icons-material/Clear';
 
 const AddressPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
@@ -55,6 +56,12 @@ const AddressPage = () => {
 
     const formatTime = (s) =>
         `${Math.floor(s / 60)}:${(s % 60).toString().padStart(2, "0")}`;
+
+    // chống bị nhảy ô nhập khi nhấn clear
+    const fullNameRef = useRef(null);
+    const phoneRef = useRef(null);
+    const otpRef = useRef(null);
+    const addressRef = useRef(null);
 
     return (
         <>
@@ -135,13 +142,27 @@ const AddressPage = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-full mt-4">
+                                <div className="relative w-full h-[38px] mt-4">
                                     <input
                                         value={fullName}
                                         onChange={(e) => setFullName(e.target.value)}
                                         placeholder="Thêm họ và tên"
-                                        className="w-full h-[38px] px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400"
+                                        className="w-full h-[38px] border rounded-md px-2.5 outline-none focus:ring-1 focus:ring-blue-400"
                                     />
+
+                                    {fullName && (
+                                        <button
+                                            type="button"
+                                            onMouseDown={(e) => {
+                                                e.preventDefault(); // 🔥 ngăn mất focus
+                                                setFullName("");
+                                                fullNameRef.current?.focus(); // giữ focus
+                                            }}
+                                            className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                        >
+                                            <ClearIcon />
+                                        </button>
+                                    )}
                                 </div>
                             </div>
 
@@ -155,24 +176,41 @@ const AddressPage = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-full mt-4">
+                                <div className="w-full">
+
                                     <div className="w-full relative">
-                                        <input
-                                            value={phone}
-                                            onChange={(e) => {
-                                                setPhone(e.target.value);
-                                                setPhoneVerified(false);
-                                                setOtpSent(false);
-                                            }}
-                                            placeholder="Thêm số điện thoại"
-                                            className="w-full h-[38px] pl-3 pr-[100px] border rounded focus:ring-1 focus:ring-blue-400"
-                                        />
+                                        <div className="relative w-full h-[38px] mt-4">
+                                            <input
+                                                value={phone}
+                                                onChange={(e) => {
+                                                    setPhone(e.target.value);
+                                                    setPhoneVerified(false);
+                                                    setOtpSent(false);
+                                                }}
+                                                placeholder="Thêm số điện thoại"
+                                                className="w-full h-[38px] pl-3 pr-[100px] border rounded-md outline-none focus:ring-1 focus:ring-blue-400"
+                                            />
+
+                                            {phone && (
+                                                <button
+                                                    type="button"
+                                                    onMouseDown={(e) => {
+                                                        e.preventDefault(); // 🔥 ngăn mất focus
+                                                        setPhone("");
+                                                        phoneRef.current?.focus(); // giữ focus
+                                                    }}
+                                                    className="absolute pr-[95px] right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                                >
+                                                    <ClearIcon />
+                                                </button>
+                                            )}
+                                        </div>
 
                                         {!phoneVerified && (
                                             <button
                                                 onClick={sendOtp}
                                                 disabled={countdown > 0}
-                                                className={`absolute right-0 top-0 h-full w-[95px] text-sm border rounded-r font-medium
+                                                className={`absolute w-[95px] h-full right-0 top-0   text-sm border rounded-r font-medium
                                                     ${countdown
                                                         ? "text-gray-400 cursor-not-allowed bg-gray-50"
                                                         : "text-blue-500 hover:text-blue-600 hover:bg-blue-50"
@@ -193,15 +231,32 @@ const AddressPage = () => {
                                     {/* OTP */}
                                     {otpSent && !phoneVerified && (
                                         <div className="w-full relative mt-3">
-                                            <input
-                                                value={otp}
-                                                onChange={(e) => setOtp(e.target.value)}
-                                                placeholder="Nhập OTP"
-                                                className="w-full h-[38px] pl-3 pr-[100px] border rounded focus:ring-1 focus:ring-blue-400"
-                                            />
+                                            <div className="relative w-full h-[38px] mt-4">
+                                                <input
+                                                    value={otp}
+                                                    onChange={(e) => setOtp(e.target.value)}
+                                                    placeholder="Nhập OTP"
+                                                    className="w-full h-[38px] pl-3 pr-[100px] border rounded-md outline-none focus:ring-1 focus:ring-blue-400"
+                                                />
+
+                                                {otp && (
+                                                    <button
+                                                        type="button"
+                                                        onMouseDown={(e) => {
+                                                            e.preventDefault(); // 🔥 ngăn mất focus
+                                                            setOtp("");
+                                                            otpRef.current?.focus(); // giữ focus
+                                                        }}
+                                                        className="absolute pr-[95px] right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                                    >
+                                                        <ClearIcon />
+                                                    </button>
+                                                )}
+                                            </div>
+
                                             <button
                                                 onClick={verifyOtp}
-                                                className="absolute right-0 top-0 h-full w-[95px] text-sm border rounded-r bg-blue-500 hover:bg-blue-600 text-white font-medium"
+                                                className="absolute w-[95px] h-full right-0 top-0  text-sm border rounded-r bg-blue-500 hover:bg-blue-600 text-white font-medium"
                                             >
                                                 Xác minh
                                             </button>
@@ -219,14 +274,28 @@ const AddressPage = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-full mt-4">
+                                <div className="relative w-full h-[90px] mt-4">
                                     <textarea
                                         value={address}
                                         onChange={(e) => setAddress(e.target.value)}
                                         rows={3}
                                         placeholder="Thêm địa chỉ"
-                                        className="w-full px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400 resize-none"
+                                        className="w-full h-[90px] border rounded-md px-2.5 py-2 pr-6 resize-none overflow-y-scroll outline-none focus:ring-1 focus:ring-blue-400"
                                     />
+
+                                    {address && (
+                                        <button
+                                            type="button"
+                                            onMouseDown={(e) => {
+                                                e.preventDefault(); // 🔥 ngăn mất focus
+                                                setAddress("");
+                                                addressRef.current?.focus(); // giữ focus
+                                            }}
+                                            className="absolute pr-3 right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                        >
+                                            <ClearIcon />
+                                        </button>
+                                    )}
                                 </div>
                             </div>
 
@@ -246,7 +315,6 @@ const AddressPage = () => {
                                     </span>
                                 </label>
                             </div>
-
 
                             {/* SAVE */}
                             <div className="w-full mt-1 flex items-center justify-center">
