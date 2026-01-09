@@ -63,14 +63,18 @@ const AddressPage = () => {
     const otpRef = useRef(null);
 
     // Viết hoa chữ cái đầu ở ô nhập họ và tên
+    const [isComposing, setIsComposing] = useState(false);
+
     const capitalizeName = (str) => {
         return str
             .toLowerCase()
+            .replace(/\s+/g, " ")
+            .trim()
             .split(" ")
-            .filter(Boolean)
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .map(w => w.charAt(0).toUpperCase() + w.slice(1))
             .join(" ");
     };
+
 
     const handleChange = (e) => {
         let value = e.target.value;
@@ -180,8 +184,25 @@ const AddressPage = () => {
                                     <input
                                         type="text"
                                         value={fullName}
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
+                                        onCompositionStart={() => setIsComposing(true)}
+                                        onCompositionEnd={(e) => {
+                                            setIsComposing(false);
+                                            // khi gõ tiếng Việt xong → mới format
+                                            setFullName(capitalizeName(e.target.value));
+                                        }}
+                                        onChange={(e) => {
+                                            let value = e.target.value;
+
+                                            // Chỉ chặn số & ký tự đặc biệt (KHÔNG phá IME)
+                                            value = value.replace(/[0-9~`!@#$%^&*()_+=\[\]{};:"\\|<>/?.,]/g, "");
+
+                                            setFullName(value);
+                                        }}
+                                        onBlur={() => {
+                                            if (!isComposing) {
+                                                setFullName(capitalizeName(fullName));
+                                            }
+                                        }}
                                         placeholder="Ví dụ: Nguyễn Văn A"
                                         autoComplete="name"
                                         maxLength={100}
