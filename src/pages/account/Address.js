@@ -129,85 +129,94 @@ const AddressPage = () => {
                         <div className="w-full py-4">
                             <div className="flex flex-col gap-4">
                                 {/* NAME */}
-                                <div className="relative">
-                                    <PersonOutlineOutlinedIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                                    <input
-                                        value={fullName}
-                                        onChange={(e) => setFullName(e.target.value)}
-                                        placeholder="Họ và tên người nhận"
-                                        className="w-full h-10 pl-10 pr-3 border rounded focus:ring-1 focus:ring-blue-400"
-                                    />
+                                <div>
+                                    <div className="relative">
+                                        <PersonOutlineOutlinedIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                                        <input
+                                            value={fullName}
+                                            onChange={(e) => setFullName(e.target.value)}
+                                            placeholder="Họ và tên người nhận"
+                                            className="w-full h-10 pl-10 pr-3 border rounded focus:ring-1 focus:ring-blue-400"
+                                        />
+                                    </div>
                                 </div>
+
 
                                 {/* PHONE */}
                                 <div>
-                                    <div className="relative">
-                                        <PhoneOutlinedIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                                        <input
-                                            value={phone}
-                                            onChange={(e) => {
-                                                setPhone(e.target.value);
-                                                setPhoneVerified(false);
-                                                setOtpSent(false);
-                                            }}
-                                            placeholder="Số điện thoại"
-                                            className="w-full h-10 pl-10 pr-24 border rounded focus:ring-1 focus:ring-blue-400"
-                                        />
+                                    <div>
+                                        <div className="relative">
+                                            <PhoneOutlinedIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                                            <input
+                                                value={phone}
+                                                onChange={(e) => {
+                                                    setPhone(e.target.value);
+                                                    setPhoneVerified(false);
+                                                    setOtpSent(false);
+                                                }}
+                                                placeholder="Số điện thoại"
+                                                className="w-full h-10 pl-10 pr-24 border rounded focus:ring-1 focus:ring-blue-400"
+                                            />
 
-                                        {!phoneVerified && (
-                                            <button
-                                                onClick={sendOtp}
-                                                disabled={countdown > 0}
-                                                className={`absolute right-2 top-1/2 -translate-y-1/2 text-sm px-3 py-1 rounded border
+                                            {!phoneVerified && (
+                                                <button
+                                                    onClick={sendOtp}
+                                                    disabled={countdown > 0}
+                                                    className={`absolute right-2 top-1/2 -translate-y-1/2 text-sm px-3 py-1 rounded border
                                             ${countdown
-                                                        ? "text-gray-400 cursor-not-allowed"
-                                                        : "text-blue-500 hover:bg-blue-50"
-                                                    }`}
-                                            >
-                                                {countdown
-                                                    ? formatTime(countdown)
-                                                    : "Gửi OTP"}
-                                            </button>
+                                                            ? "text-gray-400 cursor-not-allowed"
+                                                            : "text-blue-500 hover:bg-blue-50"
+                                                        }`}
+                                                >
+                                                    {countdown
+                                                        ? formatTime(countdown)
+                                                        : "Gửi OTP"}
+                                                </button>
+                                            )}
+                                        </div>
+
+                                        {phoneVerified && (
+                                            <div className="mt-1 text-sm text-green-600 flex items-center gap-1">
+                                                <VerifiedOutlinedIcon fontSize="small" />
+                                                Đã xác minh
+                                            </div>
                                         )}
                                     </div>
 
-                                    {phoneVerified && (
-                                        <div className="mt-1 text-sm text-green-600 flex items-center gap-1">
-                                            <VerifiedOutlinedIcon fontSize="small" />
-                                            Đã xác minh
+                                    {/* OTP */}
+                                    {otpSent && !phoneVerified && (
+                                        <div className="flex gap-2">
+                                            <input
+                                                value={otp}
+                                                onChange={(e) => setOtp(e.target.value)}
+                                                placeholder="Nhập OTP"
+                                                className="flex-1 h-10 border rounded px-3 focus:ring-1 focus:ring-blue-400"
+                                            />
+                                            <button
+                                                onClick={verifyOtp}
+                                                className="px-4 rounded bg-blue-500 text-white hover:bg-blue-600"
+                                            >
+                                                Xác minh
+                                            </button>
                                         </div>
                                     )}
-                                </div>
 
-                                {/* OTP */}
-                                {otpSent && !phoneVerified && (
-                                    <div className="flex gap-2">
-                                        <input
-                                            value={otp}
-                                            onChange={(e) => setOtp(e.target.value)}
-                                            placeholder="Nhập OTP"
-                                            className="flex-1 h-10 border rounded px-3 focus:ring-1 focus:ring-blue-400"
-                                        />
-                                        <button
-                                            onClick={verifyOtp}
-                                            className="px-4 rounded bg-blue-500 text-white hover:bg-blue-600"
-                                        >
-                                            Xác minh
-                                        </button>
-                                    </div>
-                                )}
+                                </div>
 
                                 {/* ADDRESS */}
-                                <div className="relative">
-                                    <AddLocationAltOutlinedIcon className="absolute left-3 top-3 text-gray-400" />
-                                    <textarea
-                                        value={address}
-                                        onChange={(e) => setAddress(e.target.value)}
-                                        rows={3}
-                                        placeholder="Địa chỉ chi tiết"
-                                        className="w-full pl-10 pr-3 py-2 border rounded focus:ring-1 focus:ring-blue-400 resize-none"
-                                    />
+                                <div>
+                                    <div className="relative">
+                                        <AddLocationAltOutlinedIcon className="absolute left-3 top-3 text-gray-400" />
+                                        <textarea
+                                            value={address}
+                                            onChange={(e) => setAddress(e.target.value)}
+                                            rows={3}
+                                            placeholder="Địa chỉ chi tiết"
+                                            className="w-full pl-10 pr-3 py-2 border rounded focus:ring-1 focus:ring-blue-400 resize-none"
+                                        />
+                                    </div>
                                 </div>
+
 
                                 {/* DEFAULT */}
                                 <label className="flex items-center gap-2 text-sm">
