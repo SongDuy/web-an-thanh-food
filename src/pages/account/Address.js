@@ -5,10 +5,9 @@ import Footer from "../../components/Footer";
 import Search from "../../components/Search";
 import Notification from "../../components/Notification";
 
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
-import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import AddLocationAltOutlinedIcon from "@mui/icons-material/AddLocationAltOutlined";
+import PersonIcon from '@mui/icons-material/Person';
+import PhoneIcon from '@mui/icons-material/Phone';
+import HomeWorkIcon from '@mui/icons-material/HomeWork';
 import VerifiedOutlinedIcon from "@mui/icons-material/VerifiedOutlined";
 
 const AddressPage = () => {
@@ -97,7 +96,7 @@ const AddressPage = () => {
                         <div className="w-full py-4">
 
                             <div className="w-full border rounded-lg p-4 flex gap-3">
-                                <LocationOnOutlinedIcon className="text-blue-500" />
+                                <HomeWorkIcon className="text-blue-500" />
                                 <div>
                                     <div className="flex items-center gap-2">
                                         <span className="font-medium">
@@ -132,7 +131,7 @@ const AddressPage = () => {
                                 <div className="w-full">
                                     <div className="flex items-center">
                                         <div className="flex items-center gap-2 text-gray-500">
-                                            <PersonOutlineOutlinedIcon />
+                                            <PersonIcon />
                                             <h3 className="text-black">Họ và tên</h3>
                                         </div>
                                     </div>
@@ -152,7 +151,7 @@ const AddressPage = () => {
                                 <div className="w-full space-y-3">
                                     <div className="flex items-center">
                                         <div className="flex items-center gap-2 text-gray-500">
-                                            <PhoneOutlinedIcon />
+                                            <PhoneIcon />
                                             <h3 className="text-black">Số điện thoại</h3>
                                         </div>
                                     </div>
@@ -215,7 +214,7 @@ const AddressPage = () => {
                                 <div className="w-full">
                                     <div className="flex items-center">
                                         <div className="flex items-center gap-2 text-gray-500">
-                                            <AddLocationAltOutlinedIcon />
+                                            <HomeWorkIcon />
                                             <h3 className="text-black">Địa chỉ</h3>
                                         </div>
                                     </div>
