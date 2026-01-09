@@ -146,11 +146,19 @@ const AddressPage = () => {
                                         type="text"
                                         value={fullName}
                                         onChange={(e) => {
-                                            // Chuẩn hoá: bỏ ký tự lạ, gộp nhiều khoảng trắng, không cho space ở đầu
-                                            const value = e.target.value
-                                                .replace(/[^a-zA-ZÀ-ỹ\s]/g, "")   // chỉ cho chữ + tiếng Việt
-                                                .replace(/\s+/g, " ")            // gộp nhiều space
-                                                .trimStart();                   // không cho space đầu
+                                            let value = e.target.value;
+
+                                            // 1. Không cho nhập số & ký tự đặc biệt (nhưng KHÔNG phá IME)
+                                            value = value.replace(/[0-9~`!@#$%^&*()_+=\[\]{};:"\\|<>/?.,]/g, "");
+
+                                            // 2. Gộp nhiều khoảng trắng
+                                            value = value.replace(/\s+/g, " ");
+
+                                            // 3. Không cho space ở đầu
+                                            value = value.trimStart();
+
+                                            // 4. Tự động viết hoa chữ cái đầu mỗi từ
+                                            value = value.replace(/\b\p{L}/gu, (char) => char.toUpperCase());
 
                                             setFullName(value);
                                         }}
