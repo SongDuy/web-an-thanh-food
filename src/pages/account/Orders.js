@@ -104,7 +104,7 @@ const OrdersPage = () => {
                         </div>
 
                         <button
-                            className="absolute w-[125px] h-full right-0 top-0  text-sm border hover:border-r rounded-r-md bg- hover:bg-gray-100 text-blue-500 hover:text-blue-600"
+                            className="absolute w-[125px] h-full right-0 top-0 border hover:border-r rounded-r-md hover:bg-blue-50 text-blue-500 hover:text-blue-600"
                         >
                             Tìm đơn hàng
                         </button>
