@@ -172,7 +172,7 @@ const AddressPage = () => {
                                             <button
                                                 onClick={sendOtp}
                                                 disabled={countdown > 0}
-                                                className={`absolute right-0 top-0 h-full w-[95px] text-sm border rounded-r
+                                                className={`absolute right-0 top-0 h-full w-[95px] text-sm border rounded-r font-medium
                                                     ${countdown
                                                         ? "text-gray-400 cursor-not-allowed bg-gray-50"
                                                         : "text-blue-500 hover:text-blue-600 hover:bg-blue-50"
@@ -192,16 +192,16 @@ const AddressPage = () => {
 
                                     {/* OTP */}
                                     {otpSent && !phoneVerified && (
-                                        <div className="flex gap-2">
+                                        <div className="w-full relative">
                                             <input
                                                 value={otp}
                                                 onChange={(e) => setOtp(e.target.value)}
                                                 placeholder="Nhập OTP"
-                                                className="flex-1 h-[38px] border rounded px-3 focus:ring-1 focus:ring-blue-400"
+                                                className="w-full h-[38px] pl-3 pr-[100px] border rounded focus:ring-1 focus:ring-blue-400"
                                             />
                                             <button
                                                 onClick={verifyOtp}
-                                                className="px-4 rounded bg-blue-500 text-white hover:bg-blue-600"
+                                                className="absolute right-0 top-0 h-full w-[95px] text-sm border rounded-r bg-blue-500 hover:bg-blue-600 text-white font-medium"
                                             >
                                                 Xác minh
                                             </button>
