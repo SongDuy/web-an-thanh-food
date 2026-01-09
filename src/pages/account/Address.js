@@ -129,7 +129,13 @@ const AddressPage = () => {
                         <div className="w-full py-4">
                             <div className="flex flex-col gap-4">
                                 {/* NAME */}
-                                <div>
+                                <div className="w-full">
+                                    <div className="w-full">
+                                        <h3>
+                                            Họ và tên người nhận
+                                        </h3>
+                                    </div>
+
                                     <div className="relative">
                                         <PersonOutlineOutlinedIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                                         <input
@@ -143,7 +149,13 @@ const AddressPage = () => {
 
 
                                 {/* PHONE */}
-                                <div>
+                                <div className="w-full">
+                                    <div className="w-full">
+                                        <h3>
+                                            Số điện thoại liên hệ
+                                        </h3>
+                                    </div>
+
                                     <div>
                                         <div className="relative">
                                             <PhoneOutlinedIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
@@ -204,7 +216,13 @@ const AddressPage = () => {
                                 </div>
 
                                 {/* ADDRESS */}
-                                <div>
+                                <div className="w-full">
+                                    <div className="w-full">
+                                        <h3>
+                                            Địa chỉ nhận hàng
+                                        </h3>
+                                    </div>
+
                                     <div className="relative">
                                         <AddLocationAltOutlinedIcon className="absolute left-3 top-3 text-gray-400" />
                                         <textarea
