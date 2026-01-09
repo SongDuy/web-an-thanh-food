@@ -218,7 +218,7 @@ const AddressPage = () => {
                                                     setPhoneVerified(false);
                                                     setOtpSent(false);
                                                 }}
-                                                placeholder="Ví dụ: 0901234567 hoặc +84901234567"
+                                                placeholder="Ví dụ: 0901234567 (+84901234567)"
                                                 inputMode="tel"
                                                 autoComplete="tel"
                                                 maxLength={15}
