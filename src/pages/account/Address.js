@@ -140,7 +140,7 @@ const AddressPage = () => {
                                         <input
                                             value={fullName}
                                             onChange={(e) => setFullName(e.target.value)}
-                                            placeholder="Thêm họ tên người nhận"
+                                            placeholder="Thêm họ và tên"
                                             className="w-full h-[38px] px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400"
                                         />
                                     </div>
@@ -165,7 +165,7 @@ const AddressPage = () => {
                                                     setPhoneVerified(false);
                                                     setOtpSent(false);
                                                 }}
-                                                placeholder="Thêm số điện thoại liên hệ"
+                                                placeholder="Thêm số điện thoại"
                                                 className="w-full h-[38px] pl-3 pr-[100px] border rounded focus:ring-1 focus:ring-blue-400"
                                             />
 
@@ -225,7 +225,7 @@ const AddressPage = () => {
                                             value={address}
                                             onChange={(e) => setAddress(e.target.value)}
                                             rows={3}
-                                            placeholder="Thêm địa chỉ chi tiết"
+                                            placeholder="Thêm địa chỉ"
                                             className="w-full px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400 resize-none"
                                         />
                                     </div>
