@@ -62,6 +62,16 @@ const AddressPage = () => {
     const phoneRef = useRef(null);
     const otpRef = useRef(null);
 
+    // Viết hoa chữ cái đầu ở ô nhập họ và tên
+    const capitalizeName = (str) => {
+        return str
+            .toLowerCase()
+            .split(" ")
+            .filter(Boolean)
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ");
+    };
+
     return (
         <>
             <Header
@@ -158,7 +168,7 @@ const AddressPage = () => {
                                             value = value.trimStart();
 
                                             // 4. Tự động viết hoa chữ cái đầu mỗi từ
-                                            value = value.replace(/\b\p{L}/gu, (char) => char.toUpperCase());
+                                            value = capitalizeName(value);
 
                                             setFullName(value);
                                         }}
