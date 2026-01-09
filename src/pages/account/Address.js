@@ -207,7 +207,6 @@ const AddressPage = () => {
                                             </button>
                                         </div>
                                     )}
-
                                 </div>
 
                                 {/* ADDRESS */}
@@ -241,7 +240,10 @@ const AddressPage = () => {
                                         }
                                         className="accent-blue-500 scale-125"
                                     />
-                                    Đặt làm địa chỉ mặc định
+                                    <span className="h-full flex items-center pb-1">
+                                        Đặt làm địa chỉ mặc định
+                                    </span>
+
                                 </label>
 
                                 {/* SAVE */}
