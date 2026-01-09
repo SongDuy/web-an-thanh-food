@@ -61,7 +61,6 @@ const AddressPage = () => {
     const fullNameRef = useRef(null);
     const phoneRef = useRef(null);
     const otpRef = useRef(null);
-    const addressRef = useRef(null);
 
     return (
         <>
@@ -274,28 +273,14 @@ const AddressPage = () => {
                                     </div>
                                 </div>
 
-                                <div className="relative w-full h-[90px] mt-4">
+                                <div className="w-full mt-4">
                                     <textarea
                                         value={address}
                                         onChange={(e) => setAddress(e.target.value)}
                                         rows={3}
                                         placeholder="Thêm địa chỉ"
-                                        className="w-full h-[90px] border rounded-md px-2.5 py-2 pr-6 resize-none overflow-y-scroll outline-none focus:ring-1 focus:ring-blue-400"
+                                        className="w-full h-[90px] border rounded-md px-2.5 py-2 resize-none overflow-y-scroll outline-none focus:ring-1 focus:ring-blue-400"
                                     />
-
-                                    {address && (
-                                        <button
-                                            type="button"
-                                            onMouseDown={(e) => {
-                                                e.preventDefault(); // 🔥 ngăn mất focus
-                                                setAddress("");
-                                                addressRef.current?.focus(); // giữ focus
-                                            }}
-                                            className="absolute pr-3 right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
-                                        >
-                                            <ClearIcon />
-                                        </button>
-                                    )}
                                 </div>
                             </div>
 
