@@ -141,7 +141,7 @@ const AddressPage = () => {
                                             value={fullName}
                                             onChange={(e) => setFullName(e.target.value)}
                                             placeholder="Nhập họ và tên người nhận"
-                                            className="w-full h-10 px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400"
+                                            className="w-full h-[38px] px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400"
                                         />
                                     </div>
                                 </div>
@@ -165,7 +165,7 @@ const AddressPage = () => {
                                                 setOtpSent(false);
                                             }}
                                             placeholder="Nhập số điện thoại liên hệ"
-                                            className="w-full h-10 pl-3 pr-[100px] border rounded focus:ring-1 focus:ring-blue-400"
+                                            className="w-full h-[38px] pl-3 pr-[100px] border rounded focus:ring-1 focus:ring-blue-400"
                                         />
 
                                         {!phoneVerified && (
@@ -197,7 +197,7 @@ const AddressPage = () => {
                                                 value={otp}
                                                 onChange={(e) => setOtp(e.target.value)}
                                                 placeholder="Nhập OTP"
-                                                className="flex-1 h-10 border rounded px-3 focus:ring-1 focus:ring-blue-400"
+                                                className="flex-1 h-[38px] border rounded px-3 focus:ring-1 focus:ring-blue-400"
                                             />
                                             <button
                                                 onClick={verifyOtp}
@@ -247,7 +247,7 @@ const AddressPage = () => {
                                 </label>
 
                                 {/* SAVE */}
-                                <div className="w-full flex items-center justify-center">
+                                <div className="w-full flex items-center justify-center mt-3">
                                     <button
                                         disabled={!canSave}
                                         className={`w-[200px] h-full px-3 py-2 text-md  font-medium shadow rounded
