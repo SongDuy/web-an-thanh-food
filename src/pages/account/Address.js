@@ -65,13 +65,16 @@ const AddressPage = () => {
     // Viết hoa chữ cái đầu ở ô nhập họ và tên
     const [isComposing, setIsComposing] = useState(false);
 
-    const normalizeVietnameseName = (str) => {
+    const capitalizeName = (str) => {
         return str
+            .toLowerCase()
             .replace(/\s+/g, " ")
             .trim()
-            .replace(/\b\p{L}/gu, (c) => c.toUpperCase())
-            .replace(/\B\p{L}/gu, (c) => c.toLowerCase());
+            .split(" ")
+            .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+            .join(" ");
     };
+
 
     return (
         <>
@@ -159,23 +162,16 @@ const AddressPage = () => {
                                         onCompositionStart={() => setIsComposing(true)}
                                         onCompositionEnd={(e) => {
                                             setIsComposing(false);
-                                            setFullName(e.target.value);
+                                            // khi gõ tiếng Việt xong → mới format
+                                            setFullName(capitalizeName(e.target.value));
                                         }}
                                         onChange={(e) => {
                                             let value = e.target.value;
 
-                                            // chặn số & ký tự đặc biệt
+                                            // Chỉ chặn số & ký tự đặc biệt (KHÔNG phá IME)
                                             value = value.replace(/[0-9~`!@#$%^&*()_+=\[\]{};:"\\|<>/?.,]/g, "");
 
-                                            // chỉ format khi KHÔNG đang gõ tiếng Việt
-                                            if (!isComposing) {
-                                                value = normalizeVietnameseName(value);
-                                            }
-
                                             setFullName(value);
-                                        }}
-                                        onBlur={() => {
-                                            setFullName(normalizeVietnameseName(fullName));
                                         }}
                                         placeholder="Ví dụ: Nguyễn Văn A"
                                         autoComplete="name"
