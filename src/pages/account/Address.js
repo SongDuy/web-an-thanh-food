@@ -166,22 +166,20 @@ const AddressPage = () => {
                                                 setOtpSent(false);
                                             }}
                                             placeholder="Nhập số điện thoại liên hệ"
-                                            className="w-full h-10 px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400"
+                                            className="w-full h-10 pl-3 pr-[100px] border rounded focus:ring-1 focus:ring-blue-400"
                                         />
 
                                         {!phoneVerified && (
                                             <button
                                                 onClick={sendOtp}
                                                 disabled={countdown > 0}
-                                                className={`absolute right-2 top-1/2 -translate-y-1/2 text-sm px-3 py-1 rounded border
-                                            ${countdown
-                                                        ? "text-gray-400 cursor-not-allowed"
-                                                        : "text-blue-500 hover:bg-blue-50"
+                                                className={`absolute right-0 top-0 h-full w-[95px] text-sm border rounded-r
+                                                    ${countdown
+                                                        ? "text-gray-400 cursor-not-allowed bg-gray-50"
+                                                        : "text-blue-500 hover:text-blue-600 hover:bg-blue-50"
                                                     }`}
                                             >
-                                                {countdown
-                                                    ? formatTime(countdown)
-                                                    : "Gửi OTP"}
+                                                {countdown ? formatTime(countdown) : "Gửi OTP"}
                                             </button>
                                         )}
                                     </div>
