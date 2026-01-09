@@ -27,11 +27,30 @@ const AddressPage = () => {
     const [countdown, setCountdown] = useState(0);
     const [phoneVerified, setPhoneVerified] = useState(false);
 
+    // Viết hoa chữ cái đầu ở ô nhập họ và tên
+
+    const capitalizeName = (str) => {
+        return str
+            .toLowerCase()
+            .split(" ")
+            .filter(Boolean)
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ");
+    };
+
+    const normalizeName = (value) => {
+        value = value.replace(/[^a-zA-ZÀ-ỹ\s]/g, "");
+        value = value.replace(/\s+/g, " ");
+        value = value.trim();
+        return capitalizeName(value);
+    };
+
     const canSave =
-        fullName.trim() &&
-        phone.trim() &&
-        address.trim() &&
+        normalizeName(fullName).length > 0 &&
+        phone.trim().length > 0 &&
+        address.trim().length > 0 &&
         phoneVerified;
+
 
     /* ===== OTP ===== */
     useEffect(() => {
@@ -62,17 +81,14 @@ const AddressPage = () => {
     const phoneRef = useRef(null);
     const otpRef = useRef(null);
 
-    // Viết hoa chữ cái đầu ở ô nhập họ và tên
-    const [isComposing, setIsComposing] = useState(false);
+    const handleSave = () => {
+        const safeName = normalizeName(fullName);
+        if (!safeName) return;
 
-    const capitalizeName = (str) => {
-        return str
-            .toLowerCase()
-            .replace(/\s+/g, " ")
-            .trim()
-            .split(" ")
-            .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-            .join(" ");
+        // DÙNG safeName để gửi API
+        console.log("Save name:", safeName);
+
+        setFullName(safeName);
     };
 
 
@@ -157,25 +173,25 @@ const AddressPage = () => {
 
                                 <div className="relative w-full h-[38px] mt-4">
                                     <input
+                                        ref={fullNameRef}
                                         type="text"
                                         value={fullName}
-                                        onCompositionStart={() => setIsComposing(true)}
-                                        onCompositionEnd={(e) => {
-                                            setIsComposing(false);
-                                            // khi gõ tiếng Việt xong → mới format
-                                            setFullName(capitalizeName(e.target.value));
-                                        }}
+                                        autoComplete="off"
+                                        name="no-autofill-name"
                                         onChange={(e) => {
-                                            let value = e.target.value;
-
-                                            // Chỉ chặn số & ký tự đặc biệt (KHÔNG phá IME)
-                                            value = value.replace(/[0-9~`!@#$%^&*()_+=\[\]{};:"\\|<>/?.,]/g, "");
-
-                                            setFullName(value);
+                                            // Cho IME gõ tự do
+                                            setFullName(e.target.value);
+                                        }}
+                                        onBlur={() => {
+                                            setFullName(normalizeName(fullName));
+                                        }}
+                                        onPaste={(e) => {
+                                            const text = e.clipboardData.getData("text");
+                                            if (/[^a-zA-ZÀ-ỹ\s]/.test(text)) {
+                                                e.preventDefault();
+                                            }
                                         }}
                                         placeholder="Ví dụ: Nguyễn Văn A"
-                                        autoComplete="name"
-                                        maxLength={100}
                                         className="w-full h-[38px] border rounded-md pl-2.5 pr-[35px] outline-none focus:ring-1 focus:ring-blue-400"
                                     />
 
@@ -193,6 +209,13 @@ const AddressPage = () => {
                                         </button>
                                     )}
                                 </div>
+
+                                {/* ĐẶT CẢNH BÁO Ở ĐÂY */}
+                                {fullName.length > 0 && /[^a-zA-ZÀ-ỹ\s]/.test(fullName) && (
+                                    <p className="text-xs text-red-500 mt-1">
+                                        Tên không được chứa số hoặc ký tự đặc biệt
+                                    </p>
+                                )}
                             </div>
 
 
@@ -210,6 +233,7 @@ const AddressPage = () => {
                                     <div className="w-full relative">
                                         <div className="relative w-full h-[38px] mt-4">
                                             <input
+                                                ref={phoneRef}
                                                 type="tel"
                                                 value={phone}
                                                 onChange={(e) => {
@@ -269,6 +293,7 @@ const AddressPage = () => {
                                         <div className="w-full relative mt-3">
                                             <div className="relative w-full h-[38px] mt-4">
                                                 <input
+                                                    ref={otpRef}
                                                     type="text"
                                                     value={otp}
                                                     onChange={(e) => {
@@ -354,6 +379,7 @@ const AddressPage = () => {
                             {/* SAVE */}
                             <div className="w-full mt-1 flex items-center justify-center">
                                 <button
+                                    onClick={handleSave}
                                     disabled={!canSave}
                                     className={`w-[200px] h-full px-3 py-2 text-md  font-medium shadow rounded
                                          ${canSave
