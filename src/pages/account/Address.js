@@ -142,7 +142,7 @@ const AddressPage = () => {
                                             value={fullName}
                                             onChange={(e) => setFullName(e.target.value)}
                                             placeholder="Nhập họ và tên người nhận"
-                                            className="w-full h-10 pl-2.5 border rounded focus:ring-1 focus:ring-blue-400"
+                                            className="w-full h-10 px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400"
                                         />
                                     </div>
                                 </div>
@@ -166,7 +166,7 @@ const AddressPage = () => {
                                                 setOtpSent(false);
                                             }}
                                             placeholder="Nhập số điện thoại liên hệ"
-                                            className="w-full h-10 pl-2.5 border rounded focus:ring-1 focus:ring-blue-400"
+                                            className="w-full h-10 px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400"
                                         />
 
                                         {!phoneVerified && (
@@ -228,7 +228,7 @@ const AddressPage = () => {
                                             onChange={(e) => setAddress(e.target.value)}
                                             rows={3}
                                             placeholder="Nhập địa chỉ chi tiết"
-                                            className="w-full pl-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400 resize-none"
+                                            className="w-full px-2.5 py-2 border rounded focus:ring-1 focus:ring-blue-400 resize-none"
                                         />
                                     </div>
                                 </div>
