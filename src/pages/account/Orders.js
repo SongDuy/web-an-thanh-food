@@ -28,6 +28,7 @@ const OrdersPage = () => {
 
     // chống bị nhảy ô nhập khi clear
     const inputRef = useRef(null);
+
     return (
         <>
             <Header
@@ -76,29 +77,37 @@ const OrdersPage = () => {
                         </ul>
                     </div>
 
-                    <div className="relative w-full h-[38px]">
-                        <input
-                            ref={inputRef}   // 👈 thiếu dòng này
-                            type="text"
-                            value={valueSearch}
-                            onChange={(e) => setValueSearch(e.target.value)}
-                            placeholder="Tìm đơn hàng theo Mã đơn hàng, Tên sản phẩm"
-                            className="w-full h-full border rounded-md px-2.5 pr-8 outline-none focus:ring-1 focus:ring-blue-400"
-                        />
+                    <div className="w-full relative">
+                        <div className="relative w-full h-[38px]">
+                            <input
+                                ref={inputRef}   // 👈 thiếu dòng này
+                                type="text"
+                                value={valueSearch}
+                                onChange={(e) => setValueSearch(e.target.value)}
+                                placeholder="Tìm đơn hàng theo Mã đơn hàng, Tên sản phẩm"
+                                className="w-full h-full border rounded-md px-2.5 pr-[160px] outline-none focus:ring-1 focus:ring-blue-400"
+                            />
 
-                        {valueSearch && (
-                            <button
-                                type="button"
-                                onMouseDown={(e) => {
-                                    e.preventDefault(); // 🔥 ngăn mất focus
-                                    setValueSearch("");
-                                    inputRef.current?.focus(); // giữ focus
-                                }}
-                                className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
-                            >
-                                <ClearIcon />
-                            </button>
-                        )}
+                            {valueSearch && (
+                                <button
+                                    type="button"
+                                    onMouseDown={(e) => {
+                                        e.preventDefault(); // 🔥 ngăn mất focus
+                                        setValueSearch("");
+                                        inputRef.current?.focus(); // giữ focus
+                                    }}
+                                    className="absolute pr-[125px] right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                >
+                                    <ClearIcon />
+                                </button>
+                            )}
+                        </div>
+
+                        <button
+                            className="absolute w-[125px] h-full right-0 top-0  text-sm border hover:border-r rounded-r-md bg- hover:bg-gray-100 text-blue-500 hover:text-blue-600"
+                        >
+                            Tìm đơn hàng
+                        </button>
                     </div>
 
                     <div className="w-full grid grid-cols-1 gap-3">

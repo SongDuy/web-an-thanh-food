@@ -210,9 +210,9 @@ const AddressPage = () => {
                                             <button
                                                 onClick={sendOtp}
                                                 disabled={countdown > 0}
-                                                className={`absolute w-[95px] h-full right-0 top-0 text-sm border rounded-r font-medium
+                                                className={`absolute w-[95px] h-full right-0 top-0 text-sm border-l rounded-r font-medium
                                                     ${countdown
-                                                        ? "text-gray-400 cursor-not-allowed bg-gray-50"
+                                                        ? "text-gray-400 cursor-not-allowed bg-gray-100"
                                                         : "text-blue-500 hover:text-blue-600 hover:bg-blue-50"
                                                     }`}
                                             >
