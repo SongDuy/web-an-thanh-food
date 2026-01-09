@@ -143,9 +143,20 @@ const AddressPage = () => {
 
                                 <div className="relative w-full h-[38px] mt-4">
                                     <input
+                                        type="text"
                                         value={fullName}
-                                        onChange={(e) => setFullName(e.target.value)}
-                                        placeholder="Thêm họ và tên"
+                                        onChange={(e) => {
+                                            // Chuẩn hoá: bỏ ký tự lạ, gộp nhiều khoảng trắng, không cho space ở đầu
+                                            const value = e.target.value
+                                                .replace(/[^a-zA-ZÀ-ỹ\s]/g, "")   // chỉ cho chữ + tiếng Việt
+                                                .replace(/\s+/g, " ")            // gộp nhiều space
+                                                .trimStart();                   // không cho space đầu
+
+                                            setFullName(value);
+                                        }}
+                                        placeholder="Ví dụ: Nguyễn Văn A"
+                                        autoComplete="name"
+                                        maxLength={100}
                                         className="w-full h-[38px] border rounded-md pl-2.5 pr-[35px] outline-none focus:ring-1 focus:ring-blue-400"
                                     />
 
@@ -180,13 +191,20 @@ const AddressPage = () => {
                                     <div className="w-full relative">
                                         <div className="relative w-full h-[38px] mt-4">
                                             <input
+                                                type="tel"
                                                 value={phone}
                                                 onChange={(e) => {
-                                                    setPhone(e.target.value);
+                                                    // Chỉ cho nhập số và +
+                                                    const value = e.target.value.replace(/[^0-9+]/g, "");
+                                                    setPhone(value);
                                                     setPhoneVerified(false);
                                                     setOtpSent(false);
                                                 }}
-                                                placeholder="Thêm số điện thoại"
+                                                placeholder="Ví dụ: 0901234567 hoặc +84901234567"
+                                                inputMode="tel"
+                                                autoComplete="tel"
+                                                maxLength={15}
+                                                pattern="(\+84|0)[0-9]{9}"
                                                 className="w-full h-[38px] pl-3 pr-[130px] border rounded-md outline-none focus:ring-1 focus:ring-blue-400"
                                             />
 
@@ -232,9 +250,18 @@ const AddressPage = () => {
                                         <div className="w-full relative mt-3">
                                             <div className="relative w-full h-[38px] mt-4">
                                                 <input
+                                                    type="text"
                                                     value={otp}
-                                                    onChange={(e) => setOtp(e.target.value)}
-                                                    placeholder="Nhập OTP"
+                                                    onChange={(e) => {
+                                                        // Chỉ cho nhập số
+                                                        const value = e.target.value.replace(/\D/g, "");
+                                                        setOtp(value);
+                                                    }}
+                                                    placeholder="Nhập mã OTP"
+                                                    inputMode="numeric"
+                                                    autoComplete="one-time-code"
+                                                    maxLength={6}
+                                                    pattern="[0-9]{6}"
                                                     className="w-full h-[38px] pl-3 pr-[130px] border rounded-md outline-none focus:ring-1 focus:ring-blue-400"
                                                 />
 
@@ -278,9 +305,13 @@ const AddressPage = () => {
                                         value={address}
                                         onChange={(e) => setAddress(e.target.value)}
                                         rows={3}
-                                        placeholder="Thêm địa chỉ"
+                                        placeholder="Ví dụ: 25 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP.HCM"
+                                        autoComplete="shipping street-address"
+                                        minLength={10}
+                                        maxLength={300}
                                         className="w-full h-[90px] border rounded-md px-2.5 py-2 resize-none overflow-y-auto outline-none focus:ring-1 focus:ring-blue-400"
                                     />
+
                                 </div>
                             </div>
 
