@@ -279,7 +279,7 @@ const AddressPage = () => {
                                         onChange={(e) => setAddress(e.target.value)}
                                         rows={3}
                                         placeholder="Thêm địa chỉ"
-                                        className="w-full h-[90px] border border-r-2 rounded-l-md rounded-r-sm px-2.5 py-2 resize-none overflow-y-scroll outline-none focus:ring-1 focus:ring-blue-400"
+                                        className="w-full h-[90px] border rounded-md px-2.5 py-2 resize-none overflow-y-auto outline-none focus:ring-1 focus:ring-blue-400"
                                     />
                                 </div>
                             </div>
