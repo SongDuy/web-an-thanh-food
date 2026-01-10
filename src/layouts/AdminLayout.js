@@ -23,7 +23,7 @@ const AdminLayout = ({ children, menuItems, isTitle, handleNavigation, mockAdmin
                                         className={`w-full h-[50px] cursor-pointer px-5 py-2 font-medium shadow-sm border border-gray-200 flex items-center rounded transition-all 
                                             ${isTitle === item.id
                                                 ? 'text-yellow-500 bg-red-50 border-l-4 border-l-yellow-500'
-                                                : 'hover:text-yellow-500 bg-white text-gray-500 '
+                                                : 'hover:text-yellow-500 bg-white text-gray-600 '
                                             }`}
                                     >
                                         <span className="mr-4">{item.icon}</span>

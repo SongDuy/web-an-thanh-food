@@ -63,7 +63,7 @@ const AccountOrdersPage = () => {
                             {tabs.map((tab, index) => (
                                 <li
                                     key={index}
-                                    className={`w-full h-full border-b-2 ${active === index ? "border-blue-500 text-blue-700" : "border-transparent text-gray-500"
+                                    className={`w-full h-full border-b-2 ${active === index ? "border-blue-500 text-blue-700" : "border-transparent text-gray-500 hover:text-blue-700"
                                         }`}
                                 >
                                     <button
