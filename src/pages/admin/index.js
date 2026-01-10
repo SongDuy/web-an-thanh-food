@@ -77,7 +77,7 @@ const AdminPage = () => {
       {/* Header */}
       <div className="w-full h-[50px] flex items-center border-b-2 mb-5">
         <div className="flex items-center text-gray-600">
-          <h1 className="font-semibold">관리자</h1>
+          <h1 className="font-semibold">Admin</h1>
           <NavigateNextIcon className="mx-1" />
           <span className="font-semibold text-yellow-500">
             {currentMenuLabel}

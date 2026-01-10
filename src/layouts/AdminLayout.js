@@ -9,7 +9,7 @@ const AdminLayout = ({ children, menuItems, isTitle, handleNavigation, mockAdmin
                 <div className="w-[300px] h-full py-5 bg-gray-100 border-r flex-shrink-0">
                     <div className="w-full px-5">
                         <div className="w-full h-[50px] flex items-center border-b-2">
-                            <h1 className="font-bold text-xl text-gray-800">관리자</h1>
+                            <h1 className="font-bold text-xl text-gray-800">Admin</h1>
                         </div>
                     </div>
 
