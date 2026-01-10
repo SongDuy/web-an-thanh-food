@@ -70,7 +70,7 @@ const AdminPage = () => {
                     </div>
 
                     <div className="w-full px-2">
-                        <div className="w-full h-[calc(100vh-150px)] px-3 my-5 overflow-y-auto custom-scrollbar">
+                        <div className="w-full h-[calc(100vh-120px)] px-3 my-5 overflow-y-auto custom-scrollbar">
                             <ul className="grid grid-cols-1 gap-2 pb-5">
                                 {menuItems.map((item) => (
                                     <li
