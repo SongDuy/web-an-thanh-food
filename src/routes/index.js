@@ -72,7 +72,7 @@ const AppRoutes = () => {
             <Route path="/admin/settings" element={<AdminSettingsPage />} />
             <Route path="/admin/dashboard" element={<AdminDashboardPage />} />
 
-            {/* 404 */}
+            {/*Không tìm thấy trang 404 */}
             <Route path="/404" element={<NotFoundPage />} />
             <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
