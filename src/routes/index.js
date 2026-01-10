@@ -20,6 +20,13 @@ import FavoritesPage from '../pages/account/Favorites';
 import SettingsPage from '../pages/account/Settings';
 
 import AdminPage from '../pages/admin'
+import AdminBannersPage from '../pages/admin/banners';
+import AdminCategoriesPage from '../pages/admin/categories';
+import AdminCustomersPage from '../pages/admin/customers';
+import AdminOrdersPage from '../pages/admin/orders';
+import AdminProductsPage from '../pages/admin/products';
+import AdminSettingsPage from '../pages/admin/settings';
+
 
 import NotFoundPage from '../pages/notFound';
 
@@ -55,6 +62,12 @@ const AppRoutes = () => {
 
             {/* Admin - page */}
             <Route path="/admin" element={<AdminPage />} />
+            <Route path="/admin/banners" element={<AdminBannersPage />} />
+            <Route path="/admin/categories" element={<AdminCategoriesPage />} />
+            <Route path="/admin/customers" element={<AdminCustomersPage />} />
+            <Route path="/admin/orders" element={<AdminOrdersPage />} />
+            <Route path="/admin/products" element={<AdminProductsPage />} />
+            <Route path="/admin/settings" element={<AdminSettingsPage />} />
 
             {/* 404 */}
             <Route path="/404" element={<NotFoundPage />} />
