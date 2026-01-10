@@ -9,12 +9,12 @@ module.exports = {
       colors: {
         soft: '#F5F5FA',
       },
-      
+
       fontFamily: {
         serifBook: ['Merriweather', 'serif'],
         serifTitle: ['Playfair Display', 'serif'],
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')({ nocompatible: true }),],
 }
