@@ -20,8 +20,9 @@ const AdminLayout = ({ children, menuItems, isTitle, handleNavigation, mockAdmin
                                     <li
                                         key={item.id}
                                         onClick={() => handleNavigation(item.id, item.path)}
-                                        className={`w-full h-[50px] cursor-pointer px-5 py-2 font-medium shadow-sm border border-gray-300 flex items-center rounded transition-all ${isTitle === item.id
-                                                ? 'text-yellow-500 bg-red-50 border-l-4 border-l-yellow-500'
+                                        className={`w-full h-[50px] cursor-pointer px-5 py-2 font-medium shadow border-gray-300 flex items-center rounded transition-all 
+                                            ${isTitle === item.id
+                                                ? 'text-yellow-500 bg-gradient-to-tr from-gray-100 via-red-50 to-red-100 border-l-4 border-l-yellow-500'
                                                 : 'hover:text-yellow-500 bg-white text-gray-500 '
                                             }`}
                                     >
