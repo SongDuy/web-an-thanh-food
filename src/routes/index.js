@@ -19,6 +19,8 @@ import AddressPage from '../pages/account/Address';
 import FavoritesPage from '../pages/account/Favorites';
 import SettingsPage from '../pages/account/Settings';
 
+import AdminPage from '../pages/admin'
+
 import NotFoundPage from '../pages/notFound';
 
 const AppRoutes = () => {
@@ -39,7 +41,7 @@ const AppRoutes = () => {
             {/* Giỏ hàng - page */}
             <Route path="/cart" element={<CartPage />} />
 
-            {/* Danh mục Tài Khoản */}
+            {/* Danh mục Account - page */}
             <Route path="/account/profile" element={<ProfilePage />} />
             <Route path="/account/orders" element={<OrdersPage />} />
             <Route path="/account/address" element={<AddressPage />} />
@@ -50,6 +52,9 @@ const AppRoutes = () => {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
+
+            {/* Admin - page */}
+            <Route path="/admin" element={<AdminPage />} />
 
             {/* 404 */}
             <Route path="/404" element={<NotFoundPage />} />

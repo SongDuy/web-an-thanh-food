@@ -45,12 +45,15 @@ const AddressPage = () => {
         return capitalizeName(value);
     };
 
+    const nameHasError =
+        fullName.length > 0 && /[^a-zA-ZÀ-ỹ\s]/.test(fullName);
+
     const canSave =
+        !nameHasError &&
         normalizeName(fullName).length > 0 &&
         phone.trim().length > 0 &&
         address.trim().length > 0 &&
         phoneVerified;
-
 
     /* ===== OTP ===== */
     useEffect(() => {
@@ -62,6 +65,9 @@ const AddressPage = () => {
     }, [countdown]);
 
     const sendOtp = () => {
+        const rawPhone = phone.replace(/\s/g, ""); // bỏ khoảng trắng
+        console.log("Send OTP to:", rawPhone);
+
         setOtp("");
         setOtpSent(true);
         setCountdown(90);
@@ -91,6 +97,21 @@ const AddressPage = () => {
         setFullName(safeName);
     };
 
+    // Tạo khoảng cách cho số điện thoại
+    const formatPhone = (input) => {
+        // 🔥 Chỉ giữ lại các chữ số 0-9, loại bỏ tất cả ký tự khác kể cả dấu +
+        let raw = input.replace(/[^0-9]/g, "");
+
+        // Nếu số điện thoại bắt đầu bằng 0 (định dạng Việt Nam phổ biến)
+        if (raw.startsWith("0")) {
+            let nums = raw.slice(1); // Lấy phần số sau số 0
+            if (nums.length <= 2) return "0" + nums;
+            // Định dạng thành: 093 8595...
+            return "0" + nums.slice(0, 2) + " " + nums.slice(2);
+        }
+
+        return raw;
+    };
 
     return (
         <>
@@ -192,7 +213,12 @@ const AddressPage = () => {
                                             }
                                         }}
                                         placeholder="Ví dụ: Nguyễn Văn A"
-                                        className="w-full h-[38px] border rounded-md pl-2.5 pr-[35px] outline-none focus:ring-1 focus:ring-blue-400"
+                                        className={`w-full h-[38px] rounded-md pl-2.5 pr-[35px] outline-none focus:ring-1
+                                                ${nameHasError
+                                                ? "border border-red-500 focus:ring-red-400"
+                                                : "border border-gray-300 focus:ring-blue-400"
+                                            }`}
+
                                     />
 
                                     {fullName && (
@@ -237,16 +263,15 @@ const AddressPage = () => {
                                                 type="tel"
                                                 value={phone}
                                                 onChange={(e) => {
-                                                    // Chỉ cho nhập số và +
-                                                    const value = e.target.value.replace(/[^0-9+]/g, "");
-                                                    setPhone(value);
+                                                    const formatted = formatPhone(e.target.value);
+                                                    setPhone(formatted);
                                                     setPhoneVerified(false);
                                                     setOtpSent(false);
                                                 }}
-                                                placeholder="Ví dụ: 0901234567 (+84901234567)"
+                                                placeholder="Ví dụ: 090 1234567"
                                                 inputMode="tel"
                                                 autoComplete="tel"
-                                                maxLength={15}
+                                                maxLength={11}
                                                 pattern="(\+84|0)[0-9]{9}"
                                                 className="w-full h-[38px] pl-3 pr-[130px] border rounded-md outline-none focus:ring-1 focus:ring-blue-400"
                                             />
