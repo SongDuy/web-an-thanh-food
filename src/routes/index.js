@@ -62,15 +62,21 @@ const AppRoutes = () => {
             <Route path="/account/settings" element={<AccountSettingsPage />} />
 
             {/* Admin - page */}
-            <Route path="/admin" element={<AdminPage />} />
+            <Route path="/admin" element={<AdminPage />}>
+                {/* Định tuyến mặc định cho /admin */}
+                <Route index element={<Navigate to="dashboard" replace />} />
+
+                <Route path="dashboard" element={<AdminDashboardPage />} />
+                <Route path="banners" element={<AdminBannersPage />} />
+                <Route path="categories" element={<AdminCategoriesPage />} />
+                <Route path="customers" element={<AdminCustomersPage />} />
+                <Route path="orders" element={<AdminOrdersPage />} />
+                <Route path="products" element={<AdminProductsPage />} />
+                <Route path="settings" element={<AdminSettingsPage />} />
+            </Route>
+
+            {/* Đăng nhập Admin */}
             <Route path="/admin/login" element={<AdminLoginPage />} />
-            <Route path="/admin/banners" element={<AdminBannersPage />} />
-            <Route path="/admin/categories" element={<AdminCategoriesPage />} />
-            <Route path="/admin/customers" element={<AdminCustomersPage />} />
-            <Route path="/admin/orders" element={<AdminOrdersPage />} />
-            <Route path="/admin/products" element={<AdminProductsPage />} />
-            <Route path="/admin/settings" element={<AdminSettingsPage />} />
-            <Route path="/admin/dashboard" element={<AdminDashboardPage />} />
 
             {/*Không tìm thấy trang 404 */}
             <Route path="/404" element={<NotFoundPage />} />
