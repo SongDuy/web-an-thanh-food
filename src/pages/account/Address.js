@@ -11,7 +11,7 @@ import HomeWorkIcon from '@mui/icons-material/HomeWork';
 import VerifiedOutlinedIcon from "@mui/icons-material/VerifiedOutlined";
 import ClearIcon from '@mui/icons-material/Clear';
 
-const AddressPage = () => {
+const AccountAddressPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
 
@@ -426,4 +426,4 @@ const AddressPage = () => {
     );
 };
 
-export default AddressPage;
+export default AccountAddressPage;

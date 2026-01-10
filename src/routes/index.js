@@ -13,11 +13,11 @@ import LoginPage from "../pages/auth/Login";
 import RegisterPage from "../pages/auth/Register";
 import ForgotPassword from "../pages/auth/ForgotPassword";
 
-import ProfilePage from '../pages/account/Profile';
-import OrdersPage from '../pages/account/Orders';
-import AddressPage from '../pages/account/Address';
-import FavoritesPage from '../pages/account/Favorites';
-import SettingsPage from '../pages/account/Settings';
+import AccountProfilePage from '../pages/account/Profile';
+import AccountOrdersPage from '../pages/account/Orders';
+import AccountAddressPage from '../pages/account/Address';
+import AccountFavoritesPage from '../pages/account/Favorites';
+import AccountSettingsPage from '../pages/account/Settings';
 
 import AdminPage from '../pages/admin'
 import AdminBannersPage from '../pages/admin/banners';
@@ -50,11 +50,11 @@ const AppRoutes = () => {
             <Route path="/cart" element={<CartPage />} />
 
             {/* Danh mục Account - page */}
-            <Route path="/account/profile" element={<ProfilePage />} />
-            <Route path="/account/orders" element={<OrdersPage />} />
-            <Route path="/account/address" element={<AddressPage />} />
-            <Route path="/account/favorites" element={<FavoritesPage />} />
-            <Route path="/account/settings" element={<SettingsPage />} />
+            <Route path="/account/profile" element={<AccountProfilePage />} />
+            <Route path="/account/orders" element={<AccountOrdersPage />} />
+            <Route path="/account/address" element={<AccountAddressPage />} />
+            <Route path="/account/favorites" element={<AccountFavoritesPage />} />
+            <Route path="/account/settings" element={<AccountSettingsPage />} />
 
             {/* Auth - page */}
             <Route path="/login" element={<LoginPage />} />

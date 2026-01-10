@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 import Search from "../../components/Search";
 import Notification from "../../components/Notification";
 
-const SettingsPage = () => {
+const AccountSettingsPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
 
@@ -47,4 +47,4 @@ const SettingsPage = () => {
     );
 };
 
-export default SettingsPage;
+export default AccountSettingsPage;

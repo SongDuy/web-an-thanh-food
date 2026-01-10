@@ -16,7 +16,7 @@ const tabs = [
     "Đã hủy",
 ];
 
-const OrdersPage = () => {
+const AccountOrdersPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
 
@@ -219,4 +219,4 @@ const OrdersPage = () => {
     );
 };
 
-export default OrdersPage;
+export default AccountOrdersPage;

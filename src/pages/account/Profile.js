@@ -16,7 +16,7 @@ import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 
 countries.registerLocale(vi);
 
-const ProfilePage = () => {
+const AccountProfilePage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
 
@@ -543,4 +543,4 @@ const ProfilePage = () => {
     );
 };
 
-export default ProfilePage;
+export default AccountProfilePage;
