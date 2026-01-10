@@ -36,7 +36,7 @@ const AdminPage = () => {
     { id: 'orders', label: 'Quản lý đơn hàng', path: '/admin/orders', icon: <InventoryIcon /> },
 
     // --- NHÓM NỘI DUNG ---
-    { id: 'categories', label: 'Danh mục', path: '/admin/categories', icon: <CategoryIcon /> },
+    { id: 'categories', label: 'Quản lý danh mục', path: '/admin/categories', icon: <CategoryIcon /> },
     { id: 'products', label: 'Quản lý sản phẩm', path: '/admin/products', icon: <VideoLibraryIcon /> },
     { id: 'banners', label: 'Quản lý Banner', path: '/admin/banners', icon: <CollectionsIcon /> },
 
