@@ -27,6 +27,7 @@ import AdminOrdersPage from '../pages/admin/orders';
 import AdminProductsPage from '../pages/admin/products';
 import AdminSettingsPage from '../pages/admin/settings';
 import AdminLoginPage from '../pages/admin/auth/Login';
+import AdminDashboardPage from '../pages/admin/dashboard';
 
 import NotFoundPage from '../pages/notFound';
 
@@ -69,6 +70,7 @@ const AppRoutes = () => {
             <Route path="/admin/orders" element={<AdminOrdersPage />} />
             <Route path="/admin/products" element={<AdminProductsPage />} />
             <Route path="/admin/settings" element={<AdminSettingsPage />} />
+            <Route path="/admin/dashboard" element={<AdminDashboardPage />} />
 
             {/* 404 */}
             <Route path="/404" element={<NotFoundPage />} />
