@@ -38,16 +38,21 @@ const AppRoutes = () => {
             {/* Home - page */}
             <Route path="/" element={<HomePage />} />
 
+            {/* Auth - page */}
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+
             {/* Danh mục - page */}
             <Route path="/luong-thuc" element={<StaplesPage />} />
             <Route path="/thuc-pham" element={<GroceriesPage />} />
             <Route path="/bang-xep-hang" element={<RankingsPage />} />
 
-            {/* Chi tiết sản phẩm - page */}
-            <Route path="/:category/:id" element={<ProductDetailPage />} />
-
             {/* Giỏ hàng - page */}
             <Route path="/cart" element={<CartPage />} />
+
+            {/* Chi tiết sản phẩm - page */}
+            <Route path="/:category/:id" element={<ProductDetailPage />} />
 
             {/* Danh mục Account - page */}
             <Route path="/account/profile" element={<AccountProfilePage />} />
@@ -55,11 +60,6 @@ const AppRoutes = () => {
             <Route path="/account/address" element={<AccountAddressPage />} />
             <Route path="/account/favorites" element={<AccountFavoritesPage />} />
             <Route path="/account/settings" element={<AccountSettingsPage />} />
-
-            {/* Auth - page */}
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="/forgot-password" element={<ForgotPassword />} />
 
             {/* Admin - page */}
             <Route path="/admin" element={<AdminPage />} />
