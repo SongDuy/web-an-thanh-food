@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 
+import AdminLayout from '../../layouts/AdminLayout';
+
 // Import Icons
 import PieChartIcon from '@mui/icons-material/PieChart';
 import PeopleIcon from '@mui/icons-material/People';
@@ -67,67 +69,33 @@ const AdminPage = () => {
   const currentMenuLabel = menuItems.find(item => item.id === isTitle)?.label || capitalizeFirstLetter(isTitle);
 
   return (
-    <div className="w-full h-screen border bg-white">
-      <div className="flex h-full">
-
-        {/* Sidebar */}
-        <div className="w-[300px] h-full py-5 bg-gray-100 border-r">
-          <div className="w-full px-5">
-            <div className="w-full h-[50px] flex items-center border-b-2">
-              <h1 className="font-bold text-xl text-gray-800">관리자</h1>
-            </div>
-          </div>
-
-          <div className="w-full px-2">
-            <div className="w-full h-[calc(100vh-120px)] px-3 my-5 overflow-y-auto custom-scrollbar">
-              <ul className="grid grid-cols-1 gap-2 pb-5">
-                {menuItems.map((item) => (
-                  <li
-                    key={item.id}
-                    onClick={() => handleNavigation(item.id, item.path)}
-                    className={`w-full h-[50px] cursor-pointer px-5 py-2 shadow-sm flex items-center rounded transition-all ${isTitle === item.id
-                      ? 'text-yellow-600 bg-yellow-50 border-l-4 border-yellow-500 font-bold'
-                      : 'hover:text-yellow-500 bg-white text-gray-600'
-                      }`}
-                  >
-                    <span className="mr-4">{item.icon}</span>
-                    <span className="text-sm">{item.label}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+    <AdminLayout
+      menuItems={menuItems}         // PHẢI CÓ DÒNG NÀY
+      isTitle={isTitle}             // PHẢI CÓ DÒNG NÀY
+      handleNavigation={handleNavigation} // PHẢI CÓ DÒNG NÀY
+    >
+      {/* Header */}
+      <div className="w-full h-[50px] flex items-center border-b-2 mb-5">
+        <div className="flex items-center text-gray-600">
+          <h1 className="font-semibold">관리자</h1>
+          <NavigateNextIcon className="mx-1" />
+          <span className="font-semibold text-yellow-500">
+            {currentMenuLabel}
+          </span>
         </div>
 
-        {/* Main Content Area */}
-        <div className="flex-1 h-full px-8 py-5 bg-white overflow-auto">
-
-          {/* Header */}
-          <div className="w-full h-[50px] flex items-center border-b-2 mb-5">
-            <div className="flex items-center text-gray-600">
-              <h1 className="font-semibold">관리자</h1>
-              <NavigateNextIcon className="mx-1" />
-              <span className="font-semibold text-yellow-500">
-                {currentMenuLabel}
-              </span>
-            </div>
-
-            {/* Mock User Button */}
-            <div className="ml-auto">
-              <button className="px-4 py-1.5 bg-gray-50 border border-gray-300 rounded-full font-medium text-sm text-gray-600 hover:bg-gray-100 transition">
-                {mockAdmin.displayName} (Log Out)
-              </button>
-            </div>
-          </div>
-
-          {/* Sub-route Content */}
-          <div className="w-full">
-            <Outlet />
-          </div>
+        <div className="ml-auto">
+          <button className="px-4 py-1.5 bg-gray-50 border border-gray-300 rounded-full font-medium text-sm text-gray-600 hover:bg-gray-100 transition">
+            {mockAdmin.displayName} (Log Out)
+          </button>
         </div>
-
       </div>
-    </div>
+
+      {/* Sub-route Content */}
+      <div className="w-full">
+        <Outlet />
+      </div>
+    </AdminLayout>
   );
 }
 
