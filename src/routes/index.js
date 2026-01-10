@@ -28,6 +28,11 @@ import AdminProductsPage from '../pages/admin/products';
 import AdminSettingsPage from '../pages/admin/settings';
 import AdminLoginPage from '../pages/admin/auth/Login';
 import AdminDashboardPage from '../pages/admin/dashboard';
+import AdminAboutPage from '../pages/admin/about';
+import AdminContactPage from '../pages/admin/contact';
+import AdminAdvertisePage from '../pages/admin/advertise';
+import AdminPrivacyPage from '../pages/admin/privacy';
+import AdminTermsPage from '../pages/admin/terms';
 
 import NotFoundPage from '../pages/notFound';
 
@@ -72,6 +77,11 @@ const AppRoutes = () => {
                 <Route path="customers" element={<AdminCustomersPage />} />
                 <Route path="orders" element={<AdminOrdersPage />} />
                 <Route path="products" element={<AdminProductsPage />} />
+                <Route path="about" element={<AdminAboutPage />} />
+                <Route path="Contact" element={<AdminContactPage />} />
+                <Route path="advertise" element={<AdminAdvertisePage/>} />
+                <Route path="privacy" element={<AdminPrivacyPage />} />
+                <Route path="terms" element={<AdminTermsPage />} />
                 <Route path="settings" element={<AdminSettingsPage />} />
             </Route>
 

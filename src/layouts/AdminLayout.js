@@ -20,9 +20,9 @@ const AdminLayout = ({ children, menuItems, isTitle, handleNavigation, mockAdmin
                                     <li
                                         key={item.id}
                                         onClick={() => handleNavigation(item.id, item.path)}
-                                        className={`w-full h-[50px] cursor-pointer px-5 py-2 shadow-sm flex items-center rounded transition-all ${isTitle === item.id
-                                                ? 'text-yellow-600 bg-yellow-50 border-l-4 border-yellow-500 font-bold'
-                                                : 'hover:text-yellow-500 bg-white text-gray-600'
+                                        className={`w-full h-[50px] cursor-pointer px-5 py-2 font-medium shadow-sm border border-gray-300 flex items-center rounded transition-all ${isTitle === item.id
+                                                ? 'text-yellow-500 bg-red-50 border-l-4 border-l-yellow-500'
+                                                : 'hover:text-yellow-500 bg-white text-gray-500 '
                                             }`}
                                     >
                                         <span className="mr-4">{item.icon}</span>
@@ -35,7 +35,7 @@ const AdminLayout = ({ children, menuItems, isTitle, handleNavigation, mockAdmin
                 </div>
 
                 {/* --- PHẦN NỘI DUNG CHÍNH --- */}
-                <main className="flex-1 h-full px-8 py-5 bg-white overflow-auto">
+                <main className="flex-1 h-full px-5 py-5 bg-white overflow-auto">
                     {children}
                 </main>
 
