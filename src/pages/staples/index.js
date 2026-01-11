@@ -252,7 +252,6 @@ const products = [
   }
 ];
 
-
 const StaplesPage = () => {
   const [openSearch, setOpenSearch] = useState(false);
   const [openNotification, setOpenNotification] = useState(false);

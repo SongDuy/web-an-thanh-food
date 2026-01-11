@@ -321,15 +321,6 @@ const products = [
   },
 ];
 
-// const sortedProducts = [...products].sort((a, b) => {
-//   // So sánh rating trước
-//   if (b.rating !== a.rating) {
-//     return b.rating - a.rating;
-//   }
-//   // Nếu rating bằng nhau thì so sánh likes
-//   return b.likes - a.likes;
-// });
-
 const RankingsPage = () => {
   const [openSearch, setOpenSearch] = useState(false);
   const [openNotification, setOpenNotification] = useState(false);

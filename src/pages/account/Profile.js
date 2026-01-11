@@ -136,8 +136,6 @@ const AccountProfilePage = () => {
         }),
     };
 
-
-
     // Chọn quốc gia 
     const options = useMemo(() => {
         return Object.entries(
@@ -368,6 +366,7 @@ const AccountProfilePage = () => {
                                     <Select
                                         options={options}
                                         placeholder="Quốc gia"
+                                        isSearchable={true}
                                         menuPortalTarget={document.body}
                                         menuPosition="fixed"
                                         menuPlacement="auto"
