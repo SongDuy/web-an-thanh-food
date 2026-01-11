@@ -8,7 +8,7 @@ import PieChartIcon from '@mui/icons-material/PieChart';
 import PeopleIcon from '@mui/icons-material/People';
 import CollectionsIcon from '@mui/icons-material/Collections';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
+import FastfoodIcon from '@mui/icons-material/Fastfood';
 import CategoryIcon from '@mui/icons-material/Category';
 import SettingsIcon from '@mui/icons-material/Settings';
 import InventoryIcon from '@mui/icons-material/Inventory';
@@ -37,7 +37,7 @@ const AdminPage = () => {
 
     // --- NHÓM NỘI DUNG ---
     { id: 'categories', label: 'Quản lý danh mục', path: '/admin/categories', icon: <CategoryIcon /> },
-    { id: 'products', label: 'Quản lý sản phẩm', path: '/admin/products', icon: <VideoLibraryIcon /> },
+    { id: 'products', label: 'Quản lý sản phẩm', path: '/admin/products', icon: <FastfoodIcon /> },
     { id: 'banners', label: 'Quản lý Banner', path: '/admin/banners', icon: <CollectionsIcon /> },
 
     // --- NHÓM TRUYỀN THÔNG ---
