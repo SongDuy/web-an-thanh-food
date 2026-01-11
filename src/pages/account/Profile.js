@@ -389,7 +389,7 @@ const AccountProfilePage = () => {
                     </div>
 
                     <div className="col-span-4 px-4 py-3 border-l">
-                        <div className="w-full h-full flex flex-col gap-10">
+                        <div className="w-full h-full flex flex-col gap-[28px]">
                             <div className="w-full">
                                 <h2 className="text-lg text-gray-500">
                                     Email
