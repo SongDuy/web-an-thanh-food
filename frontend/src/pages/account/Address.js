@@ -28,7 +28,6 @@ const AccountAddressPage = () => {
     const [phoneVerified, setPhoneVerified] = useState(false);
 
     // Viết hoa chữ cái đầu ở ô nhập họ và tên
-
     const capitalizeName = (str) => {
         return str
             .toLowerCase()
