@@ -54,7 +54,7 @@ const AccountRewardsPage = () => {
                         </div>
 
                         <div className="w-full mt-5 max-h-[460px] pr-3 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
-                            <div className="w-full h-full flex flex-col gap-2">
+                            <div className="w-full h-full flex flex-col gap-2 pb-5">
                                 <div className="w-full h-[50px] bg-white border rounded shadow-sm">
 
                                 </div>
