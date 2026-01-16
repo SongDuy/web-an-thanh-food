@@ -53,33 +53,33 @@ const AccountRewardsPage = () => {
                             </h2>
                         </div>
 
-                        <div className="w-full mt-5 max-h-[465px] pr-3 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
-                            <div className="w-full h-full flex flex-col gap-3 ">
-                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+                        <div className="w-full mt-5 max-h-[460px] pr-3 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
+                            <div className="w-full h-full flex flex-col gap-2">
+                                <div className="w-full h-[50px] bg-white border rounded shadow-sm">
 
                                 </div>
-                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+                                <div className="w-full h-[50px] bg-white border rounded shadow-sm">
 
                                 </div>
-                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+                                <div className="w-full h-[50px] bg-white border rounded shadow-sm">
 
                                 </div>
-                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+                                <div className="w-full h-[50px] bg-white border rounded shadow-sm">
 
                                 </div>
-                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+                                <div className="w-full h-[50px] bg-white border rounded shadow-sm">
 
                                 </div>
-                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+                                <div className="w-full h-[50px] bg-white border rounded shadow-sm">
 
                                 </div>
-                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+                                <div className="w-full h-[50px] bg-white border rounded shadow-sm">
 
                                 </div>
-                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+                                <div className="w-full h-[50px] bg-white border rounded shadow-sm">
 
                                 </div>
-                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+                                <div className="w-full h-[50px] bg-white border rounded shadow-sm">
 
                                 </div>
                             </div>
