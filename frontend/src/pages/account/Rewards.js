@@ -38,19 +38,51 @@ const AccountRewardsPage = () => {
                 </div>
 
                 <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded-md border">
-                    <div className="col-span-7 px-4 py-3 border-r">
+                    <div className="col-span-7 px-4 py-3">
                         <div className="w-full">
                             <h2 className="text-lg text-gray-500">
-                               Tham Gia Vòng Quay
+                                Tham Gia Vòng Quay
                             </h2>
                         </div>
                     </div>
 
-                    <div className="col-span-4 px-4 py-3 border-l">
+                    <div className="col-span-4 px-4 py-3 bg-gray-100">
                         <div className="w-full">
                             <h2 className="text-lg text-gray-500">
                                 Lịch Sử Nhận Thẻ
                             </h2>
+                        </div>
+
+                        <div className="w-full mt-5 max-h-[465px] pr-3 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-200 scrollbar-thumb-rounded-full">
+                            <div className="w-full h-full flex flex-col gap-3 ">
+                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+
+                                </div>
+                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+
+                                </div>
+                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+
+                                </div>
+                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+
+                                </div>
+                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+
+                                </div>
+                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+
+                                </div>
+                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+
+                                </div>
+                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+
+                                </div>
+                                <div className="w-full h-[55px] bg-white border rounded shadow-sm">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
