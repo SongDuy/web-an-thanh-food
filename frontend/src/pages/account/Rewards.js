@@ -123,7 +123,7 @@ const AccountRewardsPage = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-full h-[65px] pb-0.5 flex items-center justify-center bg-red-50/80 rounded">
+                                <div className="w-full h-[65px] pb-0.5 flex items-center justify-center bg-red-50 rounded">
                                     <div className="w-full grid grid-cols-5">
                                         <div className="w-full flex flex-col items-center justify-center">
                                             <span className="text-black text-sm">
