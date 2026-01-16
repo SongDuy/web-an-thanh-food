@@ -41,7 +41,7 @@ const AccountRewardsPage = () => {
                     <div className="col-span-7 px-4 py-3 border-r">
                         <div className="w-full">
                             <h2 className="text-lg text-gray-500">
-                                Vòng Quay Mai Mắn
+                               Tham Gia Vòng Quay
                             </h2>
                         </div>
                     </div>
