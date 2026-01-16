@@ -46,12 +46,12 @@ const AccountRewardsPage = () => {
                         </div>
                     </div>
 
-                    <div className="col-span-4 flex flex-col gap-5 px-4 py-3 rounded-r-md bg-gray-100">
+                    <div className="col-span-4 flex flex-col gap-5 px-4 py-3">
 
                         <div className="w-full">
                             <div className="w-full">
                                 <h2 className="text-lg text-gray-500">
-                                    Thẻ Mua Đang Có
+                                    Thẻ Mua Của Bạn
                                 </h2>
                             </div>
 
