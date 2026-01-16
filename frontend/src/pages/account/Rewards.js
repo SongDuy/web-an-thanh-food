@@ -123,8 +123,69 @@ const AccountRewardsPage = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-full h-[65px] bg-gray-100 rounded">
+                                <div className="w-full h-[65px] pb-0.5 flex items-center justify-center bg-red-50/80 rounded">
+                                    <div className="w-full grid grid-cols-5">
+                                        <div className="w-full flex flex-col items-center justify-center">
+                                            <span className="text-black text-sm">
+                                                Chúc phúc
+                                            </span>
+                                            <span className="text-black text-sm">
+                                                = 10X
+                                            </span>
+                                            <span className="text-black text-sm">
+                                                Thẻ cấp 1
+                                            </span>
+                                        </div>
 
+                                        <div className="w-full flex flex-col items-center justify-center">
+                                            <span className="text-black text-sm">
+                                                Thẻ cấp 1
+                                            </span>
+                                            <span className="text-black text-sm">
+                                                = 10X
+                                            </span>
+                                            <span className="text-black text-sm">
+                                                Thẻ cấp 2
+                                            </span>
+                                        </div>
+
+                                        <div className="w-full flex flex-col items-center justify-center">
+                                            <span className="text-black text-sm">
+                                                Thẻ cấp 2
+                                            </span>
+                                            <span className="text-black text-sm">
+                                                = 10X
+                                            </span>
+                                            <span className="text-black text-sm">
+                                                Thẻ cấp 3
+                                            </span>
+                                        </div>
+
+                                        <div className="w-full flex flex-col items-center justify-center">
+                                            <span className="text-black text-sm">
+                                                Thẻ cấp 3
+                                            </span>
+                                            <span className="text-black text-sm">
+                                                = 10X
+                                            </span>
+                                            <span className="text-black text-sm">
+                                                Thẻ cấp 4
+                                            </span>
+                                        </div>
+
+                                        <div className="w-full flex flex-col items-center justify-center">
+                                            <span className="text-black text-sm">
+                                                Thẻ cấp 4
+                                            </span>
+                                            <span className="text-black text-sm">
+                                                = 10X
+                                            </span>
+                                            <span className="text-black text-sm">
+                                                Thẻ cấp 5
+                                            </span>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
 
