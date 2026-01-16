@@ -203,8 +203,13 @@ const AccountRewardsPage = () => {
                                                 Bạn nhận được thẻ cấp 5 (Hệ Kim)
                                             </div>
 
-                                            <div className="ml-auto text-sm text-gray-500">
-                                                11/02/2026
+                                            <div className="ml-auto flex flex-col items-center justify-center">
+                                                <span className="text-sm text-gray-500">
+                                                    11/02/2026
+                                                </span>
+                                                <span className="text-sm text-gray-500">
+                                                    9:30:48
+                                                </span>
                                             </div>
                                         </div>
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
@@ -212,8 +217,13 @@ const AccountRewardsPage = () => {
                                                 Bạn nhận được thẻ cấp 3 (Hệ Thủy)
                                             </div>
 
-                                            <div className="ml-auto text-sm text-gray-500">
-                                                11/02/2026
+                                            <div className="ml-auto flex flex-col items-center justify-center">
+                                                <span className="text-sm text-gray-500">
+                                                    11/02/2026
+                                                </span>
+                                                <span className="text-sm text-gray-500">
+                                                    9:30:48
+                                                </span>
                                             </div>
                                         </div>
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
@@ -221,8 +231,13 @@ const AccountRewardsPage = () => {
                                                 Bạn nhận được thẻ cấp 2 (Hệ Hỏa)
                                             </div>
 
-                                            <div className="ml-auto text-sm text-gray-500">
-                                                11/02/2026
+                                           <div className="ml-auto flex flex-col items-center justify-center">
+                                                <span className="text-sm text-gray-500">
+                                                    11/02/2026
+                                                </span>
+                                                <span className="text-sm text-gray-500">
+                                                    9:30:48
+                                                </span>
                                             </div>
                                         </div>
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
@@ -230,8 +245,13 @@ const AccountRewardsPage = () => {
                                                 Bạn nhận được thẻ cấp 4 (Hệ Mộc)
                                             </div>
 
-                                            <div className="ml-auto text-sm text-gray-500">
-                                                11/02/2026
+                                           <div className="ml-auto flex flex-col items-center justify-center">
+                                                <span className="text-sm text-gray-500">
+                                                    11/02/2026
+                                                </span>
+                                                <span className="text-sm text-gray-500">
+                                                    9:30:48
+                                                </span>
                                             </div>
                                         </div>
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
@@ -239,8 +259,13 @@ const AccountRewardsPage = () => {
                                                 Bạn nhận được thẻ cấp 2 (Hệ Hỏa)
                                             </div>
 
-                                            <div className="ml-auto text-sm text-gray-500">
-                                                11/02/2026
+                                           <div className="ml-auto flex flex-col items-center justify-center">
+                                                <span className="text-sm text-gray-500">
+                                                    11/02/2026
+                                                </span>
+                                                <span className="text-sm text-gray-500">
+                                                    9:30:48
+                                                </span>
                                             </div>
                                         </div>
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
@@ -248,8 +273,13 @@ const AccountRewardsPage = () => {
                                                 Bạn nhận được thẻ cấp 1 (Hệ Thổ)
                                             </div>
 
-                                            <div className="ml-auto text-sm text-gray-500">
-                                                11/02/2026
+                                           <div className="ml-auto flex flex-col items-center justify-center">
+                                                <span className="text-sm text-gray-500">
+                                                    11/02/2026
+                                                </span>
+                                                <span className="text-sm text-gray-500">
+                                                    9:30:48
+                                                </span>
                                             </div>
                                         </div>
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
@@ -257,8 +287,13 @@ const AccountRewardsPage = () => {
                                                 Bạn nhận được thẻ cấp 2 (Hệ Hỏa)
                                             </div>
 
-                                            <div className="ml-auto text-sm text-gray-500">
-                                                11/02/2026
+                                           <div className="ml-auto flex flex-col items-center justify-center">
+                                                <span className="text-sm text-gray-500">
+                                                    11/02/2026
+                                                </span>
+                                                <span className="text-sm text-gray-500">
+                                                    9:30:48
+                                                </span>
                                             </div>
                                         </div>
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
@@ -266,8 +301,13 @@ const AccountRewardsPage = () => {
                                                 Bạn nhận được thẻ cấp 2 (Hệ Hỏa)
                                             </div>
 
-                                            <div className="ml-auto text-sm text-gray-500">
-                                                11/02/2026
+                                           <div className="ml-auto flex flex-col items-center justify-center">
+                                                <span className="text-sm text-gray-500">
+                                                    11/02/2026
+                                                </span>
+                                                <span className="text-sm text-gray-500">
+                                                    9:30:48
+                                                </span>
                                             </div>
                                         </div>
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
@@ -275,8 +315,13 @@ const AccountRewardsPage = () => {
                                                 Bạn nhận được thẻ cấp 3 (Hệ Thủy)
                                             </div>
 
-                                            <div className="ml-auto text-sm text-gray-500">
-                                                11/02/2026
+                                           <div className="ml-auto flex flex-col items-center justify-center">
+                                                <span className="text-sm text-gray-500">
+                                                    11/02/2026
+                                                </span>
+                                                <span className="text-sm text-gray-500">
+                                                    9:30:48
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
