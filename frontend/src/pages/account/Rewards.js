@@ -18,56 +18,69 @@ const AccountRewardsPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
 
-    // Tạo vòng quay
-    const [activeIndex, setActiveIndex] = useState(null);
-    const [points, setPoints] = useState(10000);
-    const [result, setResult] = useState(null);
-    const [spinning, setSpinning] = useState(false);
+    // (---Tạo vòng quay---)
 
-    const getWeightedIndex = () => {
-        const total = rewards.reduce((s, r) => s + r.weight, 0);
-        let rand = Math.random() * total;
+    const [activeIndex, setActiveIndex] = useState(null); // Ô đang sáng (hiệu ứng quay)
+    const [points, setPoints] = useState(10000); // Điểm người chơi
+    const [result, setResult] = useState(null); // Kết quả trúng thưởng
+    const [spinning, setSpinning] = useState(false); // Trạng thái đang quay (chống spam click)
 
-        for (let i = 0; i < rewards.length; i++) {
-            if (rand < rewards[i].weight) return i;
-            rand -= rewards[i].weight;
+
+    const getWeightedIndex = () => {  // Hàm random theo trọng số (xác suất)
+
+        const total = rewards.reduce((s, r) => s + r.weight, 0); // Tổng trọng số tất cả phần thưởng
+        let rand = Math.random() * total; // Số ngẫu nhiên trong [0, total)
+
+        for (let i = 0; i < rewards.length; i++) { // Duyệt từng phần thưởng
+
+            if (rand < rewards[i].weight) return i; // Nếu rand rơi vào khoảng của item hiện tại => trúng
+
+            rand -= rewards[i].weight; // Nếu chưa trúng, trừ đi weight và xét tiếp
         }
-        return 0;
+
+        return 0; // Fallback (hiếm khi dùng)
     };
 
-
+    // Hàm quay
     const spin = () => {
+        // Không đủ điểm hoặc đang quay thì bỏ qua
         if (points < 100 || spinning) return;
 
-        setSpinning(true);
-        setPoints(p => p - 100);
+        setSpinning(true);          // khóa nút quay
+        setPoints(p => p - 100);    // trừ 100 điểm
 
-        const target = getWeightedIndex();
-        let current = 0;
-        let steps = 3 * rewards.length + target; // số bước quay
-        let speed = 60; // bắt đầu nhanh
+        const target = getWeightedIndex();  // ô sẽ trúng (đã quyết định NGAY TỪ ĐẦU)
+
+        let current = 0;            // vị trí sáng hiện tại
+        let steps = 3 * rewards.length + target;
+        // số bước quay:
+        // - quay ít nhất 3 vòng đầy
+        // - sau đó dừng đúng ô target
+
+        let speed = 60;             // delay ban đầu (ms) => quay nhanh
 
         const run = () => {
-            setActiveIndex(current);
-            current = (current + 1) % rewards.length;
+            setActiveIndex(current);                // làm sáng ô hiện tại
+            current = (current + 1) % rewards.length; // sang ô kế tiếp
             steps--;
 
+            // Nếu đã hết bước => dừng và trả thưởng
             if (steps <= 0) {
-                setActiveIndex(target);
-                setResult(rewards[target]);
-                setSpinning(false);
+                setActiveIndex(target);             // cố định ô trúng
+                setResult(rewards[target]);         // lưu kết quả
+                setSpinning(false);                 // mở lại nút quay
                 return;
             }
 
-            // tăng delay => chậm dần
+            // Mỗi vòng tăng delay => cảm giác chậm dần
             speed += 25;
 
+            // Gọi tiếp vòng quay sau "speed" ms
             setTimeout(run, speed);
         };
 
-        run();
+        run(); // bắt đầu quay
     };
-
 
     return (
         <>
