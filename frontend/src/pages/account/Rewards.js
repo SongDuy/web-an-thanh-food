@@ -20,7 +20,7 @@ const AccountRewardsPage = () => {
 
     // Tạo vòng quay
     const [activeIndex, setActiveIndex] = useState(null);
-    const [points, setPoints] = useState(1000);
+    const [points, setPoints] = useState(10000);
     const [result, setResult] = useState(null);
     const [spinning, setSpinning] = useState(false);
 
