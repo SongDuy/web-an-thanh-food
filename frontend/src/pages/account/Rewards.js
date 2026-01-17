@@ -212,6 +212,7 @@ const AccountRewardsPage = () => {
                                                 </span>
                                             </div>
                                         </div>
+                                        
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
                                             <div className="font-medium text-blue-500">
                                                 Bạn nhận được thẻ cấp 3 (Hệ Thủy)
@@ -226,6 +227,7 @@ const AccountRewardsPage = () => {
                                                 </span>
                                             </div>
                                         </div>
+
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
                                             <div className="font-medium text-red-500">
                                                 Bạn nhận được thẻ cấp 2 (Hệ Hỏa)
@@ -240,6 +242,7 @@ const AccountRewardsPage = () => {
                                                 </span>
                                             </div>
                                         </div>
+
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
                                             <div className="font-medium text-green-500">
                                                 Bạn nhận được thẻ cấp 4 (Hệ Mộc)
@@ -253,6 +256,7 @@ const AccountRewardsPage = () => {
                                                 </span>
                                             </div>
                                         </div>
+
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
                                             <div className="font-medium text-red-500">
                                                 Bạn nhận được thẻ cấp 2 (Hệ Hỏa)
@@ -267,6 +271,7 @@ const AccountRewardsPage = () => {
                                                 </span>
                                             </div>
                                         </div>
+
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
                                             <div className="font-medium text-yellow-500">
                                                 Bạn nhận được thẻ cấp 1 (Hệ Thổ)
@@ -281,6 +286,7 @@ const AccountRewardsPage = () => {
                                                 </span>
                                             </div>
                                         </div>
+
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
                                             <div className="font-medium text-red-500">
                                                 Bạn nhận được thẻ cấp 2 (Hệ Hỏa)
@@ -295,6 +301,7 @@ const AccountRewardsPage = () => {
                                                 </span>
                                             </div>
                                         </div>
+
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
                                             <div className="font-medium text-red-500">
                                                 Bạn nhận được thẻ cấp 2 (Hệ Hỏa)
@@ -309,6 +316,7 @@ const AccountRewardsPage = () => {
                                                 </span>
                                             </div>
                                         </div>
+
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
                                             <div className="font-medium text-blue-500">
                                                 Bạn nhận được thẻ cấp 3 (Hệ Thủy)
