@@ -5,9 +5,69 @@ import Footer from "../../components/Footer";
 import Search from "../../components/Search";
 import Notification from "../../components/Notification";
 
+const rewards = [
+    { name: "Chúc phúc", weight: 100000 },
+    { name: "Thẻ cấp 1 (Hệ Thổ)", weight: 10000 },
+    { name: "Thẻ cấp 2 (Hệ Hỏa)", weight: 1000 },
+    { name: "Thẻ cấp 3 (Hệ Thủy)", weight: 100 },
+    { name: "Thẻ cấp 4 (Hệ Mộc)", weight: 10 },
+    { name: "Thẻ cấp 5 (Hệ Kim)", weight: 1 },
+];
+
 const AccountRewardsPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
+
+    // Tạo vòng quay
+    const [activeIndex, setActiveIndex] = useState(null);
+    const [points, setPoints] = useState(1000);
+    const [result, setResult] = useState(null);
+    const [spinning, setSpinning] = useState(false);
+
+    const getWeightedIndex = () => {
+        const total = rewards.reduce((s, r) => s + r.weight, 0);
+        let rand = Math.random() * total;
+
+        for (let i = 0; i < rewards.length; i++) {
+            if (rand < rewards[i].weight) return i;
+            rand -= rewards[i].weight;
+        }
+        return 0;
+    };
+
+
+    const spin = () => {
+        if (points < 100 || spinning) return;
+
+        setSpinning(true);
+        setPoints(p => p - 100);
+
+        const target = getWeightedIndex();
+        let current = 0;
+        let steps = 3 * rewards.length + target; // số bước quay
+        let speed = 60; // bắt đầu nhanh
+
+        const run = () => {
+            setActiveIndex(current);
+            current = (current + 1) % rewards.length;
+            steps--;
+
+            if (steps <= 0) {
+                setActiveIndex(target);
+                setResult(rewards[target]);
+                setSpinning(false);
+                return;
+            }
+
+            // tăng delay => chậm dần
+            speed += 25;
+
+            setTimeout(run, speed);
+        };
+
+        run();
+    };
+
 
     return (
         <>
@@ -39,11 +99,47 @@ const AccountRewardsPage = () => {
 
                 <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded-md border">
                     <div className="col-span-7 px-4 py-3 border-r">
-                        <div className="w-full">
-                            <h2 className="text-lg text-gray-500">
-                                Tham Gia Vòng Quay
-                            </h2>
+                        <h2 className="text-lg text-gray-500 mb-4">Tham Gia Vòng Quay</h2>
+
+                        {/* Điểm */}
+                        <div className="mb-4 text-sm text-gray-600">
+                            Điểm hiện tại: <b>{points}</b>
                         </div>
+
+                        {/* Vòng quay */}
+                        <div className="grid grid-cols-3 gap-3 mb-6">
+                            {rewards.map((item, i) => (
+                                <div
+                                    key={i}
+                                    className={`h-24 flex items-center justify-center text-center text-sm font-medium rounded-lg border shadow-sm transition-all duration-200
+                                        ${activeIndex === i
+                                            ? "bg-yellow-300 border-yellow-500 scale-110"
+                                            : "bg-gray-50"}
+                                        `}
+                                >
+                                    {item.name}
+                                </div>
+                            ))}
+                        </div>
+
+
+                        {/* Kết quả */}
+                        {result && !spinning && (
+                            <div className="mb-4 text-green-600 font-semibold animate-pulse">
+                                🎯 Kết quả: {result.name}
+                            </div>
+                        )}
+
+
+
+                        {/* Nút quay */}
+                        <button
+                            onClick={spin}
+                            disabled={spinning}
+                            className="px-6 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50"
+                        >
+                            {spinning ? "Đang quay..." : "Quay (100 điểm)"}
+                        </button>
                     </div>
 
                     <div className="col-span-4 px-4 py-3 border-l">
@@ -212,7 +308,7 @@ const AccountRewardsPage = () => {
                                                 </span>
                                             </div>
                                         </div>
-                                        
+
                                         <div className="w-full h-[48px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
                                             <div className="font-medium text-blue-500">
                                                 Bạn nhận được thẻ cấp 3 (Hệ Thủy)
