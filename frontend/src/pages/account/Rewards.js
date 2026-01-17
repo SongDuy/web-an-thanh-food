@@ -18,7 +18,7 @@ const AccountRewardsPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
 
-    // (---Tạo vòng quay---)
+    // (---Tạo vòng quay phải ở backend nếu không sẽ bị hack kết quả---)
     const [activeIndex, setActiveIndex] = useState(null); // Ô đang sáng (hiệu ứng quay)
     const [points, setPoints] = useState(10000); // Điểm người chơi
     const [result, setResult] = useState(null); // Kết quả trúng thưởng
