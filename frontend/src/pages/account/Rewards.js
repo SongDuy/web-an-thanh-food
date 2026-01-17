@@ -19,12 +19,10 @@ const AccountRewardsPage = () => {
     const [openNotification, setOpenNotification] = useState(false);
 
     // (---Tạo vòng quay---)
-
     const [activeIndex, setActiveIndex] = useState(null); // Ô đang sáng (hiệu ứng quay)
     const [points, setPoints] = useState(10000); // Điểm người chơi
     const [result, setResult] = useState(null); // Kết quả trúng thưởng
     const [spinning, setSpinning] = useState(false); // Trạng thái đang quay (chống spam click)
-
 
     const getWeightedIndex = () => {  // Hàm random theo trọng số (xác suất)
 
@@ -41,45 +39,36 @@ const AccountRewardsPage = () => {
         return 0; // Fallback (hiếm khi dùng)
     };
 
-    // Hàm quay
     const spin = () => {
-        // Không đủ điểm hoặc đang quay thì bỏ qua
+
         if (points < 100 || spinning) return;
 
-        setSpinning(true);          // khóa nút quay
-        setPoints(p => p - 100);    // trừ 100 điểm
+        setSpinning(true);
+        setPoints(p => p - 100);
 
-        const target = getWeightedIndex();  // ô sẽ trúng (đã quyết định NGAY TỪ ĐẦU)
+        const target = getWeightedIndex(); // kết quả thật
 
-        let current = 0;            // vị trí sáng hiện tại
-        let steps = 3 * rewards.length + target;
-        // số bước quay:
-        // - quay ít nhất 3 vòng đầy
-        // - sau đó dừng đúng ô target
-
-        let speed = 60;             // delay ban đầu (ms) => quay nhanh
+        let flashes = 15;     // số lần nháy
+        const speed = 250;    // TỐC ĐỘ CỐ ĐỊNH (ms)
 
         const run = () => {
-            setActiveIndex(current);                // làm sáng ô hiện tại
-            current = (current + 1) % rewards.length; // sang ô kế tiếp
-            steps--;
+            // mỗi lần sáng ngẫu nhiên 1 ô
+            const randomIndex = Math.floor(Math.random() * rewards.length);
+            setActiveIndex(randomIndex);
+            flashes--;
 
-            // Nếu đã hết bước => dừng và trả thưởng
-            if (steps <= 0) {
-                setActiveIndex(target);             // cố định ô trúng
-                setResult(rewards[target]);         // lưu kết quả
-                setSpinning(false);                 // mở lại nút quay
+            // hết lượt => dừng ở kết quả thật
+            if (flashes <= 0) {
+                setActiveIndex(target);
+                setResult(rewards[target]);
+                setSpinning(false);
                 return;
             }
 
-            // Mỗi vòng tăng delay => cảm giác chậm dần
-            speed += 25;
-
-            // Gọi tiếp vòng quay sau "speed" ms
-            setTimeout(run, speed);
+            setTimeout(run, speed); // KHÔNG thay đổi speed
         };
 
-        run(); // bắt đầu quay
+        run();
     };
 
     return (
@@ -126,7 +115,7 @@ const AccountRewardsPage = () => {
                                     key={i}
                                     className={`h-24 flex items-center justify-center text-center text-sm font-medium rounded-lg border shadow-sm transition-all duration-200
                                         ${activeIndex === i
-                                            ? "bg-yellow-300 border-yellow-500 scale-110"
+                                            ? "bg-yellow-300 border-yellow-500"
                                             : "bg-gray-50"}
                                         `}
                                 >
@@ -135,15 +124,12 @@ const AccountRewardsPage = () => {
                             ))}
                         </div>
 
-
                         {/* Kết quả */}
                         {result && !spinning && (
                             <div className="mb-4 text-green-600 font-semibold animate-pulse">
                                 🎯 Kết quả: {result.name}
                             </div>
                         )}
-
-
 
                         {/* Nút quay */}
                         <button
