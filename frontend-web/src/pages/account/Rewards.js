@@ -113,7 +113,7 @@ const AccountRewardsPage = () => {
                             {rewards.map((item, i) => (
                                 <div
                                     key={i}
-                                    className={`h-24 flex items-center justify-center text-center text-sm font-medium rounded-lg border shadow-sm transition-all duration-200
+                                    className={`h-24 flex items-center justify-center text-center text-sm font-medium rounded-md border shadow transition-all duration-200
                                         ${activeIndex === i
                                             ? "bg-yellow-200 border-yellow-100"
                                             : "bg-gray-50"}
@@ -125,21 +125,51 @@ const AccountRewardsPage = () => {
                         </div>
 
                         <div className="w-full flex flex-col items-center justify-center">
-                            {/* Kết quả */}
-                            {result && !spinning && (
-                                <div className="mb-4 text-green-600 font-semibold animate-pulse">
-                                    🎯 Kết quả: {result.name}
-                                </div>
-                            )}
 
                             {/* Nút quay */}
                             <button
                                 onClick={spin}
                                 disabled={spinning}
-                                className="px-6 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50"
+                                className="w-[150px] h-[45px] rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center gap-2"
                             >
-                                {spinning ? "Đang quay..." : "Quay (100 điểm)"}
+                                {spinning ? (
+                                    <>
+                                    <span>Đang quay</span>
+                                    
+                                        <svg
+                                            className="animate-spin h-5 w-5 text-white"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <circle
+                                                className="opacity-25"
+                                                cx="12"
+                                                cy="12"
+                                                r="10"
+                                                stroke="currentColor"
+                                                strokeWidth="4"
+                                            />
+                                            <path
+                                                className="opacity-75"
+                                                fill="currentColor"
+                                                d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                                            />
+                                        </svg>
+                                        
+                                    </>
+                                ) : (
+                                    <span>Quay (100 điểm)</span>
+                                )}
                             </button>
+
+                            {/* Kết quả */}
+                            {result && !spinning && (
+                                <div className="mt-4 text-green-600 font-semibold animate-pulse">
+                                    🎯 Kết quả: {result.name}
+                                </div>
+                            )}
+
                         </div>
 
                     </div>
