@@ -104,19 +104,19 @@ const AccountRewardsPage = () => {
                         <h2 className="text-lg text-gray-500 mb-4">Tham Gia Vòng Quay</h2>
 
                         {/* Điểm */}
-                        <div className="mb-4 text-sm text-gray-600">
+                        <div className="mb-4 text-gray-600">
                             Điểm hiện tại: <b>{points}</b>
                         </div>
 
                         {/* Vòng quay */}
-                        <div className="grid grid-cols-3 mt-16 gap-3 mb-6">
+                        <div className="grid grid-cols-3 mt-[75px] gap-3 mb-6">
                             {rewards.map((item, i) => (
                                 <div
                                     key={i}
                                     className={`h-24 flex items-center justify-center text-center text-sm font-medium rounded-md border shadow transition-all duration-200
                                         ${activeIndex === i
-                                            ? "bg-yellow-200 border-yellow-100"
-                                            : "bg-gray-50"}
+                                            ? "bg-yellow-100 border-b-2 border-yellow-300"
+                                            : "bg-gray-50 border-b-2 border-gray-200"}
                                         `}
                                 >
                                     {item.name}
@@ -135,7 +135,7 @@ const AccountRewardsPage = () => {
                                 {spinning ? (
                                     <>
                                     <span>Đang quay</span>
-                                    
+
                                         <svg
                                             className="animate-spin h-5 w-5 text-white"
                                             xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +165,7 @@ const AccountRewardsPage = () => {
 
                             {/* Kết quả */}
                             {result && !spinning && (
-                                <div className="mt-4 text-green-600 font-semibold animate-pulse">
+                                <div className="mt-5 text-yellow-600 font-semibold animate-pulse">
                                     🎯 Kết quả: {result.name}
                                 </div>
                             )}
