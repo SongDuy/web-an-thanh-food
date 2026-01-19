@@ -115,7 +115,7 @@ const AccountRewardsPage = () => {
                                     key={i}
                                     className={`h-24 flex items-center justify-center text-center text-sm font-medium rounded-md border shadow transition-all duration-200
                                         ${activeIndex === i
-                                            ? "bg-yellow-100 border-b-2 border-yellow-300"
+                                            ? "bg-yellow-100 border-b-2 border-yellow-200"
                                             : "bg-gray-50 border-b-2 border-gray-200"}
                                         `}
                                 >
@@ -130,14 +130,14 @@ const AccountRewardsPage = () => {
                             <button
                                 onClick={spin}
                                 disabled={spinning}
-                                className="w-[150px] h-[45px] rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center gap-2"
+                                className="w-[150px] h-[45px] flex items-center justify-center gap-2 rounded-md  text-white font-medium bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500"
                             >
                                 {spinning ? (
                                     <>
-                                    <span>Đang quay</span>
+                                        <span>Đang quay</span>
 
                                         <svg
-                                            className="animate-spin h-5 w-5 text-white"
+                                            className="animate-spin h-6 w-6 text-white"
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
                                             viewBox="0 0 24 24"
@@ -156,7 +156,7 @@ const AccountRewardsPage = () => {
                                                 d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
                                             />
                                         </svg>
-                                        
+
                                     </>
                                 ) : (
                                     <span>Quay (100 điểm)</span>
