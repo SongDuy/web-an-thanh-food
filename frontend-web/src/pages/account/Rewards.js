@@ -109,7 +109,7 @@ const AccountRewardsPage = () => {
                         </div>
 
                         {/* Vòng quay */}
-                        <div className="grid grid-cols-3 mt-[75px] gap-3 mb-6">
+                        <div className="grid grid-cols-3 mt-[75px] gap-3">
                             {rewards.map((item, i) => (
                                 <div
                                     key={i}
@@ -130,7 +130,7 @@ const AccountRewardsPage = () => {
                             <button
                                 onClick={spin}
                                 disabled={spinning}
-                                className="w-[150px] h-[45px] flex items-center justify-center gap-2 rounded-md  text-white font-medium bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500"
+                                className="w-[150px] h-[45px] mt-5 flex items-center justify-center gap-2 rounded-md  text-white font-medium bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500"
                             >
                                 {spinning ? (
                                     <>
