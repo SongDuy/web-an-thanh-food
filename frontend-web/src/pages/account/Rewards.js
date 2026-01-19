@@ -109,13 +109,13 @@ const AccountRewardsPage = () => {
                         </div>
 
                         {/* Vòng quay */}
-                        <div className="grid grid-cols-3 gap-3 mb-6">
+                        <div className="grid grid-cols-3 mt-16 gap-3 mb-6">
                             {rewards.map((item, i) => (
                                 <div
                                     key={i}
                                     className={`h-24 flex items-center justify-center text-center text-sm font-medium rounded-lg border shadow-sm transition-all duration-200
                                         ${activeIndex === i
-                                            ? "bg-yellow-300 border-yellow-500"
+                                            ? "bg-yellow-200 border-yellow-100"
                                             : "bg-gray-50"}
                                         `}
                                 >
@@ -124,21 +124,24 @@ const AccountRewardsPage = () => {
                             ))}
                         </div>
 
-                        {/* Kết quả */}
-                        {result && !spinning && (
-                            <div className="mb-4 text-green-600 font-semibold animate-pulse">
-                                🎯 Kết quả: {result.name}
-                            </div>
-                        )}
+                        <div className="w-full flex flex-col items-center justify-center">
+                            {/* Kết quả */}
+                            {result && !spinning && (
+                                <div className="mb-4 text-green-600 font-semibold animate-pulse">
+                                    🎯 Kết quả: {result.name}
+                                </div>
+                            )}
 
-                        {/* Nút quay */}
-                        <button
-                            onClick={spin}
-                            disabled={spinning}
-                            className="px-6 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50"
-                        >
-                            {spinning ? "Đang quay..." : "Quay (100 điểm)"}
-                        </button>
+                            {/* Nút quay */}
+                            <button
+                                onClick={spin}
+                                disabled={spinning}
+                                className="px-6 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50"
+                            >
+                                {spinning ? "Đang quay..." : "Quay (100 điểm)"}
+                            </button>
+                        </div>
+
                     </div>
 
                     <div className="col-span-4 px-4 py-3 border-l">
