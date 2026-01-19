@@ -130,7 +130,7 @@ const AccountRewardsPage = () => {
                             <button
                                 onClick={spin}
                                 disabled={spinning}
-                                className="w-[150px] h-[45px] mt-5 flex items-center justify-center gap-2 rounded-md  text-white font-medium bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500"
+                                className="w-[150px] h-[45px] mt-6 flex items-center justify-center gap-2 rounded-md  text-white font-medium bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500"
                             >
                                 {spinning ? (
                                     <>
