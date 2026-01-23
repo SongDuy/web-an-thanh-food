@@ -42,7 +42,7 @@ const AccountRewardsPage = () => {
                         <div className="w-full">
                             <div className="w-full">
                                 <h2 className="text-lg text-gray-500 mb-4">
-                                    Cửa Hàng Đổi Thẻ
+                                    Cửa Hàng Nhận Thẻ
                                 </h2>
                             </div>
 
@@ -55,7 +55,7 @@ const AccountRewardsPage = () => {
                         <div className="w-full">
                             <div className="w-full">
                                 <h2 className="text-lg text-gray-500 mb-4">
-                                    Nâng Cấp Thẻ Mua
+                                   Bảng Nâng Cấp Thẻ
                                 </h2>
                             </div>
 
@@ -72,7 +72,7 @@ const AccountRewardsPage = () => {
                             <div className="w-full flex flex-col gap-5">
                                 <div className="w-full">
                                     <h2 className="text-lg text-gray-500">
-                                        Thẻ Mua Của Bạn
+                                        Tất Cả Thẻ Của Bạn
                                     </h2>
                                 </div>
 
