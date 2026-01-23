@@ -152,15 +152,20 @@ const AccountRewardsPage = () => {
                             <div className="w-full flex flex-col gap-5">
                                 <div className="w-full">
                                     <h2 className="text-lg text-gray-500">
-                                       Tất Cả Thẻ Của Tôi
+                                        Tất Cả Thẻ Của Tôi
                                     </h2>
                                 </div>
 
                                 <div className="w-full max-h-[285px] pr-3 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
                                     <div className="w-full flex flex-col gap-1.5 pb-5">
                                         <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="font-medium text-gray-500">
-                                                Bạn nhận được thẻ cấp 5 (Hệ Kim)
+                                            <div className="flex gap-1">
+                                                <span className="font-medium text-black">
+                                                    Bạn hiện có 3
+                                                </span>
+                                                <span className="font-medium text-gray-500">
+                                                    (-Thẻ Cấp 5 Hệ Kim-)
+                                                </span>
                                             </div>
 
                                             <div className="ml-auto flex flex-col items-center justify-center">
@@ -174,8 +179,13 @@ const AccountRewardsPage = () => {
                                         </div>
 
                                         <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="font-medium text-blue-500">
-                                                Bạn nhận được thẻ cấp 3 (Hệ Thủy)
+                                            <div className="flex gap-1">
+                                                <span className="font-medium text-black">
+                                                    Bạn hiện có 2
+                                                </span>
+                                                <span className="font-medium text-blue-500">
+                                                    (-Thẻ Cấp 3 Hệ Thủy-)
+                                                </span>
                                             </div>
 
                                             <div className="ml-auto flex flex-col items-center justify-center">
@@ -189,8 +199,13 @@ const AccountRewardsPage = () => {
                                         </div>
 
                                         <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="font-medium text-red-500">
-                                                Bạn nhận được thẻ cấp 2 (Hệ Hỏa)
+                                            <div className="flex gap-1">
+                                                <span className="font-medium text-black">
+                                                    Bạn hiện có 4
+                                                </span>
+                                                <span className="font-medium text-red-500">
+                                                    (-Thẻ Cấp 2 Hệ Hỏa-)
+                                                </span>
                                             </div>
 
                                             <div className="ml-auto flex flex-col items-center justify-center">
@@ -204,22 +219,13 @@ const AccountRewardsPage = () => {
                                         </div>
 
                                         <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="font-medium text-green-500">
-                                                Bạn nhận được thẻ cấp 4 (Hệ Mộc)
-                                            </div>
-                                            <div className="ml-auto flex flex-col items-center justify-center">
-                                                <span className="text-xs text-gray-500">
-                                                    11/02/2026
+                                            <div className="flex gap-1">
+                                                <span className="font-medium text-black">
+                                                    Bạn hiện có 4
                                                 </span>
-                                                <span className="text-xs text-gray-500">
-                                                    9:30:48
+                                                <span className="font-medium text-green-500">
+                                                    (-Thẻ Cấp 4 Hệ Mộc-)
                                                 </span>
-                                            </div>
-                                        </div>
-
-                                        <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="font-medium text-red-500">
-                                                Bạn nhận được thẻ cấp 2 (Hệ Hỏa)
                                             </div>
 
                                             <div className="ml-auto flex flex-col items-center justify-center">
@@ -233,8 +239,13 @@ const AccountRewardsPage = () => {
                                         </div>
 
                                         <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="font-medium text-yellow-500">
-                                                Bạn nhận được thẻ cấp 1 (Hệ Thổ)
+                                            <div className="flex gap-1">
+                                                <span className="font-medium text-black">
+                                                    Bạn hiện có 4
+                                                </span>
+                                                <span className="font-medium text-red-500">
+                                                    (-Thẻ Cấp 2 Hệ Hỏa-)
+                                                </span>
                                             </div>
 
                                             <div className="ml-auto flex flex-col items-center justify-center">
@@ -248,8 +259,13 @@ const AccountRewardsPage = () => {
                                         </div>
 
                                         <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="font-medium text-red-500">
-                                                Bạn nhận được thẻ cấp 2 (Hệ Hỏa)
+                                            <div className="flex gap-1">
+                                                <span className="font-medium text-black">
+                                                    Bạn hiện có 2
+                                                </span>
+                                                <span className="font-medium text-blue-500">
+                                                    (-Thẻ Cấp 3 Hệ Thủy-)
+                                                </span>
                                             </div>
 
                                             <div className="ml-auto flex flex-col items-center justify-center">
@@ -263,8 +279,13 @@ const AccountRewardsPage = () => {
                                         </div>
 
                                         <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="font-medium text-red-500">
-                                                Bạn nhận được thẻ cấp 2 (Hệ Hỏa)
+                                            <div className="flex gap-1">
+                                                <span className="font-medium text-black">
+                                                    Bạn hiện có 8
+                                                </span>
+                                                <span className="font-medium text-gray-500">
+                                                    (-Thẻ Cấp 1 Hệ Kim-)
+                                                </span>
                                             </div>
 
                                             <div className="ml-auto flex flex-col items-center justify-center">
@@ -278,8 +299,33 @@ const AccountRewardsPage = () => {
                                         </div>
 
                                         <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="font-medium text-blue-500">
-                                                Bạn nhận được thẻ cấp 3 (Hệ Thủy)
+                                            <div className="flex gap-1">
+                                                <span className="font-medium text-black">
+                                                    Bạn hiện có 1
+                                                </span>
+                                                <span className="font-medium text-yellow-500">
+                                                    (-Thẻ Cấp 1 Hệ Thổ-)
+                                                </span>
+                                            </div>
+
+                                            <div className="ml-auto flex flex-col items-center justify-center">
+                                                <span className="text-xs text-gray-500">
+                                                    11/02/2026
+                                                </span>
+                                                <span className="text-xs text-gray-500">
+                                                    9:30:48
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
+                                            <div className="flex gap-1">
+                                                <span className="font-medium text-black">
+                                                    Bạn hiện có 2
+                                                </span>
+                                                <span className="font-medium text-blue-500">
+                                                    (-Thẻ Cấp 3 Hệ Thủy-)
+                                                </span>
                                             </div>
 
                                             <div className="ml-auto flex flex-col items-center justify-center">
