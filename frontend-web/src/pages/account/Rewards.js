@@ -152,7 +152,7 @@ const AccountRewardsPage = () => {
                             <div className="w-full flex flex-col gap-5">
                                 <div className="w-full">
                                     <h2 className="text-lg text-gray-500">
-                                        Tất Cả Thẻ Của Bạn
+                                       Tất Cả Thẻ Của Tôi
                                     </h2>
                                 </div>
 
