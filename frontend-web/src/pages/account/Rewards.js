@@ -5,71 +5,9 @@ import Footer from "../../components/Footer";
 import Search from "../../components/Search";
 import Notification from "../../components/Notification";
 
-const rewards = [
-    { name: "Chúc phúc", weight: 100000 },
-    { name: "Thẻ cấp 1 (Hệ Thổ)", weight: 10000 },
-    { name: "Thẻ cấp 2 (Hệ Hỏa)", weight: 1000 },
-    { name: "Thẻ cấp 3 (Hệ Thủy)", weight: 100 },
-    { name: "Thẻ cấp 4 (Hệ Mộc)", weight: 10 },
-    { name: "Thẻ cấp 5 (Hệ Kim)", weight: 1 },
-];
-
 const AccountRewardsPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
-
-    // (---Tạo vòng quay phải ở backend nếu không sẽ bị hack kết quả---)
-    const [activeIndex, setActiveIndex] = useState(null); // Ô đang sáng (hiệu ứng quay)
-    const [points, setPoints] = useState(10000); // Điểm người chơi
-    const [result, setResult] = useState(null); // Kết quả trúng thưởng
-    const [spinning, setSpinning] = useState(false); // Trạng thái đang quay (chống spam click)
-
-    const getWeightedIndex = () => {  // Hàm random theo trọng số (xác suất)
-
-        const total = rewards.reduce((s, r) => s + r.weight, 0); // Tổng trọng số tất cả phần thưởng
-        let rand = Math.random() * total; // Số ngẫu nhiên trong [0, total)
-
-        for (let i = 0; i < rewards.length; i++) { // Duyệt từng phần thưởng
-
-            if (rand < rewards[i].weight) return i; // Nếu rand rơi vào khoảng của item hiện tại => trúng
-
-            rand -= rewards[i].weight; // Nếu chưa trúng, trừ đi weight và xét tiếp
-        }
-
-        return 0; // Fallback (hiếm khi dùng)
-    };
-
-    const spin = () => {
-
-        if (points < 100 || spinning) return;
-
-        setSpinning(true);
-        setPoints(p => p - 100);
-
-        const target = getWeightedIndex(); // kết quả thật
-
-        let flashes = 15;     // số lần nháy
-        const speed = 250;    // TỐC ĐỘ CỐ ĐỊNH (ms)
-
-        const run = () => {
-            // mỗi lần sáng ngẫu nhiên 1 ô
-            const randomIndex = Math.floor(Math.random() * rewards.length);
-            setActiveIndex(randomIndex);
-            flashes--;
-
-            // hết lượt => dừng ở kết quả thật
-            if (flashes <= 0) {
-                setActiveIndex(target);
-                setResult(rewards[target]);
-                setSpinning(false);
-                return;
-            }
-
-            setTimeout(run, speed); // KHÔNG thay đổi speed
-        };
-
-        run();
-    };
 
     return (
         <>
@@ -101,76 +39,31 @@ const AccountRewardsPage = () => {
 
                 <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded-md border">
                     <div className="col-span-7 px-4 py-3 border-r">
-                        <h2 className="text-lg text-gray-500 mb-4">Tham Gia Vòng Quay</h2>
+                        <div className="w-full">
+                            <div className="w-full">
+                                <h2 className="text-lg text-gray-500 mb-4">
+                                    Cửa Hàng Đổi Thẻ
+                                </h2>
+                            </div>
 
-                        {/* Điểm */}
-                        <div className="mb-4 text-gray-600">
-                            Điểm hiện tại: <b>{points}</b>
-                        </div>
+                            <div className="w-full">
 
-                        {/* Vòng quay */}
-                        <div className="grid grid-cols-3 mt-[75px] gap-3">
-                            {rewards.map((item, i) => (
-                                <div
-                                    key={i}
-                                    className={`h-24 flex items-center justify-center text-center text-sm font-medium rounded-md border shadow transition-all duration-200
-                                        ${activeIndex === i
-                                            ? "bg-yellow-100 border-b-2 border-yellow-200"
-                                            : "bg-gray-50 border-b-2 border-gray-200"}
-                                        `}
-                                >
-                                    {item.name}
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className="w-full flex flex-col items-center justify-center">
-
-                            {/* Nút quay */}
-                            <button
-                                onClick={spin}
-                                disabled={spinning}
-                                className="w-[150px] h-[45px] mt-6 flex items-center justify-center gap-2 rounded-md  text-white font-medium bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500"
-                            >
-                                {spinning ? (
-                                    <>
-                                        <span>Đang quay</span>
-
-                                        <svg
-                                            className="animate-spin h-6 w-6 text-white"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <circle
-                                                className="opacity-25"
-                                                cx="12"
-                                                cy="12"
-                                                r="10"
-                                                stroke="currentColor"
-                                                strokeWidth="4"
-                                            />
-                                            <path
-                                                className="opacity-75"
-                                                fill="currentColor"
-                                                d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                                            />
-                                        </svg>
-
-                                    </>
-                                ) : (
-                                    <span>Quay (100 điểm)</span>
-                                )}
-                            </button>
-
-                            {/* Kết quả */}
-                            {result && !spinning && (
-                                <div className="mt-5 text-yellow-600 font-semibold animate-pulse">
-                                    🎯 Kết quả: {result.name}
-                                </div>
-                            )}
+                            </div>
 
                         </div>
+
+                        <div className="w-full">
+                            <div className="w-full">
+                                <h2 className="text-lg text-gray-500 mb-4">
+                                    Nâng Cấp Thẻ Mua
+                                </h2>
+                            </div>
+
+                            <div className="w-full">
+
+                            </div>
+                        </div>
+
 
                     </div>
 
