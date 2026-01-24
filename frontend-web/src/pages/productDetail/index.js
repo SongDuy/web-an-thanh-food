@@ -180,7 +180,7 @@ const ProductDetailPage = () => {
                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
                                 <div className="w-full h-full flex flex-col items-start justify-center">
                                     <span className="text-md text-gray-500">
-                                        Thẻ nhận
+                                        Thẻ của tôi
                                     </span>
                                     <span className="text-md text-gray-500">
                                         Đang có
@@ -207,7 +207,7 @@ const ProductDetailPage = () => {
                                             className="w-[65px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr from-red-300 via-red-200 to-red-400 shadow border border-white items-center justify-center rounded-md"
                                         >
                                             <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">
-                                                2
+                                                1
                                             </span>
                                             <span className="text-black flex items-center justify-center border-l border-white">
                                                 0
@@ -219,7 +219,7 @@ const ProductDetailPage = () => {
                                             className="w-[65px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr from-blue-300 via-blue-200 to-blue-400 shadow border border-white items-center justify-center rounded-md"
                                         >
                                             <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">
-                                                3
+                                                1
                                             </span>
                                             <span className="text-black flex items-center justify-center border-l border-white">
                                                 0
@@ -231,7 +231,7 @@ const ProductDetailPage = () => {
                                             className="w-[65px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr from-green-300 via-green-200 to-green-400 shadow border border-white items-center justify-center rounded-md"
                                         >
                                             <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">
-                                                4
+                                                1
                                             </span>
                                             <span className="text-black flex items-center justify-center border-l border-white">
                                                 0
@@ -243,7 +243,7 @@ const ProductDetailPage = () => {
                                             className="w-[65px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr from-gray-300 via-gray-200 to-gray-400 shadow border border-white items-center justify-center rounded-md"
                                         >
                                             <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">
-                                                5
+                                                1
                                             </span>
                                             <span className="text-black flex items-center justify-center border-l border-white">
                                                 0
