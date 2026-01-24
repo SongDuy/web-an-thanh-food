@@ -16,11 +16,11 @@ const cardLevels = [
 
 // Cửa hàng đổi điểm
 const shopCards = [
-    { element: "tho", name: "Thẻ Hệ Thổ" },
-    { element: "hoa", name: "Thẻ Hệ Hỏa" },
-    { element: "thuy", name: "Thẻ Hệ Thủy" },
-    { element: "moc", name: "Thẻ Hệ Mộc" },
-    { element: "kim", name: "Thẻ Hệ Kim" },
+    { element: "tho", name: "Thẻ Thổ Cấp 1" },
+    { element: "hoa", name: "Thẻ Hỏa Cấp 1"  },
+    { element: "thuy", name: "Thẻ Thủy Cấp 1" },
+    { element: "moc", name: "Thẻ Mộc Cấp 1"  },
+    { element: "kim", name: "Thẻ Kim Cấp 1"  },
 ];
 
 // Nâng cấp thẻ
@@ -66,7 +66,7 @@ const AccountRewardsPage = () => {
         <div className="flex flex-col items-center justify-between border rounded-lg p-3 shadow-sm bg-white text-center">
 
             <div
-                className={`w-[70px] h-[35px] flex items-center justify-center text-white text-shadow-black font-medium cursor-default bg-gradient-to-tr ${elementStyles[element]} shadow border border-white rounded-md`}
+                className={`w-[70px] h-[35px] flex items-center justify-center text-black font-medium cursor-default bg-gradient-to-tr ${elementStyles[element]} shadow border border-white rounded-md`}
             >
               1
             </div>
