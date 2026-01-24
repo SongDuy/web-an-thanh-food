@@ -166,7 +166,7 @@ const ProductDetailPage = () => {
                                     <ShoppingBagOutlinedIcon />
                                     <div
                                         title="Thẻ cấp 1 (Hệ Thổ)"
-                                        className="w-[65px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr from-yellow-300 via-yellow-200 to-yellow-400 shadow border border-white items-center justify-center rounded-md"
+                                        className="w-[70px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr from-yellow-300 via-yellow-200 to-yellow-400 shadow border border-white items-center justify-center rounded-md"
                                     >
                                         <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">
                                             1
@@ -180,7 +180,7 @@ const ProductDetailPage = () => {
                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
                                 <div className="w-full h-full flex flex-col items-start justify-center">
                                     <span className="text-md text-gray-500">
-                                        Thẻ mua
+                                        Thẻ đổi
                                     </span>
                                     <span className="text-md text-gray-500">
                                         Đang có
@@ -192,7 +192,7 @@ const ProductDetailPage = () => {
                                     <div className="h-full flex items-center gap-3">
                                         <div
                                             title="Thẻ cấp 1 (Hệ Thổ)"
-                                            className="w-[65px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr from-yellow-300 via-yellow-200 to-yellow-400 shadow border border-white items-center justify-center rounded-md"
+                                            className="w-[70px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr from-yellow-300 via-yellow-200 to-yellow-400 shadow border border-white items-center justify-center rounded-md"
                                         >
                                             <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">
                                                 1
@@ -276,13 +276,13 @@ const ProductDetailPage = () => {
                         </div>
                         <div className="w-full h-[65px] flex items-center justify-center">
                             <div className="h-[50px] grid grid-cols-2 gap-3">
-                                <div className="w-[220px] h-[50px] flex items-center justify-center text-black text-md rounded bg-gradient-to-tr from-gray-100 via-red-50 to-red-100 shadow border  transition-colors font-medium ">
+                                <div className="w-[225px] h-[50px] flex items-center justify-center text-black text-md rounded bg-gradient-to-tr from-gray-100 via-red-50 to-red-100 shadow border  transition-colors font-medium ">
                                     {Number(10).toLocaleString("vi-VN")}
                                 </div>
                                 {/* <button className="w-[200px] h-[50px] text-white text-md rounded font-medium shadow bg-gradient-to-t from-green-400 via-green-500 to-green-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-green-500">
                                     Mua ngay
                                 </button> */}
-                                <button className="w-[220px] h-[50px] text-white text-md rounded font-medium shadow bg-gradient-to-t from-red-400 via-red-500 to-red-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-red-500">
+                                <button className="w-[225px] h-[50px] text-white text-md rounded font-medium shadow bg-gradient-to-t from-red-400 via-red-500 to-red-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-red-500">
                                     Hết hàng
                                 </button>
                             </div>

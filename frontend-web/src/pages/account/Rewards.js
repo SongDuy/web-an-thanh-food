@@ -5,10 +5,19 @@ import Footer from "../../components/Footer";
 import Search from "../../components/Search";
 import Notification from "../../components/Notification";
 
+const cardLevels = [
+    { element: "tho", title: "Thẻ Hệ Thổ", cards: [300, 4, 8, 1, 2] },
+    { element: "hoa", title: "Thẻ Hệ Hỏa", cards: [0, 3, 0, 0, 1] },
+    { element: "thuy", title: "Thẻ Hệ Thủy", cards: [0, 1, 0, 2, 0] },
+    { element: "moc", title: "Thẻ Hệ Mộc", cards: [2, 0, 2, 0, 1] },
+    { element: "kim", title: "Thẻ Hệ Kim", cards: [0, 7, 1, 0, 4] },
+];
+
 const AccountRewardsPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
 
+    // Bảng sung khắc
     const Cell = ({ children, color }) => {
         const bg =
             color === "red"
@@ -23,6 +32,30 @@ const AccountRewardsPage = () => {
             </div>
         );
     };
+
+    // Màu thẻ
+    const elementStyles = {
+        kim: "from-gray-300 via-gray-200 to-gray-400",
+        moc: "from-green-300 via-green-200 to-green-400",
+        thuy: "from-blue-300 via-blue-200 to-blue-400",
+        hoa: "from-red-300 via-red-200 to-red-400",
+        tho: "from-yellow-300 via-yellow-200 to-yellow-400",
+    };
+
+    // Thẻ của tôi
+    const CardBox = ({ title, element, left, right }) => (
+        <div
+            title={title}
+            className={`w-[70px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr ${elementStyles[element]} shadow border border-white items-center justify-center rounded-md`}
+        >
+            <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">
+                {left}
+            </span>
+            <span className="text-black flex items-center justify-center border-l border-white">
+                {right}
+            </span>
+        </div>
+    );
 
     return (
         <>
@@ -93,7 +126,7 @@ const AccountRewardsPage = () => {
 
                                 <div className="w-full flex items-center justify-center bg-red-50 rounded">
                                     <div className="w-full bg-white rounded">
-                                        <div className="grid grid-cols-6 border border-black text-[11px] text-center font-serifBook">
+                                        <div className="grid grid-cols-6 border border-black text-[13px] text-center font-serifBook">
 
                                             {/* Header */}
                                             <div className="bg-white border border-black font-semibold">Quy Đổi</div>
@@ -156,189 +189,22 @@ const AccountRewardsPage = () => {
                                     </h2>
                                 </div>
 
-                                <div className="w-full max-h-[285px] pr-3 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
-                                    <div className="w-full flex flex-col gap-1.5 pb-5">
-                                        <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="flex gap-1">
-                                                <span className="font-medium text-black">
-                                                    Bạn hiện có 3
-                                                </span>
-                                                <span className="font-medium text-gray-500">
-                                                    (-Thẻ Cấp 5 Hệ Kim-)
-                                                </span>
-                                            </div>
-
-                                            <div className="ml-auto flex flex-col items-center justify-center">
-                                                <span className="text-xs text-gray-500">
-                                                    11/02/2026
-                                                </span>
-                                                <span className="text-xs text-gray-500">
-                                                    9:30:48
-                                                </span>
-                                            </div>
+                                <div className="flex flex-col gap-5 items-center justify-center">
+                                    {cardLevels.map((level) => (
+                                        <div key={level.element} className="flex items-center gap-3">
+                                            {level.cards.map((rightValue, index) => (
+                                                <CardBox
+                                                    key={index}
+                                                    title={level.title}
+                                                    element={level.element}
+                                                    left={index + 1}
+                                                    right={rightValue}
+                                                />
+                                            ))}
                                         </div>
-
-                                        <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="flex gap-1">
-                                                <span className="font-medium text-black">
-                                                    Bạn hiện có 2
-                                                </span>
-                                                <span className="font-medium text-blue-500">
-                                                    (-Thẻ Cấp 3 Hệ Thủy-)
-                                                </span>
-                                            </div>
-
-                                            <div className="ml-auto flex flex-col items-center justify-center">
-                                                <span className="text-xs text-gray-500">
-                                                    11/02/2026
-                                                </span>
-                                                <span className="text-xs text-gray-500">
-                                                    9:30:48
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                        <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="flex gap-1">
-                                                <span className="font-medium text-black">
-                                                    Bạn hiện có 4
-                                                </span>
-                                                <span className="font-medium text-red-500">
-                                                    (-Thẻ Cấp 2 Hệ Hỏa-)
-                                                </span>
-                                            </div>
-
-                                            <div className="ml-auto flex flex-col items-center justify-center">
-                                                <span className="text-xs text-gray-500">
-                                                    11/02/2026
-                                                </span>
-                                                <span className="text-xs text-gray-500">
-                                                    9:30:48
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                        <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="flex gap-1">
-                                                <span className="font-medium text-black">
-                                                    Bạn hiện có 4
-                                                </span>
-                                                <span className="font-medium text-green-500">
-                                                    (-Thẻ Cấp 4 Hệ Mộc-)
-                                                </span>
-                                            </div>
-
-                                            <div className="ml-auto flex flex-col items-center justify-center">
-                                                <span className="text-xs text-gray-500">
-                                                    11/02/2026
-                                                </span>
-                                                <span className="text-xs text-gray-500">
-                                                    9:30:48
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                        <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="flex gap-1">
-                                                <span className="font-medium text-black">
-                                                    Bạn hiện có 4
-                                                </span>
-                                                <span className="font-medium text-red-500">
-                                                    (-Thẻ Cấp 2 Hệ Hỏa-)
-                                                </span>
-                                            </div>
-
-                                            <div className="ml-auto flex flex-col items-center justify-center">
-                                                <span className="text-xs text-gray-500">
-                                                    11/02/2026
-                                                </span>
-                                                <span className="text-xs text-gray-500">
-                                                    9:30:48
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                        <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="flex gap-1">
-                                                <span className="font-medium text-black">
-                                                    Bạn hiện có 2
-                                                </span>
-                                                <span className="font-medium text-blue-500">
-                                                    (-Thẻ Cấp 3 Hệ Thủy-)
-                                                </span>
-                                            </div>
-
-                                            <div className="ml-auto flex flex-col items-center justify-center">
-                                                <span className="text-xs text-gray-500">
-                                                    11/02/2026
-                                                </span>
-                                                <span className="text-xs text-gray-500">
-                                                    9:30:48
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                        <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="flex gap-1">
-                                                <span className="font-medium text-black">
-                                                    Bạn hiện có 8
-                                                </span>
-                                                <span className="font-medium text-gray-500">
-                                                    (-Thẻ Cấp 1 Hệ Kim-)
-                                                </span>
-                                            </div>
-
-                                            <div className="ml-auto flex flex-col items-center justify-center">
-                                                <span className="text-xs text-gray-500">
-                                                    11/02/2026
-                                                </span>
-                                                <span className="text-xs text-gray-500">
-                                                    9:30:48
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                        <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="flex gap-1">
-                                                <span className="font-medium text-black">
-                                                    Bạn hiện có 1
-                                                </span>
-                                                <span className="font-medium text-yellow-500">
-                                                    (-Thẻ Cấp 1 Hệ Thổ-)
-                                                </span>
-                                            </div>
-
-                                            <div className="ml-auto flex flex-col items-center justify-center">
-                                                <span className="text-xs text-gray-500">
-                                                    11/02/2026
-                                                </span>
-                                                <span className="text-xs text-gray-500">
-                                                    9:30:48
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                        <div className="w-full h-[42px] flex items-center justify-center px-3 py-3 bg-white border rounded shadow-sm">
-                                            <div className="flex gap-1">
-                                                <span className="font-medium text-black">
-                                                    Bạn hiện có 2
-                                                </span>
-                                                <span className="font-medium text-blue-500">
-                                                    (-Thẻ Cấp 3 Hệ Thủy-)
-                                                </span>
-                                            </div>
-
-                                            <div className="ml-auto flex flex-col items-center justify-center">
-                                                <span className="text-xs text-gray-500">
-                                                    11/02/2026
-                                                </span>
-                                                <span className="text-xs text-gray-500">
-                                                    9:30:48
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
+
                             </div>
                         </div>
                     </div>
