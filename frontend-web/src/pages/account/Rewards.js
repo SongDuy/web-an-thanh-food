@@ -57,9 +57,14 @@ const AccountRewardsPage = () => {
         <div className="flex flex-col items-center justify-between border border-gray-200 rounded-lg p-3 shadow-sm bg-white text-center">
 
             <div
-                className={`w-[70px] h-[35px] flex items-center justify-center text-black cursor-default bg-gradient-to-tr ${elementStyles[element]} shadow border border-white rounded-md`}
+                className={`w-[70px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr ${elementStyles[element]} shadow border border-white items-center justify-center rounded-md`}
             >
-                1
+                <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">
+                    1
+                </span>
+                <span className="text-black flex items-center justify-center border-l border-white">
+                    1
+                </span>
             </div>
 
             <p className="font-semibold text-black mt-2 text-sm leading-tight">{name}</p>
