@@ -147,15 +147,15 @@ const AccountRewardsPage = () => {
 
                             <div className="w-full">
                                 <div className="w-full grid grid-cols-3 gap-3">
-                                    <div className="w-full h-[250px] bg-green-50 border shadow rounded-lg">
+                                    <div className="w-full h-[250px] bg-green-100 border border-white shadow-sm rounded-lg">
 
                                     </div>
 
-                                    <div className="w-full h-[250px] bg-yellow-50 border shadow rounded-lg">
+                                    <div className="w-full h-[250px] bg-yellow-100 border border-white shadow-sm rounded-lg">
 
                                     </div>
 
-                                    <div className="w-full h-[250px] bg-red-50 border shadow rounded-lg">
+                                    <div className="w-full h-[250px] bg-red-100 border border-white shadow-sm rounded-lg">
 
                                     </div>
                                 </div>
