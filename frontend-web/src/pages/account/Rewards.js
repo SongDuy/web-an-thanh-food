@@ -5,12 +5,31 @@ import Footer from "../../components/Footer";
 import Search from "../../components/Search";
 import Notification from "../../components/Notification";
 
+// danh sách thẻ
 const cardLevels = [
     { element: "tho", title: "Thẻ Hệ Thổ", cards: [30, 4, 8, 1, 2] },
     { element: "hoa", title: "Thẻ Hệ Hỏa", cards: [25, 3, 7, 21, 1] },
     { element: "thuy", title: "Thẻ Hệ Thủy", cards: [0, 10, 0, 2, 0] },
     { element: "moc", title: "Thẻ Hệ Mộc", cards: [2, 0, 2, 0, 1] },
     { element: "kim", title: "Thẻ Hệ Kim", cards: [6, 7, 15, 0, 4] },
+];
+
+// Cửa hàng đổi điểm
+const shopCards = [
+    { element: "tho", name: "Thẻ Hệ Thổ" },
+    { element: "hoa", name: "Thẻ Hệ Hỏa" },
+    { element: "thuy", name: "Thẻ Hệ Thủy" },
+    { element: "moc", name: "Thẻ Hệ Mộc" },
+    { element: "kim", name: "Thẻ Hệ Kim" },
+];
+
+// Nâng cấp thẻ
+const upgradeRules = [
+    { element: "tho", from: 1, to: 2, cost: 3 },
+    { element: "hoa", from: 1, to: 2, cost: 3 },
+    { element: "thuy", from: 1, to: 2, cost: 3 },
+    { element: "moc", from: 1, to: 2, cost: 3 },
+    { element: "kim", from: 1, to: 2, cost: 3 },
 ];
 
 const AccountRewardsPage = () => {
@@ -41,6 +60,62 @@ const AccountRewardsPage = () => {
         hoa: "from-red-300 via-red-200 to-red-400",
         tho: "from-yellow-300 via-yellow-200 to-yellow-400",
     };
+
+    // Cửa hàng đổi thẻ
+    const ShopCardItem = ({ element, name }) => (
+        <div className="flex flex-col items-center justify-between border rounded-lg p-3 shadow-sm bg-white text-center">
+
+            <div
+                className={`w-[70px] h-[35px] flex items-center justify-center text-white text-shadow-black font-medium cursor-default bg-gradient-to-tr ${elementStyles[element]} shadow border border-white rounded-md`}
+            >
+              1
+            </div>
+
+            <p className="font-semibold text-black mt-2 text-sm leading-tight">{name}</p>
+
+            <p className="text-xs text-gray-500 mt-1">
+                Giá: <span className="text-yellow-600 font-semibold">1000</span>
+            </p>
+
+            <button className="px-1 py-1  font-medium shadow rounded mt-2 w-full text-white bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
+                Đổi
+            </button>
+        </div>
+    );
+
+    // Nâng cấp thẻ
+    const UpgradeItem = ({ element, from, to, cost }) => (
+        <div className="flex items-center justify-between border rounded-lg px-4 py-3 bg-white shadow-sm hover:shadow-md transition">
+
+            {/* Công thức */}
+            <div className="flex items-center gap-4">
+
+                {/* Thẻ nguồn */}
+                <div className="flex flex-col items-center">
+                    <div className={`w-12 h-8 rounded bg-gradient-to-br ${elementStyles[element]} flex items-center justify-center text-white text-xs font-bold`}>
+                        Cấp {from}
+                    </div>
+                    <span className="text-xs text-gray-500 mt-1">x{cost}</span>
+                </div>
+
+                <span className="text-xl font-bold text-gray-400">→</span>
+
+                {/* Thẻ sau nâng cấp */}
+                <div className="flex flex-col items-center">
+                    <div className={`w-12 h-8 rounded bg-gradient-to-br ${elementStyles[element]} flex items-center justify-center text-white text-xs font-bold`}>
+                        Cấp {to}
+                    </div>
+                    <span className="text-xs text-green-600 mt-1">+1</span>
+                </div>
+
+            </div>
+
+            {/* Button */}
+            <button className="px-4 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 active:scale-95 transition text-sm font-medium">
+                Nâng Cấp
+            </button>
+        </div>
+    );
 
     // Thẻ của tôi
     const CardBox = ({ title, element, left, right }) => (
@@ -87,15 +162,21 @@ const AccountRewardsPage = () => {
 
                 <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded-md border">
                     <div className="col-span-7 px-4 py-3 border-r">
-                        <div className="w-full">
+                        <div className="w-full mb-5">
                             <div className="w-full">
                                 <h2 className="text-lg text-gray-500 mb-4">
                                     Cửa Hàng Nhận Thẻ
                                 </h2>
                             </div>
 
-                            <div className="w-full">
-
+                            <div className="w-full grid grid-cols-5 gap-3">
+                                {shopCards.map(card => (
+                                    <ShopCardItem
+                                        key={card.element}
+                                        element={card.element}
+                                        name={card.name}
+                                    />
+                                ))}
                             </div>
 
                         </div>
@@ -107,9 +188,12 @@ const AccountRewardsPage = () => {
                                 </h2>
                             </div>
 
-                            <div className="w-full">
-
+                            <div className="w-full grid grid-cols-3 gap-3">
+                                {upgradeRules.map(rule => (
+                                    <UpgradeItem key={rule.element} {...rule} />
+                                ))}
                             </div>
+
                         </div>
 
 
