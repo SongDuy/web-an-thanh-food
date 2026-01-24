@@ -46,7 +46,7 @@ const AccountRewardsPage = () => {
     const CardBox = ({ title, element, left, right }) => (
         <div
             title={title}
-            className={`min-w-0 h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr ${elementStyles[element]} shadow border border-white items-center justify-center rounded-md`}
+            className={`w-full min-w-0 h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr ${elementStyles[element]} shadow border border-white items-center justify-center rounded-md`}
         >
             <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">
                 {left}
