@@ -189,7 +189,7 @@ const ProductDetailPage = () => {
 
                                 <div className="h-full text-md text-black flex items-center gap-2">
                                     <LoyaltyOutlinedIcon />
-                                    <div className="h-full flex items-center gap-3">
+                                    <div className="w-full h-full flex items-center gap-3">
                                         <div
                                             title="Thẻ cấp 1 (Hệ Thổ)"
                                             className="w-[70px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr from-yellow-300 via-yellow-200 to-yellow-400 shadow border border-white items-center justify-center rounded-md"
