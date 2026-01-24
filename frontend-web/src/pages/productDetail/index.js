@@ -180,7 +180,7 @@ const ProductDetailPage = () => {
                             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
                                 <div className="w-full h-full flex flex-col items-start justify-center">
                                     <span className="text-md text-gray-500">
-                                        Thẻ đổi
+                                        Thẻ nhận
                                     </span>
                                     <span className="text-md text-gray-500">
                                         Đang có
