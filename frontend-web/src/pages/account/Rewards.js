@@ -261,7 +261,6 @@ const AccountRewardsPage = () => {
                                             <Cell>-3,+1</Cell>
                                         </div>
                                     </div>
-
                                 </div>
 
                             </div>
