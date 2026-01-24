@@ -9,9 +9,9 @@ import Notification from "../../components/Notification";
 const cardLevels = [
     { element: "tho", title: "Thẻ Hệ Thổ", cards: [30, 4, 8, 1, 2] },
     { element: "hoa", title: "Thẻ Hệ Hỏa", cards: [25, 3, 7, 21, 1] },
-    { element: "thuy", title: "Thẻ Hệ Thủy", cards: [0, 10, 0, 2, 0] },
-    { element: "moc", title: "Thẻ Hệ Mộc", cards: [2, 0, 2, 0, 1] },
-    { element: "kim", title: "Thẻ Hệ Kim", cards: [6, 7, 15, 0, 4] },
+    { element: "thuy", title: "Thẻ Hệ Thủy", cards: [3, 10, 3, 2, 3] },
+    { element: "moc", title: "Thẻ Hệ Mộc", cards: [2, 3, 2, 3, 1] },
+    { element: "kim", title: "Thẻ Hệ Kim", cards: [6, 7, 15, 3, 4] },
 ];
 
 // Cửa hàng đổi điểm
@@ -26,6 +26,13 @@ const shopCards = [
 const AccountRewardsPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const [openNotification, setOpenNotification] = useState(false);
+
+    // Tương sinh tương khắc
+    const [selectedTarget, setSelectedTarget] = useState(null); // { element: "kim", level: 1 }
+    const [selectedMaterials, setSelectedMaterials] = useState({ tuongSinh: [], trungTinh: [], tuongKhac: [] });
+
+    // Nâng cấp tối đa 5
+    const MAX_LEVEL = 5;
 
     // Bảng sung khắc
     const Cell = ({ children, color }) => {
@@ -50,6 +57,30 @@ const AccountRewardsPage = () => {
         thuy: "from-blue-300 via-blue-200 to-blue-400",
         hoa: "from-red-300 via-red-200 to-red-400",
         tho: "from-yellow-300 via-yellow-200 to-yellow-400",
+    };
+
+    // quy tắc tương sinh tương khắc
+    const elementRelations = {
+        kim: {
+            sinhBy: "tho",   // Thổ sinh Kim
+            khacBy: "hoa",   // Hỏa khắc Kim
+        },
+        moc: {
+            sinhBy: "thuy",  // Thủy sinh Mộc
+            khacBy: "kim",   // Kim Khắc Mộc
+        },
+        thuy: {
+            sinhBy: "kim",   // Kim sinh Thủy
+            khacBy: "tho",   // Thổ Khắc Thủy
+        },
+        hoa: {
+            sinhBy: "moc",   // Mộc sinh Hỏa
+            khacBy: "thuy",  // Thủy Khắc Hỏa
+        },
+        tho: {
+            sinhBy: "hoa",   // Hỏa sinh Thổ
+            khacBy: "moc",   // Mộc Khắc Thổ
+        },
     };
 
     // Cửa hàng đổi thẻ
@@ -79,13 +110,106 @@ const AccountRewardsPage = () => {
         </div>
     );
 
+    //Nâng cấp thẻ 
+    const UpgradeBox = ({ type, color, title, requirement, filterFn }) => {
+        const isMaxLevel = selectedTarget?.level === MAX_LEVEL;
+
+        const bg =
+            color === "green"
+                ? "bg-green-100"
+                : color === "yellow"
+                    ? "bg-yellow-100"
+                    : "bg-red-100";
+
+        const availableCards = cardLevels.flatMap(level =>
+            level.cards.map((qty, i) => ({
+                element: level.element,
+                level: i + 1,
+                qty,
+            }))
+        ).filter(card =>
+            card.qty > 0 &&
+            selectedTarget &&                          // đã chọn thẻ đích
+            card.level === selectedTarget.level &&    // ⭐ CHỈ CÙNG CẤP
+            filterFn(card)                            // đúng hệ sinh/khắc/trung tính
+        );
+
+        return (
+            <div className={`w-full h-[250px] flex flex-col ${bg} border-2 border-white shadow-sm rounded-lg p-3`}>
+                <h3 className="font-semibold text-center mb-2">{title}</h3>
+
+                {isMaxLevel && (
+                    <p className="text-center text-sm text-gray-600 font-semibold mt-4">
+                        Thẻ đã đạt cấp tối đa
+                    </p>
+                )}
+
+                {!selectedTarget && (
+                    <p className="text-center text-sm text-gray-500">
+                        Hãy chọn thẻ cần nâng cấp trước
+                    </p>
+                )}
+
+                {selectedTarget && !isMaxLevel && (
+                    <>
+                        <p className="text-xs text-center mb-2">
+                            Cần <b>{requirement}</b> thẻ nguyên liệu
+                        </p>
+
+                        <div
+                            className={`grid gap-2 justify-center ${requirement === 2 ? "grid-cols-2" : ""} ${requirement === 3 ? "grid-cols-3" : ""} ${requirement === 5 ? "grid-cols-3" : ""}`}
+                        >
+                            {availableCards.map((card, i) => (
+                                <div
+                                    key={i}
+                                    onClick={() => {
+                                        if (selectedMaterials[type].length < requirement) {
+                                            setSelectedMaterials(prev => ({
+                                                ...prev,
+                                                [type]: [...prev[type], card]
+                                            }));
+                                        }
+                                    }}
+                                    className="cursor-pointer scale-90 hover:scale-100 transition"
+                                >
+                                    <CardBox
+                                        element={card.element}
+                                        left={card.level}
+                                        right={card.qty}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </>
+                )}
+
+                <button
+                    disabled={isMaxLevel || selectedMaterials[type].length < requirement}
+                    className={`mt-auto w-full py-1 rounded text-white font-semibold transition 
+                        ${!isMaxLevel && selectedMaterials[type].length >= requirement
+                            ? "bg-green-500 hover:brightness-110"
+                            : "bg-gray-400 cursor-not-allowed"}
+                        `}
+                >
+                    {isMaxLevel
+                        ? "Đã đạt cấp tối đa"
+                        : selectedMaterials[type].length < requirement
+                            ? `Đã chọn ${selectedMaterials[type].length} / ${requirement}`
+                            : "Nâng Cấp"}
+                </button>
+
+            </div>
+        );
+    };
+
     // Thẻ của tôi
-    const CardBox = ({ title, element, left, right }) => (
+    const CardBox = ({ title, element, left, right, onClick, active }) => (
         <div
+            onClick={onClick}
             title={title}
-            className={`w-[70px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr ${elementStyles[element]} shadow border border-white items-center justify-center rounded-md`}
+            className={`w-[70px] h-[35px] cursor-pointer grid grid-cols-[35%_65%] bg-gradient-to-tr ${elementStyles[element]} shadow border-2 ${active ? "border-black" : "border-white hover:border-black"} items-center justify-center rounded-md transition`}
         >
-            <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">
+            <span className="text-white font-medium flex items-center justify-center border-r border-white">
                 {left}
             </span>
             <span className="text-black flex items-center justify-center border-l border-white">
@@ -93,6 +217,7 @@ const AccountRewardsPage = () => {
             </span>
         </div>
     );
+
 
     return (
         <>
@@ -152,22 +277,48 @@ const AccountRewardsPage = () => {
 
                             <div className="w-full">
                                 <div className="w-full grid grid-cols-3 gap-3">
-                                    <div className="w-full h-[250px] bg-green-100 border-2 border-white shadow-sm rounded-lg">
 
-                                    </div>
+                                    {/* TƯƠNG SINH */}
+                                    <UpgradeBox
+                                        type="tuongSinh"
+                                        color="green"
+                                        title="Nâng Cấp Tương Sinh"
+                                        requirement={2}
+                                        filterFn={(card) =>
+                                            selectedTarget &&
+                                            card.element === elementRelations[selectedTarget.element].sinhBy
+                                        }
+                                    />
 
-                                    <div className="w-full h-[250px] bg-yellow-100 border-2 border-white shadow-sm rounded-lg">
+                                    {/* TRUNG TÍNH */}
+                                    <UpgradeBox
+                                        type="trungTinh"
+                                        color="yellow"
+                                        title="Nâng Cấp Trung Tính"
+                                        requirement={3}
+                                        filterFn={(card) =>
+                                            selectedTarget &&
+                                            card.element !== elementRelations[selectedTarget.element].sinhBy &&
+                                            card.element !== elementRelations[selectedTarget.element].khacBy
+                                        }
+                                    />
 
-                                    </div>
+                                    {/* TƯƠNG KHẮC */}
+                                    <UpgradeBox
+                                        type="tuongKhac"
+                                        color="red"
+                                        title="Nâng Cấp Tương Khắc"
+                                        requirement={5}
+                                        filterFn={(card) =>
+                                            selectedTarget &&
+                                            card.element === elementRelations[selectedTarget.element].khacBy
+                                        }
+                                    />
 
-                                    <div className="w-full h-[250px] bg-red-100 border-2 border-white shadow-sm rounded-lg">
-
-                                    </div>
                                 </div>
                             </div>
 
                         </div>
-
 
                     </div>
 
@@ -195,40 +346,40 @@ const AccountRewardsPage = () => {
                                             {/* Kim */}
                                             <div className="bg-white border border-black font-semibold">Kim (-)</div>
                                             <Cell>-3,+1</Cell>
-                                            <Cell>-3,+1</Cell>
-                                            <Cell color="green">-2,+1</Cell>
                                             <Cell color="red">-5,+1</Cell>
+                                            <Cell color="green">-2,+1</Cell>
+                                            <Cell>-3,+1</Cell>
                                             <Cell>-3,+1</Cell>
 
                                             {/* Mộc */}
                                             <div className="bg-white border border-black font-semibold">Mộc (-)</div>
-                                            <Cell color="red">-5,+1</Cell>
+                                            <Cell>-3,+1</Cell>
                                             <Cell>-3,+1</Cell>
                                             <Cell>-3,+1</Cell>
                                             <Cell color="green">-2,+1</Cell>
-                                            <Cell>-3,+1</Cell>
+                                            <Cell color="red">-5,+1</Cell>
 
                                             {/* Thủy */}
                                             <div className="bg-white border border-black font-semibold">Thủy (-)</div>
                                             <Cell>-3,+1</Cell>
                                             <Cell color="green">-2,+1</Cell>
                                             <Cell>-3,+1</Cell>
-                                            <Cell>-3,+1</Cell>
                                             <Cell color="red">-5,+1</Cell>
+                                            <Cell>-3,+1</Cell>
 
                                             {/* Hỏa */}
                                             <div className="bg-white border border-black font-semibold">Hỏa (-)</div>
-                                            <Cell>-3,+1</Cell>
-                                            <Cell>-3,+1</Cell>
                                             <Cell color="red">-5,+1</Cell>
+                                            <Cell>-3,+1</Cell>
+                                            <Cell>-3,+1</Cell>
                                             <Cell>-3,+1</Cell>
                                             <Cell color="green">-2,+1</Cell>
 
                                             {/* Thổ */}
                                             <div className="bg-white border border-black font-semibold">Thổ (-)</div>
                                             <Cell color="green">-2,+1</Cell>
-                                            <Cell color="red">-5,+1</Cell>
                                             <Cell>-3,+1</Cell>
+                                            <Cell color="red">-5,+1</Cell>
                                             <Cell>-3,+1</Cell>
                                             <Cell>-3,+1</Cell>
                                         </div>
@@ -254,7 +405,15 @@ const AccountRewardsPage = () => {
                                                     element={level.element}
                                                     left={index + 1}
                                                     right={rightValue}
+                                                    active={
+                                                        selectedTarget?.element === level.element &&
+                                                        selectedTarget?.level === index + 1
+                                                    }
+                                                    onClick={() =>
+                                                        setSelectedTarget({ element: level.element, level: index + 1 })
+                                                    }
                                                 />
+
                                             ))}
                                         </div>
                                     ))}
