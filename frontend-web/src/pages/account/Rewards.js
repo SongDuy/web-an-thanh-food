@@ -6,11 +6,11 @@ import Search from "../../components/Search";
 import Notification from "../../components/Notification";
 
 const cardLevels = [
-    { element: "tho", title: "Thẻ Hệ Thổ", cards: [300, 4, 8, 1, 2] },
-    { element: "hoa", title: "Thẻ Hệ Hỏa", cards: [0, 3, 0, 0, 1] },
-    { element: "thuy", title: "Thẻ Hệ Thủy", cards: [0, 1, 0, 2, 0] },
+    { element: "tho", title: "Thẻ Hệ Thổ", cards: [30, 4, 8, 1, 2] },
+    { element: "hoa", title: "Thẻ Hệ Hỏa", cards: [25, 3, 7, 21, 1] },
+    { element: "thuy", title: "Thẻ Hệ Thủy", cards: [0, 10, 0, 2, 0] },
     { element: "moc", title: "Thẻ Hệ Mộc", cards: [2, 0, 2, 0, 1] },
-    { element: "kim", title: "Thẻ Hệ Kim", cards: [0, 7, 1, 0, 4] },
+    { element: "kim", title: "Thẻ Hệ Kim", cards: [6, 7, 15, 0, 4] },
 ];
 
 const AccountRewardsPage = () => {
