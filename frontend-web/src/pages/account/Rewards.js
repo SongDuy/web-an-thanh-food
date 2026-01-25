@@ -24,11 +24,11 @@ const AccountRewardsPage = () => {
 
     // danh sách thẻ
     const [cardLevels, setCardLevels] = useState([
-        { element: "tho", title: "Thẻ Hệ Thổ", cards: [1, 4, 8, 1, 2] },
-        { element: "hoa", title: "Thẻ Hệ Hỏa", cards: [25, 3, 7, 21, 1] },
-        { element: "thuy", title: "Thẻ Hệ Thủy", cards: [1, 10, 3, 2, 3] },
+        { element: "tho", title: "Thẻ Hệ Thổ", cards: [3, 2, 1, 2, 0] },
+        { element: "hoa", title: "Thẻ Hệ Hỏa", cards: [5, 3, 7, 1, 1] },
+        { element: "thuy", title: "Thẻ Hệ Thủy", cards: [1, 1, 3, 2, 3] },
         { element: "moc", title: "Thẻ Hệ Mộc", cards: [2, 3, 2, 3, 1] },
-        { element: "kim", title: "Thẻ Hệ Kim", cards: [0, 7, 15, 3, 4] },
+        { element: "kim", title: "Thẻ Hệ Kim", cards: [0, 7, 5, 3, 4] },
     ]);
 
     useEffect(() => {
