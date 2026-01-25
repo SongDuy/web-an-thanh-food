@@ -213,8 +213,8 @@ const AccountRewardsPage = () => {
                 <p className="text-xs text-center mb-2">
                     Cần <b>{requirement}</b> thẻ nguyên liệu
                 </p>
-
-                <div className="grid grid-cols-3 gap-2 justify-center ">
+                {/* 
+                <div className="grid grid-cols-3 gap-2 justify-center place-content-center">
                     {availableCards.map((card, i) => {
 
                         const isPicked = selectedMaterials[type].some(c => c.id === card.id);
@@ -252,8 +252,45 @@ const AccountRewardsPage = () => {
                             </div>
                         );
                     })}
-                </div>
+                </div> */}
+                <div className="flex flex-wrap gap-2 justify-center">
+                    {availableCards.map((card, i) => {
+                        const isPicked = selectedMaterials[type].some(c => c.id === card.id);
 
+                        if (card.empty) {
+                            return (
+                                <div
+                                    key={i}
+                                    // calc((100% / 3) - khoảng cách gap) để ép tối đa 3 thẻ/dòng
+                                    className="w-[calc(33.33%-8px)] h-[35px] border-2 border-dashed border-gray-400 rounded-md opacity-40"
+                                />
+                            );
+                        }
+
+                        return (
+                            <div
+                                key={i}
+                                onClick={() => {
+                                    const exists = selectedMaterials[type].some(c => c.id === card.id);
+                                    if (exists) {
+                                        setSelectedMaterials(prev => ({
+                                            ...prev,
+                                            [type]: prev[type].filter(c => c.id !== card.id)
+                                        }));
+                                    } else if (selectedMaterials[type].length < requirement) {
+                                        setSelectedMaterials(prev => ({
+                                            ...prev,
+                                            [type]: [...prev[type], card]
+                                        }));
+                                    }
+                                }}
+                                className="w-[calc(33.33%-8px)] cursor-pointer transition"
+                            >
+                                <CardBox element={card.element} left={card.level} right={1} picked={isPicked} />
+                            </div>
+                        );
+                    })}
+                </div>
                 <button
                     disabled={selectedMaterials[type].length < requirement}
                     onClick={() => handleUpgrade(type)}
@@ -275,30 +312,37 @@ const AccountRewardsPage = () => {
 
         const { element: targetElement, level } = selectedTarget;
 
-        setCardLevels(prev => {
-            const data = JSON.parse(JSON.stringify(prev));
+        // Kiểm tra lần cuối xem thẻ đích có còn để nâng cấp không
+        if (getCardQty(targetElement, level) <= 0) {
+            alert("Bạn không còn thẻ này để nâng cấp!");
+            return;
+        }
 
-            // ❌ TRỪ NGUYÊN LIỆU
+        setCardLevels(prev => {
+            // Sử dụng cấu trúc mới để tránh lỗi tham chiếu sâu
+            const newData = prev.map(row => ({
+                ...row,
+                cards: [...row.cards]
+            }));
+
+            // 1. Trừ các thẻ nguyên liệu đã chọn
             selectedMaterials[type].forEach(mat => {
-                const row = data.find(e => e.element === mat.element);
-                if (row.cards[mat.level - 1] > 0) {
-                    row.cards[mat.level - 1] -= 1;
-                }
+                const row = newData.find(e => e.element === mat.element);
+                if (row) row.cards[mat.level - 1] -= 1;
             });
 
-            // ❌ TRỪ THẺ ĐÍCH CŨ
-            const targetRow = data.find(e => e.element === targetElement);
+            // 2. Trừ 1 thẻ đích cũ và Cộng 1 thẻ cấp mới
+            const targetRow = newData.find(e => e.element === targetElement);
             targetRow.cards[level - 1] -= 1;
-
-            // ➕ CỘNG THẺ CẤP MỚI
             targetRow.cards[level] += 1;
 
-            return data;
+            return newData;
         });
 
-        // reset chọn
+        // Reset trạng thái
         setSelectedMaterials({ tuongSinh: [], trungTinh: [], tuongKhac: [] });
         setSelectedTarget(null);
+        alert("Nâng cấp thành công!");
     };
 
 
