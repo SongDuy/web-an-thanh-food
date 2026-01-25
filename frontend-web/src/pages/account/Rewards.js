@@ -208,7 +208,7 @@ const AccountRewardsPage = () => {
 
         return (
             <div className={`w-full h-[250px] flex flex-col ${bg} border-2 border-white shadow-sm rounded-lg p-3`}>
-                <h3 className="font-semibold text-center mb-2">{title}</h3>
+                <h3 className="font-semibold text-center mb-1">{title}</h3>
 
                 <p className="text-xs text-center mb-2">
                     Cần <b>{requirement}</b> thẻ nguyên liệu
