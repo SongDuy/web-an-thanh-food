@@ -108,7 +108,7 @@ const AccountRewardsPage = () => {
                 Giá: <span className="text-yellow-600 font-semibold">1000</span>
             </p>
 
-            <button className="px-1 py-1  font-medium shadow rounded mt-2 w-full text-white bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
+            <button className="w-full mt-2 px-1 py-1 font-medium shadow rounded text-white bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
                 Đổi
             </button>
         </div>
@@ -255,9 +255,9 @@ const AccountRewardsPage = () => {
                 <button
                     disabled={selectedMaterials[type].length < requirement}
                     onClick={() => handleUpgrade(type)}
-                    className={`mt-auto w-full py-1 rounded text-white font-semibold transition ${selectedMaterials[type].length >= requirement
-                        ? "bg-green-500"
-                        : "bg-gray-400 cursor-not-allowed"
+                    className={`mt-auto w-full px-1 py-1 shadow rounded text-white font-medium transition ${selectedMaterials[type].length >= requirement
+                        ? " bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500"
+                        : "bg-gray-400 border-b-2 border-gray-500 cursor-not-allowed"
                         }`}
                 >
                     {selectedMaterials[type].length < requirement
@@ -364,75 +364,78 @@ const AccountRewardsPage = () => {
 
                 <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded-md border">
                     <div className="col-span-7 px-4 py-3 border-r">
-                        <div className="w-full mb-5">
+
+                        <div className="w-full flex flex-col gap-5">
                             <div className="w-full">
-                                <h2 className="text-lg text-gray-500 mb-4">
-                                    Cửa Hàng Nhận Thẻ
-                                </h2>
-                            </div>
+                                <div className="w-full">
+                                    <h2 className="text-lg text-gray-500">
+                                        Cửa Hàng Nhận Thẻ
+                                    </h2>
+                                </div>
 
-                            <div className="w-full grid grid-cols-5 gap-3">
-                                {shopCards.map(card => (
-                                    <ShopCardItem
-                                        key={card.element}
-                                        element={card.element}
-                                        name={card.name}
-                                    />
-                                ))}
-                            </div>
-
-                        </div>
-
-                        <div className="w-full">
-                            <div className="w-full">
-                                <h2 className="text-lg text-gray-500 mb-4">
-                                    Nâng Cấp Thẻ Nhận
-                                </h2>
-                            </div>
-
-                            <div className="w-full">
-                                <div className="w-full grid grid-cols-3 gap-3">
-
-                                    {/* TƯƠNG SINH */}
-                                    <UpgradeBox
-                                        type="tuongSinh"
-                                        color="green"
-                                        title="Nâng Cấp Tương Sinh"
-                                        requirement={2}
-                                        filterFn={(card) =>
-                                            selectedTarget &&
-                                            card.element === elementRelations[selectedTarget.element].sinhBy
-                                        }
-                                    />
-
-                                    {/* TRUNG TÍNH */}
-                                    <UpgradeBox
-                                        type="trungTinh"
-                                        color="yellow"
-                                        title="Nâng Cấp Trung Tính"
-                                        requirement={3}
-                                        filterFn={(card) =>
-                                            selectedTarget &&
-                                            card.element !== elementRelations[selectedTarget.element].sinhBy &&
-                                            card.element !== elementRelations[selectedTarget.element].khacBy
-                                        }
-                                    />
-
-                                    {/* TƯƠNG KHẮC */}
-                                    <UpgradeBox
-                                        type="tuongKhac"
-                                        color="red"
-                                        title="Nâng Cấp Tương Khắc"
-                                        requirement={5}
-                                        filterFn={(card) =>
-                                            selectedTarget &&
-                                            card.element === elementRelations[selectedTarget.element].khacBy
-                                        }
-                                    />
-
+                                <div className="w-full mt-5">
+                                    <div className="w-full mt-5 grid grid-cols-5 gap-3">
+                                        {shopCards.map(card => (
+                                            <ShopCardItem
+                                                key={card.element}
+                                                element={card.element}
+                                                name={card.name}
+                                            />
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
 
+                            <div className="w-full">
+                                <div className="w-full">
+                                    <h2 className="text-lg text-gray-500">
+                                        Nâng Cấp Thẻ Nhận
+                                    </h2>
+                                </div>
+
+                                <div className="w-full mt-5">
+                                    <div className="w-full grid grid-cols-3 gap-3">
+
+                                        {/* TƯƠNG SINH */}
+                                        <UpgradeBox
+                                            type="tuongSinh"
+                                            color="green"
+                                            title="Nâng Cấp Tương Sinh"
+                                            requirement={2}
+                                            filterFn={(card) =>
+                                                selectedTarget &&
+                                                card.element === elementRelations[selectedTarget.element].sinhBy
+                                            }
+                                        />
+
+                                        {/* TRUNG TÍNH */}
+                                        <UpgradeBox
+                                            type="trungTinh"
+                                            color="yellow"
+                                            title="Nâng Cấp Trung Tính"
+                                            requirement={3}
+                                            filterFn={(card) =>
+                                                selectedTarget &&
+                                                card.element !== elementRelations[selectedTarget.element].sinhBy &&
+                                                card.element !== elementRelations[selectedTarget.element].khacBy
+                                            }
+                                        />
+
+                                        {/* TƯƠNG KHẮC */}
+                                        <UpgradeBox
+                                            type="tuongKhac"
+                                            color="red"
+                                            title="Nâng Cấp Tương Khắc"
+                                            requirement={5}
+                                            filterFn={(card) =>
+                                                selectedTarget &&
+                                                card.element === elementRelations[selectedTarget.element].khacBy
+                                            }
+                                        />
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
