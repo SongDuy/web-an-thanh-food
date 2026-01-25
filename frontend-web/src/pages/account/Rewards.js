@@ -271,46 +271,50 @@ const AccountRewardsPage = () => {
     const handleUpgrade = (type) => {
         if (!selectedTarget) return;
 
+        const materialsToUse = selectedMaterials[type];
         const { element: targetElement, level } = selectedTarget;
 
+        // 1. Kiểm tra xem số lượng thẻ trong kho có đủ để trừ không
+        let isStockValid = true;
+        const tempCheck = {}; // Dùng để gom nhóm và kiểm tra tổng số lượng cần trừ
+
+        materialsToUse.forEach(mat => {
+            const key = `${mat.element}-${mat.level}`;
+            tempCheck[key] = (tempCheck[key] || 0) + 1;
+        });
+
+        for (const key in tempCheck) {
+            const [el, lvl] = key.split('-');
+            const currentQty = getCardQty(el, parseInt(lvl));
+            if (currentQty < tempCheck[key]) {
+                isStockValid = false;
+                break;
+            }
+        }
+
+        if (!isStockValid) {
+            alert("Lỗi: Số lượng thẻ trong kho không đủ để thực hiện!");
+            return;
+        }
+
+        // 2. Nếu hợp lệ thì mới tiến hành cập nhật State
         setCardLevels(prev => {
             const newData = prev.map(row => ({
                 ...row,
                 cards: [...row.cards]
             }));
 
-            const targetRow = newData.find(e => e.element === targetElement);
-
-            // 👉 Đếm xem có bao nhiêu thẻ mục tiêu bị dùng làm nguyên liệu
-            const usedAsMaterial = selectedMaterials[type].filter(
-                mat => mat.element === targetElement && mat.level === level
-            ).length;
-
-            // 1️⃣ Trừ nguyên liệu + chống âm
-            selectedMaterials[type].forEach(mat => {
+            // Trừ thẻ nguyên liệu
+            materialsToUse.forEach(mat => {
                 const row = newData.find(e => e.element === mat.element);
-                if (row) {
+                if (row && row.cards[mat.level - 1] > 0) {
                     row.cards[mat.level - 1] -= 1;
-
-                    // 🛡 CHỐNG ÂM Ở ĐÂY
-                    if (row.cards[mat.level - 1] < 0) {
-                        row.cards[mat.level - 1] = 0;
-                    }
                 }
             });
 
-            // 2️⃣ CHỈ trừ thẻ đích nếu nó chưa nằm trong nguyên liệu
-            if (usedAsMaterial === 0) {
-                targetRow.cards[level - 1] -= 1;
-
-                // 🛡 chống âm cho thẻ đích
-                if (targetRow.cards[level - 1] < 0) {
-                    targetRow.cards[level - 1] = 0;
-                }
-            }
-
-            // 3️⃣ Cộng thẻ cấp mới
-            if (targetRow.cards[level] !== undefined) {
+            // Cộng thẻ cấp mới
+            const targetRow = newData.find(e => e.element === targetElement);
+            if (targetRow && targetRow.cards[level] !== undefined) {
                 targetRow.cards[level] += 1;
             }
 
@@ -321,8 +325,6 @@ const AccountRewardsPage = () => {
         setSelectedTarget(null);
         alert("Nâng cấp thành công!");
     };
-
-
 
     // Thẻ của tôi
     const CardBox = ({ title, element, left, right, onClick, active, picked }) => {
