@@ -1,18 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Search from "../../components/Search";
 import Notification from "../../components/Notification";
-
-// danh sách thẻ
-const cardLevels = [
-    { element: "tho", title: "Thẻ Hệ Thổ", cards: [30, 4, 8, 1, 2] },
-    { element: "hoa", title: "Thẻ Hệ Hỏa", cards: [25, 3, 7, 21, 1] },
-    { element: "thuy", title: "Thẻ Hệ Thủy", cards: [3, 10, 3, 2, 3] },
-    { element: "moc", title: "Thẻ Hệ Mộc", cards: [2, 3, 2, 3, 1] },
-    { element: "kim", title: "Thẻ Hệ Kim", cards: [6, 7, 15, 3, 4] },
-];
 
 // Cửa hàng đổi điểm
 const shopCards = [
@@ -30,6 +21,19 @@ const AccountRewardsPage = () => {
     // Tương sinh tương khắc
     const [selectedTarget, setSelectedTarget] = useState(null); // { element: "kim", level: 1 }
     const [selectedMaterials, setSelectedMaterials] = useState({ tuongSinh: [], trungTinh: [], tuongKhac: [] });
+
+    // danh sách thẻ
+    const [cardLevels, setCardLevels] = useState([
+        { element: "tho", title: "Thẻ Hệ Thổ", cards: [30, 4, 8, 1, 2] },
+        { element: "hoa", title: "Thẻ Hệ Hỏa", cards: [25, 3, 7, 21, 1] },
+        { element: "thuy", title: "Thẻ Hệ Thủy", cards: [3, 10, 3, 2, 3] },
+        { element: "moc", title: "Thẻ Hệ Mộc", cards: [2, 3, 2, 3, 1] },
+        { element: "kim", title: "Thẻ Hệ Kim", cards: [6, 7, 15, 3, 4] },
+    ]);
+
+    useEffect(() => {
+        setSelectedMaterials({ tuongSinh: [], trungTinh: [], tuongKhac: [] });
+    }, [selectedTarget]);
 
     // Nâng cấp tối đa 5
     const MAX_LEVEL = 5;
@@ -111,9 +115,23 @@ const AccountRewardsPage = () => {
     );
 
     //Nâng cấp thẻ 
-    const UpgradeBox = ({ type, color, title, requirement, filterFn }) => {
-        const isMaxLevel = selectedTarget?.level === MAX_LEVEL;
+    const getCardQty = (element, level) => {
+        const row = cardLevels.find(e => e.element === element);
+        return row ? row.cards[level - 1] : 0;
+    };
 
+    const buildMaterialSlots = (element, level, need, type) => {
+        const qty = getCardQty(element, level);
+        const slotsToShow = Math.min(qty, need);
+
+        return Array.from({ length: slotsToShow }, (_, i) => ({
+            id: `${type}-${element}-${level}-${i}`, // ✅ ỔN ĐỊNH
+            element,
+            level,
+        }));
+    };
+
+    const UpgradeBox = ({ type, color, title, requirement }) => {
         const bg =
             color === "green"
                 ? "bg-green-100"
@@ -121,102 +139,198 @@ const AccountRewardsPage = () => {
                     ? "bg-yellow-100"
                     : "bg-red-100";
 
-        const availableCards = cardLevels.flatMap(level =>
-            level.cards.map((qty, i) => ({
-                element: level.element,
-                level: i + 1,
-                qty,
-            }))
-        ).filter(card =>
-            card.qty > 0 &&
-            selectedTarget &&                          // đã chọn thẻ đích
-            card.level === selectedTarget.level &&    // ⭐ CHỈ CÙNG CẤP
-            filterFn(card)                            // đúng hệ sinh/khắc/trung tính
-        );
+        // CHƯA CHỌN THẺ
+        if (!selectedTarget) {
+            return (
+                <div className={`w-full h-[250px] flex flex-col ${bg} border-2 border-white shadow-sm rounded-lg p-3`}>
+                    <h3 className="font-semibold text-center mb-2">{title}</h3>
+                    <p className="text-center text-sm text-gray-500 mt-8">
+                        Hãy chọn thẻ cần nâng cấp trước
+                    </p>
+                </div>
+            );
+        }
+
+        const level = selectedTarget.level;
+        const isMaxLevel = level === MAX_LEVEL;
+
+        // ĐÃ MAX LEVEL
+        if (isMaxLevel) {
+            return (
+                <div className={`w-full h-[250px] flex flex-col ${bg} border-2 border-white shadow-sm rounded-lg p-3`}>
+                    <h3 className="font-semibold text-center mb-2">{title}</h3>
+                    <p className="text-center text-sm text-gray-600 font-semibold mt-8">
+                        Thẻ đã đạt cấp tối đa
+                    </p>
+                </div>
+            );
+        }
+
+        let availableCards = [];
+
+        if (type === "tuongSinh") {
+            const e = elementRelations[selectedTarget.element].sinhBy;
+            availableCards = buildMaterialSlots(e, level, requirement, type);
+        } else if (type === "tuongKhac") {
+            const e = elementRelations[selectedTarget.element].khacBy;
+            availableCards = buildMaterialSlots(e, level, requirement, type);
+        } else {
+            const ALL_ELEMENTS = ["kim", "moc", "thuy", "hoa", "tho"];
+
+            const neutralElements = ALL_ELEMENTS.filter(
+                e =>
+                    e !== elementRelations[selectedTarget.element].sinhBy &&
+                    e !== elementRelations[selectedTarget.element].khacBy
+            );
+
+            for (const e of neutralElements) {
+                const qty = getCardQty(e, level);
+
+                // mỗi hệ tối đa 3 thẻ
+                const showCount = Math.min(qty, 3);
+
+                for (let i = 0; i < showCount; i++) {
+                    availableCards.push({
+                        id: `${type}-${e}-${level}-${i}`, // ⭐ DUY NHẤT
+                        element: e,
+                        level
+                    });
+
+                }
+            }
+        }
+
+
+        const emptySlots = requirement - availableCards.length;
+        for (let i = 0; i < emptySlots; i++) {
+            availableCards.push({ empty: true });
+        }
 
         return (
             <div className={`w-full h-[250px] flex flex-col ${bg} border-2 border-white shadow-sm rounded-lg p-3`}>
                 <h3 className="font-semibold text-center mb-2">{title}</h3>
 
-                {isMaxLevel && (
-                    <p className="text-center text-sm text-gray-600 font-semibold mt-4">
-                        Thẻ đã đạt cấp tối đa
-                    </p>
-                )}
+                <p className="text-xs text-center mb-2">
+                    Cần <b>{requirement}</b> thẻ nguyên liệu
+                </p>
 
-                {!selectedTarget && (
-                    <p className="text-center text-sm text-gray-500">
-                        Hãy chọn thẻ cần nâng cấp trước
-                    </p>
-                )}
+                <div className="grid grid-cols-3 gap-2 justify-center ">
+                    {availableCards.map((card, i) => {
 
-                {selectedTarget && !isMaxLevel && (
-                    <>
-                        <p className="text-xs text-center mb-2">
-                            Cần <b>{requirement}</b> thẻ nguyên liệu
-                        </p>
+                        const isPicked = selectedMaterials[type].some(c => c.id === card.id);
 
-                        <div
-                            className={`grid gap-2 justify-center ${requirement === 2 ? "grid-cols-2" : ""} ${requirement === 3 ? "grid-cols-3" : ""} ${requirement === 5 ? "grid-cols-3" : ""}`}
-                        >
-                            {availableCards.map((card, i) => (
-                                <div
-                                    key={i}
-                                    onClick={() => {
-                                        if (selectedMaterials[type].length < requirement) {
-                                            setSelectedMaterials(prev => ({
-                                                ...prev,
-                                                [type]: [...prev[type], card]
-                                            }));
-                                        }
-                                    }}
-                                    className="cursor-pointer scale-90 hover:scale-100 transition"
-                                >
-                                    <CardBox
-                                        element={card.element}
-                                        left={card.level}
-                                        right={card.qty}
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    </>
-                )}
+                        if (card.empty) {
+                            return (
+                                <div key={i} className="w-[70px] h-[35px] border-2 border-dashed border-gray-400 rounded-md opacity-40" />
+                            );
+                        }
+
+                        return (
+                            <div
+                                key={i}
+                                onClick={() => {
+                                    const exists = selectedMaterials[type].some(c => c.id === card.id);
+
+                                    if (exists) {
+                                        // BỎ CHỌN
+                                        setSelectedMaterials(prev => ({
+                                            ...prev,
+                                            [type]: prev[type].filter(c => c.id !== card.id)
+                                        }));
+                                    } else if (selectedMaterials[type].length < requirement) {
+                                        // CHỌN
+                                        setSelectedMaterials(prev => ({
+                                            ...prev,
+                                            [type]: [...prev[type], card]
+                                        }));
+                                    }
+                                }}
+
+                                className="cursor-pointer transition"
+                            >
+                                <CardBox element={card.element} left={card.level} right={1} picked={isPicked} />
+                            </div>
+                        );
+                    })}
+                </div>
 
                 <button
-                    disabled={isMaxLevel || selectedMaterials[type].length < requirement}
-                    className={`mt-auto w-full py-1 rounded text-white font-semibold transition 
-                        ${!isMaxLevel && selectedMaterials[type].length >= requirement
-                            ? "bg-green-500 hover:brightness-110"
-                            : "bg-gray-400 cursor-not-allowed"}
-                        `}
+                    disabled={selectedMaterials[type].length < requirement}
+                    onClick={() => handleUpgrade(type)}
+                    className={`mt-auto w-full py-1 rounded text-white font-semibold transition ${selectedMaterials[type].length >= requirement
+                        ? "bg-green-500"
+                        : "bg-gray-400 cursor-not-allowed"
+                        }`}
                 >
-                    {isMaxLevel
-                        ? "Đã đạt cấp tối đa"
-                        : selectedMaterials[type].length < requirement
-                            ? `Đã chọn ${selectedMaterials[type].length} / ${requirement}`
-                            : "Nâng Cấp"}
+                    {selectedMaterials[type].length < requirement
+                        ? `Đã chọn ${selectedMaterials[type].length} / ${requirement}`
+                        : "Nâng Cấp"}
                 </button>
-
             </div>
         );
     };
 
+    const handleUpgrade = (type) => {
+        if (!selectedTarget) return;
+
+        const { element: targetElement, level } = selectedTarget;
+
+        setCardLevels(prev => {
+            const data = JSON.parse(JSON.stringify(prev));
+
+            // ❌ TRỪ NGUYÊN LIỆU
+            selectedMaterials[type].forEach(mat => {
+                const row = data.find(e => e.element === mat.element);
+                if (row.cards[mat.level - 1] > 0) {
+                    row.cards[mat.level - 1] -= 1;
+                }
+            });
+
+            // ❌ TRỪ THẺ ĐÍCH CŨ
+            const targetRow = data.find(e => e.element === targetElement);
+            targetRow.cards[level - 1] -= 1;
+
+            // ➕ CỘNG THẺ CẤP MỚI
+            targetRow.cards[level] += 1;
+
+            return data;
+        });
+
+        // reset chọn
+        setSelectedMaterials({ tuongSinh: [], trungTinh: [], tuongKhac: [] });
+        setSelectedTarget(null);
+    };
+
+
     // Thẻ của tôi
-    const CardBox = ({ title, element, left, right, onClick, active }) => (
-        <div
-            onClick={onClick}
-            title={title}
-            className={`w-[70px] h-[35px] cursor-pointer grid grid-cols-[35%_65%] bg-gradient-to-tr ${elementStyles[element]} shadow border-2 ${active ? "border-black" : "border-white hover:border-black"} items-center justify-center rounded-md transition`}
-        >
-            <span className="text-white font-medium flex items-center justify-center border-r border-white">
-                {left}
-            </span>
-            <span className="text-black flex items-center justify-center border-l border-white">
-                {right}
-            </span>
-        </div>
-    );
+    const CardBox = ({ title, element, left, right, onClick, active, picked }) => {
+
+        const outerBorder = picked || active
+            ? "border-black"
+            : "border-white hover:border-black";
+
+        const innerBorder = picked || active
+            ? "border-black"
+            : "border-white";
+
+        return (
+            <div
+                onClick={onClick}
+                title={title}
+                className={`w-full h-[35px] cursor-pointer grid grid-cols-[35%_65%]
+            bg-gradient-to-tr ${elementStyles[element]}
+            shadow border-2 ${outerBorder}
+            items-center justify-center rounded-md transition`}
+            >
+                <span className={`text-white font-medium flex items-center justify-center border-r ${innerBorder}`}>
+                    {left}
+                </span>
+                <span className={`text-black flex items-center justify-center border-l ${innerBorder}`}>
+                    {right}
+                </span>
+            </div>
+        );
+    };
 
 
     return (
