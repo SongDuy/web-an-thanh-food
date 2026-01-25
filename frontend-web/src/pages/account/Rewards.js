@@ -89,7 +89,7 @@ const AccountRewardsPage = () => {
 
     // Cửa hàng đổi thẻ
     const ShopCardItem = ({ element, name }) => (
-        <div className="flex flex-col items-center justify-between border border-gray-200 rounded-lg p-3 shadow-sm bg-white text-center">
+        <div className="flex flex-col items-center justify-between border border-gray-200 rounded-md p-3 shadow-sm bg-white text-center">
 
             <div
                 className={`w-[70px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr ${elementStyles[element]} shadow border border-white items-center justify-center rounded-md`}
@@ -207,7 +207,7 @@ const AccountRewardsPage = () => {
         }
 
         return (
-            <div className={`w-full h-[250px] flex flex-col ${bg} border-2 border-white shadow-sm rounded-lg p-3`}>
+            <div className={`w-full h-[250px] flex flex-col ${bg} border-2 border-white shadow-sm rounded-md p-3`}>
                 <h3 className="font-semibold text-center mb-1">{title}</h3>
 
                 <p className="text-xs text-center mb-2">
