@@ -200,7 +200,6 @@ const AccountRewardsPage = () => {
             }
         }
 
-
         const emptySlots = requirement - availableCards.length;
         for (let i = 0; i < emptySlots; i++) {
             availableCards.push({ empty: true });
