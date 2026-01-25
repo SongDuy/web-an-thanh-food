@@ -273,38 +273,55 @@ const AccountRewardsPage = () => {
 
         const { element: targetElement, level } = selectedTarget;
 
-        // Kiểm tra lần cuối xem thẻ đích có còn để nâng cấp không
-        if (getCardQty(targetElement, level) <= 0) {
-            alert("Bạn không còn thẻ này để nâng cấp!");
-            return;
-        }
-
         setCardLevels(prev => {
-            // Sử dụng cấu trúc mới để tránh lỗi tham chiếu sâu
             const newData = prev.map(row => ({
                 ...row,
                 cards: [...row.cards]
             }));
 
-            // 1. Trừ các thẻ nguyên liệu đã chọn
+            const targetRow = newData.find(e => e.element === targetElement);
+
+            // 👉 Đếm xem có bao nhiêu thẻ mục tiêu bị dùng làm nguyên liệu
+            const usedAsMaterial = selectedMaterials[type].filter(
+                mat => mat.element === targetElement && mat.level === level
+            ).length;
+
+            // 1️⃣ Trừ nguyên liệu + chống âm
             selectedMaterials[type].forEach(mat => {
                 const row = newData.find(e => e.element === mat.element);
-                if (row) row.cards[mat.level - 1] -= 1;
+                if (row) {
+                    row.cards[mat.level - 1] -= 1;
+
+                    // 🛡 CHỐNG ÂM Ở ĐÂY
+                    if (row.cards[mat.level - 1] < 0) {
+                        row.cards[mat.level - 1] = 0;
+                    }
+                }
             });
 
-            // 2. Trừ 1 thẻ đích cũ và Cộng 1 thẻ cấp mới
-            const targetRow = newData.find(e => e.element === targetElement);
-            targetRow.cards[level - 1] -= 1;
-            targetRow.cards[level] += 1;
+            // 2️⃣ CHỈ trừ thẻ đích nếu nó chưa nằm trong nguyên liệu
+            if (usedAsMaterial === 0) {
+                targetRow.cards[level - 1] -= 1;
+
+                // 🛡 chống âm cho thẻ đích
+                if (targetRow.cards[level - 1] < 0) {
+                    targetRow.cards[level - 1] = 0;
+                }
+            }
+
+            // 3️⃣ Cộng thẻ cấp mới
+            if (targetRow.cards[level] !== undefined) {
+                targetRow.cards[level] += 1;
+            }
 
             return newData;
         });
 
-        // Reset trạng thái
         setSelectedMaterials({ tuongSinh: [], trungTinh: [], tuongKhac: [] });
         setSelectedTarget(null);
         alert("Nâng cấp thành công!");
     };
+
 
 
     // Thẻ của tôi
