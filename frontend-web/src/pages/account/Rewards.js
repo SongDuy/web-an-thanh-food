@@ -144,8 +144,8 @@ const AccountRewardsPage = () => {
             return (
                 <div className={`w-full h-[250px] flex flex-col ${bg} border-2 border-white shadow-sm rounded-lg p-3`}>
                     <h3 className="font-semibold text-center mb-2">{title}</h3>
-                    <p className="text-center text-sm text-gray-500 mt-8">
-                        Hãy chọn thẻ cần nâng cấp trước
+                    <p className="text-center text-sm text-gray-600 font-semibold mt-16">
+                        Hãy chọn thẻ cần nâng cấp!
                     </p>
                 </div>
             );
@@ -159,8 +159,8 @@ const AccountRewardsPage = () => {
             return (
                 <div className={`w-full h-[250px] flex flex-col ${bg} border-2 border-white shadow-sm rounded-lg p-3`}>
                     <h3 className="font-semibold text-center mb-2">{title}</h3>
-                    <p className="text-center text-sm text-gray-600 font-semibold mt-8">
-                        Thẻ đã đạt cấp tối đa
+                    <p className="text-center text-sm text-gray-600 font-semibold mt-16">
+                        Thẻ chọn đã đạt cấp tối đa!
                     </p>
                 </div>
             );
@@ -213,46 +213,7 @@ const AccountRewardsPage = () => {
                 <p className="text-xs text-center mb-2">
                     Cần <b>{requirement}</b> thẻ nguyên liệu
                 </p>
-                {/* 
-                <div className="grid grid-cols-3 gap-2 justify-center place-content-center">
-                    {availableCards.map((card, i) => {
 
-                        const isPicked = selectedMaterials[type].some(c => c.id === card.id);
-
-                        if (card.empty) {
-                            return (
-                                <div key={i} className="w-full h-[35px] border-2 border-dashed border-gray-400 rounded-md opacity-40" />
-                            );
-                        }
-
-                        return (
-                            <div
-                                key={i}
-                                onClick={() => {
-                                    const exists = selectedMaterials[type].some(c => c.id === card.id);
-
-                                    if (exists) {
-                                        // BỎ CHỌN
-                                        setSelectedMaterials(prev => ({
-                                            ...prev,
-                                            [type]: prev[type].filter(c => c.id !== card.id)
-                                        }));
-                                    } else if (selectedMaterials[type].length < requirement) {
-                                        // CHỌN
-                                        setSelectedMaterials(prev => ({
-                                            ...prev,
-                                            [type]: [...prev[type], card]
-                                        }));
-                                    }
-                                }}
-
-                                className="cursor-pointer transition"
-                            >
-                                <CardBox element={card.element} left={card.level} right={1} picked={isPicked} />
-                            </div>
-                        );
-                    })}
-                </div> */}
                 <div className="flex flex-wrap gap-2 justify-center">
                     {availableCards.map((card, i) => {
                         const isPicked = selectedMaterials[type].some(c => c.id === card.id);
