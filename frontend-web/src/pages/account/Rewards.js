@@ -221,7 +221,7 @@ const AccountRewardsPage = () => {
 
                         if (card.empty) {
                             return (
-                                <div key={i} className="w-[70px] h-[35px] border-2 border-dashed border-gray-400 rounded-md opacity-40" />
+                                <div key={i} className="w-full h-[35px] border-2 border-dashed border-gray-400 rounded-md opacity-40" />
                             );
                         }
 
@@ -331,7 +331,6 @@ const AccountRewardsPage = () => {
             </div>
         );
     };
-
 
     return (
         <>
