@@ -24,11 +24,11 @@ const AccountRewardsPage = () => {
 
     // danh sách thẻ
     const [cardLevels, setCardLevels] = useState([
-        { element: "tho", title: "Thẻ Hệ Thổ", cards: [30, 4, 8, 1, 2] },
+        { element: "tho", title: "Thẻ Hệ Thổ", cards: [1, 4, 8, 1, 2] },
         { element: "hoa", title: "Thẻ Hệ Hỏa", cards: [25, 3, 7, 21, 1] },
-        { element: "thuy", title: "Thẻ Hệ Thủy", cards: [3, 10, 3, 2, 3] },
+        { element: "thuy", title: "Thẻ Hệ Thủy", cards: [1, 10, 3, 2, 3] },
         { element: "moc", title: "Thẻ Hệ Mộc", cards: [2, 3, 2, 3, 1] },
-        { element: "kim", title: "Thẻ Hệ Kim", cards: [6, 7, 15, 3, 4] },
+        { element: "kim", title: "Thẻ Hệ Kim", cards: [0, 7, 15, 3, 4] },
     ]);
 
     useEffect(() => {
@@ -175,7 +175,7 @@ const AccountRewardsPage = () => {
             const e = elementRelations[selectedTarget.element].khacBy;
             availableCards = buildMaterialSlots(e, level, requirement, type);
         } else {
-            const ALL_ELEMENTS = ["kim", "moc", "thuy", "hoa", "tho"];
+            const ALL_ELEMENTS = ["tho", "hoa", "thuy", "moc", "kim"];
 
             const neutralElements = ALL_ELEMENTS.filter(
                 e =>
@@ -317,10 +317,7 @@ const AccountRewardsPage = () => {
             <div
                 onClick={onClick}
                 title={title}
-                className={`w-full h-[35px] cursor-pointer grid grid-cols-[35%_65%]
-            bg-gradient-to-tr ${elementStyles[element]}
-            shadow border-2 ${outerBorder}
-            items-center justify-center rounded-md transition`}
+                className={`w-full h-[35px] cursor-pointer grid grid-cols-[35%_65%] bg-gradient-to-tr ${elementStyles[element]} shadow border-2 ${outerBorder} items-center justify-center rounded-md transition`}
             >
                 <span className={`text-white font-medium flex items-center justify-center border-r ${innerBorder}`}>
                     {left}
