@@ -39,11 +39,11 @@ const AccountRewardsPage = () => {
 
     //Hệ 
     const elementOptions = [
-        { value: "kim", label: "Kim" },
-        { value: "moc", label: "Mộc" },
-        { value: "thuy", label: "Thủy" },
-        { value: "hoa", label: "Hỏa" },
-        { value: "tho", label: "Thổ" },
+        { value: "kim", label: "Thẻ Kim" },
+        { value: "moc", label: "Thẻ Mộc" },
+        { value: "thuy", label: "Thẻ Thủy" },
+        { value: "hoa", label: "Thẻ Hỏa" },
+        { value: "tho", label: "Thẻ Thổ" },
     ];
 
     const levelOptions = useMemo(() => {
@@ -120,6 +120,14 @@ const AccountRewardsPage = () => {
             maxHeight: "175px",
         }),
     };
+
+    const getElementOption = (element) =>
+        elementOptions.find(opt => opt.value === element);
+
+    const getLevelOption = (level) => ({
+        value: level,
+        label: `Cấp ${level}`,
+    });
 
     useEffect(() => {
         setSelectedMaterials({ tuongSinh: [], trungTinh: [], tuongKhac: [] });
@@ -662,9 +670,17 @@ const AccountRewardsPage = () => {
                                                         selectedTarget?.element === level.element &&
                                                         selectedTarget?.level === index + 1
                                                     }
-                                                    onClick={() =>
-                                                        setSelectedTarget({ element: level.element, level: index + 1 })
-                                                    }
+                                                    onClick={() => {
+                                                        const element = level.element;
+                                                        const lvl = index + 1;
+
+                                                        setSelectedTarget({ element, level: lvl });
+
+                                                        // sync dropdown
+                                                        setSelectedElement(getElementOption(element));
+                                                        setSelectedLevel(getLevelOption(lvl));
+                                                    }}
+
                                                 />
 
                                             ))}
