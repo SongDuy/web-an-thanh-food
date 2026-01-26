@@ -126,7 +126,7 @@ const AccountProfilePage = () => {
             width: "1.5px",
             height: "18px",
             backgroundColor: "#d1d5db",
-            margin: "0 6px",
+            margin: "0 0",
             alignSelf: "center",
         }),
 
