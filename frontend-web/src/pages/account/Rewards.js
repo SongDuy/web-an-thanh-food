@@ -120,9 +120,15 @@ const AccountRewardsPage = () => {
             padding: "0 6px",
         }),
 
-        indicatorSeparator: () => ({
-            display: "none", // nhỏ gọn hơn khi thu width
+        indicatorSeparator: (base) => ({
+            ...base,
+            width: "1.5px",
+            height: "18px",
+            backgroundColor: "#d1d5db",
+            margin: "0 0",
+            alignSelf: "center",
         }),
+
 
         menuList: (base) => ({
             ...base,
@@ -524,7 +530,7 @@ const AccountRewardsPage = () => {
                                     <div className="ml-auto flex gap-3">
 
                                         {/* CHỌN HỆ */}
-                                        <div className="w-[120px] h-[38px]">
+                                        <div className="w-[125px] h-[38px]">
                                             <Select
                                                 options={elementOptions}
                                                 placeholder="Chọn Thẻ"
@@ -535,7 +541,7 @@ const AccountRewardsPage = () => {
                                         </div>
 
                                         {/* CHỌN CẤP */}
-                                        <div className="w-[120px] h-[38px]">
+                                        <div className="w-[125px] h-[38px]">
                                             <Select
                                                 options={levelOptions}
                                                 placeholder="Chọn Cấp"
