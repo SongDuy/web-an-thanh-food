@@ -419,7 +419,12 @@ const AccountRewardsPage = () => {
         });
 
         setSelectedMaterials({ tuongSinh: [], trungTinh: [], tuongKhac: [] });
-        setSelectedTarget(null);
+        // giữ nguyên lựa chọn sau khi nâng cấp
+        setSelectedTarget({
+            element: selectedElement.value,
+            level: selectedLevel.value,
+        });
+
         alert("Nâng cấp thành công!");
     };
 
