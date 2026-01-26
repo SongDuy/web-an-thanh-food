@@ -78,11 +78,7 @@ const AccountRewardsPage = () => {
             borderWidth: "1px",
             borderColor: state.isFocused ? "#60a5fa" : "#d1d5db",
             boxShadow: "none",
-            ":hover": {
-                borderColor: "#60a5fa",
-            },
-            display: "flex",
-            alignItems: "center",
+            ":hover": { borderColor: "#60a5fa" },
         }),
 
         valueContainer: (base) => ({
@@ -93,10 +89,23 @@ const AccountRewardsPage = () => {
             alignItems: "center",
         }),
 
-        /** ⭐ FIX PLACEHOLDER */
+        singleValue: (base) => ({
+            ...base,
+            margin: 0,
+            lineHeight: "38px", // ⭐ chữ luôn đứng giữa
+        }),
+
         placeholder: (base, state) => ({
             ...base,
-            display: state.isFocused ? "none" : "block", // 🔥 biến mất khi focus
+            margin: 0,
+            lineHeight: "38px", // ⭐ placeholder giữa luôn
+            display: state.isFocused ? "none" : "block",
+        }),
+
+        input: (base) => ({
+            ...base,
+            margin: 0,
+            padding: 0,
         }),
 
         indicatorsContainer: (base) => ({
@@ -106,13 +115,13 @@ const AccountRewardsPage = () => {
             alignItems: "center",
         }),
 
-        indicatorSeparator: (base) => ({
+        dropdownIndicator: (base) => ({
             ...base,
-            width: "1.5px",
-            height: "18px",
-            backgroundColor: "#d1d5db",
-            margin: "0 6px",
-            alignSelf: "center",
+            padding: "0 6px",
+        }),
+
+        indicatorSeparator: () => ({
+            display: "none", // nhỏ gọn hơn khi thu width
         }),
 
         menuList: (base) => ({
@@ -515,7 +524,7 @@ const AccountRewardsPage = () => {
                                     <div className="ml-auto flex gap-3">
 
                                         {/* CHỌN HỆ */}
-                                        <div className="w-[150px] h-[38px]">
+                                        <div className="w-[120px] h-[38px]">
                                             <Select
                                                 options={elementOptions}
                                                 placeholder="Chọn Thẻ"
@@ -526,7 +535,7 @@ const AccountRewardsPage = () => {
                                         </div>
 
                                         {/* CHỌN CẤP */}
-                                        <div className="w-[150px] h-[38px]">
+                                        <div className="w-[120px] h-[38px]">
                                             <Select
                                                 options={levelOptions}
                                                 placeholder="Chọn Cấp"
