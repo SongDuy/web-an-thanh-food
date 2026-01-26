@@ -1,4 +1,6 @@
-import { useState, useEffect } from "react";
+import Select from "react-select";
+
+import { useState, useEffect, useMemo } from "react";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -22,6 +24,10 @@ const AccountRewardsPage = () => {
     const [selectedTarget, setSelectedTarget] = useState(null); // { element: "kim", level: 1 }
     const [selectedMaterials, setSelectedMaterials] = useState({ tuongSinh: [], trungTinh: [], tuongKhac: [] });
 
+    // Chọn hệ và cấp ở mục nâng cấp thẻ nhận 
+    const [selectedElement, setSelectedElement] = useState(null);
+    const [selectedLevel, setSelectedLevel] = useState(null);
+
     // danh sách thẻ
     const [cardLevels, setCardLevels] = useState([
         { element: "tho", title: "Thẻ Hệ Thổ", cards: [3, 2, 1, 2, 0] },
@@ -30,6 +36,90 @@ const AccountRewardsPage = () => {
         { element: "moc", title: "Thẻ Hệ Mộc", cards: [2, 3, 2, 3, 1] },
         { element: "kim", title: "Thẻ Hệ Kim", cards: [0, 7, 5, 3, 4] },
     ]);
+
+    //Hệ 
+    const elementOptions = [
+        { value: "kim", label: "Kim" },
+        { value: "moc", label: "Mộc" },
+        { value: "thuy", label: "Thủy" },
+        { value: "hoa", label: "Hỏa" },
+        { value: "tho", label: "Thổ" },
+    ];
+
+    const levelOptions = useMemo(() => {
+        if (!selectedElement) return [];
+
+        const row = cardLevels.find(e => e.element === selectedElement.value);
+        if (!row) return [];
+
+        return row.cards.map((qty, i) => ({
+            value: i + 1,
+            label: `Cấp ${i + 1}`, // hiện luôn số thẻ đang có
+        }));
+    }, [selectedElement, cardLevels]);
+
+    useEffect(() => {
+        if (selectedElement && selectedLevel) {
+            setSelectedTarget({
+                element: selectedElement.value,
+                level: selectedLevel.value,
+            });
+        }
+    }, [selectedElement, selectedLevel]);
+
+
+    // Chỉnh css cho ô cuộn
+    const selectStyles = {
+        control: (base, state) => ({
+            ...base,
+            minHeight: "38px",
+            height: "38px",
+            borderRadius: "6px",
+            borderWidth: "1px",
+            borderColor: state.isFocused ? "#60a5fa" : "#d1d5db",
+            boxShadow: "none",
+            ":hover": {
+                borderColor: "#60a5fa",
+            },
+            display: "flex",
+            alignItems: "center",
+        }),
+
+        valueContainer: (base) => ({
+            ...base,
+            height: "38px",
+            padding: "0 8px",
+            display: "flex",
+            alignItems: "center",
+        }),
+
+        /** ⭐ FIX PLACEHOLDER */
+        placeholder: (base, state) => ({
+            ...base,
+            display: state.isFocused ? "none" : "block", // 🔥 biến mất khi focus
+        }),
+
+        indicatorsContainer: (base) => ({
+            ...base,
+            height: "38px",
+            display: "flex",
+            alignItems: "center",
+        }),
+
+        indicatorSeparator: (base) => ({
+            ...base,
+            width: "1.5px",
+            height: "18px",
+            backgroundColor: "#d1d5db",
+            margin: "0 6px",
+            alignSelf: "center",
+        }),
+
+        menuList: (base) => ({
+            ...base,
+            maxHeight: "175px",
+        }),
+    };
 
     useEffect(() => {
         setSelectedMaterials({ tuongSinh: [], trungTinh: [], tuongKhac: [] });
@@ -405,10 +495,37 @@ const AccountRewardsPage = () => {
                             </div>
 
                             <div className="w-full">
-                                <div className="w-full">
+                                <div className="w-full flex items-center">
                                     <h2 className="text-lg text-gray-500">
                                         Nâng Cấp Thẻ Nhận
                                     </h2>
+                                    <div className="ml-auto flex gap-3">
+
+                                        {/* CHỌN HỆ */}
+                                        <div className="w-[150px] h-[38px]">
+                                            <Select
+                                                options={elementOptions}
+                                                placeholder="Chọn Thẻ"
+                                                value={selectedElement}
+                                                onChange={setSelectedElement}
+                                                styles={selectStyles}
+                                            />
+                                        </div>
+
+                                        {/* CHỌN CẤP */}
+                                        <div className="w-[150px] h-[38px]">
+                                            <Select
+                                                options={levelOptions}
+                                                placeholder="Chọn Cấp"
+                                                value={selectedLevel}
+                                                onChange={setSelectedLevel}
+                                                isDisabled={!selectedElement}
+                                                styles={selectStyles}
+                                            />
+                                        </div>
+
+                                    </div>
+
                                 </div>
 
                                 <div className="w-full mt-5">
