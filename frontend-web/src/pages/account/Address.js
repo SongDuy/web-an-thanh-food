@@ -149,8 +149,8 @@ const AccountAddressPage = () => {
                             </h2>
                         </div>
 
-                        <div className="w-full mt-5">
-                            <div className="w-full border rounded-lg p-4">
+                        <div className="w-full mt-5 flex flex-col gap-3">
+                            <div className="w-full border shadow rounded-lg p-4">
                                 <div className="flex gap-3 items-start">
                                     <HomeWorkIcon className="text-blue-500 mt-1" />
 
@@ -176,7 +176,35 @@ const AccountAddressPage = () => {
                                     </button>
 
                                     <button className="px-3 py-1 rounded border text-green-600 border-green-500 hover:bg-green-50 transition">
-                                        Đặt làm mặc định
+                                        Mặc định
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div className="w-full border shadow rounded-lg p-4">
+                                <div className="flex gap-3 items-start">
+                                    <HomeWorkIcon className="text-blue-500 mt-1" />
+
+                                    <div className="flex-1">
+                                        <div className="flex items-center gap-2 flex-wrap">
+                                            <span className="font-medium">Nguyễn Văn A</span>
+                                            <span className="text-sm text-gray-500">| 0909 123 456</span>
+                                        </div>
+
+                                        <p className="text-sm text-gray-600 mt-1">
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Buttons dưới cùng */}
+                                <div className="flex gap-3 mt-5 text-sm">
+                                    <button className="px-3 py-1 rounded border text-blue-600 border-blue-500 hover:bg-blue-50 transition">
+                                        Chỉnh sửa
+                                    </button>
+
+                                    <button className="px-3 py-1 rounded border text-green-600 border-green-500 hover:bg-green-50 transition">
+                                        Mặc định
                                     </button>
 
                                     <button className="px-3 py-1 rounded border text-red-600 border-red-500 hover:bg-red-50 transition">
