@@ -149,28 +149,44 @@ const AccountAddressPage = () => {
                             </h2>
                         </div>
 
-                        <div className="w-full py-4">
+                        <div className="w-full mt-5">
+                            <div className="w-full border rounded-lg p-4">
+                                <div className="flex gap-3 items-start">
+                                    <HomeWorkIcon className="text-blue-500 mt-1" />
 
-                            <div className="w-full border rounded-lg p-4 flex gap-3">
-                                <HomeWorkIcon className="text-blue-500" />
-                                <div>
-                                    <div className="flex items-center gap-2">
-                                        <span className="font-medium">
-                                            Nguyễn Văn A
-                                        </span>
-                                        <span className="text-sm text-gray-500">
-                                            | 0909 123 456
-                                        </span>
-                                        <span className="text-xs px-2 py-0.5 rounded bg-blue-50 text-blue-600 border">
-                                            Mặc định
-                                        </span>
+                                    <div className="flex-1">
+                                        <div className="flex items-center gap-2 flex-wrap">
+                                            <span className="font-medium">Nguyễn Văn A</span>
+                                            <span className="text-sm text-gray-500">| 0909 123 456</span>
+                                            <span className="text-xs px-2 py-0.5 rounded bg-blue-50 text-blue-600 border">
+                                                Mặc định
+                                            </span>
+                                        </div>
+
+                                        <p className="text-sm text-gray-600 mt-1">
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                        </p>
                                     </div>
-                                    <p className="text-sm text-gray-600 mt-1">
-                                        123 Nguyễn Trãi, Quận 1, TP.HCM
-                                    </p>
+                                </div>
+
+                                {/* Buttons dưới cùng */}
+                                <div className="flex gap-3 mt-5 text-sm">
+                                    <button className="px-3 py-1 rounded border text-blue-600 border-blue-500 hover:bg-blue-50 transition">
+                                        Chỉnh sửa
+                                    </button>
+
+                                    <button className="px-3 py-1 rounded border text-green-600 border-green-500 hover:bg-green-50 transition">
+                                        Đặt làm mặc định
+                                    </button>
+
+                                    <button className="px-3 py-1 rounded border text-red-600 border-red-500 hover:bg-red-50 transition">
+                                        Xóa
+                                    </button>
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
 
                     <div className="col-span-4 px-4 py-3 border-l">
@@ -379,7 +395,6 @@ const AccountAddressPage = () => {
                                         maxLength={300}
                                         className="w-full h-[90px] border rounded-md px-2.5 py-2 resize-none overflow-y-auto outline-none focus:ring-1 focus:ring-blue-400"
                                     />
-
                                 </div>
                             </div>
 
