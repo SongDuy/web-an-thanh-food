@@ -159,7 +159,7 @@ const AccountAddressPage = () => {
                                     <div className="flex-1">
                                         <div className="flex items-center gap-2 flex-wrap">
                                             <span className="font-medium">Nguyễn Văn A</span>
-                                            <span className="text-sm text-gray-500">| 0909 123 456</span>
+                                            <span className="text-sm text-gray-500">| 090 1234567</span>
                                             <span className="text-xs px-2 py-0.5 rounded bg-blue-50 text-blue-600 border">
                                                 Mặc định
                                             </span>
@@ -173,12 +173,12 @@ const AccountAddressPage = () => {
 
                                 {/* Buttons dưới cùng */}
                                 <div className="flex gap-3 mt-5">
-                                    <button className="flex items-center gap-1 px-3 py-1 font-medium rounded border text-blue-600 border-blue-500 hover:bg-blue-50 transition">
+                                    <button className="h-[35px] flex items-center gap-1 px-3 font-medium rounded border text-blue-500 border-blue-500 hover:bg-blue-50 hover:text-blue-600 transition">
                                         <EditIcon className="w-4 h-4" />
                                         <span>Chỉnh sửa</span>
                                     </button>
 
-                                    <button className="flex items-center gap-1 px-3 py-1 font-medium rounded border text-red-600 border-red-500 hover:bg-red-50 transition">
+                                    <button className="h-[35px] flex items-center gap-1 px-3 font-medium rounded border text-red-500 border-red-500 hover:bg-red-50 hover:text-red-600 transition">
                                         <DeleteForeverIcon className="w-4 h-4" />
                                         <span>Xóa</span>
                                     </button>
@@ -193,7 +193,7 @@ const AccountAddressPage = () => {
                                     <div className="flex-1">
                                         <div className="flex items-center gap-2 flex-wrap">
                                             <span className="font-medium">Nguyễn Văn A</span>
-                                            <span className="text-sm text-gray-500">| 0909 123 456</span>
+                                            <span className="text-sm text-gray-500">| 090 1234567</span>
                                         </div>
 
                                         <p className="text-sm text-gray-600 mt-1">
@@ -204,17 +204,17 @@ const AccountAddressPage = () => {
 
                                 {/* Buttons dưới cùng */}
                                 <div className="flex gap-3 mt-5">
-                                    <button className="flex items-center gap-1 px-3 py-1 font-medium rounded border text-blue-600 border-blue-500 hover:bg-blue-50 transition">
+                                    <button className="h-[35px] flex items-center gap-1 px-3 font-medium rounded border text-blue-500 border-blue-500 hover:bg-blue-50 hover:text-blue-600 transition">
                                         <EditIcon className="w-4 h-4" />
                                         <span>Chỉnh sửa</span>
                                     </button>
 
-                                    <button className="flex items-center gap-1 px-3 py-1 font-medium rounded border text-red-600 border-red-500 hover:bg-red-50 transition">
+                                    <button className="h-[35px] flex items-center gap-1 px-3 font-medium rounded border text-red-500 border-red-500 hover:bg-red-50 hover:text-red-600 transition">
                                         <DeleteForeverIcon className="w-4 h-4" />
                                         <span>Xóa</span>
                                     </button>
 
-                                    <button className="flex items-center px-3 py-1 font-medium rounded border text-purple-700 border-purple-700 hover:bg-blue-100 transition">
+                                    <button className="h-[35px] flex items-center px-3 font-medium rounded text-white bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500 ">
                                         Mặc định
                                     </button>
                                 </div>
