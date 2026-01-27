@@ -160,9 +160,6 @@ const AccountAddressPage = () => {
                                         <div className="flex items-center gap-2 flex-wrap">
                                             <span className="font-medium">Nguyễn Văn A</span>
                                             <span className="text-sm text-gray-500">| 090 1234567</span>
-                                            <span className="text-xs px-2 py-0.5 rounded bg-blue-50 text-blue-600 border">
-                                                Mặc định
-                                            </span>
                                         </div>
 
                                         <p className="text-sm text-gray-600 mt-1">
@@ -178,11 +175,9 @@ const AccountAddressPage = () => {
                                         <span>Chỉnh sửa</span>
                                     </button>
 
-                                    <button className="h-[35px] flex items-center gap-1 px-3 font-medium rounded border text-red-500 border-red-500 hover:bg-red-50 hover:text-red-600 transition">
-                                        <DeleteForeverIcon className="w-4 h-4" />
-                                        <span>Xóa</span>
+                                    <button className="h-[35px] flex items-center gap-2 px-4 text-sm font-medium rounded-md shadow bg-blue-50 text-blue-600 hover:bg-blue-100 transition">
+                                        Mặc định
                                     </button>
-
                                 </div>
                             </div>
 
@@ -214,9 +209,10 @@ const AccountAddressPage = () => {
                                         <span>Xóa</span>
                                     </button>
 
-                                    <button className="h-[35px] flex items-center px-3 font-medium rounded text-white bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500 ">
-                                        Mặc định
+                                    <button className="h-[35px] flex items-center gap-2 px-4 text-sm font-medium rounded-md shadow bg-blue-50 text-blue-600 hover:bg-blue-100 transition">
+                                        Đặt làm mặc định
                                     </button>
+
                                 </div>
                             </div>
                         </div>
