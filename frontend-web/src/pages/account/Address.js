@@ -175,7 +175,7 @@ const AccountAddressPage = () => {
                                         <span>Chỉnh sửa</span>
                                     </button>
 
-                                    <button className="h-[35px] flex items-center gap-2 px-4 text-sm font-medium rounded-md shadow bg-blue-50 text-blue-600 hover:bg-blue-100 transition">
+                                    <button className="h-[35px] flex items-center gap-2 px-4 text-sm font-medium rounded-md shadow bg-purple-50 text-purple-700 border-b-2 border-purple-100 hover:bg-gray-100 transition">
                                         Mặc định
                                     </button>
                                 </div>
@@ -209,7 +209,7 @@ const AccountAddressPage = () => {
                                         <span>Xóa</span>
                                     </button>
 
-                                    <button className="h-[35px] flex items-center gap-2 px-4 text-sm font-medium rounded-md shadow bg-blue-50 text-blue-600 hover:bg-blue-100 transition">
+                                    <button className="h-[35px] flex items-center gap-2 px-4 text-sm font-medium rounded-md shadow bg-purple-50 text-purple-700 border-b-2 border-purple-100 hover:bg-gray-100 transition">
                                         Đặt làm mặc định
                                     </button>
 
