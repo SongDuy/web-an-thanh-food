@@ -10,6 +10,8 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import HomeWorkIcon from '@mui/icons-material/HomeWork';
 import VerifiedOutlinedIcon from "@mui/icons-material/VerifiedOutlined";
 import ClearIcon from '@mui/icons-material/Clear';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
 const AccountAddressPage = () => {
     const [openSearch, setOpenSearch] = useState(false);
@@ -170,14 +172,17 @@ const AccountAddressPage = () => {
                                 </div>
 
                                 {/* Buttons dưới cùng */}
-                                <div className="flex gap-3 mt-5 text-sm">
-                                    <button className="px-3 py-1 rounded border text-blue-600 border-blue-500 hover:bg-blue-50 transition">
-                                        Chỉnh sửa
+                                <div className="flex gap-3 mt-5">
+                                    <button className="flex items-center gap-1 px-3 py-1 font-medium rounded border text-blue-600 border-blue-500 hover:bg-blue-50 transition">
+                                        <EditIcon className="w-4 h-4" />
+                                        <span>Chỉnh sửa</span>
                                     </button>
 
-                                    <button className="px-3 py-1 rounded border text-green-600 border-green-500 hover:bg-green-50 transition">
-                                        Mặc định
+                                    <button className="flex items-center gap-1 px-3 py-1 font-medium rounded border text-red-600 border-red-500 hover:bg-red-50 transition">
+                                        <DeleteForeverIcon className="w-4 h-4" />
+                                        <span>Xóa</span>
                                     </button>
+
                                 </div>
                             </div>
 
@@ -198,17 +203,19 @@ const AccountAddressPage = () => {
                                 </div>
 
                                 {/* Buttons dưới cùng */}
-                                <div className="flex gap-3 mt-5 text-sm">
-                                    <button className="px-3 py-1 rounded border text-blue-600 border-blue-500 hover:bg-blue-50 transition">
-                                        Chỉnh sửa
+                                <div className="flex gap-3 mt-5">
+                                    <button className="flex items-center gap-1 px-3 py-1 font-medium rounded border text-blue-600 border-blue-500 hover:bg-blue-50 transition">
+                                        <EditIcon className="w-4 h-4" />
+                                        <span>Chỉnh sửa</span>
                                     </button>
 
-                                    <button className="px-3 py-1 rounded border text-green-600 border-green-500 hover:bg-green-50 transition">
+                                    <button className="flex items-center gap-1 px-3 py-1 font-medium rounded border text-red-600 border-red-500 hover:bg-red-50 transition">
+                                        <DeleteForeverIcon className="w-4 h-4" />
+                                        <span>Xóa</span>
+                                    </button>
+
+                                    <button className="flex items-center px-3 py-1 font-medium rounded border text-purple-700 border-purple-700 hover:bg-blue-100 transition">
                                         Mặc định
-                                    </button>
-
-                                    <button className="px-3 py-1 rounded border text-red-600 border-red-500 hover:bg-red-50 transition">
-                                        Xóa
                                     </button>
                                 </div>
                             </div>
