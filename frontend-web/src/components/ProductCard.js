@@ -58,9 +58,6 @@ const ProductCard = ({ product, index }) => {
                 {product.unit} * {product.weight}
               </span>
             </div>
-            {/* <span className="text-sm font-medium text-blue-700">
-              {product.unit} * {product.weight}
-            </span> */}
           </div>
 
           {/* Nút bấm: Sẽ luôn nằm ở đáy nhờ cấu trúc flex-col */}
