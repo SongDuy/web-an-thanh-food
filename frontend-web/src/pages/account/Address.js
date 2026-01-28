@@ -170,7 +170,7 @@ const AccountAddressPage = () => {
 
                                 {/* Buttons dưới cùng */}
                                 <div className="flex gap-3 mt-5">
-                                    <button className="h-[35px] flex items-center gap-1 px-3 font-medium rounded border text-blue-500 border-blue-500 hover:bg-blue-50 hover:text-blue-600 transition">
+                                    <button className="h-[35px] flex items-center gap-1 px-3 font-medium rounded border text-blue-500 border-blue-400 hover:bg-blue-50 hover:text-blue-600 transition">
                                         <EditIcon className="w-4 h-4" />
                                         <span>Chỉnh sửa</span>
                                     </button>
@@ -199,12 +199,12 @@ const AccountAddressPage = () => {
 
                                 {/* Buttons dưới cùng */}
                                 <div className="flex gap-3 mt-5">
-                                    <button className="h-[35px] flex items-center gap-1 px-3 font-medium rounded border text-blue-500 border-blue-500 hover:bg-blue-50 hover:text-blue-600 transition">
+                                    <button className="h-[35px] flex items-center gap-1 px-3 font-medium rounded border text-blue-500 border-blue-400 hover:bg-blue-50 hover:text-blue-600 transition">
                                         <EditIcon className="w-4 h-4" />
                                         <span>Chỉnh sửa</span>
                                     </button>
 
-                                    <button className="h-[35px] flex items-center gap-1 px-3 font-medium rounded border text-red-500 border-red-500 hover:bg-red-50 hover:text-red-600 transition">
+                                    <button className="h-[35px] flex items-center gap-1 px-3 font-medium rounded border text-red-500 border-red-400 hover:bg-red-50 hover:text-red-600 transition">
                                         <DeleteForeverIcon className="w-4 h-4" />
                                         <span>Xóa</span>
                                     </button>
@@ -212,12 +212,9 @@ const AccountAddressPage = () => {
                                     <button className="h-[35px] flex items-center gap-2 px-4 text-sm font-medium rounded-md shadow bg-purple-50 text-purple-700 border-b-2 border-purple-100 hover:bg-gray-100 transition">
                                         Đặt làm mặc định
                                     </button>
-
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
 
                     <div className="col-span-4 px-4 py-3 border-l">
