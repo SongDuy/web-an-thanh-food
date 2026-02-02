@@ -172,8 +172,8 @@ const AccountAddressPage = () => {
 
                                     {/* Buttons dưới cùng */}
                                     <div className="flex gap-3 mt-5">
-                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-2.5 font-medium rounded border-2 border-blue-400 text-blue-500 hover:text-blue-600 transition">
-                                            <EditIcon className="w-4 h-4" />
+                                        <button className="h-[35px] flex items-center gap-1 pl-2.5 pr-3 text-sm font-medium rounded border-2 border-blue-400 text-blue-500 hover:text-blue-600 transition">
+                                            <EditIcon fontSize="small" />
                                             <span>Chỉnh sửa</span>
                                         </button>
 
@@ -201,13 +201,13 @@ const AccountAddressPage = () => {
 
                                     {/* Buttons dưới cùng */}
                                     <div className="flex gap-3 mt-5">
-                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-2.5 font-medium rounded border-2 border-blue-400 text-blue-500 hover:text-blue-600 transition">
-                                            <EditIcon className="w-4 h-4" />
+                                        <button className="h-[35px] flex items-center gap-1 pl-2.5 pr-3 text-sm font-medium rounded border-2 border-blue-400 text-blue-500 hover:text-blue-600 transition">
+                                            <EditIcon fontSize="small" />
                                             <span>Chỉnh sửa</span>
                                         </button>
 
-                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-2.5 font-medium rounded border-2 border-red-400 text-red-500 hover:text-red-600 transition">
-                                            <DeleteForeverIcon className="w-4 h-4" />
+                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-3 text-sm font-medium rounded border-2 border-red-400 text-red-500 hover:text-red-600 transition">
+                                            <DeleteForeverIcon fontSize="small" />
                                             <span>Xóa</span>
                                         </button>
 
@@ -235,13 +235,13 @@ const AccountAddressPage = () => {
 
                                     {/* Buttons dưới cùng */}
                                     <div className="flex gap-3 mt-5">
-                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-2.5 font-medium rounded border-2 border-blue-400 text-blue-500 hover:text-blue-600 transition">
-                                            <EditIcon className="w-4 h-4" />
+                                        <button className="h-[35px] flex items-center gap-1 pl-2.5 pr-3 text-sm font-medium rounded border-2 border-blue-400 text-blue-500 hover:text-blue-600 transition">
+                                            <EditIcon fontSize="small" />
                                             <span>Chỉnh sửa</span>
                                         </button>
 
-                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-2.5 font-medium rounded border-2 border-red-400 text-red-500 hover:text-red-600 transition">
-                                            <DeleteForeverIcon className="w-4 h-4" />
+                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-3 text-sm font-medium rounded border-2 border-red-400 text-red-500 hover:text-red-600 transition">
+                                            <DeleteForeverIcon fontSize="small" />
                                             <span>Xóa</span>
                                         </button>
 
@@ -269,13 +269,13 @@ const AccountAddressPage = () => {
 
                                     {/* Buttons dưới cùng */}
                                     <div className="flex gap-3 mt-5">
-                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-2.5 font-medium rounded border-2 border-blue-400 text-blue-500 hover:text-blue-600 transition">
-                                            <EditIcon className="w-4 h-4" />
+                                        <button className="h-[35px] flex items-center gap-1 pl-2.5 pr-3 text-sm font-medium rounded border-2 border-blue-400 text-blue-500 hover:text-blue-600 transition">
+                                            <EditIcon fontSize="small" />
                                             <span>Chỉnh sửa</span>
                                         </button>
 
-                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-2.5 font-medium rounded border-2 border-red-400 text-red-500 hover:text-red-600 transition">
-                                            <DeleteForeverIcon className="w-4 h-4" />
+                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-3 text-sm font-medium rounded border-2 border-red-400 text-red-500 hover:text-red-600 transition">
+                                            <DeleteForeverIcon fontSize="small" />
                                             <span>Xóa</span>
                                         </button>
 
@@ -303,13 +303,13 @@ const AccountAddressPage = () => {
 
                                     {/* Buttons dưới cùng */}
                                     <div className="flex gap-3 mt-5">
-                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-2.5 font-medium rounded border-2 border-blue-400 text-blue-500 hover:text-blue-600 transition">
-                                            <EditIcon className="w-4 h-4" />
+                                        <button className="h-[35px] flex items-center gap-1 pl-2.5 pr-3 text-sm font-medium rounded border-2 border-blue-400 text-blue-500 hover:text-blue-600 transition">
+                                            <EditIcon fontSize="small" />
                                             <span>Chỉnh sửa</span>
                                         </button>
 
-                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-2.5 font-medium rounded border-2 border-red-400 text-red-500 hover:text-red-600 transition">
-                                            <DeleteForeverIcon className="w-4 h-4" />
+                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-3 text-sm font-medium rounded border-2 border-red-400 text-red-500 hover:text-red-600 transition">
+                                            <DeleteForeverIcon fontSize="small" />
                                             <span>Xóa</span>
                                         </button>
 
