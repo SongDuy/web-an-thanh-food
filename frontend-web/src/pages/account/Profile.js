@@ -403,7 +403,7 @@ const AccountProfilePage = () => {
 
                                     <button
                                         onClick={() => setShowEditEmail(v => !v)}
-                                        className="ml-auto h-[35px] px-3 rounded border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600 transition"
+                                        className="ml-auto h-[35px] px-4 rounded border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600 transition"
                                     >
                                         Cập nhật
                                     </button>
@@ -460,7 +460,7 @@ const AccountProfilePage = () => {
 
                                     <button
                                         onClick={() => setShowEditPassword(v => !v)}
-                                        className="ml-auto h-[35px] px-3 rounded border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600 transition"
+                                        className="ml-auto h-[35px] px-4 rounded border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600 transition"
                                     >
                                         Cập nhật
                                     </button>
