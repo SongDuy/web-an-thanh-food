@@ -163,18 +163,20 @@ const AccountAddressPage = () => {
                                                 <span className="font-medium">Nguyễn Văn A</span>
                                                 <span className="text-sm text-gray-500">| 090 1234567</span>
                                             </div>
-
-                                            <p className="text-sm text-gray-600 line-clamp-2 mt-1">
-                                                123 Nguyễn Trãi, Quận 1, TP.HCM
-                                                123 Nguyễn Trãi, Quận 1, TP.HCM
-                                                123 Nguyễn Trãi, Quận 1, TP.HCM
-                                                123 Nguyễn Trãi, Quận 1, TP.HCM
-                                                123 Nguyễn Trãi, Quận 1, TP.HCM
-                                                123 Nguyễn Trãi, Quận 1, TP.HCM
-                                                123 Nguyễn Trãi, Quận 1, TP.HCM
-                                                123 Nguyễn Trãi, Quận 1, TP.HCM
-                                            </p>
                                         </div>
+                                    </div>
+
+                                    <div className="w-full">
+                                        <p className="w-full text-sm text-gray-600 line-clamp-2 mt-1">
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                        </p>
                                     </div>
 
                                     {/* Buttons dưới cùng */}
@@ -199,113 +201,13 @@ const AccountAddressPage = () => {
                                                 <span className="font-medium">Nguyễn Văn A</span>
                                                 <span className="text-sm text-gray-500">| 090 1234567</span>
                                             </div>
-
-                                            <p className="text-sm text-gray-600 line-clamp-2 mt-1">
-                                                123 Nguyễn Trãi, Quận 1, TP.HCM
-                                            </p>
                                         </div>
                                     </div>
 
-                                    {/* Buttons dưới cùng */}
-                                    <div className="mt-auto flex gap-3">
-                                        <button className="h-[35px] flex items-center gap-1 pl-2.5 pr-3 text-sm font-medium rounded border-2 border-blue-400 text-blue-500 hover:text-blue-600 transition">
-                                            <EditIcon fontSize="small" />
-                                            <span>Chỉnh sửa</span>
-                                        </button>
-
-                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-3 text-sm font-medium rounded border-2 border-red-400 text-red-500 hover:text-red-600 transition">
-                                            <DeleteForeverIcon fontSize="small" />
-                                            <span>Xóa</span>
-                                        </button>
-
-                                        <button className="h-[35px] flex items-center px-4 text-sm font-medium rounded shadow bg-purple-50 text-purple-700 border-2 border-purple-100 hover:bg-gray-100 transition">
-                                            Đặt làm mặc định
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div className="w-full h-[145px] px-4 pt-3 pb-4 flex flex-col border shadow rounded-lg ">
-                                    <div className="flex gap-3 items-start">
-                                        <HomeWorkIcon className="text-blue-500 mt-1" />
-
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-2 flex-wrap">
-                                                <span className="font-medium">Nguyễn Văn A</span>
-                                                <span className="text-sm text-gray-500">| 090 1234567</span>
-                                            </div>
-
-                                            <p className="text-sm text-gray-600 line-clamp-2 mt-1">
-                                                123 Nguyễn Trãi, Quận 1, TP.HCM
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    {/* Buttons dưới cùng */}
-                                    <div className="mt-auto flex gap-3">
-                                        <button className="h-[35px] flex items-center gap-1 pl-2.5 pr-3 text-sm font-medium rounded border-2 border-blue-400 text-blue-500 hover:text-blue-600 transition">
-                                            <EditIcon fontSize="small" />
-                                            <span>Chỉnh sửa</span>
-                                        </button>
-
-                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-3 text-sm font-medium rounded border-2 border-red-400 text-red-500 hover:text-red-600 transition">
-                                            <DeleteForeverIcon fontSize="small" />
-                                            <span>Xóa</span>
-                                        </button>
-
-                                        <button className="h-[35px] flex items-center px-4 text-sm font-medium rounded shadow bg-purple-50 text-purple-700 border-2 border-purple-100 hover:bg-gray-100 transition">
-                                            Đặt làm mặc định
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div className="w-full h-[145px] px-4 pt-3 pb-4 flex flex-col border shadow rounded-lg ">
-                                    <div className="flex gap-3 items-start">
-                                        <HomeWorkIcon className="text-blue-500 mt-1" />
-
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-2 flex-wrap">
-                                                <span className="font-medium">Nguyễn Văn A</span>
-                                                <span className="text-sm text-gray-500">| 090 1234567</span>
-                                            </div>
-
-                                            <p className="text-sm text-gray-600 line-clamp-2 mt-1">
-                                                123 Nguyễn Trãi, Quận 1, TP.HCM
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    {/* Buttons dưới cùng */}
-                                    <div className="mt-auto flex gap-3">
-                                        <button className="h-[35px] flex items-center gap-1 pl-2.5 pr-3 text-sm font-medium rounded border-2 border-blue-400 text-blue-500 hover:text-blue-600 transition">
-                                            <EditIcon fontSize="small" />
-                                            <span>Chỉnh sửa</span>
-                                        </button>
-
-                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-3 text-sm font-medium rounded border-2 border-red-400 text-red-500 hover:text-red-600 transition">
-                                            <DeleteForeverIcon fontSize="small" />
-                                            <span>Xóa</span>
-                                        </button>
-
-                                        <button className="h-[35px] flex items-center px-4 text-sm font-medium rounded shadow bg-purple-50 text-purple-700 border-2 border-purple-100 hover:bg-gray-100 transition">
-                                            Đặt làm mặc định
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div className="w-full h-[145px] px-4 pt-3 pb-4 flex flex-col border shadow rounded-lg ">
-                                    <div className="flex gap-3 items-start">
-                                        <HomeWorkIcon className="text-blue-500 mt-1" />
-
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-2 flex-wrap">
-                                                <span className="font-medium">Nguyễn Văn A</span>
-                                                <span className="text-sm text-gray-500">| 090 1234567</span>
-                                            </div>
-
-                                            <p className="text-sm text-gray-600 line-clamp-2 mt-1">
-                                                123 Nguyễn Trãi, Quận 1, TP.HCM
-                                            </p>
-                                        </div>
+                                    <div className="w-full">
+                                        <p className="w-full text-sm text-gray-600 line-clamp-2 mt-1">
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                        </p>
                                     </div>
 
                                     {/* Buttons dưới cùng */}
