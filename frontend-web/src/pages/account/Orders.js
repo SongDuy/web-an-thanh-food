@@ -104,7 +104,7 @@ const AccountOrdersPage = () => {
                         </div>
 
                         <button
-                            className="absolute w-[125px] h-full right-0 top-0 border hover:border-r rounded-r-md hover:bg-blue-50 text-blue-500 hover:text-blue-600"
+                            className="absolute w-[125px] h-full right-0 top-0 font-medium border hover:border-r rounded-r-md hover:bg-blue-50 text-blue-500 hover:text-blue-600"
                         >
                             Tìm đơn hàng
                         </button>
@@ -187,11 +187,11 @@ const AccountOrdersPage = () => {
 
                                     <div className="w-full flex items-center gap-2">
 
-                                        <button className="w-[95px] px-3 py-1 rounded border-2 border-blue-400 font-medium text-blue-500 hover:text-blue-600">
+                                        <button className="w-[95px] h-[35px] px-4 rounded border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600">
                                             Đánh giá
                                         </button>
 
-                                        <button className="w-[115px] px-3 py-1 rounded border-2 border-blue-400 font-medium text-blue-500 hover:text-blue-600">
+                                        <button className="w-[115px] h-[35px] px-4 rounded border-2 border-blue-400 text-sm font-medium text-blue-500 hover:text-blue-600">
                                             Xem chi tiết
                                         </button>
 
