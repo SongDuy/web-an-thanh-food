@@ -460,7 +460,7 @@ const AccountRewardsPage = () => {
                 title={title}
                 className={`w-full h-[35px] cursor-pointer grid grid-cols-[35%_65%] bg-gradient-to-tr ${elementStyles[element]} shadow border-2 ${outerBorder} items-center justify-center rounded-md transition`}
             >
-                <span className={`text-white font-medium flex items-center justify-center border-r ${innerBorder}`}>
+                <span className={`text-white text-shadow-black font-medium flex items-center justify-center border-r ${innerBorder}`}>
                     {left}
                 </span>
                 <span className={`text-black flex items-center justify-center border-l ${innerBorder}`}>
