@@ -7,6 +7,8 @@ import Footer from "../../components/Footer";
 import Search from "../../components/Search";
 import Notification from "../../components/Notification";
 
+import AddIcon from '@mui/icons-material/Add';
+
 // Cửa hàng đổi điểm
 const shopCards = [
     { element: "tho", name: "Thẻ Thổ Cấp 1" },
@@ -335,8 +337,10 @@ const AccountRewardsPage = () => {
                                 <div
                                     key={i}
                                     // calc((100% / 3) - khoảng cách gap) để ép tối đa 3 thẻ/dòng
-                                    className="w-[calc(33.33%-8px)] h-[35px] border-2 border-dashed border-gray-400 rounded-md opacity-40"
-                                />
+                                    className="w-[calc(33.33%-8px)] h-[35px] flex items-center justify-center text-gray-400 font-bold border-2 border-dashed border-gray-400 rounded-md opacity-50"
+                                >
+                                    <AddIcon fontSize="small" />
+                                </div>
                             );
                         }
 
@@ -695,8 +699,10 @@ const AccountRewardsPage = () => {
                                         card.qty === 0 ? (
                                             <div
                                                 key={`${card.element}-${card.level}`}
-                                                className="w-full h-[35px] border-2 border-dashed border-gray-400 rounded-md opacity-40"
-                                            />
+                                                className="w-full h-[35px] flex items-center justify-center text-gray-400 font-bold border-2 border-dashed border-gray-400 rounded-md opacity-50"
+                                            >
+                                                <AddIcon fontSize="small" />
+                                            </div>
                                         ) : (
                                             <CardBox
                                                 key={`${card.element}-${card.level}`}
