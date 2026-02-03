@@ -144,7 +144,7 @@ const AccountAddressPage = () => {
                 </div>
 
                 <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded-md border">
-                    <div className="col-span-7 pl-4 pr-3 py-3 border-r">
+                    <div className="col-span-7 pl-4 pr-3 py-4 border-r">
                         <div className="w-full">
                             <h2 className="text-lg text-gray-500">
                                 Địa chỉ đã lưu
@@ -287,7 +287,7 @@ const AccountAddressPage = () => {
                         </div>
                     </div>
 
-                    <div className="col-span-4 px-4 py-3 border-l">
+                    <div className="col-span-4 px-4 py-4 border-l">
                         {/* RIGHT */}
                         <div className="w-full">
                             <h2 className="text-lg text-gray-500">
