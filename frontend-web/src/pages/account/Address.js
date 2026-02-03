@@ -144,7 +144,7 @@ const AccountAddressPage = () => {
                 </div>
 
                 <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded-md border">
-                    <div className="col-span-7 pl-3 pr-2 py-3 border-r">
+                    <div className="col-span-7 px-3 py-3 border-r">
                         <div className="w-full">
                             <h2 className="text-lg text-gray-500">
                                 Địa chỉ đã lưu
@@ -152,7 +152,7 @@ const AccountAddressPage = () => {
                         </div>
 
                         {/* Nội dung địa chỉ đã lưu */}
-                        <div className="w-full h-[calc(100vh-290px)] pr-3 my-5 overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
+                        <div className="w-full h-[calc(100vh-290px)] border pr-3 my-5 overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
                             <div className="w-full flex flex-col gap-3 pb-5">
                                 <div className="w-full h-[145px] px-4 pt-3 pb-4 flex flex-col border shadow rounded-lg">
                                     <div className="w-full flex items-center gap-3">
@@ -438,7 +438,7 @@ const AccountAddressPage = () => {
                                         autoComplete="shipping street-address"
                                         minLength={10}
                                         maxLength={300}
-                                        className="w-full h-[90px] border rounded-md px-2.5 py-2 resize-none overflow-y-auto outline-none focus:ring-1 focus:ring-blue-400"
+                                        className="w-full h-[90px] border rounded-md pl-2.5 pr-1 py-2 resize-none overflow-y-auto outline-none focus:ring-1 focus:ring-blue-400"
                                     />
                                 </div>
                             </div>
