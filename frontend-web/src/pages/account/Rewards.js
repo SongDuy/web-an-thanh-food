@@ -677,7 +677,6 @@ const AccountRewardsPage = () => {
                                 </div>
 
                                 <div className="w-full grid grid-cols-5 gap-x-3 gap-y-5">
-
                                     {cardLevels
                                         .flatMap(level =>
                                             level.cards.map((qty, index) => ({
@@ -707,9 +706,7 @@ const AccountRewardsPage = () => {
                                             />
                                         ))
                                     }
-
                                 </div>
-
 
                             </div>
                         </div>
