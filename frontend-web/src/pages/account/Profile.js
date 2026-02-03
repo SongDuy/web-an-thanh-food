@@ -182,7 +182,7 @@ const AccountProfilePage = () => {
                 </div>
 
                 <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded-md border">
-                    <div className="col-span-7 px-4 py-3 border-r">
+                    <div className="col-span-7 px-4 py-4 border-r">
                         <div className="w-full">
                             <h2 className="text-lg text-gray-500">
                                 Thông tin cá nhân
@@ -388,7 +388,7 @@ const AccountProfilePage = () => {
                         </div>
                     </div>
 
-                    <div className="col-span-4 px-4 py-3 border-l">
+                    <div className="col-span-4 px-4 py-4 border-l">
                         <div className="w-full h-full flex flex-col gap-[28px]">
                             <div className="w-full">
                                 <h2 className="text-lg text-gray-500">

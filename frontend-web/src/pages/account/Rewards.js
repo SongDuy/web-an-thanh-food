@@ -532,14 +532,14 @@ const AccountRewardsPage = () => {
 
                         <div className="w-full flex flex-col">
                             <div className="w-full">
-                                <div className="w-full h-[30px] flex items-center">
+                                <div className="w-full flex items-center">
                                     <h2 className="text-lg text-gray-500">
                                         Cửa Hàng Nhận Thẻ
                                     </h2>
                                     <div className="ml-auto flex items-center gap-3">
 
                                         {/* Tổng điểm */}
-                                        <div className="h-[30px] flex items-center gap-1 border bg-blue-50 px-3 rounded-full shadow-sm">
+                                        <div className="h-[35px] flex items-center gap-1 bg-blue-50 px-3 rounded-md shadow-sm">
                                             <MonetizationOnIcon sx={{ fontSize: 18 }} className="text-yellow-500" />
                                             <div className="flex items-center gap-2">
                                                 <p className="text-gray-500">Tổng điểm:</p>
@@ -550,7 +550,7 @@ const AccountRewardsPage = () => {
                                         {/* Làm nhiệm vụ */}
                                         <Link
                                             to="/"
-                                            className="h-[30px] flex items-center gap-1 border bg-green-50 hover:bg-green-100 px-3 rounded-full shadow-sm transition"
+                                            className="h-[35px] flex items-center gap-1 bg-green-100 hover:bg-green-200 px-3 rounded-md shadow-sm transition"
                                         >
                                             <AssignmentTurnedInIcon sx={{ fontSize: 18 }} className="text-green-600" />
                                             <div className="flex items-center gap-2">
@@ -562,7 +562,7 @@ const AccountRewardsPage = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-full mt-[18px] mb-[15px]">
+                                <div className="w-full mt-[16px] mb-[15px]">
                                     <div className="w-full grid grid-cols-5 gap-3">
                                         {shopCards.map(card => (
                                             <ShopCardItem
@@ -655,7 +655,7 @@ const AccountRewardsPage = () => {
 
                     </div>
 
-                    <div className="col-span-4 px-4 py-3 border-l">
+                    <div className="col-span-4 px-4 py-4 border-l">
                         <div className="w-full h-full flex flex-col gap-5">
                             <div className="w-full flex flex-col gap-5">
                                 <div className="w-full">
