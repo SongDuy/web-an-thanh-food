@@ -2,12 +2,16 @@ import Select from "react-select";
 
 import { useState, useEffect, useMemo } from "react";
 
+import { Link } from "react-router-dom";
+
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Search from "../../components/Search";
 import Notification from "../../components/Notification";
 
 import AddIcon from '@mui/icons-material/Add';
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
+import LiveTvIcon from '@mui/icons-material/LiveTv';
 
 // Cửa hàng đổi điểm
 const shopCards = [
@@ -217,13 +221,20 @@ const AccountRewardsPage = () => {
                 </span>
             </div>
 
-            <p className="font-semibold text-black mt-2 text-sm leading-tight">{name}</p>
+            <span className="font-medium text-black mt-2 text-sm leading-tight">{name}</span>
 
-            <p className="text-xs text-gray-500 mt-1">
-                Giá: <span className="text-yellow-600 font-semibold">1000</span>
-            </p>
+            <div className="flex items-center justify-center gap-1 py-1">
+                <span className="text-xs text-gray-500 font-medium">
+                    Giá:
+                </span>
 
-            <button className="w-full mt-2 px-1 py-1 font-medium shadow rounded text-white bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
+                <div className="flex items-center gap-0.5 text-xs text-yellow-500 font-medium">
+                    <MonetizationOnIcon sx={{ fontSize: 12 }} className="block" />
+                    <span className="leading-none">1000</span>
+                </div>
+            </div>
+
+            <button className="w-full mt-1 px-1 py-1 font-medium shadow rounded text-white bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
                 Đổi
             </button>
         </div>
@@ -522,10 +533,38 @@ const AccountRewardsPage = () => {
 
                         <div className="w-full flex flex-col gap-5">
                             <div className="w-full">
-                                <div className="w-full">
+                                <div className="w-full flex items-center">
                                     <h2 className="text-lg text-gray-500">
                                         Cửa Hàng Nhận Thẻ
                                     </h2>
+
+                                    <div className="ml-auto flex items-center">
+                                        <div className="flex items-center gap-1 text-yellow-500 leading-none border-r border-gray-300 pr-2">
+
+                                            <MonetizationOnIcon
+                                                sx={{ fontSize: 18 }}
+                                                className="block translate-y-[1px]"
+                                            />
+
+                                            <span className="font-medium text-md leading-none">
+                                                3,000
+                                            </span>
+                                        </div>
+
+
+                                        <Link
+                                            to="/"
+                                            className="flex items-center gap-1 font-medium text-md text-blue-500 hover:text-blue-600 border-l border-gray-300 pl-2"
+                                        >
+
+                                            <LiveTvIcon sx={{ fontSize: 18 }} />
+
+                                            <span className="font-medium text-md text-blue-500 hover:text-blue-600 transition leading-none">
+                                                Nhận Điểm
+                                            </span>
+                                        </Link>
+                                    </div>
+
                                 </div>
 
                                 <div className="w-full mt-5">
