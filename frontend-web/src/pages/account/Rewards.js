@@ -228,7 +228,7 @@ const AccountRewardsPage = () => {
                     Giá:
                 </span>
 
-                <span className="text-xs text-yellow-500 font-medium leading-none">
+                <span className="text-xs text-yellow-600 font-medium leading-none">
                     1000
                 </span>
             </div>
@@ -530,7 +530,7 @@ const AccountRewardsPage = () => {
                 <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded-md border">
                     <div className="col-span-7 px-4 py-3 border-r">
 
-                        <div className="w-full flex flex-col gap-5">
+                        <div className="w-full flex flex-col">
                             <div className="w-full">
                                 <div className="w-full h-[30px] flex items-center">
                                     <h2 className="text-lg text-gray-500">
@@ -539,10 +539,10 @@ const AccountRewardsPage = () => {
                                     <div className="ml-auto flex items-center gap-3">
 
                                         {/* Tổng điểm */}
-                                        <div className="h-[30px] flex items-center gap-2 bg-blue-50 px-3 rounded-full shadow-sm">
+                                        <div className="h-[30px] flex items-center gap-1 border bg-blue-50 px-3 rounded-full shadow-sm">
                                             <MonetizationOnIcon sx={{ fontSize: 18 }} className="text-yellow-500" />
-                                            <div className="flex leading-tight">
-                                                <p className="text-[11px] text-gray-500">Tổng điểm</p>
+                                            <div className="flex items-center gap-2">
+                                                <p className="text-gray-500">Tổng điểm:</p>
                                                 <p className="text-yellow-600 font-bold tracking-wide">3,000</p>
                                             </div>
                                         </div>
@@ -550,22 +550,20 @@ const AccountRewardsPage = () => {
                                         {/* Làm nhiệm vụ */}
                                         <Link
                                             to="/"
-                                            className="h-[30px] flex items-center gap-2 bg-green-50 px-3 rounded-full shadow-sm hover:brightness-105 transition"
+                                            className="h-[30px] flex items-center gap-1 border bg-green-50 px-3 rounded-full shadow-sm hover:brightness-105 transition"
                                         >
                                             <AssignmentTurnedInIcon sx={{ fontSize: 18 }} className="text-green-600" />
-                                            <div className="flex leading-tight">
-                                                <p className="text-[11px] text-gray-500">Làm nhiệm vụ</p>
+                                            <div className="flex items-center gap-2">
+                                                <p className="text-gray-500">Làm nhiệm vụ:</p>
                                                 <p className="text-green-600 font-bold tracking-wide">+100</p>
                                             </div>
                                         </Link>
 
                                     </div>
-
-
                                 </div>
 
-                                <div className="w-full mt-5">
-                                    <div className="w-full mt-5 grid grid-cols-5 gap-3">
+                                <div className="w-full mt-[18px] mb-[15px]">
+                                    <div className="w-full grid grid-cols-5 gap-3">
                                         {shopCards.map(card => (
                                             <ShopCardItem
                                                 key={card.element}
@@ -608,10 +606,9 @@ const AccountRewardsPage = () => {
                                         </div>
 
                                     </div>
-
                                 </div>
 
-                                <div className="w-full mt-5">
+                                <div className="w-full mt-[14px]">
                                     <div className="w-full grid grid-cols-3 gap-3">
 
                                         {/* TƯƠNG SINH */}
