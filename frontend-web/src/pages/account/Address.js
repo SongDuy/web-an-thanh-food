@@ -164,8 +164,8 @@ const AccountAddressPage = () => {
                                         </div>
                                     </div>
 
-                                    <div className="w-full mt-1">
-                                        <p className="w-full text-sm text-gray-600 line-clamp-2">
+                                    <div className="w-full h-[42px] mt-1 overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-gray-100 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
+                                        <p className="w-full text-sm text-gray-600">
                                             123 Nguyễn Trãi, Quận 1, TP.HCM
                                             123 Nguyễn Trãi, Quận 1, TP.HCM
                                             123 Nguyễn Trãi, Quận 1, TP.HCM
@@ -204,8 +204,19 @@ const AccountAddressPage = () => {
                                         </div>
                                     </div>
 
-                                    <div className="w-full mt-1">
-                                        <p className="w-full text-sm text-gray-600 line-clamp-2">
+                                    <div className="w-full h-[42px] mt-1 overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-gray-100 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
+                                        <p className="w-full text-sm text-gray-600">
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
                                             123 Nguyễn Trãi, Quận 1, TP.HCM
                                         </p>
                                     </div>
@@ -238,8 +249,19 @@ const AccountAddressPage = () => {
                                         </div>
                                     </div>
 
-                                    <div className="w-full mt-1">
-                                        <p className="w-full text-sm text-gray-600 line-clamp-2">
+                                    <div className="w-full h-[42px] mt-1 overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-gray-100 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
+                                        <p className="w-full text-sm text-gray-600">
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
                                             123 Nguyễn Trãi, Quận 1, TP.HCM
                                         </p>
                                     </div>
