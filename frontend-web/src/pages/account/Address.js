@@ -152,7 +152,7 @@ const AccountAddressPage = () => {
                         </div>
 
                         {/* Nội dung địa chỉ đã lưu */}
-                        <div className="w-full h-[calc(100vh-290px)] pr-3 my-5 overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
+                        <div className="w-full h-[calc(100vh-290px)] pr-3 my-5 overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-gray-100 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
                             <div className="w-full flex flex-col gap-3 pb-5">
                                 <div className="w-full h-[145px] px-4 pt-3 pb-4 flex flex-col border shadow rounded-lg">
                                     <div className="w-full flex items-center gap-3">
@@ -228,7 +228,39 @@ const AccountAddressPage = () => {
                                     </div>
                                 </div>
 
-                               
+                                <div className="w-full h-[145px] px-4 pt-3 pb-4 flex flex-col border shadow rounded-lg ">
+                                    <div className="w-full flex items-center gap-3">
+                                        <HomeWorkIcon className="text-blue-500" />
+
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-black font-medium">Nguyễn Văn A</span>
+                                            <span className="text-gray-400 border-l-2 border-gray-300 pl-2">090 1234567</span>
+                                        </div>
+                                    </div>
+
+                                    <div className="w-full mt-1">
+                                        <p className="w-full text-sm text-gray-600 line-clamp-2">
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                        </p>
+                                    </div>
+
+                                    {/* Buttons dưới cùng */}
+                                    <div className="mt-auto flex gap-3">
+                                        <button className="h-[35px] flex items-center gap-1 pl-2.5 pr-3 text-sm font-medium rounded border-2 border-blue-400 text-blue-500 hover:text-blue-600 transition">
+                                            <EditIcon fontSize="small" />
+                                            <span>Chỉnh sửa</span>
+                                        </button>
+
+                                        <button className="h-[35px] flex items-center gap-1 pl-2 pr-3 text-sm font-medium rounded border-2 border-red-400 text-red-500 hover:text-red-600 transition">
+                                            <DeleteForeverIcon fontSize="small" />
+                                            <span>Xóa</span>
+                                        </button>
+
+                                        <button className="h-[35px] flex items-center px-4 text-sm font-medium rounded shadow bg-purple-50 text-purple-700 border-2 border-purple-100 hover:bg-gray-100 transition">
+                                            Đặt làm mặc định
+                                        </button>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
