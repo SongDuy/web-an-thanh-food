@@ -637,14 +637,14 @@ const AccountRewardsPage = () => {
 
                                             {/* Header */}
                                             <div className="bg-white border border-black font-semibold">Quy Đổi</div>
-                                            <div className="bg-white border border-black font-semibold">Kim (+)</div>
-                                            <div className="bg-white border border-black font-semibold">Mộc (+)</div>
-                                            <div className="bg-white border border-black font-semibold">Thủy (+)</div>
-                                            <div className="bg-white border border-black font-semibold">Hỏa (+)</div>
-                                            <div className="bg-white border border-black font-semibold">Thổ (+)</div>
+                                            <div className="bg-white border border-black font-semibold">Kim [+]</div>
+                                            <div className="bg-white border border-black font-semibold">Mộc [+]</div>
+                                            <div className="bg-white border border-black font-semibold">Thủy [+]</div>
+                                            <div className="bg-white border border-black font-semibold">Hỏa [+]</div>
+                                            <div className="bg-white border border-black font-semibold">Thổ [+]</div>
 
                                             {/* Kim */}
-                                            <div className="bg-white border border-black font-semibold">Kim (-)</div>
+                                            <div className="bg-white border border-black font-semibold">Kim [-]</div>
                                             <Cell>-3,+1</Cell>
                                             <Cell color="red">-5,+1</Cell>
                                             <Cell color="green">-2,+1</Cell>
@@ -652,7 +652,7 @@ const AccountRewardsPage = () => {
                                             <Cell>-3,+1</Cell>
 
                                             {/* Mộc */}
-                                            <div className="bg-white border border-black font-semibold">Mộc (-)</div>
+                                            <div className="bg-white border border-black font-semibold">Mộc [-]</div>
                                             <Cell>-3,+1</Cell>
                                             <Cell>-3,+1</Cell>
                                             <Cell>-3,+1</Cell>
@@ -660,7 +660,7 @@ const AccountRewardsPage = () => {
                                             <Cell color="red">-5,+1</Cell>
 
                                             {/* Thủy */}
-                                            <div className="bg-white border border-black font-semibold">Thủy (-)</div>
+                                            <div className="bg-white border border-black font-semibold">Thủy [-]</div>
                                             <Cell>-3,+1</Cell>
                                             <Cell color="green">-2,+1</Cell>
                                             <Cell>-3,+1</Cell>
@@ -668,7 +668,7 @@ const AccountRewardsPage = () => {
                                             <Cell>-3,+1</Cell>
 
                                             {/* Hỏa */}
-                                            <div className="bg-white border border-black font-semibold">Hỏa (-)</div>
+                                            <div className="bg-white border border-black font-semibold">Hỏa [-]</div>
                                             <Cell color="red">-5,+1</Cell>
                                             <Cell>-3,+1</Cell>
                                             <Cell>-3,+1</Cell>
@@ -676,7 +676,7 @@ const AccountRewardsPage = () => {
                                             <Cell color="green">-2,+1</Cell>
 
                                             {/* Thổ */}
-                                            <div className="bg-white border border-black font-semibold">Thổ (-)</div>
+                                            <div className="bg-white border border-black font-semibold">Thổ [-]</div>
                                             <Cell color="green">-2,+1</Cell>
                                             <Cell>-3,+1</Cell>
                                             <Cell color="red">-5,+1</Cell>
