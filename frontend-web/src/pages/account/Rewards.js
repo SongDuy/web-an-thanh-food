@@ -11,7 +11,7 @@ import Notification from "../../components/Notification";
 
 import AddIcon from '@mui/icons-material/Add';
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
-import LiveTvIcon from '@mui/icons-material/LiveTv';
+import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
 
 // Cửa hàng đổi điểm
 const shopCards = [
@@ -228,10 +228,9 @@ const AccountRewardsPage = () => {
                     Giá:
                 </span>
 
-                <div className="flex items-center gap-0.5 text-xs text-yellow-500 font-medium">
-                    <MonetizationOnIcon sx={{ fontSize: 12 }} className="block" />
-                    <span className="leading-none">1000</span>
-                </div>
+                <span className="text-xs text-yellow-500 font-medium leading-none">
+                    1000
+                </span>
             </div>
 
             <button className="w-full mt-1 px-1 py-1 font-medium shadow rounded text-white bg-gradient-to-t from-blue-400 via-blue-500 to-blue-600 hover:brightness-110 active:brightness-95 transition border-b-2 border-blue-500">
@@ -533,37 +532,35 @@ const AccountRewardsPage = () => {
 
                         <div className="w-full flex flex-col gap-5">
                             <div className="w-full">
-                                <div className="w-full flex items-center">
+                                <div className="w-full h-[30px] flex items-center">
                                     <h2 className="text-lg text-gray-500">
                                         Cửa Hàng Nhận Thẻ
                                     </h2>
+                                    <div className="ml-auto flex items-center gap-3">
 
-                                    <div className="ml-auto flex items-center">
-                                        <div className="flex items-center gap-1 text-yellow-500 leading-none border-r border-gray-300 pr-2">
-
-                                            <MonetizationOnIcon
-                                                sx={{ fontSize: 18 }}
-                                                className="block translate-y-[1px]"
-                                            />
-
-                                            <span className="font-medium text-md leading-none">
-                                                3,000
-                                            </span>
+                                        {/* Tổng điểm */}
+                                        <div className="h-[30px] flex items-center gap-2 bg-blue-50 px-3 rounded-full shadow-sm">
+                                            <MonetizationOnIcon sx={{ fontSize: 18 }} className="text-yellow-500" />
+                                            <div className="flex leading-tight">
+                                                <p className="text-[11px] text-gray-500">Tổng điểm</p>
+                                                <p className="text-yellow-600 font-bold tracking-wide">3,000</p>
+                                            </div>
                                         </div>
 
-
+                                        {/* Làm nhiệm vụ */}
                                         <Link
                                             to="/"
-                                            className="flex items-center gap-1 font-medium text-md text-blue-500 hover:text-blue-600 border-l border-gray-300 pl-2"
+                                            className="h-[30px] flex items-center gap-2 bg-green-50 px-3 rounded-full shadow-sm hover:brightness-105 transition"
                                         >
-
-                                            <LiveTvIcon sx={{ fontSize: 18 }} />
-
-                                            <span className="font-medium text-md text-blue-500 hover:text-blue-600 transition leading-none">
-                                                Nhận Điểm
-                                            </span>
+                                            <AssignmentTurnedInIcon sx={{ fontSize: 18 }} className="text-green-600" />
+                                            <div className="flex leading-tight">
+                                                <p className="text-[11px] text-gray-500">Làm nhiệm vụ</p>
+                                                <p className="text-green-600 font-bold tracking-wide">+100</p>
+                                            </div>
                                         </Link>
+
                                     </div>
+
 
                                 </div>
 
