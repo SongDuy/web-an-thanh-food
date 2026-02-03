@@ -154,20 +154,22 @@ const AccountAddressPage = () => {
                         {/* Nội dung địa chỉ đã lưu */}
                         <div className="w-full h-[calc(100vh-290px)] pr-3 my-5 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
                             <div className="w-full flex flex-col gap-3 pb-5">
-                                <div className="w-full h-[145px] px-4 pt-3 pb-4 flex flex-col border shadow rounded-lg ">
-                                    <div className="flex gap-3 items-start">
-                                        <HomeWorkIcon className="text-blue-500 mt-1" />
+                                <div className="w-full h-[145px] px-4 pt-3 pb-4 flex flex-col border shadow rounded-lg">
+                                    <div className="w-full flex items-center gap-3">
+                                        <HomeWorkIcon className="text-blue-500" />
 
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-2 flex-wrap">
-                                                <span className="font-medium">Nguyễn Văn A</span>
-                                                <span className="text-sm text-gray-500">| 090 1234567</span>
-                                            </div>
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-black font-medium">Nguyễn Văn A</span>
+                                            <span className="text-gray-400 border-l-2 border-gray-300 pl-2">090 1234567</span>
                                         </div>
                                     </div>
 
-                                    <div className="w-full">
-                                        <p className="w-full text-sm text-gray-600 line-clamp-2 mt-1">
+                                    <div className="w-full mt-1">
+                                        <p className="w-full text-sm text-gray-600 line-clamp-2">
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
+                                            123 Nguyễn Trãi, Quận 1, TP.HCM
                                             123 Nguyễn Trãi, Quận 1, TP.HCM
                                             123 Nguyễn Trãi, Quận 1, TP.HCM
                                             123 Nguyễn Trãi, Quận 1, TP.HCM
@@ -193,19 +195,17 @@ const AccountAddressPage = () => {
                                 </div>
 
                                 <div className="w-full h-[145px] px-4 pt-3 pb-4 flex flex-col border shadow rounded-lg ">
-                                    <div className="flex gap-3 items-start">
-                                        <HomeWorkIcon className="text-blue-500 mt-1" />
+                                    <div className="w-full flex items-center gap-3">
+                                        <HomeWorkIcon className="text-blue-500" />
 
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-2 flex-wrap">
-                                                <span className="font-medium">Nguyễn Văn A</span>
-                                                <span className="text-sm text-gray-500">| 090 1234567</span>
-                                            </div>
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-black font-medium">Nguyễn Văn A</span>
+                                            <span className="text-gray-400 border-l-2 border-gray-300 pl-2">090 1234567</span>
                                         </div>
                                     </div>
 
-                                    <div className="w-full">
-                                        <p className="w-full text-sm text-gray-600 line-clamp-2 mt-1">
+                                    <div className="w-full mt-1">
+                                        <p className="w-full text-sm text-gray-600 line-clamp-2">
                                             123 Nguyễn Trãi, Quận 1, TP.HCM
                                         </p>
                                     </div>
