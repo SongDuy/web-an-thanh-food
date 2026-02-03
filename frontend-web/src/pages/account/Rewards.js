@@ -30,11 +30,11 @@ const AccountRewardsPage = () => {
 
     // danh sách thẻ
     const [cardLevels, setCardLevels] = useState([
-        { element: "tho", title: "Thẻ Hệ Thổ", cards: [3, 2, 1, 2, 0] },
-        { element: "hoa", title: "Thẻ Hệ Hỏa", cards: [5, 3, 7, 1, 1] },
-        { element: "thuy", title: "Thẻ Hệ Thủy", cards: [1, 1, 3, 2, 3] },
+        { element: "tho", title: "Thẻ Hệ Thổ", cards: [0, 2, 1, 2, 0] },
+        { element: "hoa", title: "Thẻ Hệ Hỏa", cards: [2, 3, 1, 1, 1] },
+        { element: "thuy", title: "Thẻ Hệ Thủy", cards: [1, 1, 0, 2, 3] },
         { element: "moc", title: "Thẻ Hệ Mộc", cards: [2, 3, 2, 3, 1] },
-        { element: "kim", title: "Thẻ Hệ Kim", cards: [0, 7, 5, 3, 4] },
+        { element: "kim", title: "Thẻ Hệ Kim", cards: [0, 1, 2, 3, 0] },
     ]);
 
     //Hệ 
@@ -676,37 +676,40 @@ const AccountRewardsPage = () => {
                                     </h2>
                                 </div>
 
-                                <div className="flex flex-col gap-5 items-center justify-center">
-                                    {cardLevels.map((level) => (
-                                        <div key={level.element} className="w-full grid grid-cols-5 items-center gap-3">
-                                            {level.cards.map((rightValue, index) => (
-                                                <CardBox
-                                                    key={index}
-                                                    title={level.title}
-                                                    element={level.element}
-                                                    left={index + 1}
-                                                    right={rightValue}
-                                                    active={
-                                                        selectedTarget?.element === level.element &&
-                                                        selectedTarget?.level === index + 1
-                                                    }
-                                                    onClick={() => {
-                                                        const element = level.element;
-                                                        const lvl = index + 1;
+                                <div className="w-full grid grid-cols-5 gap-x-3 gap-y-5">
 
-                                                        setSelectedTarget({ element, level: lvl });
+                                    {cardLevels
+                                        .flatMap(level =>
+                                            level.cards.map((qty, index) => ({
+                                                element: level.element,
+                                                title: level.title,
+                                                level: index + 1,
+                                                qty
+                                            }))
+                                        )
+                                        .filter(card => card.qty > 0)
+                                        .map(card => (
+                                            <CardBox
+                                                key={`${card.element}-${card.level}`}
+                                                title={card.title}
+                                                element={card.element}
+                                                left={card.level}
+                                                right={card.qty}
+                                                active={
+                                                    selectedTarget?.element === card.element &&
+                                                    selectedTarget?.level === card.level
+                                                }
+                                                onClick={() => {
+                                                    setSelectedTarget({ element: card.element, level: card.level });
+                                                    setSelectedElement(getElementOption(card.element));
+                                                    setSelectedLevel(getLevelOption(card.level));
+                                                }}
+                                            />
+                                        ))
+                                    }
 
-                                                        // sync dropdown
-                                                        setSelectedElement(getElementOption(element));
-                                                        setSelectedLevel(getLevelOption(lvl));
-                                                    }}
-
-                                                />
-
-                                            ))}
-                                        </div>
-                                    ))}
                                 </div>
+
 
                             </div>
                         </div>
