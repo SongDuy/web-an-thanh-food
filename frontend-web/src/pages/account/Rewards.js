@@ -30,11 +30,11 @@ const AccountRewardsPage = () => {
 
     // danh sách thẻ
     const [cardLevels, setCardLevels] = useState([
-        { element: "tho", title: "Thẻ Hệ Thổ", cards: [0, 2, 1, 2, 0] },
-        { element: "hoa", title: "Thẻ Hệ Hỏa", cards: [2, 3, 1, 1, 1] },
-        { element: "thuy", title: "Thẻ Hệ Thủy", cards: [1, 1, 0, 2, 3] },
-        { element: "moc", title: "Thẻ Hệ Mộc", cards: [2, 3, 2, 3, 1] },
-        { element: "kim", title: "Thẻ Hệ Kim", cards: [0, 1, 2, 3, 0] },
+        { element: "tho", title: "Thẻ Hệ Thổ", cards: [0, 2, 0, 0, 0] },
+        { element: "hoa", title: "Thẻ Hệ Hỏa", cards: [1, 0, 0, 0, 0] },
+        { element: "thuy", title: "Thẻ Hệ Thủy", cards: [1, 0, 0, 0, 0] },
+        { element: "moc", title: "Thẻ Hệ Mộc", cards: [0, 2, 0, 0, 0] },
+        { element: "kim", title: "Thẻ Hệ Kim", cards: [0, 0, 1, 0, 0] },
     ]);
 
     //Hệ 
@@ -470,6 +470,21 @@ const AccountRewardsPage = () => {
         );
     };
 
+
+    const allCards = cardLevels.flatMap(level =>
+        level.cards.map((qty, index) => ({
+            element: level.element,
+            title: level.title,
+            level: index + 1,
+            qty
+        }))
+    );
+
+    // Có thẻ trước, ô trống xuống cuối (giữ thứ tự ban đầu)
+    const sortedCards = allCards.sort((a, b) =>
+        (a.qty === 0) - (b.qty === 0)
+    );
+
     return (
         <>
             <Header
@@ -676,17 +691,13 @@ const AccountRewardsPage = () => {
                                 </div>
 
                                 <div className="w-full grid grid-cols-5 gap-x-3 gap-y-5">
-                                    {cardLevels
-                                        .flatMap(level =>
-                                            level.cards.map((qty, index) => ({
-                                                element: level.element,
-                                                title: level.title,
-                                                level: index + 1,
-                                                qty
-                                            }))
-                                        )
-                                        .filter(card => card.qty > 0)
-                                        .map(card => (
+                                    {sortedCards.map(card =>
+                                        card.qty === 0 ? (
+                                            <div
+                                                key={`${card.element}-${card.level}`}
+                                                className="w-full h-[35px] border-2 border-dashed border-gray-400 rounded-md opacity-40"
+                                            />
+                                        ) : (
                                             <CardBox
                                                 key={`${card.element}-${card.level}`}
                                                 title={card.title}
@@ -703,8 +714,8 @@ const AccountRewardsPage = () => {
                                                     setSelectedLevel(getLevelOption(card.level));
                                                 }}
                                             />
-                                        ))
-                                    }
+                                        )
+                                    )}
                                 </div>
 
                             </div>
