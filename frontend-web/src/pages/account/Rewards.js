@@ -229,7 +229,7 @@ const AccountRewardsPage = () => {
                 </span>
 
                 <span className="text-xs text-yellow-600 font-medium leading-none">
-                    1000
+                    1,000
                 </span>
             </div>
 
@@ -334,9 +334,9 @@ const AccountRewardsPage = () => {
             <div className={`w-full h-[250px] flex flex-col ${bg} border-2 border-white shadow-sm rounded-md p-3`}>
                 <h3 className="font-semibold text-center mb-1">{title}</h3>
 
-                <p className="text-xs text-center mb-2">
+                <span className="text-xs text-center mb-2">
                     Cần <b>{requirement}</b> thẻ nguyên liệu
-                </p>
+                </span>
 
                 <div className="flex flex-wrap gap-2 justify-center">
                     {availableCards.map((card, i) => {
