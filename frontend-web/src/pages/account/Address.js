@@ -144,15 +144,15 @@ const AccountAddressPage = () => {
                 </div>
 
                 <div className="w-full h-[555px] grid grid-cols-11 bg-white rounded-md border">
-                    <div className="col-span-7 pl-4 pr-3 py-4 border-r">
-                        <div className="w-full">
+                    <div className="col-span-7 pl-4 pr-3 pt-4 border-r">
+                        <div className="w-full ">
                             <h2 className="text-lg text-gray-500">
                                 Địa chỉ đã lưu
                             </h2>
                         </div>
 
                         {/* Nội dung địa chỉ đã lưu */}
-                        <div className="w-full h-[calc(100vh-290px)] pr-3 my-5 overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-gray-100 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
+                        <div className="w-full h-[463px] pr-3 my-5 overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-gray-100 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
                             <div className="w-full flex flex-col gap-3 pb-5">
                                 <div className="w-full h-[145px] px-4 pt-3 pb-4 flex flex-col border shadow rounded-lg">
                                     <div className="w-full flex items-center gap-3">
@@ -287,7 +287,7 @@ const AccountAddressPage = () => {
                         </div>
                     </div>
 
-                    <div className="col-span-4 px-4 py-4 border-l">
+                    <div className="col-span-4 px-4 pt-4 border-l">
                         {/* RIGHT */}
                         <div className="w-full">
                             <h2 className="text-lg text-gray-500">
@@ -331,7 +331,6 @@ const AccountAddressPage = () => {
                                                 ? "border border-red-500 focus:ring-red-400"
                                                 : "border border-gray-300 focus:ring-blue-400"
                                             }`}
-
                                     />
 
                                     {fullName && (
