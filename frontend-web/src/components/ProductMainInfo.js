@@ -104,7 +104,7 @@ const ProductMainInfo = () => {
                   title="Thẻ cấp 1 (Hệ Thổ)"
                   className="w-[70px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr from-yellow-300 via-yellow-200 to-yellow-400 shadow border border-white items-center justify-center rounded-md"
                 >
-                  <span className="text-white font-medium flex items-center justify-center border-r border-white">1</span>
+                  <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">1</span>
                   <span className="text-black flex items-center justify-center border-l border-white">1</span>
                 </div>
               </div>
@@ -120,23 +120,23 @@ const ProductMainInfo = () => {
                 <LoyaltyOutlinedIcon />
                 <div className="w-full h-full flex items-center gap-3">
                   <div title="Thẻ cấp 1 (Hệ Thổ)" className="w-[70px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr from-yellow-300 via-yellow-200 to-yellow-400 shadow border border-white items-center justify-center rounded-md">
-                    <span className="text-white font-medium flex items-center justify-center border-r border-white">1</span>
+                    <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">1</span>
                     <span className="text-black flex items-center justify-center border-l border-white">3</span>
                   </div>
                   <div title="Thẻ cấp 2 (Hệ Hỏa)" className="w-[65px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr from-red-300 via-red-200 to-red-400 shadow border border-white items-center justify-center rounded-md">
-                    <span className="text-white font-medium flex items-center justify-center border-r border-white">1</span>
+                    <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">1</span>
                     <span className="text-black flex items-center justify-center border-l border-white">0</span>
                   </div>
                   <div title="Thẻ cấp 3 (Hệ Thủy)" className="w-[65px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr from-blue-300 via-blue-200 to-blue-400 shadow border border-white items-center justify-center rounded-md">
-                    <span className="text-white font-medium flex items-center justify-center border-r border-white">1</span>
+                    <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">1</span>
                     <span className="text-black flex items-center justify-center border-l border-white">0</span>
                   </div>
                   <div title="Thẻ cấp 4 (Hệ Mộc)" className="w-[65px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr from-green-300 via-green-200 to-green-400 shadow border border-white items-center justify-center rounded-md">
-                    <span className="text-white font-medium flex items-center justify-center border-r border-white">1</span>
+                    <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">1</span>
                     <span className="text-black flex items-center justify-center border-l border-white">0</span>
                   </div>
                   <div title="Thẻ cấp 5 (Hệ Kim)" className="w-[65px] h-[35px] cursor-default grid grid-cols-[35%_65%] bg-gradient-to-tr from-gray-300 via-gray-200 to-gray-400 shadow border border-white items-center justify-center rounded-md">
-                    <span className="text-white font-medium flex items-center justify-center border-r border-white">1</span>
+                    <span className="text-white text-shadow-black font-medium flex items-center justify-center border-r border-white">1</span>
                     <span className="text-black flex items-center justify-center border-l border-white">0</span>
                   </div>
                 </div>
