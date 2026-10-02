@@ -52,7 +52,7 @@ const ProductDetailPage = () => {
 
                     <NavigateNextIcon className="relative top-[2px]" fontSize="small" />
 
-                    <Link to="/Lương-Thực">
+                    <Link to="/luong-thuc">
                         <span className="text-blue-800 text-sm">
                             Lương thực
                         </span>
