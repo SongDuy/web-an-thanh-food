@@ -22,7 +22,7 @@ const AdminLayout = ({ children, menuItems, isTitle, handleNavigation, mockAdmin
                                         onClick={() => handleNavigation(item.id, item.path)}
                                         className={`w-full h-[50px] cursor-pointer px-5 py-2 font-medium shadow-sm border border-gray-200 flex items-center rounded transition-all 
                                             ${isTitle === item.id
-                                                ? 'text-yellow-500 bg-red-50 border-l-4 border-l-yellow-500'
+                                                ? 'text-yellow-500 bg-gradient-to-r from-red-50 via-gray-100 border-l-4 border-l-yellow-500'
                                                 : 'hover:text-yellow-500 bg-white text-gray-600 '
                                             }`}
                                     >
