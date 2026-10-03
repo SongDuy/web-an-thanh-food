@@ -165,7 +165,7 @@ const ProductMainInfo = () => {
           </div>
 
           {/* Nút thao tác */}
-          <div className="w-full mt-4 h-[65px] flex items-center justify-center">
+          <div className="w-full mt-5 h-[65px] flex items-center justify-center">
             <div className="h-[50px] grid grid-cols-2 gap-3">
               <div className="w-[225px] h-[50px] flex items-center justify-center text-black text-md rounded bg-gradient-to-tr from-gray-100 via-red-50 to-red-100 shadow border font-medium">
                 {Number(10).toLocaleString("vi-VN")}
