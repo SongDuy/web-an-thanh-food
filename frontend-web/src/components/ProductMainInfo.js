@@ -96,8 +96,9 @@ const ProductMainInfo = () => {
             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
               <div className="w-full h-full flex flex-col items-start justify-center">
                 <span className="text-md text-gray-500">Lượt mua</span>
-                <span className="text-md text-gray-500">Thẻ cấp 1</span>
+                <span className="text-md text-gray-500">Cấp độ 1</span>
               </div>
+
               <div className="h-full text-md text-black flex items-center gap-2">
                 <ShoppingBagOutlinedIcon />
                 <div
@@ -114,8 +115,9 @@ const ProductMainInfo = () => {
             <div className="w-full h-[65px] grid grid-cols-[20%_80%] gap-3">
               <div className="w-full h-full flex flex-col items-start justify-center">
                 <span className="text-md text-gray-500">Thẻ của tôi</span>
-                <span className="text-md text-gray-500">Đang có</span>
+                <span className="text-md text-gray-500">Cấp độ 1</span>
               </div>
+
               <div className="h-full text-md text-black flex items-center gap-2">
                 <LoyaltyOutlinedIcon />
                 <div className="w-full h-full flex items-center gap-3">
@@ -163,7 +165,7 @@ const ProductMainInfo = () => {
           </div>
 
           {/* Nút thao tác */}
-          <div className="w-full h-[65px] flex items-center justify-center">
+          <div className="w-full mt-4 h-[65px] flex items-center justify-center">
             <div className="h-[50px] grid grid-cols-2 gap-3">
               <div className="w-[225px] h-[50px] flex items-center justify-center text-black text-md rounded bg-gradient-to-tr from-gray-100 via-red-50 to-red-100 shadow border font-medium">
                 {Number(10).toLocaleString("vi-VN")}
