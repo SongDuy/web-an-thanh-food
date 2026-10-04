@@ -49,10 +49,9 @@ const RankingCard = ({ product, index, total, sortOrder }) => {
   };
 
   return (
-    <>
+    <div className="w-[392px] h-[145px]">
       <Link to={`/${toSlug(product.category)}/${toSlug(product.name)}?id=${product.id}`}>
-
-        <div className="w-full h-[145px] rounded shadow bg-white border hover:bg-red-50 p-4">
+        <div className="w-full h-full rounded shadow bg-white border hover:bg-red-50 p-4">
           <div className="w-full h-full flex gap-3">
             <div className="flex items-center justify-center gap-3">
 
@@ -118,7 +117,7 @@ const RankingCard = ({ product, index, total, sortOrder }) => {
           </div>
         </div>
       </Link >
-    </>
+    </div>
   );
 };
 

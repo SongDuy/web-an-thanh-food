@@ -23,9 +23,9 @@ const ProductCard = ({ product, index }) => {
   };
 
   return (
-    <>
+    <div className="w-[230px] h-[320px]">
       <Link to={`/${toSlug(product.category)}/${toSlug(product.name)}?id=${product.id}`}>
-        <div className="max-w-[230px] h-[320px] flex flex-col border p-4 rounded shadow hover:bg-red-50 transition-all duration-300 bg-white">
+        <div className="w-full h-full flex flex-col border p-4 bg-white hover:bg-red-50 rounded shadow  transition-all duration-300 ">
 
           {/* Khu vực ảnh: Giữ nguyên h-40 (~160px) */}
           <div className="relative w-full h-[160px] overflow-hidden rounded flex-shrink-0">
@@ -77,7 +77,7 @@ const ProductCard = ({ product, index }) => {
           </div>
         </div>
       </Link>
-    </>
+    </div>
   );
 }
 

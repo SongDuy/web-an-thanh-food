@@ -31,7 +31,7 @@ const MainLayout = ({ children }) => {
 
             <BannerSlider />
 
-            <main className="px-[160px] pb-[50px] bg-soft">
+            <main className="xs:px-[60px] sm:px-[80px] md:px-[96px] lg:px-[128px] xl:px-[160px] pb-[50px] bg-soft">
                 {children}
             </main>
 
