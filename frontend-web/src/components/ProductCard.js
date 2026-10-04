@@ -23,7 +23,7 @@ const ProductCard = ({ product, index }) => {
   };
 
   return (
-    <div className="w-[230px] h-[320px]">
+    <div className="max-w-[230px] h-[320px]">
       <Link to={`/${toSlug(product.category)}/${toSlug(product.name)}?id=${product.id}`}>
         <div className="w-full h-full flex flex-col border p-4 bg-white hover:bg-red-50 rounded shadow  transition-all duration-300 ">
 

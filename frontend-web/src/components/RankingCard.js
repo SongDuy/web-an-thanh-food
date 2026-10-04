@@ -49,7 +49,7 @@ const RankingCard = ({ product, index, total, sortOrder }) => {
   };
 
   return (
-    <div className="w-[392px] h-[145px]">
+    <div className="max-w-[392px] h-[145px]">
       <Link to={`/${toSlug(product.category)}/${toSlug(product.name)}?id=${product.id}`}>
         <div className="w-full h-full rounded shadow bg-white border hover:bg-red-50 p-4">
           <div className="w-full h-full flex gap-3">
